@@ -1,0 +1,3991 @@
+   Atari/Atari Games   Memos and Status Reports 1988   Jed Margolin
+___________________________________________________________________________
+
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 8 January 1988
+
+
+
+Driver Sound Board Rev 1
+------------------------
+I have been working on test routines.
+
+
+Driver Main Board Rev 1
+-----------------------
+Stephanie needs to fix her RAM Test so it correctly reports which VRAMs
+are bad.
+
+
+Gate Array
+----------
+Don, Max, and I have agreed on the major features for the security circuit.
+
+
+Driver Main Board Rev 2
+-----------------------
+Joe is working on the PC Board.
+
+
+Driver RAM Board
+----------------
+Gary has delivered a legible schematic to me.
+
+Unfortunately, it does not match the PC Plot.
+
+This is unacceptable. I would like it redone on SCI Cards.
+
+
+
+Jed
+_____________________________________________________________________________
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 15 January 1988
+
+
+
+Driver Sound Board Rev 1
+------------------------
+The frequency sweep tests routines are working.
+
+Sound PC Board #3 came up without any major problem.
+
+
+Driver Main Board Rev 1
+-----------------------
+Stephanie needs to fix her RAM Test so it correctly reports which VRAMs
+are bad.
+
+
+Gate Array
+----------
+Don expects to be done with the Simulation Verification by mid February,
+with 20 prototypes by mid March.
+
+Production quantities take 8-12 weeks.
+
+
+Driver Main Board Rev 2
+-----------------------
+Joe is working on the PC Board.
+
+
+Driver RAM Board
+----------------
+Gary has delivered a legible schematic to me, but
+nothing else that is usable for anything.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 22 January 1988
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+Driver Main Board Rev 1
+-----------------------
+Stephanie needs to fix her RAM Test so it correctly reports which VRAMs
+are bad.
+
+
+Gate Array
+----------
+Don expects to be done with the Simulation Verification by mid February,
+with 20 prototypes by mid March.
+
+Production quantities take 8-12 weeks.
+
+This means that if everything goes ok, production cannot be sooner
+than May-June.
+
+20 prototypes do not sound like they will go very far.
+
+
+Driver Main Board Rev 2
+-----------------------
+Joe is almost done.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+I have given Joe:
+
+	a. Gate Array pinouts.
+	b. A drawing of how I want the Gate Array symbol drawn.
+	c. Circuit changes to convert Rev 2 to Rev 3.
+
+
+Driver RAM Board
+----------------
+Gary has delivered a legible schematic to me, but
+nothing else that is usable for anything.
+
+
+New Prices
+----------
+	Thomson Mostek (Now SGS Thomson), Rep is THE Bill Woods. 
+	   48T02-15, 2K x 8, TimeKeeper   $12.60  (5K) was $14.60 last year
+	   48Z02-15, 2K x 8, ZeroPower    $ 6.30  (5K) was $ 7.30 last year
+
+
+Hardware Status, 22 January 1988					-2-
+	
+
+
+TRW Parts
+---------
+
+I have received information from TRW on their TMC2301 Image Resampling 
+Sequencer.
+
+The part is used to rotate, translate, scale, and warp 2D images.
+
+It appears to be aimed at applications where cost is no object:
+
+	1. It does one pixel at a time at 18 MHz maximum. At this rate
+	a 512 x 512 image can be transformed in 15 ms. This would require
+	55 ns memory for both buffers. A display buffer 512 x 512 x 8
+	would require 128  4K x 4 SRAMs at a cost of $256. A source and
+	destination buffer, double buffered, would require 512 parts costing
+	$1024. (For comparison, four buffers in VRAM require 32 parts and cost
+	about $192.)
+
+	2.  Slowing it down to VRAM speed (150 ns) would negate its main 
+	advantage: speed. Besides, the system does not accommodate dynamic 
+	memory.
+
+	3. A system requires two TMC2301s ($69 ea.), a Multiplier/
+	Accumulator ($20), and the memory previous mentioned. 
+
+
+It does do something that is interesting. When a picture is rotated the new
+target pixels will probably not overlap the source image pixels. The TRW 
+system interpolates the pixels.
+
+
+
+	Jed
+
+Hardware Status, 22 January 1988					-3-
+
+Parts
+-----
+We are on the hook for two custom parts:
+
+	R2R Networks:	8-18 weeks
+	Gate Array:	8-12 weeks
+
+
+There are several sole sourced parts:
+
+	Texas Instruments:	TMS34010-40, -50
+
+	Analog Devices:		ADSP2100
+				AD7582 (12 Bit A/D)
+
+	SGS Thomson (Mostek):	48Z02	ZeroPower RAM	
+				48T02	Timekeeper
+
+There are several parts that have several sources but since they
+are under different part numbers they must be treated as having
+limited or sole sources because PC will not put alternate part 
+numbers on Parts Lists.
+
+There are several other parts that Atari has not used before:
+
+	64K x 4 Video RAMs
+
+	TMS32010
+
+	ALS, AS, and F parts
+
+Program ROM on the Main Board needs to be 200 ns, which Atari does
+not stock.
+ 
+Unless someone is given the responsibility (and authority) to buy these 
+parts in a timely manner we will not be able to produce the game without 
+costly delays.
+
+That is for production.
+
+
+For game development, field test, and show games:
+
+We should immediately order parts for twenty Driver ADSP Boards.
+
+When the parts list for Driver Main Rev 3 (Gate Array) becomes available we 
+should order parts for ten boards.
+
+When the parts list for MultiSync Turbo becomes available we should order 
+parts for ten boards.
+
+This will allow us to do the Driving Game and also support at least one other
+project.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 29 January 1988
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+Driver Main Board Rev 1
+-----------------------
+I have written the routines to put the Time and Date on the screen
+for the Test Menu.
+
+
+Gate Array
+----------
+Don seems to be on schedule and expects 20 prototypes by mid March.
+
+Production quantities take 8-12 weeks.
+
+
+Driver Main Board Rev 2
+-----------------------
+Joe is almost done.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+I have given Joe:
+
+	a. Gate Array pinouts.
+	b. A drawing of how I want the Gate Array symbol drawn.
+	c. Circuit changes to convert Rev 2 to Rev 3.
+
+
+Driver RAM Board
+----------------
+Gary has delivered a legible schematic to me, but
+nothing else that is usable for anything.
+
+
+
+	Jed
+_____________________________________________________________________________
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Microphones for recording sound effects
+Dt: 3 February 1988
+
+
+I called the following places and asked what microphone they recommended
+for recording sound effects:
+
+
+Century Stereo - San Jose      -  Bob
+-------------------------------------
+   Condensor Mics:
+
+	AKG and Sennheiser (Studio quality) for about $1500.
+	Shure makes one (SM91) for about $250.
+
+   For recording sound effects he recommended using a dynamic mic because he
+   felt it would handle high sound pressures better than a condensor mic.
+
+	Shure RE20 for $550
+	Electro-Voice ND-408 for $190.
+
+   Both are cardioid pattern mics.
+
+
+K&K Music - San Jose
+--------------------
+   The gentleman I spoke with recommended dynamic mics because they are more
+rugged than condensor mics and are less likely to rust out if exposed to
+moisture. They also have a selection of Electro-Voice mics.
+
+
+Delta Services - S.F.	(formerly Sound Genesis)	
+---------------------
+   I spoke to Don Cruise who said he had installed our Sound Room and 
+   knew Brad Fuller.
+
+   He definitely recommended using a condensor mic in order to handle high
+   sound levels.
+
+   He liked the Sony C500 which unfortunately is no longer made but which 
+   might be available used.
+
+   He suggested a Crown PZM mic for about $300. This is a surface mount mic
+   which he thought would be effective mounted on a large swaure of plexiglas.
+
+   He also thought a Beyer M501 Ribbon mic might be good. I didn't know anyone
+   still made ribbon mics.
+
+
+Recommendations
+---------------
+  I think that before we buy anything we ought to borrow back the dynamic 
+  cardioid (EV RE11, I think) that I bought for the PASS Speech Development 
+  system and which has apparently become the property of the Sound Group.
+
+  If it works well enough for our application we won't need to buy anything.
+
+		Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 5 February 1988
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+Driver Main Board Rev 1
+-----------------------
+I have finished the test routines to set the clock.
+
+The next batch of test routines are on hold until I have a development
+system.
+
+
+Gate Array
+----------
+Don seems to be on schedule and expects 20 prototypes by mid March.
+
+Production quantities take 8-12 weeks.
+
+
+Driver Main Board Rev 2
+-----------------------
+Joe was done until Max required changes to the Serial Circuit.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Joe has started working on it on a time-available basis while he is
+working on Pot Shot.
+
+
+Driver RAM Board
+----------------
+I still do not have usable artwork.
+
+Since PC is not willing to do the board I recommend that it be sent out.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 12 February 1988
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+
+Driver Main Board Rev 1
+-----------------------
+I have converted the HIND Helicopter from ABZ to polygons and put it
+on the screen, using Stephanie's 34010 Polygon routines and Max's
+help.
+
+
+
+Gate Array
+----------
+Don seems to be on schedule and expects 20 prototypes by mid March.
+
+Production quantities take 8-12 weeks.
+
+
+
+Driver Main Board Rev 2
+-----------------------
+The board is done except for the last changes to the Serial Circuit.
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Joe has started working on it on a time-available basis while he is
+working on Pot Shot. 
+
+Joe and I worked out the placement for the Gate Array and he is about to 
+start routing the new traces.
+
+
+
+Driver RAM Board
+----------------
+No Change.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 19 February 1988
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+
+Driver Main Board Rev 1
+-----------------------
+I have added rotors to the HIND helicopter.
+
+I have also added routines to draw a wireframe object from either a
+polygon table or a connection list. This is so I can look at the
+objects originally designed as wireframe objects in order to do the
+polygon tables. I am currently working on converting the T62 Tank to
+polygons.
+
+
+
+Gate Array
+----------
+Don seems to be on schedule and expects 20 prototypes by mid March.
+
+Production quantities take 8-12 weeks.
+
+
+
+Driver Main Board Rev 2
+-----------------------
+The board is done except for the last changes to the Serial Circuit.
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+No progress this week. Joe has been working on Pot Shot. 
+
+
+
+Driver RAM Board
+----------------
+No Change.
+
+
+	Jed
+
+
+ASSAULT
+-------
+I have looked at Namco's new ASSAULT game in the harness area. It has a game
+feature new to raster video games, which is the ability to rotate the
+playfield.
+
+Because it does not have a frame buffer and because the memory is 150ns I 
+expect they use the following technique:
+
+To mathematically rotate a point:
+
+	X' = X*COS(A) - Y*SIN(A)
+	Y' = X*SIN(A) + Y*COS(A)
+
+where	A is the angle of rotation
+	X is the horizontal scan position (assume 0 to 319)
+	Y is the vertical line number (Assume 0 to 239)
+
+	X' is the playfield memory horizontal address
+	Y' is the playfield memory vertical address
+
+Each position on the screen is scanned, representing an X,Y address.
+This X,Y address is converted to an X',Y' Playfield memory address, 
+according to angle A.
+
+In order to avoid the use of expensive multipliers:
+
+     1.	SIN(A) and COS(A) are constant for each	angle and come from a table. 
+ 	
+	As Y (vertical line) goes from 0 to 239 one adder is used to accumulate
+	Y*SIN(A) and another one is used to accumulate Y*COS(A).  
+ 
+     2.	SIN(A) and COS(A) are constant for each	angle and come from a table. 
+ 	
+	As X (horizontal position) goes from 0 to 319 one adder is used to 
+	accumulate X*SIN(A) and another one is used to accumulate X*COS(A).  
+ 
+	A subtractor is used to produce: 
+
+		X' = X*COS(A) - Y*SIN(A)
+
+	A adder is used to produce:
+
+		Y' = X*SIN(A) + Y*COS(A)
+
+	Translations are accomplished using an addition pair of adders (or
+	subtractors) to give:
+
+		X' = (X-XT)*COS(A) - (Y-YT)*SIN(A)
+
+		Y' = (X-XT)*SIN(A) + (Y-YT)*COS(A)
+
+I developed this technique about four years ago, but no one was interested.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 26 February 1988
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+
+Driver Main Board Rev 1
+-----------------------
+I have finished converting the T62 Tank to Polygons.
+
+
+
+Gate Array
+----------
+Don is on schedule and expects 20 prototypes in four weeks.
+
+Production quantities take 8-12 weeks.
+
+
+
+Driver Main Board Rev 2
+-----------------------
+The board is done except for the last changes to the Serial Circuit.
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+We were dumped before the board was finished.
+
+
+
+Driver RAM Board
+----------------
+No Change.
+
+
+
+Driver ADSP Board
+-----------------
+I have received the preliminary data sheet on the faster 2100s
+and am reviewing it.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 4 March 1988
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+Driver Main Board Rev 1
+-----------------------
+I am converting the TomCat rocket to Polygons.
+
+
+Gate Array
+----------
+Don is on schedule and expects 20 prototypes in three weeks.
+
+Production quantities take 8-12 weeks.
+
+
+Driver Main Board Rev 2
+-----------------------
+The board is done except for the last changes to the Serial Circuit.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+The board was finished but is being sent back for regrooving to give
+Rick Meyette a head start with FCC compliance.
+
+
+Driver RAM Board
+----------------
+No Change.
+
+
+Driver ADSP Board
+-----------------
+I have received the preliminary data sheet on the faster 2100s
+and am still reviewing it.
+
+
+Parts List
+----------
+We have given Jim Wallin parts lists for the Driver Main Board Rev 3 and for 
+the Driver ADSP Board Rev 1 so he can start getting firm prices for parts.
+
+I used Jeff's AVL program to create a list containing the AVL entries
+for each part on the Main and ADSP parts list.
+
+I have completed a DCL program that extracts part numbers from a SciCards
+Parts list and generates a program that (with a little hand editing) calls
+MANMAN and creates a list of MANMAN entries.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 11 March 1988
+
+
+Driver Sound Board Rev 1
+------------------------
+No change
+
+
+Driver Main Board Rev 1
+-----------------------
+I have converted the TomCat rocket to Polygons.
+
+Mike Albaugh has started porting his coin routines to the hardware.
+
+
+Gate Array
+----------
+Don is on schedule and expects 20 prototypes in two weeks.
+
+Production quantities take 8-12 weeks.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+The board (with the changes requested by Rick Meyette) is done and eight have
+been ordered, to be delivered in 3-4 weeks. 
+
+No progress has been reported in the effort to find out why the connector
+outlines have disappeared.
+
+Karen Bjorkquist has been given the parts list so she can start ordering parts.
+
+
+Driver Main Board Rev 2 (No Gate Array)
+---------------------------------------
+The board would require a few changes to be producible: The Serial Party Line 
+Flag, Rick Meyette's RFI changes, and turning C121 around.
+
+
+Driver RAM Board
+----------------
+No progress has been reported in the effort to find out why the board is sans
+traces that appear on the schematic.
+
+
+Driver ADSP Board
+-----------------
+The ADSP2100A - 10 MHz would require 35 ns memory.
+The ADSP2100A - 12 MHz would require 25 ns memory.
+
+I am still working on the timing for the Data Memory I/O. (It is not pretty.)
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 18 March 1988
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+Driver Main Board Rev 1
+-----------------------
+Mike Albaugh is porting his coin routines to the hardware.
+
+
+Gate Array
+----------
+Don is on schedule and expects 20 prototypes next week.
+Production quantities take 8-12 weeks.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Eight are on order.
+
+No progress has been reported in the effort to find out why the connector
+outlines have disappeared.
+
+
+Driver Main Board Rev 2 (No Gate Array)
+---------------------------------------
+No Change.
+
+
+Driver RAM Board
+----------------
+No progress has been reported in the effort to find out why the board is sans
+traces that appear on the schematic.
+
+
+Other
+-----
+I have given Mary Burnias the parts list for the Driver Sound Board.
+She now has parts lists for Driver Main, Driver ADSP, and Driver Sound.
+We still owe her the parts lists for the Motor Amp and the Shifter Amp.
+
+I have written DCL programs to do the following:
+
+   1. Converts SCI-Cards Parts List Files to files that can be used with EDT.
+
+   2. Extracts the Part Numbers and creates a file that, when run, looks up
+      stock status in MANMAN.
+
+   3. Extracts the Part Numbers and creates a file that, when run, looks up
+      cost in MANMAN.
+
+   4. Extracts the Part Numbers and creates a file that, when run, looks up
+      AVL status in DataTrieve.
+
+
+Driver ADSP Board
+-----------------
+Timing For Driver ADSP Board ADSP-2100 10 MHz and 12 MHz
+Using Preliminary Data Sheet for Fast ADSP-2100, February 1988
+
+
+Summary:
+
+				8 MHz	10 MHz	12 MHz
+				-----	------	------
+
+Clock Oscillator		32 MHz	40 MHz	48 MHz
+
+Instruction Cycle		125 ns	100 ns	83.3 ns
+
+Program RAM speed		45 ns	35 ns	25 ns
+
+Data RAM Speed			45 ns	35 ns	25 ns
+
+Sequential Input Memory Speed	250 ns	250 ns	250 ns
+NOPs between SIMBUF Reads	  2	  3*	  3
+
+Sequential Output Memory 
+    8Kx8 SRAMs speed		150 ns	150 ns	120 ns	
+
+
+Sequential Input Memory		
+
+	Reading SIM is ok at both 10 MHz and 12 MHz
+
+	Writing to the SIM Counter is marginal at 10 MHz and not acceptable 
+	at 12 MHz.
+
+	This can be fixed by changing the circuit.
+ 
+
+Sequential Output Memory
+
+	The current circuit is not acceptable at either 10 MHz or 12 MHz.
+
+	This can be fixed by replacing the LS373s with ALS374s and
+	changing a trace. 
+
+
+
+	Jed
+
+
+
+* Can use 2 NOPs if Sequential Input memory is 200 ns.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 25 March 1988
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+Driver Main Board Rev 1
+-----------------------
+Mike Albaugh was porting his coin routines to the hardware
+but dumped us.
+
+
+Gate Array
+----------
+20 prototypes were expected this week.
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Eight are on order.
+
+No progress has been reported in the effort to find out why the connector
+outlines have disappeared.
+
+
+Driver Main Board Rev 2 (No Gate Array)
+---------------------------------------
+No Change.
+
+
+Driver RAM Board
+----------------
+No progress has been reported in the effort to find out why the board is sans
+traces that appear on the schematic.
+
+
+Other
+-----
+We owe Mary Burnias the parts list for the Driver Motor Amp and the Shifter Amp.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 1 April 1988
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+Driver Main Board Rev 1
+-----------------------
+Mike Albaugh was porting his coin routines to the hardware
+but dumped us.
+
+
+Gate Array
+----------
+10 prototypes have been delivered and are ready for
+Driver Main Rev 3.
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Eight are on order. Theoretically, they should arrive in two weeks.
+
+No progress has been reported in the effort to find out why the connector
+outlines have disappeared.
+
+
+Driver Main Board Rev 2 (No Gate Array)
+---------------------------------------
+No Change.
+
+
+Driver RAM Board
+----------------
+No progress has been reported in the effort to find out why the board is sans
+traces that appear on the schematic.
+
+
+Other
+-----
+We owe Mary Burnias the parts list for the Driver Motor Amp and the Shifter Amp.
+
+
+
+	Jed
+_____________________________________________________________________________
+(To PCB Department)
+
+Please make the following for me:
+
+Vellum	 1:1	Top
+Vellum	 1:1	Bottom
+Vellum	 1:1	Silkscreen
+
+Paper	 1:1	Top, Bottom, Silkscreen  (all on one sheet)
+
+Paper	 1:1	4 layers and silkscreen (all separate)
+
+Paper    1:1	Silkscreen
+
+
+	Thanks,
+
+			Jed
+_____________________________________________________________________________
+{ Date Unknown }
+
+Marty asked me to give you my input on his proposed mini-emulator, probably
+because at one time I was considering doing something similar.
+
+If there is only going to be one built it is not a cost-effective use of
+Marty's time.
+
+Buying a cheap emulator would undoubtedly require an enormous amount of time
+to debug and is, again, not a cost effective use of Marty's time.
+
+If there are to be several made the danger is that various people will not 
+be happy unless it duplicates or surpasses the functions of the AMS.
+Doing a full scale emulator is not a cost effective use of Marty's time.
+
+Making an emulator whose functions are transparent to the target hardware
+is not trivial.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+I have the Inputs for the MultiSync Board.
+
+When do you want them?
+
+	Jed
+_____________________________________________________________________________
+
+								5-11-88
+Gary,
+
+	Please make the following for me for the Driver RAM Board:
+
+
+Vellum	 2:1	Top
+Vellum	 2:1	Bottom
+Vellum	 2:1	Silkscreen
+
+Paper	 2:1	Top, Bottom, Silkscreen  (all on one sheet)
+
+Paper	 1:1	4 layers and Silkscreen (all separate)
+
+Paper    1:1	Silkscreen
+
+
+Note the changes in size to 2:1
+
+
+			Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 15 April 1988
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+We received eight boards, had one stuffed, and are making progress on 
+bringing it up.
+
+Art reports that the disappearance of the connector outlines was caused by an 
+error on the part of the PC Designer.
+
+
+
+Driver RAM Board
+----------------
+Art said he had not received any word from SCI-Cards on the problem with the
+first RAM Board but that he believed the problem was caused by an error on the
+part of the PC Designer.
+
+I told Art that I wanted the RAM Board done on the real SCI-Cards system and 
+not on SCI-Design.
+
+He told me not to tell him how to use his tools, which I understood to
+mean he is going to have the board done, once again, with SCI-Design.
+
+
+
+Parts Cost from Purchasing
+--------------------------
+Nothing yet.
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+Driver Main Board Rev 1
+-----------------------
+No Change
+
+
+Driver Main Board Rev 2 (No Gate Array)
+---------------------------------------
+No Change.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 22 April 1988
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+The Gate Array seems to work.
+
+We have discovered that the TI VRAMs do not work as advertised, having
+to do with Tri-Stating the Serial Data Outputs after a Memory-to-Shift Register
+Load. It isn't supposed to.
+
+I will call them on Monday to find out what the deal is.
+
+
+Driver APU
+----------
+Gary has started on it.
+
+
+
+MultiSync
+---------
+PC is scheduled to start it on May 2.
+
+The mods to Driver Main Rev 3 are also required on the MultiSync Board.
+
+We will save time later on if PC makes these mods to Driver Main Rev 3
+before turning it into the MultiSync Board.
+
+
+
+Driver RAM Board
+----------------
+Is still on Art's schedule.
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+
+ADSP Sequential Input Memory RAM Board
+--------------------------------------
+I have started circuit design.
+
+
+
+	Jed
+____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 29 April 1988
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+The Gate Array seems to work. The board is running the Driver Program.
+There are still sparklies while it is painting one of the monitor test screens.
+The sparklies are not present while running the Driver program. There are
+no sparklies on Rev 1 boards.
+
+
+We have discovered that the TI VRAMs do not work as advertised, having
+to do with Tri-Stating the Serial Data Outputs after a Memory-to-Shift Register
+Load. It isn't supposed to.
+
+
+I talked to Andre Gulillemaud (pronounced Gillmo) Product Engineer for TI VRAMs.
+
+	1. We are right about Serial Data going Tri-State about 1 us after a 
+	Memory-To-Shift Register Transfer and staying there until the 
+	first Serial Clock. There isn't anything they can do about it 
+	without redesigning the part.
+
+	2. We have old Rev C parts in which Shift Register-to-Memory Transfers
+	and Write-Mode Enables are the same. This is probably what is  
+	causing the problem at the top of the screen.
+
+	3. Rev C parts have been known to drop bits.
+
+
+He recommended that we return them to John Hendricks for Rev H parts. 
+(Rev H 	come immediately after Rev C for some reason that I didn't 
+understand.)
+
+Andre has sent me the data sheet addendum for the VRAMs.
+		 
+
+
+Driver APU
+----------
+Gary is almost done.
+
+
+
+MultiSync
+---------
+We were bumped in PC.
+
+
+
+Driver RAM Board
+----------------
+Is still on Art's schedule.
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+
+ADSP Sequential Input Memory RAM Board
+--------------------------------------
+Still working on it.
+
+
+Stun Runner
+-----------
+	We are ready to give them:
+
+		Rev 1 Driver Main Board with Test Program
+
+		Rev 1 Driver ADSP-2100 Board
+
+		Memory Map
+
+		Schematic of 68010 section
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 6 May 1988
+
+
+
+Driver APU
+----------
+We have received film and ordered boards.
+
+
+
+TI VRAMs
+--------
+We have received Rev H VRAMs and put them in the Rev 3 board. They seem to be 
+running the Driver program ok.
+
+
+
+ADSP Sequential Input Memory RAM Board
+--------------------------------------
+I have finished the design and turned it over to Erik to get a WW.
+
+
+
+Stun Runner
+-----------
+	We have given them:
+
+		Rev 1 Driver Main Board with Test Program
+		Rev 1 Driver ADSP-2100 Board
+		Memory Map
+		Schematic of 68010 section
+		3D demo program
+
+
+
+Sockets for the VRAMs
+---------------------
+The Robinson-Nugent socket for the VRAMs is not end-stackable and will not
+fit on the board. The VRAMs are currently spaced 0.150 and would have to
+be redone at 0.200 to use this socket.
+
+The only other source is SAE in Japan. Erwin is getting some for us, hopefully
+320 pieces. He has been told that this socket is not stocked in the U.S. and 
+orders should be placed early.
+
+The options, in order of my preference are:
+
+	1. Order the sockets from SAE with the required lead time.
+	2. Use strip sockets.
+	3. Solder the VRAMs directly (no socket).
+	4. Re do the board to increase the VRAM spacing.
+
+
+Driver RAM Board
+----------------
+Gary is working on it. Unfortunately, Art has insisted that Gary 
+use SCI-Design despite my request that he use Schemactive.
+
+Gary insists that the problems with Doug's Cyberball board were caused by
+incorrect schematic entry.
+
+Rob says there is at least one trace on the schematic that is not
+on the board.
+
+Doug kind of agrees with Rob but does not appear to be concerned about it.
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Still investigating sparklies that are present while it is painting one of the
+monitor test screens but which are not present while running the Driver 
+program. 
+
+I have gotten the Test Program to run with Watchdog active, except for
+Stephanie's memory test routines. Also, the VRAM Verify Test no longer
+runs. These will need to be fixed in order that the Test Program can
+be part of the Game Self-Test.
+
+
+
+MultiSync/Driver Main Rev 4
+---------------------------
+My inputs are still ready.
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+
+	Jed
+_____________________________________________________________________________
+{ A sneak preview at Sunnyvale Golfland to get Player feedback. I don't 
+  remember the date.}
+
+			Hard Drivin' Sneak Prevue
+	
+				  or
+
+			How I spent my Saturday
+
+
+							by Jed Margolin
+
+
+					
+1. The casters on the RoadBlasters cabinet do not work and I hope we do ours
+   differently.
+
+2. The game did not sound very loud in the arcade environment.
+
+3. The game locked up several times. Presumably the software was in a loop, 
+   waiting for something.
+
+	a. These types of loops should use software timeouts, initially
+  	   for development to log errors, but also in the final version 
+	   to allow some kind of recovery.
+
+	b. Watchdog is the last resort. 
+
+4. The crowd seemed to enjoy watching other players drive, especially
+   the Instant Replays. In the final cabinet, either the monitor should
+   be easily seen by the crowd or we should offer an optional extra
+   monitor.
+
+5. The players were able to handle starting the car, although many were
+   probably helped by the crowd.
+
+6. Players seemed confused by the screen to select the transmission.
+   Could some way be found that was more pictorial and did not require
+   reading?   
+
+7. One guy had trouble starting the car on the hill. He kept sliding
+   backwards and stalling out. I liked it.
+_____________________________________________________________________________
+{ To PCB Department}
+
+According to Leon's schematic you have swapped the functions of
+190W and 100K. If this is so, you have placed video circuitry
+outside the video section.
+
+
+	Jed
+_____________________________________________________________________________
+{To Components Group}
+
+What does it mean for a part to be "Inactive"?
+
+Does it mean it will not appear on the AVL in Datatrieve?
+
+Does it mean that Manufacturing will scrap existing stocks of
+said "Inactive" parts?
+
+If I want to use an "Inactive" part will I have to fill out a CER?
+
+Some of the parts I am using on Driver and Stun Runner are being reported
+as "Inactive" They weren't "Inactive" when they were first put on the parts 
+list.
+
+What is the deal?
+
+		Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 13 May 1988
+
+
+
+Driver RAM Board
+----------------
+Gary has delivered board plots and a schematic. I am checking them.
+
+
+MultiSync/Driver Main Rev 4
+---------------------------
+Art has accepted the inputs for Driver Rev 4. He wants the MultiSync inputs
+on Driver Rev 4 schematics and I will of course accommodate him.
+
+
+Driver APU
+----------
+PC Boards have been ordered.
+
+
+Driver ADSP Board Rev 1
+-----------------------
+More PC Boards have been ordered.
+
+
+ADSP Sequential Input Memory RAM Board
+--------------------------------------
+Lorraine is working on the WW board.
+
+
+TI VRAMs
+--------
+TI's Rev H VRAMs are still working. Erwin will add the information to the AVL.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Still working.
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+System 3D GSP
+-------------
+I have talked to Sam and Marty about interface requirements.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 20 May 1988
+
+
+
+Driver RAM Board
+----------------
+We have received film and fab and have presumably ordered boards.
+
+
+Driver Main Rev 4
+-----------------
+Gary has finished the schematic changes and the board. I am checking it.
+
+
+MultiSync
+---------
+Leon has finished the schematic and is working on the board.
+
+
+Driver APU
+----------
+PC Boards have been ordered.
+
+
+Driver ADSP Board Rev 1
+-----------------------
+PC Boards have arrived and boards are being stuffed.
+
+
+ADSP Graphics RAM Board
+-----------------------
+The WW board is working. Erik and Lorraine did a nice job.
+We will have another one made for Stun Runner.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Still working.
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+System 3D GSP
+-------------
+I have finished the schematic. I want to have a version of it put on
+a Driver Main Rev 1 Board so I can test the design and do the preliminary
+setup programming.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 27 May 1988
+
+
+
+Driver Main Rev 4
+-----------------
+Gary delivered a parts list to me that contained all the old errors that I had
+already corrected on previous Revs. He has since provided me with a more current
+version which I am correcting.
+
+The PCB layout that Gary delivered did not match the schematic. He has fixed it.
+
+I do not know how to get a correct board from PC now that it turns out that
+checking the schematics is not enough. I cannot do a line check on every
+trace on the board.
+
+
+
+Driver RAM Board
+----------------
+We have not ordered boards.
+I have not received a parts list from Gary.
+
+
+
+MultiSync
+---------
+Joe has replaced Leon in the pursuit of the wiley MultiSync.
+
+
+
+Driver APU
+----------
+PC Boards on order.
+
+
+
+Driver ADSP Board Rev 1
+-----------------------
+PC Boards are not being stuffed.
+
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is not being made for Stun Runner.
+
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Still working.
+Another one is not being stuffed due to no sockets.
+I am not writing test programs due to no development system.
+
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+
+System 3D GSP
+-------------
+I have finished the schematic. I wanted to have a version of it put on
+a Driver Main Rev 1 Board so I can test the design and do the preliminary
+setup programming.
+
+In the mean time a Driver Main Rev 1 board is not being partly stuffed.
+
+Since I do not have a development system and Erik will not be available
+to me for an indefinite period of time I will give System 3D the schematic 
+and try to work with their system.
+
+
+Other
+-----
+I have written some VAX programs to automate most of the conversion of objects
+to ADSP format. I will need to know exactly what format Max decides on.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 3 June 1988
+
+
+
+Driver RAM Board
+----------------
+Boards have been ordered.
+Gary has promised to do a parts list.
+
+
+MultiSync
+---------
+I have checked the PC Board layout and sent it back for regrooving.
+(Some bypass caps were missing.)
+
+
+Driver ADSP Board Rev 1
+-----------------------
+Board #6 is operating.
+
+
+Driver Main Rev 4
+-----------------
+No Change.
+
+
+Driver APU
+----------
+PC Boards on order.
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is being made for Stun Runner.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+Received PLCC sockets.
+Am working on Test programs.
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+System 3D GSP
+-------------
+Marty is having a WW made.
+
+
+
+Other
+-----
+Steve Suttles has installed a squawk system for the manufacturing people
+in the back, right outside our lab. It is very loud, and enormously
+distracting. 
+
+On Friday, May 27, I informed Steve of this and he said it is under the 
+control of Kurt Waller. Besides, no one else had complained about it. 
+
+A little while later Steve called back to say that he had talked to the
+Manufacturing people who expressed the opinion that they were being
+blasted out of their minds by the system.
+
+Steve showed them (Kurt?) where the volume control is.
+
+As of Tuesday the system is as loud and annoying as it was on Friday.
+I talked to some people who work back there who said, "yes, it was too loud,"
+and "no, no one ever showed THEM where the volume control is."
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Focus Group 6/8/88, Hard Drivin'
+Dt: 6/9/88
+
+
+The Seat
+-------
+The three groups uniformly seemed to like the seat.
+
+
+The Graphics
+------------
+The first two groups liked the graphics. In the third group someone said the 
+graphics reminded him of I ROBOT. I am not sure if he said he didn't like the 
+graphics or if Lyle said the guy didn't like it.
+
+
+The Steering Wheel
+------------------
+When people were talking about the steering wheel it was not always clear 
+whether they were talking about the physical effort to move the steering
+wheel or about how the car handled. It was clear that the third group did not
+like the way the car handled.
+
+Part of the problem may be the speedometer and dash. People did not seem to
+use the speedometer much. Several commented that it was hard to see. I expect
+that it is also lost in the clutter of guages that are not used, like fuel
+and temperature. You should consider making the Tachometer and Speedometer
+twice as large, dumping the unused guages, and making the dashboard background
+color darker.
+
+
+Realistic Simulation
+--------------------
+All three groups seemed to think that the realistic simulation of a car was a
+good idea.
+
+
+Transmission
+------------
+The third group seemed to have the most trouble with the transmission, mostly
+the automatic transmission. It did not help that first gear was usually "out".
+
+I recommend that with the automatic transmission the shifter not be used.
+
+I personally prefer a semi-automatic transmission, using the shifter to select
+the gears, but not using the clutch.
+
+
+Tracks
+------
+Most people seemed to think the long track was too boring.
+
+The stunt track was too hard for almost everybody. The stunt track has too 
+many stunts. 
+
+There needs to be more tracks, with the number and difficulty of stunts 
+properly apportioned.
+
+
+Traffic Cars
+-----------
+The third group wanted more interaction with the traffic cars. The first two
+groups seemed content with the existing traffic. (They probably had enough
+to do just to drive.)
+
+
+Instant Replay
+--------------
+A clear winner with all three groups.
+
+
+Sound Effects
+-------------
+People generally liked the sound effects but,
+
+	Someone in the third group noted that at 7000 RPM the engine did not
+	sound like an engine at 7000 RMS.
+
+	Although they generally appreciated the voice help, they would have
+	preferred a different speaker. I think they would have liked an
+	appropriate female voice. 
+
+	Several people expressed their desire for music. Several wanted to
+	be able to choose from a selection of tunes.
+
+
+Rear View Mirror
+----------------
+Several people expressed their interest in having the rear view mirror work,
+although one guy in the third group said he didn't need it.
+
+ 
+Other
+----
+One gentleman was consistently able to drive over the rainbow, leading to
+suggestions that the hardware was at fault.
+
+The brake is too close to the gas, and the clutch is too close to the brake.
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 10 June 1988
+
+
+
+Driver APU
+----------
+PC Boards have arrived. Most of the square pads on the top layer
+are too close to the ground plane. The pads for the 0.156 connectors
+are too small (or the holes are too big). There are two extra holes 
+in the board. 
+
+
+Driver Main Rev 4
+-----------------
+I am writing a program that will run on a standalone board. It will
+continuously run checksum tests and log any errors.
+
+
+Driver RAM Board
+----------------
+Boards on order. Gary promised to do a parts list but has not done so.
+
+
+MultiSync
+---------
+We have gotten film and will presumably order boards.
+
+
+Driver ADSP Board Rev 1
+-----------------------
+No change.
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is being made for Stun Runner.
+
+
+Driver Main Board Rev 3 (Gate Array)
+------------------------------------
+No Change.
+
+
+Driver Sound Board Rev 1
+------------------------
+No Change
+
+
+System 3D GSP
+-------------
+Marty is having a WW made.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 17 June 1988
+
+
+
+Driver APU
+----------
+We are having one stuffed. 
+
+Most of the square pads on the top layer are too close to the ground plane. 
+
+Most of the holes are too big and/or the pads are too small. 
+
+There are two extra holes in the board. 
+
+The copyright message is incorrect.
+
+
+Driver Main 
+------------
+I have completed the program that runs on a standalone board, continuously
+running checksum tests and logging any errors. 
+
+With an 8 MHz 68010 and 200 ns EPROM, after 224,000 cycles there have been no 
+checksum errors. (Total of five EPROMs on each bus; board at lab ambient.)
+
+With an 8 MHz 68010 and 250 ns EPROM, after 181,000 cycles there have been no
+checksum errors. (Total of five EPROMs on each bus; board at lab ambient.)
+
+I am working on the program to continuously run and report on RAM tests.
+
+
+Driver RAM Board
+----------------
+The boards have come in; we are having one stuffed.
+
+
+MultiSync
+---------
+Boards on order.
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is being made for Stun Runner.
+
+
+System 3D GSP
+-------------
+Marty is having a WW made.
+
+
+PC Board Status		17 June 1988
+-------------------------------------			
+
+Driver Main	Rev 4	
+
+	Change C142 spacing to 0.5" .
+
+	Add 12V through 10 ohm resistor to pin 10 of each Serial Connector.
+	(This will allow it to power a Mouse.) [Do we want to do this on
+	 production boards?]
+
+	Get sample board before releasing to Rev A.
+
+------------------------------------------------------------------------------
+Driver ADSP	Rev 1	Ready to release to Rev A.
+------------------------------------------------------------------------------
+Driver Sound	Rev 1	
+
+	Some circuit mods, lots of schematic "not loaded".
+
+	Get sample board before releasing to Rev A.
+------------------------------------------------------------------------------
+Driver APU	Rev 1	First boards. 
+
+	Spacing between square pads and ground plane is 
+	too small: CR1, CR2, CR3, CR4, C6, C22, CR5, CR6, CR12.
+
+	MANY OF THE HOLES ARE TOO BIG AND/OR THE PADS ARE TOO SMALL.
+
+	The Copyright meassage is incorrect.
+------------------------------------------------------------------------------
+We need to decide when we can freeze the hardware and schedule PC work with 
+Art.
+
+I need to know if you or Max think there are any problems with the hardware.
+
+If we go ahead and release the hardware on July 18 it will not be possible
+to order final prototypes. 
+
+As you know, we have had great difficulty in getting correct PC Boards from
+PC. It has gotten to the point where there is no assurance that the Board 
+will match the schematic, even if it is done on Schemactive.
+
+The Driver APU board is in special jeopardy because it is analog.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 24 June 1988
+
+
+
+Driver Main 
+------------
+I have fixed the DTACK timing error that showed up with the production
+version of the 34010. The diagnostic program has run 3,819,321 tests
+of the MSP Interface without error.
+
+I have completed several diagnostic programs that continuously run tests 
+and log errors:
+
+   ROM 0 checksum
+   Program RAM
+   MSP Interface
+   MSP Auto-Increment mode
+   MSP Interrupts
+
+Next will be MSP memory verify tests, which I will also add to the Test Menu.
+
+
+Driver APU
+----------
+We have received one from Karen but have not yet tested it.
+
+
+Driver RAM Board
+----------------
+The Disk Drive Interface will be tested next.
+
+
+MultiSync
+---------
+Boards on order.
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is being made for Stun Runner.
+
+
+System 3D GSP
+-------------
+Marty will hook up the WW when he has time.
+
+
+
+PC Board Status		24 June 1988
+-------------------------------------			
+Driver Main	Rev 4	
+
+     There are several mods.
+
+     Get a sample board before ordering production quantities of Rev A boards.
+
+------------------------------------------------------------------------------
+Driver ADSP	Rev 1	Have told Gary to release to Rev A.
+------------------------------------------------------------------------------
+Driver Sound	Rev 1	
+
+     Some circuit mods, lots of schematic "not loaded".
+
+     Get sample board before releasing to Rev A.
+------------------------------------------------------------------------------
+Driver APU	Rev 1	First boards. 
+
+     Spacing between square pads and ground plane is 
+     too small: CR1, CR2, CR3, CR4, C6, C22, CR5, CR6, CR12.
+
+     MANY OF THE HOLES ARE TOO BIG AND/OR THE PADS ARE TOO SMALL.
+
+     The Copyright message is incorrect.
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 1 July 1988
+
+
+
+Driver Main 
+------------
+I am continuing to work on Self-Test.
+
+I have added the MSP Verify test to the Test Menu.
+
+I have added the screen to select the Sound Board Test functions.
+
+Stephanie has fixed the GSP VRAM Verify so it runs and reports the locations
+of bad VRAMs.
+
+
+Driver Sound 
+------------
+I am working on the Self-Test routines for Gary.
+
+
+Driver APU
+----------
+We have received one from Karen but have not yet tested it.
+
+
+Driver RAM Board
+----------------
+The Disk Drive Interface will be tested next.
+
+
+MultiSync
+---------
+Boards on order.
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is being made for Stun Runner.
+
+
+System 3D GSP
+-------------
+Marty will hook up the WW when he has time.
+
+
+
+PC Board Status		1 July 1988
+-----------------------------------			
+
+Driver Main	Rev 4	
+
+     There are several mods.
+
+     We should get a sample board before ordering production quantities 
+     of Rev A boards.
+
+------------------------------------------------------------------------------
+
+Driver ADSP	Rev A	
+
+	Have received Rev A vellums to check.
+
+------------------------------------------------------------------------------
+
+Driver Sound	Rev A	
+
+	Have given PCB input for Rev A.
+
+------------------------------------------------------------------------------
+Driver APU	Rev 1	First boards. 
+
+     Spacing between square pads and ground plane is 
+     too small: CR1, CR2, CR3, CR4, C6, C22, CR5, CR6, CR12.
+
+     MANY OF THE HOLES ARE TOO BIG AND/OR THE PADS ARE TOO SMALL.
+
+     The Copyright message is incorrect.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 8 July 1988
+
+
+
+Driver Main 
+------------
+Max and I have integrated the Self-Test and Diagnostics package into the 
+Game program.
+
+Erik has installed the new Bus Error circuit and it works. We are ready to
+deliver inputs for Rev A.
+
+We have brought up Driver Main Rev 3, #2 .
+
+
+Driver Sound 
+------------
+I am working on the Self-Test routines for Gary.
+
+I have given Joe the new mods.
+
+We have brought up Driver Sound Rev 1, #4.
+
+
+Driver ADSP
+-----------
+The checkprint for Rev A does not match the checkprint for Rev 1. The actual
+Rev 1 boards appear to match the Rev A checkprint but I have no way to check it.
+On the Parts List, the ROMs should be changed to 250 ns.
+
+
+Driver APU
+----------
+We have received one from Karen but have not yet tested it.
+
+
+Driver RAM Board
+----------------
+The Disk Drive Interface will be tested next.
+
+
+MultiSync
+---------
+Boards on order.
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is being made for Stun Runner.
+
+
+System 3D GSP
+-------------
+Marty will hook up the WW when he has time.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 15 July 1988
+
+
+PC Board Status
+---------------
+Driver ADSP	Rev 1	Waiting for the Rev A schematic and parts list.
+			Otherwise ready to release Rev A.
+
+
+Driver Sound	Rev 1	Waiting for the Rev A parts list.
+			Otherwise ready to release Rev A.
+
+
+Driver Main	Rev 4	Joe is working on it and expects to be done Wednesday.
+		 	If I am able to solve the display glitch problem I 
+			will give him the additional mods even if it delays 
+			release	for a few days.
+
+
+Driver APU	Rev 1	First boards:
+
+	Q3 (The 7815) is BACKWARDS.
+
+	Spacing between the square pads and the ground plane is 
+	too small: CR1, CR2, CR3, CR4, C6, C22, CR5, CR6, CR12.
+
+	MANY OF THE HOLES ARE TOO BIG AND/OR THE PADS ARE TOO SMALL.
+
+	The Copyright message is incorrect.
+
+
+Power Requirements
+------------------
+A system consisting of the Main Board (Rev 3), ADSP Board, and Sound Board 
+required 10.2 Amps at 5V.
+
+
+MultiSync
+---------
+We have received the boards and are having one stuffed.
+
+
+Driver Sound 
+------------
+I am working on the Self-Test routines.
+
+
+Driver RAM Board
+----------------
+The Disk Drive Interface will be tested next.
+
+
+ADSP Graphics RAM Board
+-----------------------
+Another one is being made for Stun Runner.
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 22 July 1988
+
+
+
+PC Board Status
+---------------
+Driver ADSP	Rev 1	Waiting for the Rev A schematic and parts list.
+			Otherwise ready to release Rev A.
+
+
+Driver Sound	Rev 1	Waiting for the Rev A parts list.
+			Otherwise ready to release Rev A.
+
+
+Driver Main	Rev 4	Waiting for the Rev A parts list.
+			Otherwise ready to release Rev A.
+
+
+Driver APU	Rev 1	After the Main, ADSP, and Sound Boards are released
+			I will ask PC to work on the APU Board.
+
+	Q3 (The 7815) is BACKWARDS.
+
+	Spacing between the square pads and the ground plane is 
+	too small: CR1, CR2, CR3, CR4, C6, C22, CR5, CR6, CR12.
+
+	MANY OF THE HOLES ARE TOO BIG AND/OR THE PADS ARE TOO SMALL.
+
+	The Copyright message is incorrect.
+
+
+MultiSync
+---------
+A MultiSync board has been stuffed but remains unmodded. (There are two small
+mods). If the board ever gets modded and if it ever gets a harness, power  
+supply, and development system I am ready to bring it up.
+
+	I asked Don Paauw about putting LETA II in a 20 pin DIP and
+received the following reply:
+
+
+From:	SANDY::PAAUW        22-JUL-1988 12:18
+To:	MARGOLIN,PAAUW
+Subj:	RE: LETA
+
+    There is an updated copy of the LETA-II spec in the components file or I 
+have an extra copy that you may have.
+
+    The LETA-II should fit into a 20 pin DIP but this would reqiuire a new 
+test fixture and a new test program for VTI's Sentry test.  This would cost
+a few thousand dollars.  The piece price wouldn't change much, if at all,
+so it would be hard to justify a new package.
+
+-- Don
+
+
+	According to the LETA II documentation the Clock and Direction 
+quadrature signals are clocked into a state machine. The 720 game used
+160 KHz. The LETA II document (which is a marked up and not particularly 
+legible copy of the LETA I document) says this clock is 450 KHz. maximum.
+
+	The game gets the count information through a dual port RAM. All of this
+is in the Gate Array.
+
+	I asked Don if there was some kind of synchonizer in LETA II to
+prevent the count changing while it was being read. He said he didn't
+think there was.
+
+	My guess is that reading the count while it was changing would
+give the wrong count. If the 68010 runs at 8 MHz and the LETA II Clock
+is 8/32 = 250 KHz I would expect a very rough maximum average of 1/32 = 3% of
+the counts to be wrong.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 29 July 1988
+
+
+
+PC Board Status
+---------------
+
+Driver ADSP	I am ready to release Rev A.
+
+Driver Sound	I am ready to release Rev A.
+
+Driver Main	I am ready to release Rev A.
+
+Driver APU	Rev 1	After the Main, ADSP, and Sound Boards are released
+			I will ask PC to work on the APU Board.
+
+
+Stun Runner
+-----------
+I have delivered a debugged MultiSync board to the Stun Runner Project.
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 5 August 1988
+
+
+
+PC Board Status
+---------------
+
+Driver ADSP	We have released Rev A.
+
+Driver Sound	We have released Rev A.
+
+Driver Main	We have released Rev A.
+
+Driver APU	Rev 1	After the Main, ADSP, and Sound Boards are released
+			I will ask PC to work on the APU Board.
+
+
+Micron VRAMs
+------------
+On a board with Micron VRAMs loaded in 30 of 32 positions the VRAM Verify test
+has run 1199 cycles without error.
+
+
+Self-Test
+---------
+I am continuing to work on the program.
+
+
+Stun Runner
+-----------
+They have not set up a development system for the MultiSync board that
+I delivered to them last week.
+
+_____________________________________________________________________________
+_____________________________________________________________________________
+
+Game Idea - BattleZone II
+Jed Margolin	8/8/88
+
+
+
+Perspective: 	3D with Polygons
+
+
+Hardware: 	Driver System or MultiSync
+
+
+Cabinet:	1. Driver Sitdown
+		2. Upright
+
+
+Controls:	Star Wars Control,
+		Footpedal for Gas,
+		Lever to select Forward or Reverse
+		Switch to select Magnification factor,
+		Switches to select Weapons.
+
+
+Screen:		The lower part of the screen has a control panel which 
+		contains:
+
+		  	Fuel Guage, 
+			Speedometer, 
+			Radar Display, 
+			Weapons Display,
+			Message Screen.
+
+
+Weapons:	25mm machine gun (coaxial with the main gun)
+		Armour piercing shells
+		High Energy Shells
+		TOW Missiles
+
+
+Situation:	The player is inside his tank, able to drive it, change
+		the angle of the main gun, select weapons, and fire them.
+
+
+Game Play:	The player drives around and is confronted by other vehicles: 
+		American and Russian Tanks, American and Russian Helicopters, 
+		and American and Russian Personnel Carriers.
+
+		The player must identify the targets. Destroying an American 
+		vehicle loses a player's life, but a Russian vehicle that is
+		not destroyed in time will fire on the player.
+
+		Destroying a Russian vehicle earns the player big points.
+		
+		The player starts with appropriate supplies of fuel and
+		ammunition.
+
+		Machine gun and main gun rounds follow ballistic trajectories.
+		TOW Misiles are guided by the player to the target.
+	
+		Some targets can be destroyed with machine gun fire (There is
+		a lot of 25mm ammo.) Some require High Energy or Armour 
+		Piercing. (There are fewer rounds of this ammo). Some targets 
+		can only be destroyed with TOW Missiles. (There are not many
+		TOW Missiles.)
+
+ 		If the player reaches a resupply depot he can replenish his
+		supplies. However, resupply depots are considered prime
+		targets by the enemy.
+
+
+Game Link:	Up to six of these units can be linked together in the
+		Atari Battle Network, accommodating BattleZone II (Tank),
+		the Helicopter Game, and the Jet Aircraft Game.
+
+
+Game Over:	The game ends when the player loses the requisite number
+		of lives. A player who runs out fuel and ammunition will
+		not long survive.
+
+
+
+Game Idea - Helicopter Game
+Jed Margolin	8/8/88
+
+
+Perspective: 	3D with Polygons
+
+
+Hardware: 	Driver System or MultiSync
+
+
+Cabinet:	Driver Sitdown
+
+
+Controls:	Floor mounted joystick,
+		Throttle/Collective Pitch,
+		Footpedals for Tail Rotor,
+		Switches to select Weapons.
+
+		Mode 1: Extensive computer assist in flying the craft.
+		Mode 2: Mostly Manual (No Engine Torque correction required).
+		Mode 3: Full Manual (Engine Torque correction required).
+
+
+Screen:		The lower part of the screen has a control panel which 
+		contains:
+
+			Altitude Indicator,
+			Airspeed Indicator,
+		  	Fuel Guage, 
+			Engine RPM,
+			Radar Display, 
+			Weapons Display,
+			Message Screen.
+
+
+Weapons:	25mm machine gun 
+		Heat Seeking Missiles
+		TOW Missiles
+
+
+Situation:	The player is inside his helicopter, able to fly it, select 
+		weapons, and fire them.
+
+
+Game Play:	The player flies around and is confronted by other vehicles
+		and aircraft: American and Russian Tanks, American and Russian
+		Helicopters, and American and Russian Personnel Carriers.
+
+		The player must identify the targets. Destroying an American 
+		vehicle loses a player's life, but a Russian vehicle that is
+		not destroyed in time will fire on the player.
+
+		Destroying a Russian vehicle earns the player big points.
+		
+		The player starts with appropriate supplies of fuel and
+		ammunition.
+
+		Machine gun rounds follow ballistic trajectories.
+		Heat Seeking Missiles will seek heat sources; if fired at an
+		appropriate target at an appropriate range it will hit the 
+		target. TOW Misiles are guided by the player to the target.
+	
+		Some targets can be destroyed with machine gun fire (There is
+		a lot of 25mm ammo.) Some are best handled with Heat Seeking
+		Missiles; others with TOW Missiles. (If the target is in front
+		of the sun, do not use a Heat Seeking Missile.)
+
+ 		If the player reaches a resupply depot he can replenish his
+		supplies. However, resupply depots are considered prime
+		targets by the enemy.
+
+
+Game Link:	Up to six of these units can be linked together in the
+		Atari Battle Network, accommodating BattleZone II (Tank),
+		the Helicopter Game, and the Jet Aircraft Game.
+
+
+Game Over:	The game ends when the player loses the requisite number
+		of lives. A player who runs out fuel and ammunition will
+		not long survive.
+_____________________________________________________________________________
+{ Date Unknown }
+
+  1. According to Erwin, JAE #DICF-24C without the E2 suffix is 0.6" 
+     wide instead of 0.4" wide. There are therefore not useable.
+
+  2. Rick and I have decided that we will build the first 100 games with 
+     sockets for the VRAMs (32 per) and solder the parts in thereafter 
+     (unless there are problems with the VRAMs or if manufacturing objects).
+
+  2. There are other parts with 12 (or more) week lead times. 12 week
+     lead times on the sockets would be ok.
+
+  3. JAE has lied about the availability of sockets before. When I needed
+     320 for prototypes in May they promised two week delivery. I actually
+     received them last week. I would just as soon not buy anything from them.
+
+  4. Erwin says he gave you information on sockets with machine tooled pins.
+     Please look for it and find out cost and delivery for 3200 pieces.
+
+  5. While I am generally not available in the morning, I am here every 
+     afternoon and most evenings. I read my VAX mail every day and I always 
+     respond to messages sent to my attention.
+
+  6. The following is the AVL entry for the VRAM socket, 179258-014:
+
+
+PART STATUS IS: ACTIVE     
+PART NUMBER  DESCRIPTION
+179258-024   Socket,IC,24ckt/.400,Stamped,Phos_br,Tin                        
+
+MANUFACTURER                  VENDOR PART NUMBER     STATUS        TRANS DATE
+ROBINSON-NUGENT               ICN-244-S4-T           DISQUALIFIED  10-MAY-1988
+ROBINSON-NUGENT               ICN-244-S4-G           DISQUALIFIED  10-MAY-1988
+JAPAN_AVIATION_ELECTRONICS    DICF-24C-E2            APPROVED      11-MAR-1988
+JAPAN_AVIATION_ELECTRONICS    DICF-24A-E2            APPROVED      11-MAR-1988
+
+
+
+	Jed
+_____________________________________________________________________________
+{ Date Unknown }
+
+We are waiting to do the Driver ECNs until we have a chance to really
+go over the Pre-Prods.
+
+But.
+
+Since we have already decided not to stuff the DUART IC, I want to
+make sure you know so you won't order it.
+
+It is on ASSY, Driver MAIN PCB, P/L A044425-21:
+
+Item 9, pn/ 137543-001
+_____________________________________________________________________________
+{To PCB Department, Date Unknown }
+
+Please make me the following plots for MultiSync Rev 2:
+
+
+Vellum	1:1	Top
+Vellum	1:1	Bottom
+Vellum	1:1	+5
+Vellum	1:1	GND
+Vellum	1:1	Silkscreen
+
+Paper	1:1	4 layers plus silscreen (1 plot)
+
+Paper	1:2	Silkscreen
+
+
+ Thanks,
+
+		Jed
+_____________________________________________________________________________
+{ Date Unknown }
+
+34020
+-----
+I have obtained the following information from Jeff Twombly of TI about the 
+34020:
+
+   Samples will probably be available in April if the first silicon works.
+
+   Production quantities will probably be available in August/September
+   if the first silicon works.
+
+   My prediction is that early '90 is more realistic.
+
+   Jeff's prediction for prices in early '90 is:
+
+	34020	32 MHz	$150-$160
+		40 MHz	$210-$225
+
+	1MB VRAM	$30-$45		($66 now)
+
+	1MB DRAM	$15-$18
+
+
+   The 34020 has a 32 bit external memory bus and would therefore require
+   eight VRAMs. Eight 1MB VRAMs would thus be 1M Byte VRAM which is what
+   the Driver Turbo has now. 
+
+   The 34020-40 has instruction cycle time of 100 ns verses 160 ns for the 
+   34010-50 that we are currently using.
+
+   Taking into account the 32 bit data bus and the ability of 1 MB VRAMs
+   to write four pixels at a time, the maximum fill rate of the 34020-40
+   would be 80 MegaPixels/sec. The other instructions would execute 66%
+   faster than on the 34010-50.
+
+   A 34020-40 and eight 1MB VRAMs would cost $450-$585 in early '90.
+
+
+   Even if the costs were acceptable it would not be prudent to plan on the
+   34020 being available in time for June '89 production of Stun Runner.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 15 August 1988
+
+
+
+PC Boards
+---------
+Driver APU	We have released Rev A.
+
+All PC Boards have now been released.
+
+
+
+VRAM Sockets
+------------
+I have asked Melanie to get prices for sockets with machine-tooled pins as
+an alternative to the JAE sockets which have a long lead time and which
+have jumped in price.
+
+I recommend that only the first 100 Main boards be built with VRAM sockets.
+Unless there are problems the remainder should be built with the VRAMs
+soldered in.
+
+If the VRAM sockets continue to be a problem I would feel comfortable soldering
+the VRAMs in on all boards as long as everyone involved knows that TI VRAMs
+must be at least Rev H (marked HH) and not Rev C (marked HC).
+
+
+
+Self-Test
+---------
+I am continuing to make progress.
+
+
+
+Stun Runner
+-----------
+They have not set up a development system for the MultiSync board that
+I delivered to them two weeks ago.
+
+
+
+System 3D GSP
+-------------
+Marty and I have brought up the board. I still have some Test Program 
+conversion to do.
+
+
+	Jed
+
+
+
+Proposed changes to Self-Test			J. Margolin    8/15/88
+
+
+Once Self-Test has started, pressing the Start Switch will terminate Self-Test
+and go immediately to the Menu.
+
+The first Menu will be:
+
+	OPERATOR SCREENS
+	MONITOR TEST PATTERNS
+	GSP TESTS
+	MSP TESTS
+	ADSP TEST
+	CONTROLS
+	CLOCK
+	SOUND TESTS
+
+
+The GSP Test Screen will be:
+
+	EXIT
+	VRAM SIMPLE TEST - 30 SECS
+	VRAM VERIFY	 - 3 MINUTES
+	VRAM COMPLETE    - 22 MINUTES
+	TEST VRAM FOR DISPLAY GLITCHES
+	COLOR RAM
+
+The MSP Test Screen will be:
+
+	EXIT
+	MSP VERIFY   - 90 SECONDS
+	MSP COMPLETE - 3 MINUTES
+
+
+The CONTROLS Test Screen will be:
+
+	8 BIT A/D
+	12 BIT A/D
+	STEERING WHEEL
+	SHIFTER
+	  ?	
+
+
+Stephanie will need to add some code to her part of Self-Test to bail out
+of the test and go to the Menu.
+
+She will also need to add the Color RAM Tests.
+
+I suggest she wait until after the game goes out on Field Test.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 19 August 1988
+
+
+
+PC Boards
+---------
+All PC Boards have been released.
+
+
+
+Self-Test
+---------
+I have implemented the change to the Menu structure discussed last week and
+am continuing to refine the Self-Test program.
+
+
+
+Stun Runner
+-----------
+They have not set up a development system for the MultiSync board that
+I delivered to them three weeks ago.
+
+
+
+System 3D GSP
+-------------
+The board is working. There is some video noise that I believe is caused by
+WW construction.
+
+The 68010 Test Program is working, putting characters and a cursor on the 
+screen. Either Jim or Max will have to do the 34010 program but there does not
+appear to be a big rush for it.
+
+Marty has ordered a 34010-40 so we can have our 34010-50 back.
+
+
+
+	Jed
+
+
+Driver Self-Test
+----------------
+Once Self-Test has started, pressing the Start Switch will terminate Self-Test
+and go directly to the Menu.
+
+The first Menu will be:
+
+	OPERATOR SCREENS
+	MONITOR TEST PATTERNS
+	GSP TESTS
+	MSP TESTS
+	ADSP TEST
+	CONTROLS
+	CLOCK
+	SOUND TESTS
+	ROM CHECKSUMS
+
+
+The GSP Test Screen will be:
+
+	EXIT
+	VRAM SIMPLE TEST - 30 SECS
+	VRAM VERIFY	 - 3 MINUTES
+	VRAM COMPLETE    - 22 MINUTES
+	TEST VRAM FOR DISPLAY GLITCHES
+	COLOR RAM
+
+
+The MSP Test Screen will be:
+
+	EXIT
+	MSP VERIFY   - 90 SECONDS
+	MSP COMPLETE - 3 MINUTES
+
+
+The CONTROLS Test Screen will be:
+
+	EXIT
+	8 BIT A/D
+	12 BIT A/D
+	STEERING WHEEL
+	SHIFTER
+	DUART	
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 26 August 1988
+
+
+
+PC Boards
+---------
+All PC Boards have been released.
+
+
+
+VRAM Sockets
+------------
+Melanie has ordered side-stackable VRAM sockets with machine tooled pins from
+Texas Instruments for $.50, which is less than the $.54 that JAE wanted for 
+sockets with stamped pins. The TI sockets are also lots more available than
+the JAE sockets.
+
+ 
+
+Self-Test
+---------
+I am continuing to refine the Self-Test program.
+
+
+
+Stun Runner
+-----------
+They have finally set up a development system for the MultiSync board.
+
+Glen (their new Tech) and I have brought up the system.
+
+
+
+System 3D GSP
+-------------
+Marty has received his 34010-40 and returned our 34010-50.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 6 September 1988
+
+
+
+
+PC Boards
+---------
+All PC Boards have been released.
+
+
+
+Self-Test
+---------
+I am continuing to refine and document the Self-Test program.
+
+
+
+Items to Resolve
+----------------
+
+   1. Whether the customer will get schematics.
+
+
+   2. I want Stephanie to use RAM 0 for her memory tests instead of RAM 1.
+
+      I need a flag to indicate if the GSP Verify test has timed out (instead
+      of all the VRAMs being bad).
+
+      I need a flag to indicate if the MSP Verify test has timed out (instead
+      of all the DRAMs being bad).
+
+      I need a memory test for the Color RAMs.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 9 September 1988
+
+
+
+PC Boards
+---------
+All PC Boards have been released.
+
+
+
+Self-Test
+---------
+I am continuing to refine and document the Self-Test program.
+
+I have finished the operator screen that displays games played by
+day and hour.
+
+
+
+101 PGA Socket (179236-001)
+---------------------------
+According to ManMan we have ordered (and received) 32 sockets at $7.42 each. 
+
+There are no purchase orders for more.
+
+I have asked Melanie to look into it.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 16 September 1988
+
+
+PC Boards
+---------
+All PC Boards have been released.
+
+
+Self-Test
+---------
+I have finished most of the Motor Driver Tests and am continuing to refine 
+and document the Self-Test program.
+
+
+101 PGA Socket (179236-001)
+---------------------------
+According to Verna, Purchasing is aware of our long leadtime parts and is 
+ordering them as required to meet our schedule.
+
+The sockets have a 2 - 4 week leadtime and therefore have not been ordered yet.
+
+100 Position Socket for Plastic Quad Flat Pack (PQFP) ICs 
+---------------------------------------------------------
+According to Corrinda at AMP they make a Micro-Pitch Socket for Plastic 
+Quad Flat Pack (PQFP) ICs. 
+
+It is a two-piece socket with the pieces sold separately.
+
+				 500	1000	5000
+				-----	-----	-----
+
+	Housing	821949-4	$8.69	$7.98	$7.80		6-8 weeks 
+
+	Cover	821939-1	$1.12	$1.04	$0.83		6-8 weeks 
+				-----	-----	-----
+				$9.81	$9.02	$8.63
+
+According to the sell sheet:
+
+	" Providing a rugged, cost effective method of protecting the PQFP 
+	  during shipping, the cover contains slots that not only protect and 
+	  separate the leads, but also ensure proper lead-to-contact 
+	  registration between chip and socket. "
+
+Bob Grant has given me the data sheet and a drawing and two samples of the 132
+position socket. (I gave one to Erwin.) Bob will try to get me samples of the 
+100 position socket set.
+
+System 3D is using a 128 position PQFP for which no production socket is 
+available. Unfortunately, it is not a JEDEC package. The AMP sockets are
+for JEDEC standard packages like the ADSP-2100 PQFP.
+
+I showed Morgan the socket and he expressed some interest in it. In the 
+process he and I have determined that it might be possible to lay out the PCB 
+footprint so that the PQFP can be socketed ot soldered. (PQFP is surface mount.)
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 7 October 1988
+
+
+PC Boards
+---------
+All PC Boards have been released.
+
+
+
+Self-Test
+---------
+I am continuing to refine and document the Self-Test program.
+
+
+
+100 Position Socket for Plastic Quad Flat Pack (PQFP) ICs 
+---------------------------------------------------------
+I have received three sample sockets from AMP.
+
+
+
+CERs
+----
+I have submitted CERs for 50.0 MHz and 60.0 MHz crystal oscillator modules and
+for the new Zener for the 12 Bit A/D on the Main Board.
+
+  
+
+Parts to Manufacturing
+---------------------
+To help with the preprods we have given (loaned?) them:
+
+	(30)	R2R resistor networks
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+Other
+-----
+I have done a cost estimate for Sega's Space Harrier PC Boards.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 14 October 1988
+
+
+Rev A Pre-Prod Boards:
+---------------------
+
+Main:
+  #1  Ok.
+  #2  Had one bad bit in a Micron VRAM Shift Register (SD1), otherwise ok.
+
+ADSP:
+  #1  Shorted line (DMA1) due to bent lead from bypass cap. (still not working)
+  #2  Ok
+  #3  Ok
+ 
+SOUND:
+  #1  Several shorts due to bent leads on bypass capacitors. 
+  #2  Ok
+
+
+Max will write additional ADSP test programs which I will incorporate into the
+Test Menus.
+
+
+
+Self-Test
+---------
+I am continuing to refine and document the Self-Test program.
+
+
+
+CERs
+----
+I have received part numbers for 50.0 MHz and 60.0 MHz crystal oscillator 
+modules and for the new Zener for the 12 Bit A/D on the Main Board.
+
+  
+
+Parts to Manufacturing
+---------------------
+They have repaid our (30) R2R resistor networks.
+
+
+
+	Jed
+
+							14 October 1988
+
+
+Driver Main REV A ECNs so far:
+-----------------------------
+   1. Parts List: Change Part Number 179262-016 (housing) to 179261-016 (header)
+      [part number was incorrect]
+
+   2. Parts List: Delete Connector J13 [Used for development only].
+
+   3. Parts List: Change J7 Part Number 179157-060 (Rt angle header) to 
+      179021-060 (Straight header). [Makes the board easier to wave solder]
+
+   4. Parts List: After the first 100 games do not use sockets for VRAMs.
+
+   5. Circuit changes: Schematic Sheet 9. Make changes as per attached sheets.
+      [New 5 turn steering wheel pot requires change to A/D Reference]
+
+   6. Circuit Changes: Schematic Sheets 4, 6, 8, and 16. Make changes as per 
+      attached sheets. [Adds the ability to disable writes to ZeroPower RAM]
+
+   7. Parts List: Delete Item 9, 137543-001 (68681). [DUART is not used in the 
+      production version of this game]
+
+   8. Parts List: Change XOSC3 from 48 MHz to 50 MHz. (144008-005)
+      [Improves the car response] 
+
+
+Driver ADSP REV A ECNs
+----------------------
+   1. Parts List: Change J1 Part Number 179157-060 (Rt angle header) to 
+      179021-060 (Straight header).  [Makes the board easier to wave solder]
+
+   2. Add silkscreen for oscillator module.
+
+
+Driver Sound REV A ECNs
+-----------------------
+   1. Parts List: Change J1 Part Number 179157-060 (Rt angle header) to 
+      179021-060 (Straight header).  [Makes the board easier to wave solder]
+
+   2. Schematic: Sheet 2, change -14v to -22v(unreg). [Label change only]
+
+   3. Add 10K Resistor Network to pull up Bus SD7 - SD14.
+
+
+Driver APU REV A ECNs
+---------------------
+   1. Change Title from 'APU Driver' to 'Driver APU' .
+
+   2. Change Label at JACDC-1 from -18VDC to -20VDC
+
+   3. Change connector JP from 2 position 0.1 ctr to 3 position 0.156 ctr.
+
+   4. Q6 and Q7 are wrong. (There are also PC errors)
+
+							14 October 1988
+
+
+Shifter Rev A  ECNs
+-------------------
+   1. Change XPOT pin 6 to XPOT pin 25.
+
+   2. Change YPOT pin 8 to YPOT pin 26.
+
+   3. Change R18 470k to R18 470 ohm.
+
+
+Motor Amp Rev A ECNs
+--------------------
+   1. Add location holes for auto insertion.
+
+   2. Schematic: change Q3 from 1N3904 to 2N3904.
+
+   3. Schematics: F1 - no value, CR7 - no value.
+
+   4. Consolidate schematics from three sheets to 2 sheets.
+
+
+Strain Guage Brake Rev A ECNs
+-----------------------------
+   1. Change Label at J1-5 from +15 to +15 Reg.
+
+   2. J1-1 change to J1-4 Strain Guage Connection Correction
+
+   3. Change C8 from pn 127002-106 to pn 127001-106 Kemet only.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 21 October 1988
+
+
+
+Self-Test
+---------
+I am continuing to refine and document the Self-Test program.
+
+I have incorporated Mark Sherman's suggestions into the Test Menu.
+
+I have started writing the test programs to run on the 2100.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 28 October 1988
+
+
+
+Self-Test
+---------
+
+I have put in the programs to report back to the screen the results of the
+Sound Board Tests, including the Sound Program ROM checksums. Next will be
+to report back the Sound Data ROM checksums.
+
+
+I have started writing the test program utilities to run on the 2100.
+
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+
+TI user Manuals
+---------------
+
+I have obtained two copies of the new 1988 TMS34010 User's Guide which 
+contains the specs for the 60 MHz 34010. I have also received the 1988 
+TMS34010 C Compiler Reference Guide. (I have given one copy of each to Max).
+
+In the process of getting the guides I have also received several copies of 
+the 1987 Assembly Language Tools User's Guide and the TMS320 User's Guide,
+both guides shipped in error.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 6 November 1988
+
+
+
+Self-Test
+---------
+The test program now reports back and displays the Sound Data ROM checksums.
+
+I have integrated the ADSP-2100 test utilities into Self-Test and the Menu.
+
+	In Self-Test it:       Determines if the 2100 is alive;
+			       Checks if the 2100 can issue a 68010 interrupt;
+			       Does Graphics ROM checksums.
+
+	It does not currently do anything about Graphics ROM checksums. Max 
+	will have to put them in, first.
+
+	The results in Self-Test are Go/NoGo. 
+
+	In the ADSP Menu each test is run individually with specific results 
+	reported back to the screen. The actual Graphics ROM checksums are 
+	displayed.
+
+Next: 	Color RAM test (Stephanie will have to supply the code);
+
+	More Steering Wheel tests.
+
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+Other
+-----
+I have submitted a CER for the zener for the new A/D reference.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 11 November 1988
+
+
+
+PC Boards
+---------
+    I have given Art the inputs for Driver Main Rev B, Driver ADSP Rev B, and 
+Driver Sound REV B.
+
+    A copy of the list is attached. Schematics are available by request.
+
+    Art's suggestion for having VRAM sockets in only the first 100 Main Boards
+is to have the documentation with no sockets and do a Deviation for the first
+100 boards to have VRAM sockets.
+
+    Art said that his department would write up the ECNs.
+
+   I have submitted a CER for an axial capacitor for C122 on Driver Main, as
+requested by Manufacturing.
+
+
+Self-Test
+---------
+   There is now a test menu for the ADSP Board that provides 'scope loops
+for hardware diagnostics.
+
+   I am working on more Steering Wheel Tests, including line voltage 
+measurement.
+
+   Next: Color RAM test (Stephanie will have to supply the code);
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+Service Manual
+--------------
+I have updated the service manual and given a copy to Rosalind.
+
+
+
+	Jed
+
+
+Driver Main REV A ECNs:			11/1/88		J. Margolin
+----------------------
+   1. Parts List: Change Part Number 179262-016 (housing) to 179261-016 (header)
+      		  [part number was incorrect]
+
+   2. Parts List: Delete Connector J13 [Used for development only].
+
+   3. Parts List: Change J7 Part Number 179157-060 (Rt angle header) to 
+      179021-060 (Straight header). [Makes the board easier to wave solder]
+
+   4. Parts List: After the first 100 games do not use sockets for VRAMs.
+
+   5. Circuit changes: Schematic Sheet 9. Make changes as per attached sheet.
+      [New 5 turn steering wheel pot requires change to A/D Reference]
+
+   6. Circuit Changes: Schematic Sheets 4, 6, 8, and 16. (Add 74ALS32 to 200L 
+      and run some traces.)
+      [Adds the ability to disable writes to ZeroPower RAM]
+
+   7. Parts List and schematic label: Change XOSC3 from 48 MHz to 50 MHz. 
+      (144008-005)  [Improves the car response] 
+
+   8. Silkscreen the connector names on the board.
+
+   9. Schematic Label: Sheet 2. Change -14V labels to -22v.
+
+
+Driver ADSP REV A ECNs
+----------------------
+   1. Parts List: Change J1 Part Number 179157-060 (Rt angle header) to 
+      179021-060 (Straight header).  [Makes the board easier to wave solder]
+
+   2. Add silkscreen for oscillator module.
+
+
+Driver Sound REV A ECNs
+-----------------------
+   1. Parts List: Change J1 Part Number 179157-060 (Rt angle header) to 
+      179021-060 (Straight header).  [Makes the board easier to wave solder]
+
+   2. Schematic: Sheet 2, change -14v to -22v(unreg). [Label change only]
+
+   3. Add 10K Resistor Network to pull up Bus SD7 - SD14.
+
+
+Driver APU REV A ECNs
+---------------------
+   1. Change Title from 'APU Driver' to 'Driver APU' .
+
+   2. There are PC errors. See Rick.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 18 November 1988
+
+
+
+PC Boards
+---------
+	Driver Main Rev B has been released.
+
+	Leon is working on Driver ADSP (the oscillator silkscreen and
+the connector).
+
+	Joe has finished Driver Sound Rev B (the connector and the Sound Data
+Bus pullups).
+
+	I have submitted a CER for the 12V Zener in case we have to use 
+	  10-turn pots for the Steering Wheel.
+
+
+
+Self-Test
+---------
+   	The ADSP Board test screens are done.
+
+   	The line voltage measurement works. I am still working on more 
+	Steering Wheel Tests, including the Opto Tests.
+
+   	Stephanie is working on the Color RAM test.
+
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+
+Other
+-----
+	If I had an AT Clone I could probably write the 34010 routines to 
+test the VRAM Shift Registers.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 28 November 1988
+
+
+Driver PC Boards
+----------------
+
+		PC Board	 PC Board 		Complete PC Board
+		 Naked		Subassembly		   Assembly
+		---------	-------------		------------------
+
+Driver Main	044426-01     	A044425-01 B		A045988-01 B 
+
+Driver ADSP	044422-01     	A044421-01 B		A045989-01 B
+
+Driver Sound	044428-01     	A044427-01 B		A046491-01 B
+
+
+The PC Board Subassembly is the PC Board with soldered components.
+
+The PC Board Final Assembly includes all the parts that go in sockets.
+
+==============================================================================
+Self-Test
+---------
+	I have finished the Motor Amp Opto Tests.
+
+	I am working on the Steering Wheel Pot Life Test.
+
+   	Stephanie has finished the Color RAM test. I am working on integrating
+	it into the Test Program.
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+Other
+-----
+	If I had an AT Clone I could probably write the 34010 routines to test
+the VRAM Shift Registers.
+
+	I have finished the design of the Dip Gyro Controller.
+
+
+MultiSync
+---------
+
+	Leon is working on MultiSync Rev 2.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 5 December 1988
+
+
+
+Driver PC Boards
+----------------
+I have signed off on Driver Main Rev B, Driver ADSP Rev B, and Driver Sound 
+Rev B.
+
+
+
+Driver MultiSync
+----------------
+Leon has finished MultiSync Rev 2, minus the Steering Wheel Optical Encoder.
+
+
+
+Self-Test
+---------
+	I have finished the Steering Wheel Pot Life Test and given a set of
+	ROMs to Erick Peterson.
+
+   	I have integrated the Color RAM test into the Test Program.
+
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+Other
+-----
+	If I had an AT Clone I could probably write the 34010 routines to test
+the VRAM Shift Registers.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 9 December 1988
+
+
+Driver PC Boards
+----------------
+I have gotten the programmed part numbers to increase the number of Sound Data
+ROMs from 6 to 12 and given them to Art.
+
+I have given Art the deviation to have the first 100 games use sockets for the
+VRAMs.
+
+
+Driver MultiSync
+----------------
+I am waiting for the jury to come back with the verdict on the Steering Wheel 
+Optical Encoder.
+
+
+Self-Test
+---------
+I am working on the A/D Input screens.
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+Aux GSP For System 3D
+---------------------
+It is now working, locked to their System Sync. There was a problem due
+to the number of pixel clocks in their Horizontal Sync not being
+divisible by 4. The way I solved it would probably be worth a Patent 
+in most other companies. Details are available upon request.
+
+
+ROM Release Form
+----------------
+I have done a sample form for the table of information required to release
+ROMs.
+
+
+Other
+-----
+Since I do not have an AT Clone and there does not appear to be any prospects
+of the company getting me one anytime soon, this request will be absent
+in future Status Reports. 
+
+Likewise, the VRAM Shift Register Tests that I had hoped to write with said
+AT Clone will be absent from the Hard Drivin' Self-Test.
+
+
+
+	Jed
+
+									1 of 2
+
+SYNCHRONIZING THE 34010 TO EXTERNAL SYNC WHEN THE EXTERNAL SYNC IS NOT THE
+CORRECT INTEGER DIVISIBLE FACTOR OF VCLK
+
+
+Jed Margolin		
+12/9/88
+
+
+
+Because the maximum VCLK frequency is 12.5 MHz, it is derived by dividing
+the 25 MHz pixel clock by four, to produce a VCLK of 6.25 MHz.
+
+(On earlier 34010 data sheets the maximum VCLK frequency was 7.5 MHz .)
+
+When used with External Sync, the 34010 samples the External Sync on the
+rising edge of VCLK.
+
+When the External Horizontal Sync is not divisible by a factor of four
+pixel clocks, the 34010 Sync will be offset by from 0 to 3 pixel clocks on
+each line. For example: line n could be offset by 0, line n+1 offset by 1, 
+line n+2 off by 2, line n+3 offset by 3.
+
+Because 34010 Blanking is produced from this same signal, it will also be off 
+from 1 to 3 pixel clocks on each line. Because the pixel scanner is initiated
+from Blanking the horizontal lines will not line up.
+
+Possible solutions are:
+
+	1. Redesign the External Sync so it is divisible by a factor of four
+	   Pixel Clocks.
+
+	This may not be feasible because of design time contraints or because
+	of the requirements of other hardware using the Sync timing.
+
+
+
+	2. Use External Blanking instead of 34010 Blanking to initiate the
+	   Pixel Scanner.
+
+	This results in the loss of flexibility of the 34010's ability
+	to have Blanking under software control.
+
+
+
+	3. Use External Sync to trigger a digital delay whose output
+	   will initiate the pixel scanner.
+
+	Because the pixel clock is 25 MHz it requires several ICs to produce 
+	the required delay.
+
+	This also results in the loss of flexibility of the 34010's ability
+	to have Blanking under software control unless addition ICs are
+	used to bring the delay under software control.
+
+									2 of 2
+
+SYNCHRONIZING THE 34010 TO EXTERNAL SYNC WHEN THE EXTERNAL SYNC IS NOT THE
+CORRECT INTEGER DIVISIBLE FACTOR OF VCLK
+
+	4. When External Sync goes high, use this signal to clock the states
+	   of 12.5 MHz and 6.25 MHz (VCLK) into a register. These two states
+	   indicate the number of pixels by which the pixel scanner must be 
+	   delayed into order to start at the correct position referenced to 
+	   External SYNC. This is accomplished by using these two latched 
+	   signals as the preset data to the Pixel Scanner. State 1 requires a 
+	   delay of 3 pixels, State 2 requires a delay of 2 pixels, State 3 
+	   requires a delay of 1 pixel, and State 0 requires no delay.
+
+
+	This requires only one additional IC and retains the flexibility of 
+	having Blanking under software control of the 34010.
+
+
+
+
+
+
+		     ____      ____      ____      ____      ____
+25 MHz		____/    \____/    \____/    \____/    \____/    \____
+PIXEL CLOCK		    |	      |         |         |         |
+		     _________		 _________	     _________
+12.5 MHz	____/	      \_________/	  \_________/
+		    | 	      |		|	  |	    | 
+		   	       ___________________
+6.25 MHz	______________/			  \____________________     
+ (VCLK)
+		    | 	      |		|	  |	    | 
+End of
+External	               ________________________________________
+ \HSYNC		______________/________/__________/_________/
+
+
+		    | 	      |		|	  |	    | 
+State			 1	   2         3	       0
+
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 16 December 1988
+
+
+
+Driver MultiSync
+----------------
+I am waiting for the strain guage brake amplifier.
+
+
+Driver ADSP II
+--------------
+I am ready with the inputs.
+
+
+Driver APU
+----------
+I have signed off on Rev B
+
+
+Self-Test
+---------
+I have finished the A/D Input screens.
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+
+34020
+-----
+At Ed's request I have obtained the following information from Jeff Twombly 
+of TI about the 34020:
+
+   Samples will probably be available in April if the first silicon works.
+
+   Production quantities will probably be available in August/September
+   if the first silicon works.
+
+   My prediction is that early '90 is more realistic.
+
+   Jeff's prediction for prices in early '90 is:
+
+	34020	32 MHz	$150-$160
+		40 MHz	$210-$225
+
+	1MB VRAM	$30-$45		($66 now)
+
+	1MB DRAM	$15-$18
+
+
+   The 34020 has a 32 bit external memory bus and would therefore require
+   eight VRAMs. Eight 1MB VRAMs would thus be 1M Byte VRAM which is what
+   the Driver Turbo has now. 
+
+   The 34020-40 has instruction cycle time of 100 ns verses 160 ns for the 
+   34010-50 that we are currently using.
+
+   Taking into account the 32 bit data bus and the ability of 1 MB VRAMs
+   to write four pixels at a time, the maximum fill rate of the 34020-40
+   would be 80 MegaPixels/sec. The other instructions would execute 66%
+   faster than on the 34010-50.
+
+   A 34020-40 and eight 1MB VRAMs would cost $450-$585.
+
+
+   Even if the costs were acceptable it would not be prudent to plan on the
+   34020 being available in time for June '89 production of Stun Runner.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 23 December 1988
+
+
+
+Operator's Manual
+-----------------
+I have reviewed Rosalind's first draft, made additions and corrections and
+gone over it with her. The Manual looks good.
+
+
+Driver MultiSync
+----------------
+I am waiting for the strain guage brake amplifier.
+
+
+Driver ADSP II
+--------------
+I am ready with the inputs.
+
+
+Self-Test
+---------
+I am thinking about hand-assembling a 34010 program to test the shift registers.
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+
+Stun Runner Hardware
+--------------------
+I have talked to John Ray about possibilities for cost reduction of Stun 
+Runnerhardware.
+
+  1. Stun Runner does not need:
+
+	MSP
+	12 Bit A/D
+	Steering Wheel Interface
+	Shifter Interface
+	Sound Power Connector
+
+     The only remaining need for the +12V and -5V regulators is for the DUART.
+     Stun Runner is not planning on linking games or having multiple channels.
+     Therefore the only use for the DUART is during development. Perhaps some
+     alternative arrangement should be made for that. 
+
+  2. Shrinking the board from 16.05 x 16.0 to 14.0 x 16.0 should save more 
+     than would be accounted for by just the reduction in board size. 
+     According to Doug's memo of 26 April 1988, 14 x 16 is an optimum size for
+     the use of the raw stock. 
+
+  3. John wanted to know if the Main and ADSP boards could be combined. I 
+     advised against it because:
+
+     a. The ADSP Board already exists;
+
+     b. The changes I will be making to the Driver ADSP Board will result
+	in a board useable by both projects;
+
+     c. A large board is more difficult to mount in a cabinet than two smaller
+	boards;
+
+     d. A large board radiates more than two small ones.
+
+  4. The final decision will be made by someone-or-other (or maybe a 
+     committee) based on the projected cost savings and Art's schedule, which 
+     means that the cost savings will be turn out to be whatever is necessary 
+     in order to support the decision which will have already been made.
+
+  5. I asked John what Power Supply system they will be using. He hadn't 
+     thought about it. The Sound Board they will be using does not exit yet.
+     (Stempler is working on it.)
+
+  6. I advised John Ray that you and Max should be involved with some of these
+     hardware decisions and that he should wait until early February to 
+     involve you.
+
+
+
+The following is the projected schedule for Stun Runner hardware that I gave
+to Mike Hally and John Ray.
+
+
+Schedule for Stun Runner PC Boards		J. Margolin  12/12/88
+----------------------------------
+
+Feb 15		Final Inputs for Rev 1 Stun Runner Main and ADSP	
+
+			1.5 weeks	
+
+Feb 27		Send out for Stun Runner Main and ADSP Boards
+
+			4 weeks
+
+March 27	Receive Rev 1 Stun Runner Main and ADSP Boards
+
+			2 weeks
+
+April 10	Final PC inputs for Stun Runner Main and ADSP Boards
+
+			1 week
+
+April 17	Order Production PC Boards for Stun Runner Main and ADSP 
+		Boards
+
+			7 weeks
+
+June 5		Production
+
+
+Notes: 	Some parts (like Video RAMs) may have 12-20 week lead times.
+
+	The current MultiSync Board is about to diverge into Driver MultiSync 
+	Rev 2 and Stun Runner Rev 1.
+
+	If Pre-Prods are built they should use Stun Runner Rev 1 Boards 
+	which are scheduled to be available April 10. 
+------------------------------------------------------------------------------
+Changes to Driver MultiSync to create Stun Runner Main:
+ 
+	Remove:		Shifter Interface
+			Steering Wheel Interface
+			12 Bit A/D
+			MSP
+
+	What about:	Slapstik?
+			Sound Power Connector?
+			DUART?	
+
+Changes to Driver ADSP to create Stun Runner ADSP:
+
+			2100 Quad Flat Pack?
+			More Graphics ROM?
+
+
+	Jed
+_____________________________________________________________________________

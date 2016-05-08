@@ -1,0 +1,1596 @@
+   Atari/Atari Games   Memos and Status Reports 1984   Jed Margolin
+___________________________________________________________________________
+
+
+Regulator/Audio III-01  Testing
+Jed Margolin  2/22/84
+
+
+1. Test at high line (132 Vac) fully loaded.
+
+   Measure temperature rise for heatsink, 2N6576, and Regulators.
+
+   (The Regulator/Audio Board should be able to operate in an
+    ambient temperature of 55 degrees C.)
+	
+	a. Will the 2N6576 need an additional heat sink?
+
+	b. Will the 7815 and 7915 need their own heat sink?
+
+
+
+2. What happens if there is +10.6 Vdc but no +15 Vdc?
+ 
+   What happens if there is +15 Vdc but no +10.6 Vdc?
+
+   (Do it with the +5 Vdc output both loaded and unloaded. 
+    Does the 723 get fried by these conditions?)
+
+
+3. Measure the current limit at TA= 25 degrees C. and at 55 degrees C. 
+_____________________________________________________________________________
+
+To: Dan Van Elderen
+Fr: Jed Margolin
+Re: Mathbox Patent Application
+Dt: 2/24/84
+
+
+1. The only new project that uses the Star Wars mathbox is TOMCAT but I am 
+   designing new, faster hardware which will replace the Star Wars mathbox. 
+
+   The LAST STARFIGHTER had considered using the Star Wars mathbox but they 
+   are now planning on using the Digital Signal Processor (the TMS320) that
+   I will be using in TOMCAT.
+
+2. There are no new products out in the market using the Star Wars mathbox.
+
+3. As far as I know, none of our competitors uses anything similar to the
+   Star Wars mathbox.
+
+4. There are no new projects using the original mathbox.
+
+5. If we can get anything from it, a continuation would be worthwhile.
+
+
+
+cc:  Rick Moncrief
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Compensatory Time Off
+Dt: 3/1/84
+
+
+This is to confirm that I am taking compensatory time off, covering
+the Star Wars and FireFox projects.
+
+I will be gone from Monday, March 5 through Friday, March 30.
+I will return on Monday, April 2.
+
+	Jed
+_____________________________________________________________________________
+
+To: Robb Kundtz
+Fr: Jed Margolin
+Re: Conflict of Interest Statement
+Dt: 4/3/84
+
+
+
+Your definition of Family Group is too broad and the involvement of
+my Family Group in these questions is an unwarranted invasion of my privacy.
+
+
+Although, to my knowledge, I have never had any outside interests which 
+constitute a conflict of interest with the business and affairs of Atari,
+I doubt if I am aware of all of Atari's Affiliates, Suppliers, Competitors, 
+and Customers as defined under "Definitions". 
+
+  
+Therefore, please supply me with a list of Atari's Affiliates, Suppliers, 
+Competitors, and Customers as defined under "Definitions". 
+
+
+Also, since your document is written in legalese I will need an attorney
+to explain it to me. When I receive her bill who do I send it to for 
+reimbursement?
+
+_____________________________________________________________________________
+
+To: Mike Hally
+Fr: Jed Margolin
+Re: Star Wars Retrofit
+Dt: 4/6/84
+
+
+This is to address your concern that that if the retrofit kits
+consist mostly of ROMs, then operators will be able to copy them
+themselves instead of buying them from Atari.
+
+You also want to be able to retrofit the games in the field without
+having the boards returned for rework.
+
+One option, that Greg expressed an interest in, was to do a new Sound
+Board with the Yamaha Sound IC, a 6502, and more ROM. Now that
+Manufacturing has been shut down, this will not be possible.
+Besides, I don't think it could be done in three months.
+
+As far as creating a small piggyback board to plug into something,
+the physical arrangement of the boards precludes plugging a piggyback
+board into anything interesting. Besides, we have no one to build the 
+boards anymore.
+
+My only idea so far is the following:
+
+	There are lots of EPROM programmers out there to enable operators
+	to copy our EPROMs. But how available are the programmers to copy
+	the bipolar PROMs used for the Matrix Processor microcode? (These
+	are 82S137 PROMs).  If these PROM programmers are not widely
+	available we can change (or move around) the microcode so the
+	operators will have to get the new PROMs from us. By the way,
+	I had these PROMs socketed. 
+ 
+
+	
+		Jed
+_____________________________________________________________________________
+
+To: John Ray
+Fr: Jed Margolin
+Re: Electronic Speech Systems
+Dt: 4/11/84
+
+
+I called Joe Costello from Electronic Speech Systems (415-490-8642)
+and found out the following:
+
+Dr. Mozer of the University of California (who developed the algorithms used
+in Digitalker) is a partner in Electronic Speech Systems which claims to
+have developed new algorithms to make it possible for an 8 bit processor with 
+a DAC to perform as well or better than Digitalker. They have a program
+that uses about 50% of a 1 MHz 6502 (estimate provided by Joe Costello).
+  
+They are interested in having us use their algorithms in return for a
+royalty estimated at:   $5.00 	in quanities of 1K
+			$2.50	in quanities of 10K	
+			$1.50	in quantities of 100K
+
+Currently, they do all the speech analysis. Next year they expect to come
+out with a speech analysis that runs on an IBM PC. Possibly, they will
+do Beta site testing this summer.
+
+If anyone is interested they should pursue it.
+
+cc: 	Rick Moncrief
+	Earl Vickers
+_____________________________________________________________________________
+
+Controller for a DC Motor
+-------------------------
+	
+
+Jed Margolin   5/1/84
+------------------------------------------------------------------------------
+NOTES:
+
+A). There is no target date for project completion; most of the
+    people on this project have been layed off.
+
+B). Various implementations of the Powered Moving Seat have been shown
+    to outsiders as early as (probably) October 1983. However, although
+    the Powered Moving Seat was controlled by the DC Motor Controller
+    under discussion, the DC Motor Controller itself has not to my
+    knowledge been disclosed to anyone outside the company.
+
+C.  What is Atari's policy on the publication of this kind of information?
+
+------------------------------------------------------------------------------
+CONTROLLER FOR DC MOTOR.
+ABSTRACT:
+
+A Triac is connected in series between an AC current source and a DC motor.
+
+A microcomputer program is synchronized to each AC half-cycle and by
+triggering the Triac during a selected time during a selected half-cycle,
+the speed and direction of the motor are thereby controlled.
+
+In its implementation on a Powered Moving Seat, the microcomputer
+also receives inputs from a chair position sensor and from a control 
+element (either an analog joystick or a communications link to a game). 
+The computer program calculates the difference between where the seat is 
+and where it should be, and controls the motors accordingly.
+
+The following features are implemented in software and can therefore be
+easily adjusted:
+
+	Control of Chair Position Limits 
+	Control of Chair Acceleration 
+	Deadzone (to prevent chatter)
+	Mediation of Control Inputs (Scaling, Offset, and Rate of Change)
+------------------------------------------------------------------------------
+Detailed Description of Invention:
+
+
+1. The invention provides a simple method of controlling a reversible 
+   DC motor.
+
+2. The standard method of controlling a DC motor requires some type
+   of bridge configuration (consisting of thyristors or transistors) 
+   requiring a complicated trigger or drive circuit.
+
+3. Schematics and a program listing are attached.
+   
+4. The motor drive electronics is greatly simplified over what has been
+   done before, while the software permits easy adjustment of the motor 
+   control parameters. 
+
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Peter Schmelcher
+Dt: 7 May 1984
+
+
+Peter Schmelcher's "Eye Catcher" sounds very interesting. There are
+some basic questions concerning this type of device:
+
+	1. Existing devices of this type use a low power Laser. Assuming
+	   that this one does, too, there could be liability problems.
+	   People would tend to sue us just knowing that there was a Laser 
+	   in the game, pointing at them.
+
+	2. An eye tracker is probably not even the fastest control. Missile 
+	   Command would probably be too slow with it. And if you've ever
+	   played Whack-A-Mole, you know that if you take the time to look
+	   at the Mole, it's too late.
+
+	3. An alternative to the Eye Catcher might be something with Doug's
+	   position sensors. Something like a helmut-type arrangement with
+	   earphones.
+
+	4. If we were to use it, it would require a "champion"; otherwise
+	   it would turn out just like the "Face" camera. 
+
+	5. I wonder how much it costs.
+
+
+I think a demo would be very interesting.
+
+		Jed
+_____________________________________________________________________________
+
+	My DB16000 Development Board is connected to an ERNIE terminal line
+because apparently there are no more KIM lines available.
+
+	My problem is that most of the time I end up getting kicked off
+of the DECNET link and can't get back on.
+
+	I would like either: 1) a KIM line
+
+				or
+
+			     2) an ERNIE account
+
+	If you give me an ERNIE account please also create the user
+[NSC16K], complete with files.
+
+		Jed
+_____________________________________________________________________________
+
+To: Skip Paul
+Fr: Jed Margolin
+Re: The "New and Improved" Atari Health Care Program
+Dt: 6/22/84
+
+
+	I just got the booklet describing the Highlights of the
+new Atari Health Care Program.
+
+	It starts off by saying that "no services have been taken away" 
+and then goes on to explain:
+
+	1. There is to be a $150 deductible for each separate hospital 
+	   admission.
+
+	2. There is to be a YEARLY $150 deductible before Major Medical
+	   benefits are paid (for an individual).
+
+	3. These new medical "services" will only cost us $10 a month.
+
+	4. The new Plan for Basic and Major Dental requires a separate
+	   $50 yearly individual deductible.
+
+	5. These new  Basic and Major Dental "services" will cost us $2/month.
+
+	6. It is not clear whether Preventive Dental Services is exempt from
+	   the $50 deductible. Also, if an individual has routine preventive 
+	   dental treatments and requires, say, a filling, does that come
+	   under Preventive Dental Services at 100% or under Basic and Major
+	   Dental Services at $50 deductible and 80% ?
+ 
+
+Perhaps R.B.Zufall and I mean different things by the word "service". The only
+"service" that a health plan provides is to pay money. (Actual medical service
+is provided by people like Doctors, Nurses, and Dentists.)
+
+This plan is obviously going to pay LESS (plus COST individuals $10/month for 
+Medical and $2/month for Dental).
+
+It's bad enough that the Medical and Dental Insurance programs are being cut,
+but I think that R.B.Zufall has a lot of damn gall trying to make it sound
+like we're getting MORE when we are actually getting LESS. Who does this clown
+think he is? George Orwell?  
+
+
+				Warmest personal regards,
+
+					Jed
+_____________________________________________________________________________
+
+The Questions:
+
+0.	Do you feel strongly either way about keeping the Mentor system?
+	Which way and why?
+
+1.	Do you know how to use the Mentor simulator (SIM) ?
+
+2.	"         "                   "   timing verifier (TVER)?
+
+3.	"         "                   "   schematic capture package (NETED)?
+
+4.	Do you want to learn how to use those tools?
+
+5.	Do you currently, personally, perform drafting functions on the Mentor
+	System?
+
+6.	Do you currently use the Mentor system for engineering functions?
+
+7.	Do you plan to use the Mentor System for engineering functions?
+	If no, why not?	
+
+	If yes, when to you anticipate using it and on what project?
+	If yes, what benefit do you expect from it?
+
+
+The Answers:
+
+0.	Either the Mentor system should have its more egregious defects
+	fixed or we should get rid of it. The plots it makes of the
+	schematics are too small to be usable. Thus it fails to fulfill
+	what I consider one of its primary functions.
+
+1.	No. I just want something that I can do schematics on which will
+	plot them out in a usable form.
+
+
+2. 	No.
+
+3. 	Yes. It is a lot like doing it by hand, only slower.
+
+4. 	I just want something that I can do schematics on which will
+   	plot them out in a usable form.
+ 
+5. 	No. The plots it makes of the schematics are too small to be usable.
+
+6. 	No.
+
+7. 	No, it's too much work to figure out how to use it.
+
+	
+		Jed
+_____________________________________________________________________________
+
+	During the last two weeks The VAX response time has been ok, but then
+I haven't used it very much during the last two weeks. Several times when I 
+have been running EDT it bogged down just like always.
+
+	Previous to the last two weeks, it was maddening, trying to run 16032
+programs, or even to just Edit. It was even impossible in the evenings when 
+the VAX time was normally more available.
+
+	The 68000 programs (and their development systems) seem to require
+an inordinate amount of VAX time. It also doesn't help when a programmer runs 
+four RT11 jobs in batch at the same time. It doesn't leave very much for the 
+rest of use who need an interactive computer system. 
+
+	Selling off the VAXes because "we don't need them" is a self-
+fulfilling prophecy.
+_____________________________________________________________________________
+
+Janet G. Benton
+Executive Editor, CACM
+Association for Computing Machinery
+11 West 42nd Street
+New York, New York 10036
+
+
+Dear Ms. Benton,
+
+	I am submitting the enclosed article A NEW GEOMETRIC MODEL FOR
+3-D COMPUTER GRAPHICS for publication in the Communications of the ACM
+in the Research Contributions section.
+
+	These algorithms were used in Atari's Star Wars arcade game,
+using integer arithmetic. (Star Wars is a trademark of Lucasfilm, Ltd. 
+used by Atari, Inc. under license.)
+
+	Hoping to hear from you soon,
+
+	
+
+					Sincerely yours,
+
+
+
+					Jed Margolin
+					Atari, Inc.
+					1501 McCarthy Blvd.
+					Milpitas, CA  95035
+
+					(408) 942-7107
+_____________________________________________________________________________
+
+Parts for EMPIRE			Jed Margolin  9/13/84
+Information is from AMPS.
+
+PART	Atari PN	SPEED	 # Inventory	STD COST   LATEST PO
+------------------------------------------------------------------------------
+
+82S137	37-82S137	60 nS	   32,268	$1.95	     None	
+
+2732	137205-001	450 nS	   12,575	$3.40	     None
+	137212-001	250 nS	    6,686	$3.80	     None
+
+2764	137276-200	200 nS	    3,861	$5.00	     None
+	137276-250	250 nS	    9,433	$5.50	     None
+	137276-300	300 nS	   56,157	$4.50	     None
+	137276-450	450 nS	        5	$4.50	     None
+
+27128	137328-001	200 nS	      805	$16.50	    $16.50  4/30/84
+	137328-002	300 nS	   93,418	$12.50	    $ 9.75  12/14/84
+	137328-003	450 nS	    5,972	$18.54	     None
+	137328-004	250 nS	    4,645	$10.95	     None
+
+
+
+82S137:		37-82S137
+	 Karen has about 150 82S137s for the Empire Prototypes.
+
+
+
+2732:		137212-001	250 nS
+	I am not absolutely certain if 450 nS memory will work reliably in the
+	Vector Generator, so how about using 250 nS like we did in Star Wars?
+
+
+
+2764:		137276-300	300 nS
+	Lowest cost and largest inventory.
+
+
+
+27128:		137328-002	300 nS
+	Lowest cost and largest inventory.
+_____________________________________________________________________________
+
+To: Users of TI TMS-5220 Speech Synthesizer
+Fr: Jed Margolin
+Dt: 10/2/84
+
+The TMS-5220 Speech Synthesizer (Atari p/n 137308-001)
+
+has a new and improved version that we should use after
+
+we have used up the 11,000 in inventory. The new version
+
+TMS-5220C (Atari p/n 137308-002) is fully compatible
+
+with circuits and data developed for the old version 
+
+but the reverse is NOT true. A circuit design that takes
+
+advantage of the TMS-5220C's new features will NOT work
+
+with the old TMS-5220. Therefore, until someone decides
+
+otherwise, design for the TMS-5220. (Purchasing should
+
+buy the TMS-5220C from now on.)
+
+
+TMS-5220C - New Features
+
+1. D7 is now the MSB. This is a name change in TI documentation only.
+
+2. There is a new command to change the frame rate. It comes up from
+Reset in a mode that is compatible with PASS data.
+
+3. There is a real hardware reset, accomplished by bringing WS and RS
+low together for 1 ms and following it with a Reset command. For
+actual timing consult the Data Sheet. This means that the external 
+circuit to remove power from the IC is not needed.
+
+4. WS timing is better but for most applications the data input will still 
+have to be latched.
+
+5. The oscillator input can be configured to accept a 0-5 V, 320 KHz
+clock. Therefore, the level shifting circuit will not be needed.
+
+6. The Data and Control Lines have built-in pull-up resistors.
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Power Supply Alternatives
+Dt: 9/26/84
+
+
+Here are some possibilities for the Budget System Power Supply:
+
+
+1. The Switcher.
+
+2. The Sam Deus Power Supply.
+
+3A. A Standard Linear Power Supply (5V @ 6A) + and additional 5V @ 3A
+    power supply for the memory board (for games that need the additional
+    current).
+
+						 	Extended
+							-------- 
+	(1) Transformer	10VAC @  5A	$8.00 (est)	  8.00
+	(4) 1N5401			  .10		   .40	 	
+	(1) LM323			  .50 (est)	   .50
+	(2) 4700 uF, 25V		  .20 (est)	   .40
+	(1) 10 uF, 25V			  .14 (est)	   .14
+	(1) PC Board			  4.00 (est)	  4.00
+	(2) Connectors			  .30		   .60
+							-------
+
+							 14.04
+	Labor (est)					  1.50
+							-------
+					Estimate = 	 $15.54 
+
+
+3B. Modified Linear (5V @ 7.5A) + additional 5V @ 3A supply ($15.54est)
+    for the memory board for those games that need it.
+
+3C. Modified Linear (5V @ 8.0A) + Fan + additional 5V @ 3A supply ($15.54est)
+    for the memory board for those games that need it.
+
+4A. New Switcher #1:
+
+	(1) 120 VAC Isolation Transformer for the monitor	$8.00
+
+	(1) Isolated Switcher   5V @ 10A  = 50 W
+				+15V @ 2A = 30 W
+				-15V @ 1A = 15 W
+					    -----
+					    95 Watts
+
+	I have seen ads for switchers at $ .50/Watt.
+						95 x .50 =	$47.50
+
+	(1) Line Filter						$ 3.10
+
+
+	(1) Audio Amplifier Board (See Table 1 for Breakdown)	$13.80
+								-------
+								$72.40
+
+4B. New Switcher #2:
+
+	(1) 120 VAC Isolation Transformer for the monitor
+	    and for Switcher					$14.00
+
+	(1) Non-Isolated Switcher   5V @ 10A  
+				    +15V @ 2A 
+				    -15V @ 1A 			$30.00
+
+	(1) Line Filter						$ 3.10
+
+
+	(1) Audio Amplifier Board (See Table 1 for Breakdown)	$13.80
+								-------
+								$60.90
+
+5. Bizzare - Standard Transformer Base
+
+	Standard Base with a Switching Down Converter
+	and over-voltage protection crowbar
+
+
+Table 1   Audio Board (only)
+
+
+QTY		Description					P/N		#In Inventory	Cost		Extended
+
+(1)	PC Board										6.00		6.00
+
+(2)	470 uF 25 V, Aluminum Electolytic Axial Capacitor	24-250477	71,350		.11		.22
+
+(2)	0.001 uF, 35 V, Ceramic Disc Axial Lead Capacitor	122002-102	97,870		.03		.06
+
+(4)	0.1 uF, 25 V, Ceramic Disc Axial Lead Capacitor		29-088 or	
+								122002-104	1.5 Million	.036		.144
+
+(2)	0.01 uF, 25 V, Ceramic Disc Axial Lead Capacitor	100015-103 or
+								122005-103	362,610		.03		.06
+
+(4)	0.22 uF, 25 V, Ceramic Disc Axial Lead Capacitor	122004-224	122004-224	.087		.348
+
+(2)	3300 uF, 35 V, Aluminum Electrolytic Capacitor		24-350338	34,971		.44	        .88
+
+(1)	1000 uF, 25 V, Aluminum Electrolytic Capacitor		24-250108	8,787		.22		.22
+
+												--------------------------------
+(2)	1 ohm, 5%, 1/4 Watt					110000-010	33,286		.0044	  11 * 0.0044= .05
+
+(3)	10 ohm, 5%, 1/4 Watt					110000-100	77,872		.0044
+
+(2)	100 ohm, 5%, 1/4 Watt					110000-101	118,761		.0044
+
+(2)	10K ohm, 5%, 1/4 Watt					110000-103	303,323		.0044
+
+(2)	220 ohm, 5%, 1/2 Watt					110001-221	154,358		.0044		-------
+
+(2)	6-position connector					79-58306	56,069		.28		.56
+
+(1)	9-position connector					79-58308	3,655		.37		.37
+
+(1)	4-position connector					79-58354	16,203		.29		.29
+
+(2)	TDA-2002 amplifier					137151-002	46,931		.52	       1.04
+
+(1)	Heat Sink						034531-01	14,417		2.07	       2.07
+
+													--------------------
+														$12.30
+
+Labor (5 minutes at $20/hour)											$ 1.50
+														--------
+											Total			$13.80
+_____________________________________________________________________________
+****************************** PRELIMINARY ************************************
+SYSTEM I Switcher Requirements		Jed Margolin 9/84		
+------------------------------------------------------------------------------
+LINE ISOLATION:
+
+	The unit shall be quoted two ways:
+
+		1. The unit shall contain full line isolation so it may be
+	  	operated directly from the mains. The permissible line
+		leakage shall be less than 0.1 milliamperes.
+
+		2. The unit shall be connected to a source that is isolated
+		from the mains.
+
+INPUT:	90 - 140 VAC, 47 - 63 Hz.
+
+OUTPUTS:  5 Volts DC @ 10 Amps	
+	+15 Volts DC @ 2 Amps 
+	-15 Volts DC @ 1 Amp
+
+REGULATION: The 5 Volt output shall be regulated to between 4.90 Volts and 
+	    5.1 Volts at all Line input voltages and installation 
+	    temperatures.
+
+	    The +15 VDC and -15 VDC outputs may be regulated by the control
+	    element that regulates the +5 Volt output. The tolerance on the 
+	    +15 VDC and -15 VDC outputs is plus or minus 0.1 Volt under the
+	    condition that there is no voltage drop in the +5 VDC load 
+	    harness.
+
+REMOTE VOLTAGE SENSING:  
+	Remote Voltage sensing shall be provided for the +5 VDC output for 
+	both the positive line and the return line. The supply shall be able 
+	to tolerate a 0.2 Volt drop in each of these lines going to a load.
+
+	The +15 VDC and -15 VDC outputs are allowed to proportionately track 
+	the +5 VDC output. For example, with a 0.4 Volt total harness drop in
+	the +5 VDC circuit, the +15VDC output is allowed to rise to no more 
+	than 16.5 VDC.
+
+	Provision shall be made that an unconnected sense line shall not
+	result in an output greater than +5.1 Volts.
+
+OPERATING TEMPERATURE:
+	The unit shall operate at full ratings at an installation temperature
+	between 0 and 55 degrees Celsius.
+	    
+UL:	The unit shall meet the applicable UL and CSA safety standards.
+
+FCC:	The unit shall meet the applicable FCC standards with an appropriate
+	line filter to be supplied by ATARI GAMES, INC. 
+
+_____________________________________________________________________________
+
+Dan,
+
+	On Wednesday, September 26, I sent a memo to various people
+requesting that they complete and return to me by Friday afternoon
+a survey of their power supply requirements. (It is reprinted here
+as [MEMO77.DOC] ). Pat McCarthy (Road Runner) was the only one to do so.
+I received some information from Chris Downend on Monday, but most
+of it was bogus. 
+
+	In the meantime, on Friday, September 28, at about 7:00 pm,
+Rick wanted a spec for you to take to Japan. I stayed until 8:30 pm,
+the result being [MEMO79.DOC]. Remember, the Budget System people
+had ignored my request for information (and when I did get it, it was
+wrong).
+
+	Therefore, when Rick wanted a spec I took my best shot, and
+was actually not too far off. The major 'discrepancy' is that the 
+switcher I was asked to specify did not include the audio amplifiers
+and would therefore have to power them in addition to the game boards.
+I guessed +15 volts @ 1.5 Amp for the audio, allowing +15 VDC @ 0.5 A
+and -15 VDC @ 1.0 Amp for the game board.  Later, when I examined the 
+possibilities more rigorously, [SPKR.DOC], I calculated that 
++15 VDC @ 1.23 Amps would be sufficient for the audio.
+The actual totals would be:
+
+					+15 VDC (Amps)		-15 VDC (Amps)
+					---------------		--------------
+Not-Budget Only:			  1.33			   0.1
+
+Not-Budget + Road Runner:		  1.63			   0.4
+
+Switcher Spec:				  2.00			   1.0
+
+
+Therefore, I was off by 23% on +15 VDC and 150% on -15 VDC. Or, if you
+like (if it is to be for the Not-Budget System only) I was off by 50% on 
++15 VDC and 1000% on -15 VDC. 
+
+I really hate having been dragged into this power supply crap.
+		
+		
+				Warmest personal regards,
+
+
+						Jed
+cc; Rick Moncrief
+
+
+GAME:  BUDGET/MARBLE MADNESS
+
+To: Morgan Hoff
+Fr: Jed Margolin
+Re: Power Supplies
+Dt: 9/26/84
+
+In order to figure out what to do with power supplies please tell me what
+the voltage and current requirements of your game are. 
+
+------------------------------------------------------------------------------
+Voltage	     	Used?	Current 	Regulated? 
+ (VDC)	   	 	  (A)
+------------------------------------------------------------------------------
+
+ +5		____	______		______
+
+ 
+ +12		____	______		______
+
+
+ +15		____	______		______
+
+
+ -5		____	______		______
+
+
+ -12		____	______		______
+
+
+ -15		____	______		______
+
+		
+other?
+
+ ____		____	______		______
+
+------------------------------------------------------------------------------
+Monitor: 120VAC or 145 VDC [It is standard, so don't worry about it]
+
+------------------------------------------------------------------------------
+Audio: [Indicate which]
+
+	1 Channel  ____
+
+	2 Channel  ____
+
+------------------------------------------------------------------------------
+
+Anything Else? _______________________________________
+
+------------------------------------------------------------------------------
+
+Please get this back to me by Friday Afternoon.
+
+		Thanks,
+			Jed
+
+GAME:  BUDGET/TEMPLE OF DOOM
+
+To: Morgan Hoff
+Fr: Jed Margolin
+Re: Power Supplies
+Dt: 9/26/84
+
+In order to figure out what to do with power supplies please tell me what
+the voltage and current requirements of your game are. 
+
+------------------------------------------------------------------------------
+Voltage	     	Used?	Current 	Regulated? 
+ (VDC)	   	 	  (A)
+------------------------------------------------------------------------------
+
+ +5		____	______		______
+
+ 
+ +12		____	______		______
+
+
+ +15		____	______		______
+
+
+ -5		____	______		______
+
+
+ -12		____	______		______
+
+
+ -15		____	______		______
+
+		
+other?
+
+ ____		____	______		______
+
+------------------------------------------------------------------------------
+Monitor: 120VAC or 145 VDC [It is standard, so don't worry about it]
+
+------------------------------------------------------------------------------
+Audio: [Indicate which]
+
+	1 Channel  ____
+
+	2 Channel  ____
+
+------------------------------------------------------------------------------
+
+Anything Else? _______________________________________
+
+------------------------------------------------------------------------------
+
+Please get this back to me by Friday Afternoon.
+
+		Thanks,
+
+			Jed
+
+GAME:  BUDGET/PACKRAT
+
+To: Morgan Hoff
+Fr: Jed Margolin
+Re: Power Supplies
+Dt: 9/26/84
+
+In order to figure out what to do with power supplies please tell me what
+the voltage and current requirements of your game are. 
+
+------------------------------------------------------------------------------
+Voltage	     	Used?	Current 	Regulated? 
+ (VDC)	   	 	  (A)
+------------------------------------------------------------------------------
+
+ +5		____	______		______
+
+ 
+ +12		____	______		______
+
+
+ +15		____	______		______
+
+
+ -5		____	______		______
+
+
+ -12		____	______		______
+
+
+ -15		____	______		______
+
+		
+other?
+
+ ____		____	______		______
+
+------------------------------------------------------------------------------
+Monitor: 120VAC or 145 VDC [It is standard, so don't worry about it]
+
+------------------------------------------------------------------------------
+Audio: [Indicate which]
+
+	1 Channel  ____
+
+	2 Channel  ____
+
+------------------------------------------------------------------------------
+
+Anything Else? _______________________________________
+
+-------------------------------------------------------------------------------
+
+Please get this back to me by Friday Afternoon.
+
+		Thanks,
+			Jed
+
+GAME:  ROAD RUNNER
+
+To: Pat McCarthy
+Fr: Jed Margolin
+Re: Power Supplies
+Dt: 9/26/84
+
+In order to figure out what to do with power supplies please tell me what
+the voltage and current requirements of your game are. 
+
+------------------------------------------------------------------------------
+Voltage	     	Used?	Current 	Regulated? 
+ (VDC)	   	 	  (A)
+------------------------------------------------------------------------------
+
+ +5		____	______		______
+
+ 
+ +12		____	______		______
+
+
+ +15		____	______		______
+
+
+ -5		____	______		______
+
+
+ -12		____	______		______
+
+
+ -15		____	______		______
+
+		
+other?
+
+ ____		____	______		______
+
+------------------------------------------------------------------------------
+Monitor: 120VAC or 145 VDC [It is standard, so don't worry about it]
+
+------------------------------------------------------------------------------
+Audio: [Indicate which]
+
+	1 Channel  ____
+
+	2 Channel  ____
+
+-----------------------------------------------------------------------------
+
+Anything Else? _______________________________________
+
+-----------------------------------------------------------------------------
+
+Please get this back to me by Friday Afternoon.
+
+		Thanks,
+			Jed
+
+GAME:  MEDIUM RES/PAPER BOY
+
+To: Project Engineer
+Fr: Jed Margolin
+Re: Power Supplies
+Dt: 9/26/84
+
+In order to figure out what to do with power supplies please tell me what
+the voltage and current requirements of your game are. 
+
+------------------------------------------------------------------------------
+Voltage	     	Used?	Current 	Regulated? 
+ (VDC)	   	 	  (A)
+------------------------------------------------------------------------------
+
+ +5		____	______		______
+
+ 
+ +12		____	______		______
+
+
+ +15		____	______		______
+
+
+ -5		____	______		______
+
+
+ -12		____	______		______
+
+
+ -15		____	______		______
+
+		
+other?
+
+ ____		____	______		______
+
+------------------------------------------------------------------------------
+Monitor: 120VAC or 145 VDC [It is standard, so don't worry about it]
+
+------------------------------------------------------------------------------
+Audio: [Indicate which]
+
+	1 Channel  ____
+
+	2 Channel  ____
+
+-----------------------------------------------------------------------------
+
+Anything Else? _______________________________________
+
+-----------------------------------------------------------------------------
+
+Please get this back to me by Friday Afternoon.
+
+		Thanks,
+			Jed
+
+
+GAME:  BUDGET:MARBLE MADNESS; TEMPLE OF DOOM; PACKRAT
+       ROAD RUNNER
+       MEDIUM RES/PAPER BOY
+
+To: Project Engineer
+Fr: Jed Margolin
+Re: Power Supplies
+Dt: 9/26/84
+
+In order to figure out what to do with power supplies please tell me what
+the voltage and current requirements of your game are. 
+
+------------------------------------------------------------------------------
+Voltage	     	Used?	Current 	Regulated? 
+ (VDC)	   	 	  (A)
+------------------------------------------------------------------------------
+
+ +5		____	______		______
+
+ 
+ +12		____	______		______
+
+
+ +15		____	______		______
+
+
+ -5		____	______		______
+
+
+ -12		____	______		______
+
+
+ -15		____	______		______
+
+		
+other?
+
+ ____		____	______		______
+
+------------------------------------------------------------------------------
+Monitor: 120VAC or 145 VDC [It is standard, so don't worry about it]
+
+------------------------------------------------------------------------------
+Audio: [Indicate which]
+
+	1 Channel  ____
+
+	2 Channel  ____
+
+------------------------------------------------------------------------------
+
+Anything Else? _______________________________________
+
+------------------------------------------------------------------------------
+
+Please get this back to me by Friday Afternoon.
+
+		Thanks,
+
+			Jed
+
+
+****************************** PRELIMINARY ************************************
+SYSTEM I Switcher Requirements		Jed Margolin 9/84		
+------------------------------------------------------------------------------
+LINE ISOLATION:
+
+	The unit shall be quoted two ways:
+
+		1. The unit shall contain full line isolation so it may be
+	  	operated directly from the mains. The permissible line
+		leakage shall be less than 0.1 milliamperes.
+
+		2. The unit shall be connected to a source that is isolated
+		from the mains.
+
+INPUT:	90 - 140 VAC, 47 - 63 Hz.
+
+OUTPUTS:  5 Volts DC @ 10 Amps	
+	+15 Volts DC @ 2 Amps 
+	-15 Volts DC @ 1 Amp
+
+REGULATION: The 5 Volt output shall be regulated to between 4.90 Volts and 
+	    5.1 Volts at all Line input voltages and installation temperatures.
+
+	    The +15 VDC and -15 VDC outputs may be regulated by the control
+	    element that regulates the +5 Volt output. The tolerance on the 
+	    +15 VDC and -15 VDC outputs is plus or minus 0.1 Volt under the
+	    condition that there is no voltage drop in the +5 VDC load harness.
+
+REMOTE VOLTAGE SENSING:  
+	Remote Voltage sensing shall be provided for the +5 VDC output for both
+	the positive line and the return line. The supply shall be able to
+	tolerate a 0.2 Volt drop in each of these lines going to a load.
+
+	The +15 VDC and -15 VDC outputs are allowed to proportionately track 
+	the +5 VDC output. For example, with a 0.4 Volt total harness drop in
+	the +5 VDC circuit, the +15VDC output is allowed to rise to no more 
+	than 16.5 VDC.
+
+	Provision shall be made that an unconnected sense line shall not
+	result in an output greater than +5.1 Volts.
+
+OPERATING TEMPERATURE:
+	The unit shall operate at full ratings at an installation temperature
+	between 0 and 55 degrees Celsius.
+	    
+UL:	The unit shall meet the applicable UL and CSA safety standards.
+
+FCC:	The unit shall meet the applicable FCC standards with an appropriate
+	line filter to be supplied by ATARI GAMES, INC. 
+
+
+
+The Proposed Regulator/Audio III		Jed Margolin 10/3/84
+
+The least expensive Audio/Regulator board for the Not-Budget Systemi (only) 
+would be:
+		+5 VDC @ 10 A
+		+12 VDC @ 0.1 A
+		-12 VDC @ 0.1 A
+	
+Two audio channels, nominally 3.7 Watts each, into 4 Ohms, using TDA 2002's 
+connected to the +12 VDC output.
+------------------------------------------------------------------------------
+An Audio/Regulator board that could be used with either the Not-Budget Systemi
+or the Road Runner game system would be capable of:
+		
+		+5 VDC @ 10 A
+		+15 VDC @ 0.4 A
+		-15 VDC @ 0.4 A
+
+It would have two audio channels, nominally 10 Watts each, into 4 Ohms, using 
+TDA 2030's connected to the +22 VDC output.
+It would cost about $2.00 more than one for the Not-Budget Systemi only. 
+-----------------------------------------------------------------------------
+This same Audio/Regulator board might be used for the Paper Boy project 
+(apparently as part of some kind of backup scheme).
+-----------------------------------------------------------------------------
+
+Please send your comments to [Margolin].
+
+
+Amplifier and Speaker Calculations:
+
+For a single ended supply of voltage VS, the peak to peak voltage
+will be VS minus some slop in the amplifier. Use 1 volt.
+	Vp-p = VS - 1			
+Therefore: Vp = (VS-1)/2	   
+For Sine Wave Vrms = (VS-1)/2*0.7071
+
+Power = Vrms*Vrms/R
+      = ((VS-1)/2*0.7071)**2/R
+
+Since POWER = I*I*R, I = SQRT(P/R)
+Because it is single ended the effective current is half,
+so for each channel I = SQRT(P/R)/2
+
+
+
+	VS			 R(Speaker)	Power		   Current 	      Amplifier Type
+	(V)			  (Ohms)     (/Channel)	 	1 CH / 2 CH
+---------------------------------------------------------------------------
+1.	10.3 (unreg)		    4		2.7 W		0.41 A  / 0.82 A	TDA 2002
+
+2.	12 (reg)		    4		3.7 W		0.48 A	/ 0.96 A	TDA 2002
+
+3.	15 (reg)		    4		6.1 W		0.62 A  / 1.23 A 	TDA 2002
+
+4.	15 (reg)		    8		3.06		0.30 A  / 0.62 A	TDA 2002
+
+
+5.	18 (unreg, low line)	    4		9.2 W		0.75 A  / 1.52 A	TDA 2030
+	22 (unreg, nominal)	    4		13.7 W*		0.92 A	/ 1.85 A 	TDA 2030
+	26 (unreg, high line)	    4		19.5 W*		1.10 A	/ 2.20 A 	TDA 2030
+
+
+6.	18 (unreg, low line)	    8		4.5 W		0.37 A	/ 0.75 A 	TDA 2030
+	22 (unreg, nominal)	    8		6.9 W		0.46 A	/ 0.92 A 	TDA 2030
+	26 (unreg, high line)	    8		9.7 W		0.55 A	/ 1.10 A 	TDA 2030
+
+---------------------------------------------------------------------------
+
+	The Not-Budget Systemi claims to require +12 VD@ 400 ma + Audio and -12 VDC @ 400 ma + Audio.
+This is bogus. The 400 ma was made up. For a TI TMS-5220 + a bunch of LM324 a more realistic figure
+is +12 VDC @ 60 ma and -12 VDC @ 95 ma. [The TMS-5220 requires 35 ma from -5 VDC. The +5 VDC comes
+from the +5 VDC logic, not the +12 VDC. Allowing 10 ma per LM 324 package * 6 packages = 60 ma. 
+That is 24 op-amps which should be sufficient.]
+
+	The Audio they are referring to is the Audio Output Amplifiers that this is to help
+select.
+
+	The game board requirements should be satisfied by +12 VDC @ 100 ma and -12 VDC @ 100 ma.
+
+	(They could probably use +12 VDC and -5 VDC or +15 VDC and -15 VDC instead).
+	(If they are really using LM324's, they shouldn't. They should use TL084's.)
+---------------------------------------------------------------------------
+	The Road Runner game requires +5 VDC @ 7.5 A, +15 VDC @ 0.4 A, and -15 VDC @ 0.4 A.		
+----------------------------------------------------------------------------
+	The audio output amplifiers cannot be powered from the +10.3 VDC because it is already
+overloaded by the +5 VDC Regulator.
+-----------------------------------------------------------------------------
+	The 7812 is good for about 1.5 Amps.
+
+	The 7815 is also good for about 1.5 Amps.
+------------------------------------------------------------------------------
+	The +22 VDC output is rated at 1.5 A and the -22 VDC output is rated at 1 A. Since they come
+from the same transformer winding, the current available from +22 is increased as the current drawn
+from -22 is decreased.
+
+	+22 VDC actually ranges from +18 at low line to +26 VDC at high line.
+	-22 VDC actually ranges from -18 at low line to -26 VDC at high line.
+------------------------------------------------------------------------------
+*	The maximumn undistorted output level for the TDA 2030 is 10 Watts for 4 Ohm loads and
+about 9 Watts for 8 Ohm loads.
+-----------------------------------------------------------------------------
+Possibilities for the Not-Budget Systemi:
+
+	VS			 R(Speaker)	Power		   Current 	      Amplifier Type
+	(V)			  (Ohms)     (/Channel)	 	1 CH / 2 CH
+-----------------------------------------------------------------------------
+2.	12 (reg)		    4		3.7 W		0.48 A	/ 0.96 A	TDA 2002
+3.	15 (reg)		    4		6.1 W		0.62 A  / 1.23 A 	TDA 2002
+4.	15 (reg)		    8		3.06		0.30 A  / 0.62 A	TDA 2002
+
+5.	18 (unreg, low line)	    4		9.2 W		0.75 A  / 1.52 A	TDA 2030
+	22 (unreg, nominal)	    4		13.7 W		0.92 A	/ 1.85 A 	TDA 2030
+	26 (unreg, high line)	    4		19.5 W		1.10 A	/ 2.20 A 	TDA 2030
+
+6.	18 (unreg, low line)	    8		4.5 W		0.37 A	/ 0.75 A 	TDA 2030
+	22 (unreg, nominal)	    8		6.9 W		0.46 A	/ 0.92 A 	TDA 2030
+	26 (unreg, high line)	    8		9.7 W		0.55 A	/ 1.10 A 	TDA 2030
+------------------------------------------------------------------------------
+Possibilities for Road Runner:
+
+4.	15 (reg)		    8		3.06		0.30 A  / 0.62 A	TDA 2002
+
+5.	18 (unreg, low line)	    4		9.2 W		0.75 A  / 1.52 A	TDA 2030
+	22 (unreg, nominal)	    4		13.7 W		0.92 A	/ 1.85 A 	TDA 2030
+	26 (unreg, high line)	    4		19.5 W		1.10 A	/ 2.20 A 	TDA 2030
+
+6.	18 (unreg, low line)	    8		4.5 W		0.37 A	/ 0.75 A 	TDA 2030
+	22 (unreg, nominal)	    8		6.9 W		0.46 A	/ 0.92 A 	TDA 2030
+	26 (unreg, high line)	    8		9.7 W		0.55 A	/ 1.10 A 	TDA 2030
+------------------------------------------------------------------------------
+An Audio/Regulator board that could be used with either game system would produce:
+		
+		+5 VDC @ 10 A
+		+15 VDC @ 0.4 A
+		-15 VDC @ 0.4 A
+
+	Two audio channels, nominally 10 Watts each, into 4 Ohms, using 
+TDA 2030's connected to the +22 VDC output.
+
+------------------------------------------------------------------------------
+	The least expensive configuration for the Not-Budget Systemi (only) 
+would be:
+
+		+5 VDC @ 10 A
+		+12 VDC @ 0.1 A
+		-12 VDC @ 0.1 A
+	
+	Two audio channels, nominally 3.7 Watts each, into 4 Ohms, using 
+TDA 2002's connected to the +12 VDC output.
+_____________________________________________________________________________
+
+From:	MARGOLIN       15-NOV-1984 15:42  
+To:	HOFF
+Subj:	System I Audio Level
+
+The audio output level should be increased to 5 Vp-p during normal
+game play, and should have a reasonable amount of headroom for peaks.
+
+Background:
+
+1. If you leave the output purposefully low so that the audio does not clip 
+under any conditions, then most of the time it will not be as loud as it 
+could otherwise be.
+
+2. By having the output high enough to clip with the volume control all the
+way up you assure that it can be adjusted for maximum loudness.
+Presumably the operators will adjust it short of clipping.
+
+3. In the old days, the volume was controlled via a rheostat at the
+amplifier output, so that if the amplifier was clipping it could
+not be fixed by turning the volume down. The volume control pots
+on Regulator/Audio III are at the amplifier input.
+
+4. The amount of dynamic range available for arcade games is fairly narrow.
+Arcades tend to be noisy, which sets the low end. The high end is set by the 
+amount of audio power reaching the player's ears and is limited by the 
+threshhold of pain. Also, if too many sounds are turned on at the same time,
+they will simply become an indistinguishable jumble.  
+
+5. Generally, sounds with very high ratios of peak to average levels (like 
+explosions) have been allowed to clip. Otherwise, if the system is adjusted
+to handle the peaks, the average volume level is too low.
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Capital Equipment
+Dt: 11/26/84
+
+For the coming year I need the following capital equipment:
+
+
+A. A working Digital VOM:	
+
+	1. 3 1/2 Digits, minimum.
+	2. Capable of reading AC RMS, minimum; AC + DC preferred.
+	3. One set of probes with probe tip ends.
+	4. One set of probes with alligator tip ends.
+	5. Portable, capable of operating from internal rechargeable
+	   batteries or off the AC power line.
+
+B. A working 4-channel oscilloscope:
+
+	1. Must have 5 working 'scope probes complete with both long and short
+	   ground leads with clips, and 'rocket ships' for the probe.
+
+C. A working soldering iron with clean sponge. 
+
+D. Clip Leads: 
+
+	1. One dozen working 3 foot long Red clip leads.
+	2. One dozen working 3 foot long Black clip leads.
+	3. One dozen working 1 foot long Red clip leads.
+	4. One dozen working 1 foot long Black clip leads.
+
+E. Two small working screwdrivers.
+_____________________________________________________________________________
+
+Carol, Please give this to Rick.
+
+	Jed
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status Report
+Dt: 12/12/84
+
+
+1. I have given Art Jackson and Joe Dieu the inputs for Regulator/Audio III
+   Rev B and asked them to schedule it for January. I showed the changes to
+   Tim Hale; he did not have anything else to add.
+
+   The following are the changes:
+
+Jed Margolin	12/12/84
+For Regulator/Audio III Rev B:
+
+
+1. Move the +SENSE test point away from the -SENSE test point.
+   
+   Reason: Eliminate the possibility of inserting the test points incorrectly.
+
+2. Move the +10.3V test point farther away from the heat sink.
+
+   Reason: Reduce possibility of a short when the test point is being used.
+
+3. Add alternate stuffing for R2, R6. (See schematic).
+
+   Reason: Allow for future use of the Regulator/Audio III without an
+	   on-board volume control.
+
+4. Fill in more ground near the heat sink.
+
+   Reason: more ground.
+
+5. Add pads to allow the use of the Centralab potentiometer (P/N 119012-103).
+
+   Reason: This will give us an alternate source for pots.
+   The parts list should indicate that either one is acceptable.	
+
+6. Remove Solder Mask around 2N3055 mounting holes. (As per note on FAB 
+   drawing.)
+
+------------------------------------------------------------------------------
+2. I have gotten the run-around on the Marble Madness audio levels. Morgan
+says it's Brad's fault because he is not using all the loudness range.
+Brad says that's not true. Morgan wants to fix it by increasing the output
+to 15 vp-p. I say that's bullshit.
+
+The following is the memo I sent to Brad and to Morgan:
+
+From:	MARGOLIN       15-NOV-1984 15:42  
+To:	HOFF
+Subj:	System I Audio Level
+
+The audio output level should be increased to 5 Vp-p during normal
+game play, and should have a reasonable amount of headroom for peaks.
+
+Background:
+
+1. If you leave the output purposefully low so that the audio does not clip 
+under any conditions, then most of the time it will not be as loud as it 
+could otherwise be.
+
+2. By having the output high enough to clip with the volume control all the
+way up you assure that it can be adjusted for maximum loudness.
+Presumably the operators will adjust it short of clipping.
+
+3. In the old days, the volume was controlled via a rheostat at the
+amplifier output, so that if the amplifier was clipping it could
+not be fixed by turning the volume down. The volume control pots
+on Regulator/Audio III are at the amplifier input.
+
+4. The amount of dynamic range available for arcade games is fairly narrow.
+Arcades tend to be noisy, which sets the low end. The high end is set by the 
+amount of audio power reaching the player's ears and is limited by the 
+threshhold of pain. Also, if too many sounds are turned on at the same time,
+they will simply become an indistinguishable jumble.  
+
+5. Generally, sounds with very high ratios of peak to average levels (like 
+explosions) have been allowed to clip. Otherwise, if the system is adjusted
+to handle the peaks, the average volume level is too low.
+
+------------------------------------------------------------------------------
+3. TomCat: A. The lab has not been set up, yet.
+	   B. I am considering doing some custom ICs for the vector generator.
+	   C. It would be really helpful if there were documentation on the
+	      software tools for the 68010.  	
+
+------------------------------------------------------------------------------
+4. Altronics-Howard on Union is selling brand-new power supply bases with
+   Korean transformers for $10. All they would need is to mount the fuse
+   holder on standoffs and replace the 20 Amp fuse (and label) and they
+   could be used in System I or System II.
+------------------------------------------------------------------------------
+5. The vegetation around the parking lot is very thick and overgrown and makes
+   exiting said parking lot hazardous.
+
+
+									-30-
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Regulator/Audio III Costs
+Dt: 12/20/84
+
+I just received a copy of Rod Peterson's cost information on the 
+Regulator/Audio III.
+
+I used the best information I could get, and it was wrong. I used as many 
+parts from inventory as I could and then it turned out these parts had been 
+scrapped.
+
+It makes me look bad and I am mad as hell about it.
+
+Regulator/Audio III	Rod Peterson's cost	 =    	$31.95
+
+			My estimate in September =    -	$23.64
+							-------
+							$8.31
+
+Total Increase:
+---------------
+			  1.  Inventory Parts		$1.91
+			  2.  CTS Pot			 1.01
+			  3.  PC Board			 3.75
+			  4.  TDA 2030			 1.20
+			  5.  Heat Sink			  .49
+							------
+							$8.36
+
+Item 1
+-------
+When I did my cost estimate I used the best information I could get, which was
+the AMPS system before it was turned off. This was in September.
+
+As an example take 24-250477 (470 uF 25V Electrolytic Capacitor). According
+to AMPS we had 71,350 in inventory and paid $0.11 a piece. How could they now
+cost $0.477? And why do they cost almost twice as much as a 1000 uF 25V part?
+
+	Was the original AMPS entry incorrect? 
+
+	Did the capacitors somehow increase in cost while they were sitting in
+	inventory? 
+
+	Did our inventory go through some kind of time warp?
+
+	Did we store them in a 747 that was kept in the air (with in-flight
+	refueling) so as to be immediately available once it was determined
+	where the factory was going to be?
+
+	Did we sell them off and buy them back? 
+
+There are 9 items that fall into this category, accounting for an increase
+of $1.91 .
+
+Item 2
+------
+	The CTS volume control pot (119011-103) is listed as $2.028  .
+According to the quote I got from CTS, this would correspond to a quantity
+of 300 pieces. Are we buying our parts in quantities of 300? 
+
+This accounts for an increase of $1.01 .
+
+Item 3
+------
+	The PC Board used in the Regulator/Audio II is 91 square inches 
+(6.5" x 14") and costs $8.08 . (0.0888/sq in)
+
+	The PC Board for Regulator/Audio III is 119 square inches (8.5" x 14")
+and costs $12.25. (0.103/sq in). Why is that?
+
+Item 4
+------
+	The TDA-2030 used in the switcher was listed as $1.50 each. Why are
+they now $2.10 ?
+
+Item 5
+------
+	The cost of the Heat Sink increased by $.49, presumably by having
+three more holes drilled in it.
+
+------------------------------------------------------------------------------
+It is impossible to get reliable cost information ahead of time. However, 
+critical Engineering decisions are often based on price differences of $1.00 
+or less. 
+
+It is no longer possible to base a design on the cost effective use of parts 
+in inventory, because these parts could be scrapped at any time without 
+notice.
+
+Atari's system makes parts cost too much because:
+
+	Atari sells parts from inventory and then buys them back (at an 
+	inflated price).
+
+	Parts that require some amount of lead time are purchased at a
+	premium because parts are not bought until the game is released
+	and games are manufactured as soon as they are released.
+
+	There does not seem to be any way of buying parts in quantities
+	beyond what is necessary for the next release of 300 games.
+
+If you want to avoid a price increase on the Transformer Power Base,
+Alltronics-Howard is selling them for $10. Ginsu knives are not included.
+
+
+				Jed
+_____________________________________________________________________________

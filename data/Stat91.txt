@@ -1,0 +1,5716 @@
+   Atari/Atari Games   Memos and Status Reports 1991   Jed Margolin
+___________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 9 January 1991
+
+
+Driver Release Documentation
+----------------------------
+I have been spending an enormous amont of time on this.
+
+
+DSPLINK
+-------
+It works during Self-Test but screws up with Ed's code. I cannot
+fix it by making program changes, blowing boot ROMs, and trying it out.
+
+Matt and Peter have started working on it. < They have an emulator.>
+
+
+Memory Expansion Board (Bonnie's PC Board)
+------------------------------------------
+I have given the inputs to PC. Leon estimates three weeks.
+
+When fully loaded, Bonnie's PCB will have:
+
+	1.25M Bytes of EPROM (10 x 27C010-170)
+	64K Bytes of RAM
+	4K Bytes of ZeroPower RAM with Software Write Protect.
+	Driver P15 System
+
+More to Do:
+	Program the GAL address decoders;
+	Write Self-Test for this board.
+
+
+DS III
+------
+I have given the inputs to PC. Art estimates it will take four weeks for
+schematic entry and board layout.
+
+More To Do:
+	Program the GALs;
+	Write Self-Test.
+
+									2 of 2
+X2 Programmer
+-------------
+Wednesday, Jan 2, 1991: 
+	Received the PC Boards.
+
+	I called Melanie about the Yamaichi sockets. She checked and found 
+	out that the Purchase Req (signed off on 12/5/90) had only 
+	that day arrived in Purchasing. 
+
+	Yamaichi was doing inventory that week but promised to send them the 
+	next week (1/8/91).
+
+Wednesday, Jan 9, 1991:
+	I called Melanie about the Yamaichi sockets. She checked and found 
+	out that Yamaichi had sent them to the wrong company. Perhaps I
+	will get them tomorrow.
+
+
+Driver Documentation
+--------------------
+I am working on it. 
+
+
+P15s
+----
+The total delivered in 1990 is:
+	June	  635 
+	October   325
+	November  926
+	December  544 
+		-----
+		 2430
+
+In January, as of 1/9/91 we have received 104 + 255 = 359 blank parts 
+to program, and have delivered 128.
+
+
+Data I/O
+--------
+nada
+ 
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 18 January 1991
+
+
+Race Drivin' Link Parts Lists		
+-----------------------------
+The twenty Parts Lists that will have to be ECNed are as follows 
+(date indicates when given to Art to release):
+
+	Cockpit:		North American	A045988-05	1/9/91
+				British		A045988-07	1/18/91
+				German		A045988-06
+
+	Hard Drivin' to Race Drivin' Link
+	Cockpit Kit:		North American	A048486-01	1/9/91
+				British		A048486-02	1/18/91
+				German		A048486-03
+
+	Race Drivin' to Race Drivin' Link
+	Cockpit Link Kit:	North American	A048978-01	1/9/91
+				British		A048978-02	1/18/91
+				German		A048978-03
+
+	Compact:		North American	A046901-04
+				British		A046901-05
+				German		A046901-06
+
+	Hard Drivin' Compact to Race Drivin' Link Compact
+	Compact Kit:		North American	A048984-01
+				British		A048984-02
+				German		A048984-03
+
+	Race Drivin'Compact to Race Drivin' Link Compact
+	Compact Link Kit:	North American	A048979-01
+				British		A048979-02
+				German		A048979-03
+
+
+DSK Board	A047724-01	(Cockpits)			1/9/91
+		A047724-02	(Compacts)
+
+
+									2 of 3
+P15s
+----
+The total delivered in 1990 is:
+		June	  635 
+		October   325
+		November  926
+		December  544 
+			 -----
+			 2430
+
+January 1991 (to date)	  359
+			 -----
+Total Delivered		 2789
+
+
+In January, as of 1/17/91 we have received 104 + 255 + 27 = 386 blank parts 
+to program, and have delivered 359, with 24 bad parts.
+
+
+Bad Parts:
+	10 first batch
+	40 various
+	18 various		
+	18 program 
+	24 non-blank
+	13 prog
+	10 non-blank (to give to Bob Stewart)
+       ----
+       133 total bad parts	(total of 53 were received non-blank)
+
+I believe I have been able to salvage 19 parts
+
+
+Total Parts= 2941
+Good parts = 2808
+Bad Parts  =  133  = 4.52% failure rate
+
+39.8% of the bad parts were due to being received non-blank.
+
+
+Read This
+----------
+In order to evaulate the bad parts and put some together for Bob Stewart I
+needed more labels.
+
+When Jim Freitas gave me the labels he remarked that they had run out of
+teeny tiny labels and had given me merely tiny labels.
+
+In his presence I tried one out on one of the bad parts I was bringing
+Bob Stewart and it was apparent that the new label will have to cover either 
+the part number or the copyright notice. (Dennis Wood has decreed that we 
+are not to cover the copyright notice.)
+
+At this point I realized that I was looking at a Texas Instruments Logo on
+our part. I know that we specifically told them that their logo was not to
+appear on the part. (Erik has since pointed out that the TI logo is molded
+into the bottom of the plastic parts.)
+
+									3 of 3
+
+Units with this parts labeled this way have almost certainly been shipped. 
+
+TI has compromised half the security we had hoped to derive from using their
+part. I recommend that this part not be used for security after Race Drivin'
+and that TI be informed of the reason for making the decision.
+
+ 
+DSPLINK
+-------
+I have two wire-wrap boards for Peter and Matt which I have to bring up.
+
+
+Memory Expansion Board (Bonnie's PC Board)
+------------------------------------------
+Leon is working on it.
+
+More to Do:	Program the GAL address decoders;
+		Write Self-Test for this board.
+
+DS III
+------
+Joe is working on it.
+
+More To Do:	Program the GALs;
+		Write Self-Test.
+
+Max insisted that a wire-wrap of the graphics section be done, so one
+is being done.
+
+ 
+X2 Programmer
+-------------
+I received the Yamaichi sockets thanks to actions by Melanie above and
+beyond the call of duty.
+
+Karen made three boards and they seem to work. I have done the software
+to run the boards (which are single-module boards).
+
+The board is ready to be used.
+
+
+Data I/O
+--------
+Someone from Data I/O called me and we discussed their P15 problem. He 
+understood why what I wanted is important and will pass it on to the
+technical people.
+
+It still isn't clear if their unique foam socket system can be made to work.
+
+
+Driver Documentation
+--------------------
+I will work on it if I ever have time. 
+
+
+
+Jed
+_____________________________________________________________________________
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Prototype PC Boards
+Dt: 1/23/91
+
+
+We are getting ready to order prototype PC Boards for the
+Expanded Memory Board and for the DS III Board.
+
+It is very important that they NOT be ordered from Cirexx.
+
+The last two boards that I have gotten from Cirexx were the
+DS II Board and the DSK Board. These boards were awful.
+
+The DS II Boards had several shorts from signal layers to the inside
+power supply layers; I have DSK Boards that Erik and I still can't get to 
+work no matter what we do.
+
+Dealing with poor quality prototype boards wastes an enormous amount of
+time.
+
+The new X Programmer boards (the X2) seem to be very good. The name on it
+is "SK" . Maybe we can order the boards from these people.
+
+
+Regards,
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 25 January 1991
+
+
+Race Drivin' Link Parts Lists		
+-----------------------------
+The twenty Parts Lists to be ECNed are as follows (date indicates when 
+given to Art to release):
+
+	Cockpit:		North American	A045988-05	1/9/91
+				British		A045988-07	1/18/91
+				German		A045988-06	1/25/91
+
+	Hard Drivin' to Race Drivin' Link
+	Cockpit Kit:		North American	A048486-01	1/9/91
+				British		A048486-02	1/18/91
+				German		A048486-03	1/25/91
+
+	Race Drivin' to Race Drivin' Link
+	Cockpit Link Kit:	North American	A048978-01	1/9/91
+				British		A048978-02	1/18/91
+				German		A048978-03	1/25/91
+
+	Compact:		North American	A046901-04	1/21/91
+				British		A046901-05	1/21/91
+				German		A046901-06	1/25/91
+
+	Hard Drivin' Compact to Race Drivin' Link Compact
+	Compact Kit:		North American	A048984-01	1/21/91
+				British		A048984-02	1/21/91
+				German		A048984-03	1/25/91
+
+	Race Drivin'Compact to Race Drivin' Link Compact
+	Compact Link Kit:	North American	A048979-01	1/21/91
+				British		A048979-02	1/21/91
+				German		A048979-03	1/25/91
+
+
+DSK Board	A047724-01	(Cockpits)			1/9/91
+		A047724-02	(Compacts)			1/21/91
+
+
+									2 of 3
+P15s
+----
+The total delivered in 1990 is:
+		June	  635 
+		October   325
+		November  926
+		December  544 
+			 -----
+			 2430
+
+January 1991 (to date)	  359
+			  239
+			   19 (salvaged from previously bad parts)
+			 -----
+			  617
+
+Total Delivered		 3047
+
+
+
+In January, as of 1/25/91 we have received 104 + 255 + 27 + 250 = 636 blank 
+parts to program, and have delivered 617 (598 plus 19 salvaged from previously
+bad parts), with 35 bad parts. Failure rate is 35/636 = 5.5% 
+
+
+Total Parts= 3191
+Good parts = 3047
+Bad Parts  =  144  = 4.51% failure rate
+
+
+
+DSPLINK
+-------
+I have brought up the two partyline wire-wrap boards for Peter and Matt and
+am having Emmette make two more. I am buying more line buffer parts for these 
+boards and for the DS III boards.
+
+
+Memory Expansion Board (Bonnie's PC Board)
+------------------------------------------
+Leon is working on it. No work could be done on it Monday and Tuesday because
+Ernie$Userdisk was down. After that, Leon was pulled off the board to work
+on BatMan. I don't know when it will get done.
+
+More to Do:	Program the GAL address decoders;
+		Write Self-Test for this board.
+
+									3 of 3
+DS III
+------
+Joe is working on it. No work could be done on it Monday and Tuesday because
+Ernie$Userdisk was down. After that, Joe was pulled off the board to work
+on the BatMan Sound Board. I don't know when it will get done.
+
+
+More To Do:	Program the GALs;
+		Write Self-Test.
+
+I have gotten the wire-wrap of the graphics section back; I will have to
+program the GALs before it can be used. If Max wants to use it anytime soon
+it will be without much Self-Test.
+ 
+
+Driver Documentation
+--------------------
+I have been working on it.
+
+
+Plus Logic Field Programmable Gate Arrays
+-----------------------------------------
+The latest quote is for $30.00 for quantity 500 in 1991 Q4. This is higher
+than the $16.00 that the salesman talked about earlier.
+
+I also have not received the information I requested on programming the 
+device. They recommend the Data I/O Unisite ($17K).
+
+I am planning on giving them their evaluation software back and dropping
+them from consideration for now.
+
+
+Triac Motor Amp
+---------------
+Erik is working with Emmette in getting one built.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 30 January 1991
+
+
+We have released all the versions of Race Drivin' Link.
+
+But, since we have run out of Slapstic 17 we have to do it over again.
+
+The remaining Slapstics are Slapstic 15; the software will be changed so
+it will work with either one. This means that Self-Test will be backwards 
+compatible with all existing versions of Race Drivin'.
+
+
+Race Drivin' Link Parts Lists II		
+--------------------------------
+The fourteen (to twenty) Parts Lists to be ECNed are as follows 
+(date indicates when given to Art to release):
+
+New Whole Games:
+
+	Cockpit:		North American	A045988-05	
+				British		A045988-07	
+				German		A045988-06	
+
+	Compact:		North American	A046901-04	
+				British		A046901-05	
+				German		A046901-06	
+
+
+The kits that need to be ECNed are the ones that convert Hard Drivin' to
+Race Drivin' Link since Hard Drivin' was shipped without a Slapstic.
+
+	Hard Drivin' to Race Drivin' Link
+	Cockpit Kit:		North American	A048486-01	
+				British		A048486-02	
+				German		A048486-03	
+
+	Hard Drivin' Compact to Race Drivin' Link Compact
+	Compact Kit:		North American	A048984-01	
+				British		A048984-02	
+				German		A048984-03	
+
+These kits have the Slapstic called out on a different parts list, so they
+must also be changed:
+
+	ASSY, RACE DRIVIN' KIT			A048810-XX
+
+	ASSY, KIT LIST, COMPACT			A048850-01
+
+
+		WARNING   WARNING   WARNING
+		-------   -------   -------
+Kit List A048850-01 (Compact Hard Drivin' to Race Drivin' Link) does not have
+a Slapstic on it. Therefore, any of these kits that have already been shipped
+WILL NOT WORK.
+
+									2 of 2
+
+The kits that convert Race Drivin' to Race Drivin' Link presumably do not
+need to be changed, since they go only to people who already have Race Drivin'
+which means they already have a Slapstic 17 on their board. If, however, you
+want them changed anyway, let me know.
+
+	Race Drivin' to Race Drivin' Link
+	Cockpit Link Kit:	North American	A048978-01	
+				British		A048978-02	
+				German		A048978-03	
+
+
+	Race Drivin'Compact to Race Drivin' Link Compact
+	Compact Link Kit:	North American	A048979-01	
+				British		A048979-02	
+				German		A048979-03	
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status Report
+Dt: 31 January 1991
+
+
+	I have had an exploratory meeting with Philip King of
+ASIC Technical Solutions (ATS) and Mark Kuligowski of Premier
+Technical Sales.
+
+	ATS does ASICs for people using standard cell technology.
+
+	Inputs can be: 
+	   1. Customer supplies schematics and test vectors;
+
+	   2. Customer supplies schematics and test vectors using
+		   ATS software ($7K).
+
+	   3. Customer supplies layout data, simulation vectors, and 
+	      results. Presumably the $7K software will get you this far.
+
+	The customer receives a prototype of the design in an ACTEL FPGA
+	(which runs at a slower maximum speed than the real ASIC).
+		       
+I asked them to talk to Don Paauw to get the size of the TWIG and Phil
+called me back to report that they would be happy to do one from our
+schematics for NRE of $12K and:
+
+	  1K: about $3.00	    10K: $2.50
+
+For $12K we would get 12 prototypes.
+
+
+National Semiconductor is currently the sole source of TWIGs. Several
+months ago they announced their intention to get out of the ASIC
+business. They have stopped taking orders for new ASICs and although they
+have promised to continue making old ASICs I beleive it is only a matter 
+of time before they shut it down completely.
+
+
+The TWIG is used on the Driver Main Board and on the MultiSync Board.
+Besides Race Drivin', the MultiSync Board is used on Cyclotron and
+NoName.
+
+The TWIG has no application other than with the 34010; future designs
+would use the 34020 and would not use the TWIG.
+
+The questions are:
+ 
+	1. Do you think we will stop using the TWIG before National stops 
+	   making them?
+
+	2. If not, do we want to do something about it before it happens
+	   and we are left high and dry?
+
+	3. Is ATS an appropriate company to do business with?
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 8 February 1991
+
+
+We have released all the versions of Race Drivin' Link affected by the 
+Slapstic change. The only versions not changed were those to convert
+Race Drivin' to Race Drivin' Link since they already have Slapstic 17.
+
+The new release works with either Slapstic 17 or Slapstic 15 with no
+Operator action required.
+
+I gave the inputs to Art on Monday Feb 4 and signed off the parts lists
+on Thursday Feb 8. I also gave inputs to Ralph for his parts lists om
+Monday. I don't know if he has taken care of it yet.
+
+
+Race Drivin' Link Parts Lists II		
+--------------------------------
+The fourteen Parts Lists ECNed are as follows: 
+
+New Whole Games:
+
+	Cockpit:		North American	A045988-05	
+				British		A045988-07	
+				German		A045988-06	
+
+	Compact:		North American	A046901-04	
+				British		A046901-05	
+				German		A046901-06	
+
+
+The kits that need to be ECNed are the ones that convert Hard Drivin' to
+Race Drivin' Link since Hard Drivin' was shipped without a Slapstic.
+
+	Hard Drivin' to Race Drivin' Link
+	Cockpit Kit:		North American	A048486-01	
+				British		A048486-02	
+				German		A048486-03	
+
+	Hard Drivin' Compact to Race Drivin' Link Compact
+	Compact Kit:		North American	A048984-01	
+				British		A048984-02	
+				German		A048984-03	
+
+These kits have the Slapstic called out on a different parts list, so they
+must also be changed:
+
+	ASSY, RACE DRIVIN' KIT			A048810-XX
+
+	ASSY, KIT LIST, COMPACT			A048850-01
+
+									2 of 3
+
+The kits that convert Race Drivin' to Race Drivin' Link were not changed.
+
+	Race Drivin' to Race Drivin' Link
+	Cockpit Link Kit:	North American	A048978-01	
+				British		A048978-02	
+				German		A048978-03	
+
+
+	Race Drivin'Compact to Race Drivin' Link Compact
+	Compact Link Kit:	North American	A048979-01	
+				British		A048979-02	
+				German		A048979-03	
+
+
+P15s
+----
+The total delivered in 1990 is:
+		June	  635 
+		October   325
+		November  926
+		December  544 
+			 -----
+			 2430
+
+	1991	January   617  
+		February  531  (to date)
+
+Total Delivered		 3578
+
+In February so far we have received 550 parts and have delivered 531 with
+19 bad parts for a failure rate of 3.5% for this batch. Either this batch is 
+better than the previous batches or the X2 Programmer does a better job
+programming the parts. 
+
+Total Parts= 3741
+Good parts = 3578
+Bad Parts  =  163  = 4.36% failure rate
+
+
+PC Boards
+---------
+DS III Boards have been ordered.
+
+Memory Expansion Boards have come in. I will have some stuffed next week.
+
+The DSPLINK Board will probably go out for film on Monday.
+
+									3 of 3
+
+DS III Cost Summary
+-------------------
+
+DS III Stuffed to do Street Driver: 
+	256K Bytes Graphics EPROM (2*27C010); 
+	256K Bytes (2*27C010) + 64K Bytes (1*27C512) Sound EPROM; 
+	Has Extra Sound Program RAM to do Sequencer (3 8Kx8-35 SRAMs = $11.70)
+	No 3D Processor;
+	All unused positions have sockets (27C010 sockets are $0.46 ea.)
+
+		Material Total:		$221.62
+
+
+DS III Completely Stuffed: 
+	1M Byte Graphics EPROM; 
+	1M Byte Sound EPROM; 
+	3D Processor;
+	Extra Sound Program RAM
+
+		Material Total:		$304.97
+
+
+By comparison:
+					Material  Labor   Overhead     Total
+					--------  -----   --------    -------
+	Driver Sound   A046491-02	$127.40   $6.17   $50.40      $183.97
+
+	ADSP II	       A047046-03	$192.93	  $4.45   $36.40      $233.78
+	
+	DS III (Street Driver):		$221.62	  $6.17*  $50.40*     $278.19
+
+
+The DS III Board is similar to the Driver Sound Board in size and density.
+
+	Driver Sound + ADSP II 		$320.33   $10.62  $86.80     $417.75
+	DS III		       		$221.62   $ 6.17  $50.40     $278.19
+					-------   ------  ------     -------
+	Savings = 	 		$ 98.71	  $ 4.45  $36.40     $139.56
+
+		
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 12 February 1991
+
+
+Race Drivin'
+-----------
+The parts lists have been published, so we seem to be done.
+
+
+P15s
+----
+ Delivered:	June	  635 
+		October   325
+		November  926
+		December  544 
+		January	  617  
+		February  531  (to date)
+			 ----
+	  Total		 3578
+
+
+
+DS III Boards
+-------------
+The boards are on order. I have given Karen the parts list and asked her to
+get the parts ahead of time. I don't want to to get caught short when Tom 
+Smith closes things done for inventory.
+
+The schematics that the PC Group produces with ViewLogic are unacceptable. 
+The features are too small to read by a person with normal eyesight. I have
+suggested how they can fix the problem but they refuse to try it.
+
+The parts lists that the PC Group produces with ViewLogic are unacceptable.
+I had to generate my own parts list for the DS III board in order to cost the 
+board and so Karen would have something to work from.
+
+I wonder if the boards by this system will even work.
+
+
+Memory Expansion Boards
+-----------------------
+We have received boards and I have given them to Karen to stuff. She expects
+to have some ready for me next week.
+
+The boards were designed to use 170 ns 1M EPROMs. According to Mary Burnias
+the manufacturer would prefer to sell us 150ns parts because that is the
+standard speed for these parts. That is fine with me. I may be be able to 
+replace some F245 buffers with LS245s.
+
+Also, Mary deserves special commendation for getting me 75ALS194s and 
+75ALS195s last week.
+
+									2 of 2
+DSPLINK Board
+-------------
+They have either been ordered or are about to be ordered.
+
+
+TWIG Second Source
+------------------
+I have asked Philip King of ATS to prepare a proposal for a TWIG
+replacement, to include costs and schedules.
+
+
+Orcad
+-----
+According to Elcor, Orcad started shipping updates around the end of January.
+We should get it soon (if we sent in the registration card).
+
+I have asked for the demo disk for the PCB Layout package.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 4 March 1991
+
+DSPLINK Boards
+--------------
+I have given two Party-Line versions to Peter.
+
+With Matt's help I have given Ed Logg two working DSPLINK (old style) Boards.
+
+According to Melanie the PC Boards are not due in until March 19. Film and
+Fab were ready in Feb 12. What happened?
+
+
+ASIC61
+------
+Mike Felice came in and showed me a copy of what AT&T proposes to do to change
+the specs in order to increase their yield.
+
+They want to change the input threshhold for logic '1' from 2.2V to 3.0V on
+some of the Host Port signals. Since these are driven by LSTTL gates whose
+outputs are not guaranteed for more than 2.4V I told him 'No'.
+
+We would need to add pullup resistors on 7 lines either as a hand operation
+or by changing the PC Board. 
+
+
+Memory Expansion Board
+----------------------
+Karen has stuffed the nine boards. I have brought up seven of them and will
+give six to Bonnie as soon as I receive some instructions regarding the 
+Helper. If she is going to use Driver Code for the Helper I will make some. 
+If not, not.
+
+Leon screwed up the board by splitting up /32WR0 into /32WR0 and /32WRO which,
+of course, were not connected. (0=zero; O=Oh). Also, Leon has chosen to 
+do 'not' as an overstrike which means it cannot be precisely referred to in 
+an ASCII text file.)
+
+/32WRO connected two inputs together with no driving source. Doesn't Viewlogic
+report undriven inputs? OrCard does.
+
+
+DS III Boards
+-------------
+Karen has built one and I have started testing it. I expect to have the 
+Graphics section Self-Test working this week, depending on how much I
+get interrupted.
+
+
+Orcad
+-----
+I have received the demo disk for the PCB Layout package and tried it out. I
+like it.
+
+When I called OrCad with some questions about the program I also asked about
+our update for SDT III. The guy said they had just started shipping updates 
+that week. 
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 11 March 1991
+
+
+DSPLINK Boards
+--------------
+Logg has reported a problem related to the type of interconnect cable used.
+
+The boards that he has are more susceptible to cable capacitance than the 
+Party Line boards will probably be, so no action will be taken until we get
+the Party Line boards.
+
+Boards are expected on March 19.
+
+
+Memory Expansion Board
+----------------------
+I have given Bonnie six boards (two with Helpers) and documentation for same.
+
+
+DS III Boards
+-------------
+The graphics section of the first board appears to be working so I have given
+it to Matt.
+
+I have brought up another board to the point where the Graphics Section
+appears to be working.
+
+I will continue bringing up the DS III board and writing Self-Test.
+
+I have received a notice from Analog Devices that 50 MHz 2101s with a date
+code of 9049D or later have a new bug. It seems that when it returns from a
+Bus request it incorrectly executes the pending instruction. Matt has more
+information. Margot will try to find out when they expect to have Real Parts.
+
+
+Orcad
+-----
+I filled out a Purchase Request for the PCB Layout package which will allow
+us to do our own small prototype PC Boards quickly.
+
+
+P15s
+----
+Ken Williams needed three so I was able to salvage three from the dead pile.
+
+ Delivered:	June	  635 		January	   617	
+		October   325		February   531
+		November  926		March        3
+		December  544 
+
+ Total:	 3581
+
+
+
+Jed
+_____________________________________________________________________________
+_____________________________________________________________________________
+_____________________________________________________________________________
+
+							14 March 1991
+
+Matt,
+
+I have found out what was screwing up DS III Self-Test and might have
+something to do with the problem you are having.
+
+A Reset signal must be at least 1000 processor cycles long after powerup
+(84 us for a 12 MHz system) and at least 400 ns for a Reset after the
+initial powerup Reset. [ADSP-2101 Data Sheet, page 22]
+
+It doesn't say anything about what to do after Reset goes high.
+
+For a system that is going to Boot from ROM, no problem.
+
+For my Self-Test, which is run from external Program RAM, the program 
+miraculously runs if I wait a few microseconds before I do anything else
+(like generate an IRQ from the Port).
+
+I am waiting 20 us but it seems to work just as well doing:
+
+	CLR.W	GR_RES_H
+	JSR	DELAY
+	and so on
+
+
+
+DELAY:	RTS
+
+I have made new Self-Test ROMs.
+
+
+Regards,
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 15 March 1991
+
+
+DSPLINK Boards
+--------------
+We have received the PC Boards (a week early) and Karen has stuffed four
+for me. I expect to fire them up next week.
+
+
+Memory Expansion Board
+----------------------
+I have given Bonnie six boards (two with Helpers) and documentation for same.
+
+
+DS III Boards
+-------------
+The graphics section of the first board appears to be working so I have given
+it to Matt. He has been able to port the Race Drivin' program over to it and 
+it works. He has more things to do on it. I will look into why he seems to 
+need to set the Data RAM that shadows the ports to 1 wait state.
+
+I will continue bringing up the DS III board (and writing Self-Test) with the
+two additional boards that Karen stuffed for me.
+
+I have received a notice from Analog Devices that 50 MHz 2101s with a date
+code of 9049D or later have a new bug. It seems that when it returns from a
+Bus request it incorrectly executes the pending instruction. Matt has more
+information. I have asked Margot when they expect to have really real parts
+but I have not gotten an answer yet.
+
+Some of the problems we have had in bringing up the board are because the
+2101 Emulator does not do a good job in getting off the bus in response to
+a Bus Request. Matt has an Oops board from Analog Devices that is supposed to
+solve the problem but then the unit cannot operate at full speed; however, 
+apparently no one over there is willing to say what speed it will operate at.
+
+									2 of 2
+Moto
+----
+On Wednesday I attended a meeting with the Motorola rep (Rich Comeau) and the
+Field Applications Engineer (Raman Subramanian). Also attending were
+Pat McCarthy and his gang and Mike Albaugh. The purpose was to discuss 
+possible processors beyond the 68010. 
+
+Motorola has what they are calling the MC68EC020. This is a 68020 with
+some of the signals not bonded out in order to save money on packaging.
+The device has 32 address lines but only 24 are brought out. (The 68010
+is the same way.)
+
+The 68EC020 (68020) has a 32 bit data bus and a 256 byte cache. The 'EC' 
+stands for Embedded Controller' and appears to be a marketing ploy directed at
+people who think they cannot afford a real microprocessor.
+
+Prices (1K):			16 MHz		25 MHz		# pins
+				------		------		------
+		68EC020 PGA	$26.90		$32.00		100
+			PQFP	$16.90		$22.00		100
+
+		68020	PGA			$56.00		114
+			PQFP			$51.00		132
+
+Rich Comeau is getting me a real quote.
+
+There are issues that would have to be addressed, like development systems,
+but then, they would have to be addressed by any change of the Main Processor.
+
+By the way, the Microtek tools that we have do support the 68020.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 22 March 1991
+
+
+Programmed Parts Series
+-----------------------
+I have obtained the following Programmed Parts Series numbers:
+
+	Cyclotron	136086-XXXX
+	Steel Talons	136087-XXXX
+	Panorama	136088-XXXX
+
+
+DSPLINK Boards
+--------------
+The four PC Boards Karen made for me work just fine. I have asked her to
+make six more. I have documented the differences between the old and the new 
+boards. Peter needs six boards next week. I hope to be able to accomodate him.
+
+
+DS III Boards
+-------------
+The work that I have done until now has been directed to providing Matt
+with a known good board. I am continuing to work on the complete Self-Test
+for the board.
+
+
+GAL6001
+-------
+Regarding Pat's memo on replacing the Slapstic with a GAL6001.
+
+Two weeks ago I asked Joan for a quote on this part with a copy to be sent to 
+Pat. It came in at $5.18 . I told Joan that I was disappointed that it
+wasn't closer to the $4 she mentioned a few months ago. She said that 
+Lattice's attitude is that it is a sole source part and they see no reason to 
+cut the price.
+
+$5.18 seems to be a bit pricey; we were paying $0.23 the last time we bought 
+Slapstics.
+
+An alternative might be to do a custom chip with ATS. For $15K and $2.50/chip
+we could have something equivalent in capability to the TWIG. An example
+is an ASIC implementation of the parallel port used in the DS III and also
+as the Helper Interface. It would also contain security circuitry.
+
+Or, are there any other PLDs that can do buried states for less than $5.18?
+
+
+MANMAN
+------
+I have had occasion today to look up the inventory status for a particular
+part. They have changed the program. It now requires the user to make
+several choices of something or other; it cranks for awhile and then delivers
+garbage. It also refuses to let the user get out of that particular mode.
+You must Control-Y out of MANMAN and run the program again.
+
+This is really infuriating.
+
+ 
+Jed
+_____________________________________________________________________________
+_____________________________________________________________________________
+								3/28/91
+
+
+Matt,
+
+	I have had the mods done and they seem to work. The board should
+work with no wait states.
+
+
+	Also, the Pod PGA connector came apart when I unplugged it from the 
+board. You might want to check that I put it back together the right way.
+
+
+
+							Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 5
+Fr: Jed Margolin
+Re: Status Report
+Dt: 1 April 1991
+
+
+DS III
+------
+In going over the new 2101 specs I discovered an error in my circuit,
+which I have corrected. The new specs make it possible to operate the port 
+with zero wait states. This requires another circuit change that I am making.
+ 
+Dan Ash spent Tuesday afternoon here working with Matt on the Emulator. He
+is scheduled to return next week to work on it some more.
+
+According to a letter from Damon Chu, Regional Marketing Manager, Analog 
+Devices DSP Division, 50 MHz 2101s have a problem with the Bus Request
+operation. 
+
+They claim they will be able to provide us with specially screened parts in 
+which the Bus Request works as long as all wait states are 0.
+
+Since the circuit now operates with all wait states set to 0, this seems like
+an acceptable solution, especially since, according to Dan Ash, the plans are
+to not bring out a new rev until late summer.
+
+I have emphasized to Dan the absolute requirement that this part be given a
+part number to distinguish it from the other parts where Bus request does not
+work. I have suggested that this part be called an ADSP-2101KP-50-2.
+
+
+DSPLINK Boards
+--------------
+I have given Peter six boards. Two have PGA sockets for use with his ICE;
+four are PLCC for the Eds' game.
+
+I have also given him a set of documentation including memory map, schematics,
+and how the PC Board is different from the WireWrap board.
+
+I have given Ed Logg documentation of memory map and how the PC Board is 
+different from the WireWrap board.
+
+
+Panorama
+--------
+I have generated the parts lists for Main, MultiSync, ADSP II, and DSK Boards.
+
+
+PC Boards
+---------
+	DSPLINK Board will need some touchup before going to Rev A.
+	Memory Expansion Board will need some work before it can go to
+		Rev A (Leon omitted a trace).
+	DS III Board will need somewhat more than touchup. We should go to
+		Rev 2 before going to Rev A.
+
+I do not want to give inputs to PC until the boards have been thoroughly 
+evaluated by their respective programmers.
+
+									2 of 5
+DS III Costs
+------------
+DS III Stuffed to do Graphics only (no Sound, no DSP Link) with	
+512K Byte Graphics EPROM (equivalent to 8 27C512 vs. 6 for ADSP II); 
+
+Total Materials: $153.76
+
+The DS III stuffed for Graphics Only should cost $39.17 less than the ADSP II
+for what should be at least the same and probably greater performance. This
+includes four 1M EPROMs equivalent to eight 27C512s.
+
+The difference between a DS III that does Sound and Graphics and a DS III that
+just does Graphics is $221.62 - $153.76 = $67.86 (Material only), and
+		      $279.19 - $194.61 = $84.55 (Material+Labor+Overhead).
+
+How much does the SA Audio cost, with ROMs, Labor, and Overhead? 
+
+Here is how it compares:
+					Material  Labor   Overhead     Total
+					--------  -----   --------    -------
+	Driver Sound   A046491-02	$127.40   $6.17   $50.40      $183.97
+	ADSP II	       A047046-03	$192.93	  $4.45   $36.40      $233.78
+	DS III (Street Driver):		$221.62	  $6.17*  $50.40*     $278.19
+	DS III (Graphics Only):		$153.76   $4.45** $36.40**    $194.61
+
+
+	ADSP II	       A047046-03	$192.93	  $4.45   $36.40      $233.78
+	DS III (Graphics Only):		$153.76   $4.45   $36.40      $194.61
+					-------   ------  ------     -------
+	Savings = 	 		$ 39.17	  $0.00   $0.00       $39.17
+
+
+	Driver Sound + ADSP II 		$320.33   $10.62  $86.80     $417.75
+	DS III		       		$221.62   $ 6.17  $50.40     $278.19
+					-------   ------  ------     -------
+	Savings = 	 		$ 98.71	  $ 4.45  $36.40     $139.56
+
+* The DS III Board is similar to the Driver Sound Board in size and density.
+** The DS III Graphics Only is similar to the ADSP III in size and density.
+		
+Jed
+
+									3 of 5
+++++++++++++++++++++++++++++++ Things To Do ++++++++++++++++++++++++++++++++++
+
+Street Driver
+-------------
+   DS III: 
+        1. Finish Self-Test to determine that the board is working.
+        2. Redo the Self-Test menu to make it easy for Production to test 
+           the boards.
+        3. Do Self-Test for the Auto Self-Test mode.
+
+Cyclotron
+---------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Motor AMPs:
+        1. Do Self-Test for new Motor AMPs.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+
+Steel Talons
+------------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+
+Hard Drivin'/Race Drivin': Finish documentation.
+
+------------------------
+									4 of 5
+
+DS III Stuffed to do Graphics only (no Sound, no DSP Link)		
+	512K Byte Graphics EPROM (equivalent to 8 27C512 vs. 6 for ADSP II); 
+
+   1   PC Board 		$39.60		$ 39.60
+
+   1   ADSP-2101  		$40.00		$ 40.00
+   5   8K8-35            	$ 3.90		$ 19.50
+   4   27C010-200        	$ 6.30		$ 25.20
+
+       Other ICs = 				$ 12.33 
+       Diodes = 				$  0.23
+       Connectors = 				$  3.01
+       Capacitors = 				$  4.42
+       Resistors = 42 * $0.009 = 		$  0.38
+       Misc = 					$  0.65
+       Sockets = 				$  8.44
+       						-------
+				Total:		$153.76
+------------------------------------------------------------------------------
+									5 of 5
+DS III Stuffed to do Graphics only (no Sound, no DSP Link)		
+	     1   PC Board			$39.60		$39.60
+
+137668-200   4   27C010-200        		$ 6.30		$25.20
+
+137662-050   1   ADSP-2101  			$40.00		$40.00
+137667-035   5   8K8-35            		$ 3.90		$19.50
+
+137647-015   2   GAL20V8-15        		$ 2.00		$4.00
+137646-015   1   GAL16V8           		$ 1.30		$1.30
+137327-001   1   74F00             		$ 0.115		$0.12
+137005-001   1   74LS00            		$ 0.120		$0.12
+137437-001   1   74F04             		$ 0.130		$0.13
+137487-001   1   74AS32            		$ 0.225		$0.23
+137052-001   1   7406              		$ 0.180		$0.18
+137436-001   4   74F74             		$ 0.150		$0.60
+137521-001   2   74F138            		$ 0.320		$0.64
+137144-001   4   74LS374           		$ 0.225		$0.90
+137420-001   2   74F374           		$ 0.33		$0.66
+137038-001   6   74LS244           		$ 0.256		$1.54
+137502-001   3   74F244           		$ 0.33		$0.99
+137134-001   3   74LS245           		$ 0.238		$0.69
+137137-001   1   74LS259           		$ 0.230		$0.23
+							Other ICs = $12.33 
+
+122002-104  119  0.1,50V               		$0.034		$4.05 
+122016-220   2   22pF, 100V, 5% radial		$0.070		$0.14
+124000-106   1   10 uF, 35V, Elec        	$0.075		$0.08
+123009-107   1   100/35V, Radial Low ESR  	$0.150		$0.15	
+							 Capacitors = $4.42 
+
+131027-002   3   MV5053 LED               	$0.076		$0.23
+							     Diodes = $0.23
+
+179021-060   1   Conn, 60 pos 3M, straight	$2.25		$2.25
+179069-009   1   Conn, 9 pos AMP (POWER)	$0.520		$0.52
+179048-002   2   PIN_JUMPERS       		$0.120		$0.24
+						         Connectors = $3.01
+
+110027-102   21  1K, 5%, 1/8W      		$0.009		
+110027-103   20  10K, 5%, 1/8W           	$0.008	 	
+110027-151    1  150, 5%, 1/8W           	$0.009		
+	      			      Resistors = 42 * $0.009 = $0.38
+
+
+179051-001    2  Test Point  			$0.026		$0.05
+144000-012    1  XTAL, 12.0 MHz			$0.60		$0.60
+							   Misc = $0.65
+
+179237-068    1  Socket, PLCC, (ADSP-2101) 	$1.60		$1.60
+179259-020    1  Socket, 20 pin, 0.3"		$0.064		$0.07
+179259-024    2  Socket, 24 pin, 0.3"		$0.120		$0.24
+179259-028    5  Socket, 28 pin, 0.3"		$0.57		$2.85
+179257-032    8  Socket, 32 pin, 0.6"      	$0.46		$3.68
+_____________________________________________________________________________
+{ Date Unknown }
+
+New United Motor and Fan Amp (NUMFA)
+------------------------------------
+
+Power Supply tests so we know what size transformer and capacitors to use:
+
+
+
+1. Install 3" wire loop on each 8VAC transformer winding.
+
+2. Use Current Probe connected to Fluke RMS Meter to measure currents.
+   (Remember to terminate the current probe amplifier.)
+
+3. Use 'scope to observe power supply outputs and regulator margin.
+
+4. Determine regulator margin with 105 VAC primary power.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 8 April 1991
+
+
+Panorama
+--------
+I have signed off the parts lists for Main, MultiSync, ADSP II, and DSK Boards.
+
+32K x 8 SRAMs
+-------------
+Tom Smith asked me if we could use 70 ns parts instead of 85 ns parts on the
+DSK board. He gave me some parts which I tried out in a board (they worked)
+so the next day I told him that I would happy to sign a deviation to that 
+effect.
+
+
+Bonnie's Volume Control
+-----------------------
+I added an entry in Self-Test for her to use to set the game volume.
+
+
+
+DSPCOM Board
+------------
+I propose this as the name for the board with the DSP Link and the Helper.
+I have finished the schematics and will give them to PC.
+
+This board will require new GAL programming which I will try to do before
+PC finishes the board. (This is to avoid unpleasant surprises.) I expect to
+make the DSP Link addressing the same as in the DSPLINK PCB.
+
+This board will also require a bunch of Self-Test.
+
+
+New United Motor and Fan AMP PCB (NUMAF)
+----------------------------------------
+I have updated the schematic and done a sample placement of the parts and a 
+sample routing (as a 2-layer board) using the Roto-Router.
+
+I created several shapes without having much information, so they may need to 
+be redone. Especially the Transformer.
+
+Some things are already apparent:
+	1. It would be helpful if the PC group would supply a list of the
+	   parameters used for our parts [pad size, drill size, lead spacing].
+
+	2. Ditto on things like:
+		a. How close to the board edge can traces be run? 
+		b. How close to the board edge can components be mounted?
+
+	3. Logic Power and Ground will need to be routed manually.
+
+	4. Line voltage will need to be routed manually.
+
+	   
+
+Jed
+
+++++++++++++++++++++++++++++++ Things To Do ++++++++++++++++++++++++++++++++++
+
+Street Driver
+-------------
+   DS III: 
+        1. Finish Self-Test to determine that the board is working.
+        2. Redo the Self-Test menu to make it easy for Production to test 
+           the boards.
+        3. Do Self-Test for the Auto Self-Test mode.
+
+Cyclotron
+---------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Motor AMPs:
+        1. Do Self-Test for new Motor AMPs.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+
+Steel Talons
+------------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+
+Hard Drivin'/Race Drivin': Finish documentation.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 11 April 1991
+
+
+DSPCOM Board
+------------
+I have given the inputs to PC.
+
+
+New United Motor and Fan AMP PCB (NUMAF)
+----------------------------------------
+I am continuing to work on it.
+
+I have determined that the present transformer is the correct size and the
+filter capacitors are the correct values.
+
+Leon has supplied the lead spacing, pad size and drill size information for
+the component list I did.
+
+
+DS III
+------
+I have brought Karen's documentation up to date with the mods and have asked
+her to stuff four more boards. She estimates they might be ready by Friday
+April 19.
+
+
+MultiSync Board
+---------------
+This is the proposal:
+
+	1. Remove the Slapstic and replace it with a GAL6001 programmed to
+	   emulate a Slapstic. This is feasible only if Pat McCarthy 
+	   agrees to program the parts. He will also have to give me 
+	   schematics and pinouts for designing-in the part.
+
+	2. Route the SCOM Interrupt signal through an open collector gate
+	   so it can share the LINK_IRQ with the DSPCOM board.
+
+	3. Remove the 12 Bit A/D and install a Motor Amp for the Street 
+           Driver. We may also use the Motor Amp port for this purpose.
+
+This board should be useable for Steel Talons, Cyclotron, and Street Driver.
+We need to discuss these changes with Bonnie and the EDs.
+
+In the event someone absolutely needs the 12 Bit A/D, changes #1 and #2 will 
+be made first, and that board saved on tape. (If it is used it will be given a
+different fab assembly number.) Then change #3 will made and that will be the
+latest MultiSync. Note that it will be backwards compatible if someone can
+program the GAL6001 to be a Slapstic 115 or 117. In fact, that would be a good
+test to determine that the GAL6001 can be programmed to emulate a Slapstic.
+
+Because of the addition of the Motor Amp it will be necessary to get prototypes.
+We should get a bunch (for the three projects) and have Production build them.
+
+
+Jed
+
+++++++++++++++++++++++++++++++ Things To Do ++++++++++++++++++++++++++++++++++
+
+Street Driver
+-------------
+   DS III: 
+        1. Finish Self-Test to determine that the board is working.
+        2. Redo the Self-Test menu to make it easy for Production to test 
+           the boards.
+        3. Do Self-Test for the Auto Self-Test mode.
+
+   MultiSync:
+   	1. Have PC make changes to the board:
+	     a. Make SCOM IRQ open collector to be compatible with DSPCOM.
+	     b. Take out Slapstic and replace with GAL6001.
+	     c. Take out 12 Bit A/D and replace with Motor Amp?
+
+Cyclotron
+---------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Motor AMPs:
+        1. Do Self-Test for new Motor AMPs.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+
+Steel Talons
+------------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+
+Hard Drivin'/Race Drivin': Finish documentation.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 17 April 1991
+
+
+ASIC65s
+-------
+I have given Mary Burnias 127 bad parts to return to the manufacturer.
+
+Of these parts, about one-third were received non-blank and were not
+programmed. Nonethess I set the Security Bit in these non-blank parts
+just to be sure, and verified that it was secure.
+
+The remaining two-thirds were programmed to some extent before they failed
+program verification. Since there were, in some cases, fragments of code
+in them, I set the Security Bit and verified that it was secure.
+
+There were ten parts where the Security Bit did not secure the part. I have
+kept these parts. 
+
+There are also about ten parts that might be ok. They need to be tested in 
+a DSK board.
+
+I tried running 2 Amps reverse polarity through a part. It still worked
+once it had cooled down, so I did not apply this to the 127 parts.
+
+
+DSPCOM Board
+------------
+I have gotten the schematics back. I cannot check it because I cannot read
+the signal labels. This is important because on the last board Leon did for 
+me he did some some labels '0' and some 'O' that were supposed to be the
+same label. They did not get connected on the PC board.
+
+His questions about some missing signals would have been answered if he had 
+checked it against the input that I gave him.
+
+I have attached the schematics. Please have them checked by someone who can
+read them.
+
+
+New United Motor and Fan AMP PCB (NUMAF)
+----------------------------------------
+I am continuing to work on it.
+
+
+DS III
+------
+I have requested an Atari pn for the selected 2101 (68P,PLCC) that they will
+mark as "AD 90461-1".
+
+I have sent Mary Burnias a memo explaining the situation. (Analog Devices
+wants a forecast.)
+
+Karen will supposedly have four DS III boards ready on Friday.
+
+
+Jed
+
+
+MultiSync Board
+---------------
+This is the proposal:
+
+	1. Remove the Slapstic and replace it with a GAL6001 programmed to
+	   emulate a Slapstic. This is feasible only if Pat McCarthy 
+	   agrees to program the parts. He will also have to give me 
+	   schematics and pinouts for designing-in the part.
+
+	2. Route the SCOM Interrupt signal through an open collector gate
+	   so it can share the LINK_IRQ with the DSPCOM board.
+
+	3. Remove the 12 Bit A/D and install a Motor Amp for the Street 
+           Driver. We may also use the Motor Amp port for this purpose.
+
+This board should be useable for Steel Talons, Cyclotron, and Street Driver.
+We need to discuss these changes with Bonnie and the EDs.
+
+In the event someone absolutely needs the 12 Bit A/D, changes #1 and #2 will 
+be made first, and that board saved on tape. (If it is used it will be given a
+different fab assembly number.) Then change #3 will made and that will be the
+latest MultiSync. Note that it will be backwards compatible if someone can
+program the GAL6001 to be a Slapstic 115 or 117. In fact, that would be a good
+test to determine that the GAL6001 can be programmed to emulate a Slapstic.
+
+Because of the addition of the Motor Amp it will be necessary to get prototypes.
+We should get a bunch (for the three projects) and have Production build them.
+
+
+Jed
+
+++++++++++++++++++++++++++++++ Things To Do ++++++++++++++++++++++++++++++++++
+
+Street Driver
+-------------
+   DS III: 
+        1. Finish Self-Test to determine that the board is working.
+        2. Redo the Self-Test menu to make it easy for Production to test 
+           the boards.
+        3. Do Self-Test for the Auto Self-Test mode.
+
+   MultiSync:
+   	1. Have PC make changes to the board:
+	     a. Make SCOM IRQ open collector to be compatible with DSPCOM.
+	     b. Take out Slapstic and replace with GAL6001.
+	     c. Take out 12 Bit A/D and replace with Motor Amp?
+Cyclotron
+---------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Motor AMPs:
+        1. Do Self-Test for new Motor AMPs.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+Steel Talons
+------------
+   DS III: 
+        1. Determine if they are going to use DS III and integrate it into 
+   	   Self-Test.
+
+   DSPLINK Board:
+   	1. Finish Self-Test.
+	2. Redo the Self-Test menu to make it easy for Production to test the 
+	   boards.
+	3. Do Self-Test for the Auto Self-Test mode.
+	4. Figure out what to do about LINK IRQ if they also use SCOM IC.
+
+   MultiSync Board:
+   	1. Figure out how the board will be loaded and generate a new 
+           assembly for it.
+
+   Other:
+        1. Find out what else is required for Self-Test.
+
+
+Hard Drivin'/Race Drivin': Finish documentation.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 23 April 1991
+
+
+DSPCOM Board
+------------
+I have checked the large format schematics and given the corrections to Leon,
+who has already done the board.
+
+
+Motor and Fan Amp
+-----------------
+I have finished it and prepared a 5 1/4 floppy with what I hope are the 
+appropriate Gerber files.
+
+Erik did the Fab drawing on AutoCad and we have apparently gone out for 
+boards.
+
+Here is how to get the Orcad Drill Template file into AutoCad:
+	1. Set up OrCad PCB to use DXF format for plotting files.
+		a. D:>PCB/C 	(setup mode)
+		b. PL		(we will select the plotter)
+		c. 4		(DXF plot format)
+		d. Q		(Quit)
+		e. U		(Update)
+		f. Q		(Quit)
+
+	2. Plot the Drill Template
+		a. Go through the normal procedures to load the board
+		   (ex. PCB myboard.brd)
+		b. You must set the Plot window to encompass the entire board.
+		   (ex. Quit, Plot, Window, Size, A3)
+		c. Plot the Drill Template. Give it a DXF file extension.
+		   (ex. MB_DT.DXF)
+
+       3. Import it in AutoCad.
+       		a. use DXFIN
+		b. give filename
+
+If you are going to make Gerber Plot files you must restore PCB Plotter
+Default to Gerber.
+	a. D:>PCB/C 	(setup mode)
+	b. PL		(we will select the plotter)
+	c. M		(More)
+	c. M		(More)
+	c. 17		(GERBER plot format)
+	d. Q		(Quit)
+	e. U		(Update)
+	f. Q		(Quit)
+
+
+PCB Transformer
+---------------
+According to Ray Sherman, after you asked him to get data on the Magnetek
+transformer, he realized that transformers were the purview of Mr. Owens,
+and in fact, turned the job over to him.
+
+Mr. Owens got some data from EEM. On the wrong transformer.
+
+Result: I still have to get the data I need myself, but now, because
+the board had to go out with no transformer mounting holes, I am
+guaranteed more work later on.
+
+
+DS III
+------
+The Atari part numbers for the 2101KP-50 and 2101KG-50 now call out the
+selected-out parts (AD 90461-1 and AD 9046-2). The original numbers
+have been disqualified.
+
+Karen had the four DS III boards ready on Thursday (a day early). I have
+made GALs and will bring up the boards, shortly.
+
+
+MultiSync Board
+---------------
+I am waiting for inputs:
+	1. Pat's GAL6001 circuit.
+	2. What to do about the Motor Amp circuit now that the EDs are
+	   using the 12 Bit A/D.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 26 April 1991
+
+
+
+DS III
+------
+I have brought up four DS III boards and given them to the Eds.
+
+Matt's software conversion seems to work; the DS III boards are running
+Steel Talons.
+
+I will try to have two DS II Graphics RAM boards stuffed next week.
+
+I will also convert their Self-Test to do the DS III board. 
+
+
+
+Panorama
+--------
+I have made the required changes to Self-Test.
+
+I have done a preliminary AROMREL.DOC .
+
+
+Motor and Fan Amp
+-------------------
+The boards have come in and Karen is making some.
+
+									2 of 2
+
+In order for BMX to be released, the following must be done:
+
+
+Memory Expansion Board
+----------------------
+ There is a PC error that must be fixed. 
+
+ PC must generate a useable parts list.
+
+
+MultiSync
+---------
+ If BMX is to use the DSPLINK Board, the MultiSync board must be changed.
+
+ The plan is to change the SCOM Interrupt and replace Slapstic with
+ Pat's  GAL6001. If these are the only changes, the board will remain
+ compatible with Steel Talons and Street Driver. It could also be used
+ in Panorama if a GAL6001 can be programmed to behave like a Slapstic 115.
+
+ A new version will have to be created (MultiSync II), documented, and 
+ checked. 
+
+
+ADSP II
+-------
+ If BMX is to use the ADSP II Board, a new version must be documented.
+
+ If BMX is to use a partially loaded DS III Board, we have to:
+    1. Correct the existing Rev 1 Board;
+    2. Create an appropriate parts list;
+    3. Build and test two DS II RAM Boards so Bonnie can continue development.
+        (Both her ADSP II Boards have RAM boards which can only be used with
+         ADSP II Boards.)
+
+DSPLINK
+-------
+  If Bonnie is planning on using it, it has to be released. I don't know if 
+  PC has a useable parts list yet.
+
+
+Motor and Fan Amp
+-----------------
+The board will have to work.
+
+
+
+Jed
+_____________________________________________________________________________
+
+								5/28/91
+Dear Karen,
+
+
+     I need the following parts for the DSPCOM Boards:
+
+
+	(10) 	137665-1020	ASIC65 (Blank)
+
+	(10)	137674-040	ADSP-2105
+
+	(20)	137646-015	GAL16V8-15 (Blank)
+
+
+     Please MTO them for me. If you need to charge someone, they are for
+Steel Talons 523XX.
+
+
+						Sincerely yours,
+
+		
+
+						Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 3 May 1991
+
+
+
+DS III
+------
+I am having two DS II Graphics RAM boards stuffed for Steel Talons.
+
+I will convert their Self-Test to do the DS III board. 
+
+
+Panorama
+--------
+I have made the required changes to Self-Test.
+
+I have done a preliminary AROMREL.DOC .
+
+
+Motor and Fan Amp
+-------------------
+The boards work although several changes need to be made to adjust hole
+sizes and component spacing. We also need to do a filter for the Drive
+Motor section.
+
+Bonnie has been given a board.
+
+I have also given her a new Self-Test that handles the new Motor and Fan
+Amp Board.
+
+
+Other
+-----
+For Wednesday, May 8, I am planning to have inputs for PC for the following:
+
+	Memory Expansion Board, to go to Rev A;
+
+	DS III, to go to Rev 2;
+
+	MultiSync, to go to the next production Rev.
+
+We have film and Fab for the DSPCOMM Board (Rev 1). I have done the address
+GAL for it to make sure there will not be any unpleasant surprises.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 14 May 1991
+
+
+Panorama DSK Board
+------------------
+I have ECNed the parts list to remove the two 27C512s we are not using.
+There was no Slapstic on the parts list to remove. I probably forgot
+to put Slapstic on the board when I did the programmed part numbers.
+
+
+DSPCOMM 
+-------
+Boards have been ordered.
+ 
+
+DS III
+------
+I gave Leon inputs for the DS III Rev 2 Board. He made the changes, I checked
+and approved them and we ordered 50 boards due on 5/28/91.
+
+I have marked the DS III schematic with the parts that will be left off for
+Steel Talons so we can get a releasable parts list.
+
+
+Memory Expansion Board
+----------------------
+Ready for film & fab, Rev A;
+
+
+MultiSync
+---------
+ After an extensive investigation Mary Burnias has discovered:
+
+    1. TI, which told us last year they were discontinuing 64K4 DRAMs, gave 
+       the masks to Hyundai, which is the last and only company in the world
+       making them.
+    2. There are at least 125K in inventory around the world.
+    3. They are still about $3.
+    4. Everybody makes 256Kx4 DRAMs.
+    5. They are about $6.
+
+Due to cost, the lack of time to make extensive mods to the board, and my
+confidence in Mary's ability to get the parts, we are staying with the 
+64Kx4 DRAMs.
+
+After Joe finishes the mods, I will mark up the schematics with what is
+and isn't loaded for Steel Talons.
+
+
+
+Motor and Fan Amp
+-------------------
+I have given Bonnie another board. (She now has two.)
+
+									2 of 2
+Panorama
+--------
+The Side Displays do not receive +12V and -5V. While the DUART circuit does
+not need these voltages to receive, it does need them to transmit.
+
+During the game, the Side Displays only receive.
+
+However, because the Side Displays cannot transmit, the DUART cannot be 
+tested.
+
+
+Steel Talons
+------------
+I have given the Eds two DS II Graphics RAM boards.
+
+I will convert their Self-Test to do the DS III board. 
+
+Logg complained that the audio self-test stopped working after he had the
+SCOM Interrupt mods made.
+
+The problem turned out to be that Brad changed the SA III Self-Test codes.
+
+Logg complained that my Self-Test did not work properly when called from the
+problem, athough it ran ok when started from Reset.
+
+The problem turned out to be that they were using the wrong program call to
+enter Self-Test.
+
+
+Jed
+_____________________________________________________________________________
+{ To Ed Logg }
+
+Your mail message on audio self-test is completely incomprehensible to me.
+
+What is S_STAT?
+
+What is S_YTST?
+
+What is 'Clear to Send'? Is it related to the 'FF' that I was supposed to 
+wait for in Stun Runner?  
+
+I thought you were going to have Brad change it back to the version that
+worked?
+
+I am trying to make sure you have PC Boards for producing your game and I
+don't have time for this audio self-test garbage. 
+
+The information I received from Brad when I did Stun Runner Self-Test
+was both inadequate and wrong. I had to go through the RPM source code
+to find out what I needed to know to run audio self-test. I will not
+do it again.
+
+Therefore, my audio self-test screen will call your code. You write it.
+
+
+Regards,
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 20 May 1991
+
+
+DSPCOMM 
+-------
+Boards have arrived; Karen is stuffing some.
+
+
+DS III
+------
+Boards have been ordered and are due 5/29/91.
+
+I have given Karen the parts list and asked her to have parts ready when the
+boards arrive.
+ 
+I have also asked her to stuff two Rev 1 boards according to the parts list
+to make sure I haven't taken off too many parts. (The Steel Talons boards
+will be stuffed for Graphics only.) Also, we will probably need the boards.
+
+
+MultiSync
+---------
+We have ordered boards, due 6/6/91.
+
+I will mark up the schematics with what is and isn't loaded for Steel Talons.
+
+
+Memory Expansion Board
+----------------------
+Ready for film & fab, Rev A;
+
+
+Steel Talons
+------------
+1. It is not clear whether Brad will change the Self-Test codes back to what 
+   they were. I received a mail message from Logg on the subject that is 
+   completely incomprehensible. If he expects me to change Self-Test he will 
+   have to be very clear what it is supposed to change to. He will also have 
+   to supply me with an SA IIS board with ROMs so I can test the code.
+
+   The alternative is to have my Self-Test call a vector to his code similar 
+   to how we handle Operator Screen. Then he can write Audio Self-Test.
+
+2. The cabinet's thermal design is very poor, the temperature rise is too 
+   high, and the reliability of the hardware will suffer accordingly.
+   Even with a fan the PCB ambient temperature rise is 6 deg C. (12 without
+   the fan).
+
+									2 of 2
+
+3. I have been ordered to fix a problem with the field test unit that 
+   reportedly causes it to reset. Glenn found that one of the ADSP II boards
+   had a 32Kx8 RAM stuffed instead of an 8Kx8 RAM. (This was a production
+   board.) I have heard that:
+   	1. The problem is fixed;
+	2. The problem is not fixed.
+
+   The game in question uses the old wire-wrap DSP Link boards and runs old
+   software known to have bugs. Logg has refused to update the software to
+   use the DSP Link PC Boards or, in fact, to provide any software support 
+   whatsoever. It seems there is no source code for this software and 
+   therefore no way to have a development system trace the code.
+
+4. The Rumper Thumper produced an impulse SPL of 120 dBa at ear level, which 
+   is likely to cause permanent hearing damage to individuals playing it.
+
+   They have added a rubber thing to the solenoid that has reduced the SPL to
+   108-110 dBa. It can be argued that this is also too high. Even assuming it 
+   gets documented properly, the variation in SPL due to production assembly
+   methods and tolerances is unknown.
+
+
+Road Riot
+---------
+Its Rumper Thumper produced an impulse SPL of 112 dBa at ear level, which 
+I believe is unsafe.
+
+ 
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 24 May 1991
+
+
+DSPCOMM 
+-------
+I am still testing it. So far both the Link and the Helper seem to work.
+
+
+Parts Lists
+-----------
+I have given preliminary parts lists to Rob Bryant for:
+	DS III
+	DSPCOM
+	MultiSync
+
+
+Memory Expansion Board
+----------------------
+Have Fab, am ready to order boards.
+
+
+Road Riot
+---------
+The team gave me a ROM master, I programmed a windowed part, which they tried
+and approved.
+
+Their version is 2.0; Checksum is 49B7; their parts will have a 'B' label.
+
+I have left a note for Tam that the programmer is set up for Road Riot.
+
+
+Steel Talons
+------------
+I am steel working on Self-Test.
+
+ 
+Motor and Fan Amp Board
+-----------------------
+Will have to go to Rev 2 soon.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 31 May 1991
+
+
+DSPCOMM 
+-------
+The board seems to work; I have given four (with documentation) to the Eds 
+with Race Drivin' Helpers. The DSP Link section is identical to the DSPLINK
+Board so they have not had to change any Link software. They have Rev 1 boards
+#2, 3, 4, and 5. They still have some DSPLINK Boards. 
+
+They have returned one DSPLINK Board saying it doesn't receive properly. 
+It passes Self-Test so the only thing I can do is to write a more extensive 
+Self-Test which I will do if I have time. The problem could, of course, be 
+elsewhere in their system. The problem could even be in their software.
+
+I recommend the Helper code be changed so it will be unique to Steel Talons.
+
+This is the system I propose to keep track of Helpers:
+	Race Drivin'/Panorama/Street Driver:	Version 1.X  (1.3)
+	Road Riot:				Version 2.X  (2.0)
+	Steel Talons:				Version 3.X
+
+
+DS III
+------
+Rev 2 boards have arrived. Karen had Emmette stuff six for me. They all work. 
+
+I have given four (with documentation) to the Eds. They have Rev 2 boards #2, 
+3, 4, and 5. 
+
+
+Road Riot
+---------
+Out of the first batch of 470 parts there were 437 good ones and 33 bad ones.
+for a failure rate of 7.5% . Eight parts were originally classified 'bad' 
+because the RBIT did not verify. I checked these parts manually and verified
+that the RBIT was working even if it did not verify.
+
+I don't know when this batch of parts was bought, or if they are TMS parts, 
+but they all (the 470) seem to have the TI logo on them. 
+
+Out of the second batch (450 parts) so far Tram has had 240 good parts and 6
+bad parts for a failure rate of 2.4%
+ 
+Tram has noticed that when the parts come in the plastic tubes they have a
+high failure rate (about 8%). When they come in the blue carriers they have
+a much lower failure rate (about 2%). However, this also correlates to the
+part's label. Lately, the ones that come in the blue carriers have the correct
+silkscreen label; the ones that come in the tubes are incorrectly labeled
+(they have TI's logo on them and the other information is incorrectly placed.)
+
+									2 of 2
+
+BMX
+---
+I gave Bonnie new Self-Test ROMs that control the Driver Motor Amp at full
+force. I have also fixed the tachometer.
+
+I gave her two more Motor and Fan Amp Boards. She now has Rev 1 boards #2, 3, 
+4, and 5.
+
+
+Steel Talons
+------------
+Stevie showed me a piece of cardboard to represent how she is going to mount 
+the Rump/Thump Board. I have not received a copy of the harness diagram
+because it is not ready.  
+
+They have designed the cabinet in such a way as to make it impossible to
+effectively install a fan.
+
+
+Memory Expansion Board
+----------------------
+I filled out a Purchase Req; The last time I saw it John Ray had it.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 7 June 1991
+
+Steel Talons
+------------
+The new MultiSync Boards (Rev B) have arrived; Emmette is stuffing some.
+The DSPCOM Board is Rev 1 and is ready to go to Rev A with some minor changes.
+The DS III Board is Rev 2 and is ready to go to Rev A with some minor changes.
+
+I have told Leon I will try to have inputs ready for him on Monday,
+June 10. That will give him a week to do it before Steel Talons document
+release.
+
+
+Road Riot
+---------
+Date		Parts Received 		Good	Bad
+----		--------------		----	----
+5/28/91		    470			437	33
+5/31/91		    450			435	15
+		    ---			---	--
+		    920			872	48	5.5%
+
+
+Memory Expansion Board
+----------------------
+I filled out a Purchase Req for Rev A Boards; The last time I saw it John Ray 
+had it.
+
+I have spent considerable time trying to fix Rev 1 boards for Bonnie. Part of
+the time has been in adding Self-Test functions to troubleshoot the board.
+
+
+Motor and Fan Amp Board
+------------------------
+I am making the changes as time permits. We need to do more work on the 
+filter.
+
+
+Simulators
+----------
+Jim Flack consulted with me about the fuse problem in the unit in Wyoming.
+It turned out that the main fuse was 7A (the Race Drivin' value) instead of 
+10A for Panorama. They apparently replaced it with an 8A fuse from the town's 
+Radio Shack.
+
+Since there was originally some question about the unit being susceptible
+to line spikes due to lighting hits, I told him they could probably
+use a PC type A/C line protector, also available at Radio Shack. 
+
+I told Jim that the Steel Talons hardware (with the high spped Link) could
+link together several 3-Monitor units with Steel Talons as a simulator
+concept.
+
+I spent time with Matt helping him designing the AT interface for the 
+DSPLINK Board and answering his questions as he learned to use OrCad.
+
+			
+									2 of 2
+Meetings
+--------
+Monday:	         Hide's company meeting.
+ 	         Rick's Department meeting.
+
+Wednesday:       Paul Teich and Alan Budris from AMD about their 29000 family.
+(or Tuesday)     of microprocessors.
+
+Thursday:        Dave Otewalt from Eclipse Sales about Hyundai 32Kx8 SRAMs and
+(or Wednesday)   also CD-ROM Players.
+
+Friday:	         Rick's Department meeting.
+	   
+	 
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 6
+Fr: Jed Margolin
+Re: Status Report
+Dt: 14 June 1991
+
+
+Monday
+------
+1. Spent time trying to find out why the MultiSync Boards for Steel Talons
+   are not being done.
+
+   Answer: Karen doesn't have the parts. She either can't get them from
+   	   Manufacturing or she is just taking her time about it. (I gave
+	   Emmette the boards last Wednesday.)
+
+2. Spent time generating a response to Rob Bryant's questions about Steel 
+   Talon prototype boards. Also, in response to Rob's questions about
+   TI having problems getting working ASIC65s, arranged for a conference
+   call on Thursday with their engineer.
+
+3. Gave Leon the final inputs to take:
+	 DS III from Rev 2 to Rev A;
+	 DSPCOM from Rev 1 to Rev A.
+
+4. Spent time with Glenn discussing:
+	a. Logg's decision to use MultiSync Coin Cointer Outputs for Rump 
+	   Thump instead of the LC1 and LC2 LED Outputs. It seems that the
+	   Rump Thump has inputs that are reverse polarity from the LC1
+	   outputs and Logg is apparently unable to figure out how to reverse
+	   it in software.
+
+	   This means that the Split pad connecting the Coin Counter Outputs
+	   will have to be manually cut in Production. If they had told me
+	   of their plans I would have replaced the split pad with a jumper 
+	   plug, but I will not make the change now, 4 days before they want
+	   the board released.
+
+	   Glenn has found out that the Coin Counter Outputs on the MultiSync
+	   Board don't go to the connector pins as shown on the schematic;
+	   they are reversed. Score another one for Gary Popkin. I have asked
+	   Leon to correct the schematic.
+
+	b. Downend sent Glenn a memo (thru Logg) asking him to have a 
+	   programmed-part series assigned to Steel Talons in order to
+	   assign numbers for the Audio Board. Logg apparently forget that
+	   I had a series number assigned several months ago and have assigned
+	   part numbers for the MultiSync, DS III, and DSPCOM Boards.
+
+	   I worked with Glenn in assigning programmed part numbers for the 
+	   audio board.
+
+	c. The decision to have one Rump Thump board supply Regulated +15V
+	   to both games is stupid. If that side goes down, the other side 
+	   will go down as well. And it will make it more difficult to fix; 
+	   everything else is independent so people won't be looking for 
+	   something that isn't.
+
+	d. I have still not received a harness diagram. 
+
+									2 of 6
+
+5. Last night I spent about two hours working on Motor and Fan Amp Rev 2 for
+   BMX.
+
+==============================================================================
+Tuesday
+-------
+
+1. I received the first MultiSync Rev B stuffed for Steel Talons. 
+
+   I changed Self-Test to use the SLOOP (GAL6001 that McCarthy gave me); it 
+   didn't work. Pat gave me another one to try; it didn't work either.
+
+2. Joe and Leon showed me the changes they made on DSPCOM and DS III. I 
+   approved and they will go ahead with the documentation. I expect to
+   release both boards on or before Monday.
+
+3. Rob Bryant came over to discuss parts lists, GALs, and ASIC65s. I told him
+   about the change in the DS III parts list. 
+
+   He is willing to wait until Monday for the released parts lists.
+
+   I promised to release the GALs on the DS III and DSPCOM boards by the end
+   of next week. It is necessary to release them so they will get on MANMAN
+   so he can contract them out to be made. Otherwise I will have to burn them 
+   myself.
+
+   While he was here I salvaged eight ASIC65s for Road Riot. They were the
+   parts with RBIT verify errors. I verified that the program was secure.
+
+   	Road Riot Parts Received     Good	     Bad
+	------------------------     ----	  ----------
+		  920		      880	  40  (4.35%)
+
+4. The ROM Address GAL on the DS III Board is configured so ROMs can be 
+   27C512s or 27C010s. Currently, the absence of a jumper selects 27C512s;
+   27C010s requires a jumper plug in header G0. Since Ed intends to use
+   27C010s I am changing the GAL program so that the absence of a jumper
+   plug selects 27C010s. 27C512s will be selected by a plug jumper in G0.
+
+   I have changed the GAL program and will ask Glenn to make sure everyone is 
+   properly changed.
+
+5. I went over with Glenn the requirements for generating the AROMREL for
+   Steel Talons.
+
+6. I fixed another Memory Epansion Board for BMX. It had a bad trace that I
+   repaired with a jumper. Out of ten prototype boards:
+   	I have 1 working board;
+	Bonnie has 7 working boards;
+	One is blank;
+	One has fallen and can't get up.
+
+7. Last night I spent about 1.5 hours working on Motor and Fan Amp Rev 2 for
+   BMX.
+==============================================================================
+ 									3 of 6
+
+Wednesday
+---------
+
+1. Tam programmed more parts for Road Riot. Out of 279 parts there were 36
+   bad ones (12.9% failure). 
+
+   	Road Riot Parts Received     Good	     Bad
+	------------------------     ----	  ----------
+		  920		      880	  40  (4.35%)
+		 1199		     1123	  76  (6.34%)
+
+
+2. We are not equipped to test VRAMs. I wasted a bunch of time trying to fix
+   what Erik thought was the only MultiSync Board with VRAM sockets.
+
+   I installed the VRAMs in a very old rev Main Board which promptly and
+   totally stopped working. Erik found a MultiSync Board with VRAM sockets
+   in a Compact game and installed the new VRAMs. 
+
+   They pass Self-Test and work in the game. Erik and I checked specifically
+   to may sure they do not exhibit the NEC problem.
+
+   It would have been nice to have received a data sheet with the VRAMs.
+
+3. Meeting to discuss future hardware: I think the time for decisive action 
+   has passed and, instead, we should engage in senseless bickering.
+
+4. I still don't have a working SLOOP from McCarthy.
+
+5. Last night I spent about 2 hours on the PCLINK that I am helping Matt with.
+   Results: The OrCad program to print schematics does not work if it is 
+   printed to a file and then copied to the printer. It only works if it
+   printed to the printer. 
+
+   The Lab HP IIP Printer does not work properly. It cannot print a B size 
+   drawing from OrCad. My HP IIP at home does it just fine.
+
+
+									4 of 6
+============================================================================
+
+Thursday
+--------
+
+1. I wrote this for Ed Logg.
+==========================================================================
+The following is the ROM Release procedure that I suggest be used for
+Steel Talons. It is the procedure used for Panorama. 
+
+Requirements:
+   1. There should be a single file (AROMRELx.DOC) that contains all the 
+      information needed to produce the latest Masters to build a game.
+      This file is created and maintained by the Project Team.
+
+   2. This file should not contain unnecessary information such as ROMs that
+      have been superseded.
+
+Reason:
+      Previously, the parts lists maintained by the PC Group contained
+all the latest programmed part numbers. When a part was raised another
+Rev level the parts list was ECNed.
+
+      With Component Engineering's new system this is no longer the case.
+I believe this is related to the new numbering system. Previously the Rev 
+level was built into the part number so that 136087-1001 was a Rev A part,
+136087-2001 was a Rev B part, and so on. With the new system the part is
+labeled with the Rev level: "136087-1001 Rev A", "136087-1001 Rev B", and
+so on. The parts list is not changed as the Rev level is changed. The parts
+list would continue to call out "136087-1001".
+
+     Therefore, there must be another document that tells Manufacturing what
+ROMs (and other programmed parts) to put into the game.
+
+     Said document is the dreaded AROMRELx.DOC  .
+ 
+     When you first release Rev A parts, the information goes in AROMREL.DOC .
+
+Next is where my procedure might be different from the one specified by
+Components Engineering:
+
+    When you release more Rev A parts or change the Rev level of existing
+parts you will create a new AROMRELx.DOC such as AROMREL2.DOC, AROMREL3.DOC,
+and so on.
+									5 of 6
+
+   The latest AROMRELx.DOC will contain all the programmed parts necessary
+to build the game. It will not contain parts that have been superseded.
+
+For Steel Talons the AROMRELx.DOC files should be located in
+[Logg.Aces.Release]  .
+
+Rev A parts should be in [Logg.Aces.Release.ROMREVA] .
+Rev B parts should be in [Logg.Aces.Release.ROMREVB] .
+
+Note that a game can (and usually does) have programmed parts at several 
+different Rev levels.
+
+When you are planning to release parts try to notify Rick Owens ahead of
+time, preferably a few days. To release ROMs give him a copy of the new
+AROMRELx.DOC along with the masters of the parts you are releasing.
+
+Do not give him masters of parts that have already been released.
+==========================================================================
+Logg acknowledged receipt of this message and corrected my mistake.
+It is [Logg.Ace.Release] no plural.
+
+2. Rick Meyette was able to get Steel Talons to pass FCC by adding 100 pF
+caps to the serial lines. We played the game and it linked just fine; even so,
+as soon as I get a chance I will look at the signals with a 'scope. The
+advantage of the Party Line system is that all signals (including the clock)
+travel the same path. 
+
+   There are already 100 Ohm resistors in series with the serial connector; 
+adding 200 pF (100 pF on each board) produces a circuit with a time constant 
+of t = RxC = 100x200x10E-12 = 20 ns. There should be no problem with this.
+
+3. Received more DSPCOM Boards from Karen. I will bring them up and send them
+   on their way.
+
+4. Tom Dempsey the TI Rep was supposed to set up a conference call today
+   with a TI engineer. He didn't, so I called him.
+
+5. Received first working SLOOP from McCarthy. MultiSync Rev B works. I have
+   given one to Logg to try out in a game. The SLOOP has been replaced with
+   a wired-jumper header for this test because Steel Talons' software is not 
+   yet set up for a SLOOP.
+
+6. I sent one of the MultiSync Boards back to Karen for re-grooving because
+   it was missing parts.
+
+7. Tam programmed more parts for Road Riot. Out of 93 parts there were 11
+   bad ones (11.8% failure). 
+
+   	Total Road Riot Parts Received     Good	     Bad
+	------------------------------     ----	  ----------
+		 1292			  1205	  87  (6.73%)
+
+Out of the last 47 bad parts, 20 were received non-blank; i.e. filled
+with zeros. Tom Dempsey suspects that these were parts that had been
+subjected to the Data Retention Test where they program the part to be
+all zeros, put it in an oven overnight, and then check if any bits
+changed back to '1'.
+
+									6 of 6
+==============================================================================
+
+Friday
+------
+
+1. Karen reclaimed the DSPCOM Boards and gave them to Glenn. Glenn didn't
+   know what to do with them and brought them back to me. It took more time
+   to deal with this situation than it would have taken me to bring up
+   the boards myself.
+
+2. I have set up the Compact boardset with the Korean VRAMs on 
+   'VRAM LOOP TEST' and will have it continuously run VRAM Verify tests 
+   over the weekend.
+
+3. Spoke to Tom Dempsey (local TI Rep) and Boyd Reed (somebody in Houston,
+   but not an engineer). I told them:
+     a. The last batch had a 12% failure rate, half of which were parts
+	received non-blank. 
+
+	Boyd stated catagorically that there was no way they could have 
+	made a mistake and shipped us parts used for the data retention test.
+
+     b. I told him that the parts that had the wrong silkscreen were
+	much more likely to fail than the ones with the correct silkscreen.
+	These parts with the wrong silkscreen were also much more likely
+	to come in the tubes rather than the Blue Bricks.
+ 
+	Boyd said there was nothing wrong with the tubes.
+
+     c. I told Boyd that if they were using 3M sockets for the burn-in test
+        they sould get rid of them and change to Yamaichi sockets because the
+	3M burn-in sockets are no good.
+
+	Boyd didn't know what sockets they were using.
+
+     d. I told Boyd that they should replace the EPROM in the part with 
+        Flash EPROM.
+
+They are supposed to arrange a conference call on Monday with an engineer.
+
+4. Rick Meyette had a problem with a high frequency emission on the MultiSync 
+   Board. I looked at it and realized that he was using an old converted Stun 
+   Runner Board with the wrong oscillator module in the video section.
+
+   I reclaimed the MultiSync Rev B from the Eds and gave it to Meyette. I
+   also gave him another Rev B board. He has MultiSync Rev B #1 and #2.
+
+   Steel Talons has passed FCC.
+
+5. I never received a harness diagram for Steel Talons. 
+
+6. Motor and Fan Amp Board: I am working on Rev 2 in my copious spare time. 
+   We need to do more work on the filter.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 5
+Fr: Jed Margolin
+Re: Status Report
+Dt: 21 June 1991
+
+
+Monday
+------
+
+1. The Compact Driver with the Korean VRAMs ran 2502 VRAM memory tests over 
+   the weekend and had no errors. (The game had been closed up for the test.)
+   I showed Rick Owens how to run the test and he will test the VRAMs in a 
+   board in the oven.
+
+2. I talked to Thom Dempsey, Boyd Reed, and Ken Kelly (product engineer) from
+   TI in a conference call.
+
+   According the Ken Kelly:
+
+   	a. The data retention tests in Houston have been ok, they shipped
+	   parts to us today.
+
+	b. The parts we received that were filled with zeros may have been
+	   the result of operator error; the operator may have inadvertantly 
+	   selected an EPROM test which is fatal since OTPs cannot be erased.
+
+   I took the opportunity to recommend to them that if any of their test
+   fixtures use 3M sockets they get rid of them and use Yamaichi sockets.
+
+   I also repeated my suggestion that they put Flash EPROM in the P15.
+   They agreed it was a good idea once they get their Flash EPROMs to work!
+
+3. There was considerable excitement when Rick Meyette did the ESD test and
+   just about everything he touched reset the game. It looked like I would
+   have to delay the release of my PC Boards. Rick came through, however,
+   and announced the problem seemed to be in the Hitron Power Supplies.
+
+   Therefore I have released for Steel Talons:
+   	MultiSync
+	DS III
+	DSPCOM
+
+   I immediately made copies of the parts lists and placed them on Rob 
+   Bryant's desk.
+
+4. We have received 16 Rev A Memory Expansion Boards for BMX. This is the
+   first PCB I have seen that didn't have a square pad for pin 1 of each part.
+   (The Rev 1 boards did have square pads for pin 1.) 
+
+   The plots I received show square pads. Leon thinks the vendor screwed up
+   when he made the film. The vendor logo is 'SK'.
+
+   I will tell Melanie.
+
+5. I finally got a Steel Talons Harness Diagram from Stevie.
+
+									2 of 5
+6. I spent about 5 hours over the weekend on the Motor and Fan Amp.
+   This is what I have done so far:
+
+   	1. Change spacing on the Fuse Holders from 1.25" to 1.35".
+	   (The fuses did not fit in 1.25".)
+
+	2. Change the Hole for the Power Connectors from 0.062 to 0.073.
+	   (0.062 was too small.)
+
+	3. Change the hole for the Power Transformer from 0.062 to 0.052.
+	   (The board cannot use more than 8 different sizes. In order
+	    to use 0.073 for the connectors I had to get rid of one drill
+	    size. I had Erik drill a plate with 0.052 holes and the 
+	    transformer fit ok.)
+
+	4. Change the pinout for the Power Transformer.
+	   (I guessed wrong the first time.)
+
+	5. Change the Outline for the Interface Connector.
+
+	6. Fix the Outline and pad numbers for the LEDs.
+
+	7. Add 1000pF caps to the SEL1 and SEL2 inputs and have both signals
+	   go through 74LS14s. Move the 74LS14 to be closer to the Interface 
+	   Connector. [ Section 7 is the part I did over the last weekend.]
+
+   I think the board will have to be bigger if we add the Filter 
+   capacitors to it. We are currently 8.0" x 10.0" .
+
+=============================================================================
+Tuesday
+-------
+
+1. I got some information from Thom Dempsey of TI on the 34020 and 1M VRAM:
+   So far it is available only in PGA (145 pin). The price should
+   come down once it comes out in PQFP.
+
+    TMS34020GBL-32			      1K        5K       10K  
+    32 MHz GSP PGA Pkg:		    	    -------   -------	------
+    				3Q91	    $104.00   $101.85   $97.00 
+				4Q91	    $101.00   $ 97.50   $89.00
+				1992	    $ 92.00   $ 89.25   $84.70
+
+    
+    TMS34020GBL-40			      1K       5K        
+    40 MHz GSP PGA Pkg:			   -------   -------	
+    (scheduled release 4Q91)	4Q91	    $153.00   $149.60   
+     				1992	    $116.00   $108.90   
+
+
+    TMS44C251-10SD			      10K      50K      
+    256Kx4 VRAM ZIP Pkg, 100ns		   -------   -------	
+    (The VRAMs are under 	3Q91	    $9.35     $9.25    
+     allocation)		4Q91	    $9.10     $8.95   
+				1992	    $8.75     $8.65   
+
+   He also gave me some samples of their 4M EPROM (512Kx8). It is big.
+
+									3 of 5
+
+2. I have made a change to the GAL on the DS III that selects the Graphics
+   ROMs. The new part will select 27C010 ROMs with no jumper plug at G0.
+   When a jumper plug is present at G0 the ROMs will be selected as 27C512s.
+
+   Self-Test is able to read the state of G0 and report checksums appropriate
+   to the type of ROM selected. This feature is standard for Rev 2 and Rev A
+   boards; Rev 1 boards would have to be modified for the Self-Test feature 
+   to work.
+   
+3. Glenn has reported to me that the new Switch Lamp didn't work because
+   for +5V, Stevie used the +5V Reference for the 12 Bit A/D, which was not
+   designed to drive an incandescent lamp.
+
+4. I am planning on releasing GALs for Steel Talons this week.
+   The GALs are on:
+   		    DS III Board (2 GAL20V8-15 and 1 GAL16V8-15) 
+		    DSPCOM Board (2 GAL16V8-15)
+
+5. We received a shipment of real Production ASIC65s.
+   Tam brought over 528. So far the results are:
+
+   	175 total	172 good	3 bad (1.71%)
+
+6. Spent some time with Moncrief figuring out the Helper for Steel Talons.
+
+=============================================================================
+Wednesday
+---------
+
+1. Spent some time with Moncrief figuring out the Helper for Steel Talons.
+
+2. Gave Meyette the parts list for the Motor and Fan Amp Board and discussed
+   the board's power transformer (there are two sources, both UL recognized).
+
+   The fuse clips are not U.L.listed; Rick has found a molded fuse block with
+   PC terminals that is listed. I will have to redo the fuse blocks again 
+   which means ripping out most of the 120VAC traces and doing it over 
+   (again). Also, the fuse blocks call out a 0.06 diameter hole, which I do 
+   not have. The board can only have eight different drill sizes and I 
+   already have eight. The closest to 0.06 is either 0.052 or 0.073. Rick 
+   will get me some samples to try out.
+
+3. Tam programmed the last of the current batch. The failure rate for these
+   production parts was much improved. There were 12 failures out of 528 parts
+   which is 2.3% . Also. I expect I will be able to salvage some when I have 
+   time.
+
+4. Am working on Steel Talons Self-Test.
+
+									4 of 5
+Thursday
+--------
+1. I explained to Dennis how to do the checksums for the ASIC65.
+
+2. I worked most of the time getting Steel Talons Self-Test to the point
+   that I could release a new version. The reasons are made clear in the memo 
+   I sent to Logg.
+==============================================================================
+From:	KIM::MARGOLIN     20-JUN-1991 18:54:39.21
+To:	LOGG,MCNAMARA,MONCRIEF,DOWNEND
+CC:	MARGOLIN
+Subj:	GALs
+
+I have changed the operation of the GAL on the DS III Board at location 1A/B.
+
+This GAL is used in selecting the Graphics ROMs; these ROMs can be either
+27C512s or 27C010s depending on whether there is a pin header in G0.
+
+	Old was: No Header = 27C512, Header = 27C010
+
+I have changed it to:
+
+	No Header = 27C010, Header = 27C512
+
+On DS III boards starting with Rev 2, the 68010 can read the state of
+Pin Header G0. Self-Test starting with Version 2.4 uses this so it can 
+correctly compute checksums.
+
+I would like to have all DS III Boards to have the new GAL. It is a 16V8-25
+and the file is [Margolin.GALs.Release]DS3_ROM.JED. The old part has a 
+checksum of 4177; the new part has a checksum of 4178.
+
+At the same time, the games should get the latest Self-Test which is
+[Margolin.Aces]STAL2_4.VLDA [Note that Self-Test is not yet finished.]
+
+
+(When I release the GALs I will ask to have the files moved to 
+[Logg.Ace.Release.ROMREVA].)
+
+
+DS III Rev 1 boards can be modified to have this feature:
+
+	1. On bottom of board, Cut the trace going to 6P pin 19;
+	2. Connect a wire jumper from 6P pin 19 to 5J pin 1; 
+	3. Connect a wire jumper from 6P pin 11 to pin header G0; 
+	4. Connect a wire jumper from 6P pin 9 to 5D pin 6.
+ 
+
+Jed
+==============================================================================
+3. Spent about 2 hours last night working on the Motor and Fan Amp Board.
+
+
+									5 of 5
+Friday
+------
+
+1. Reviewed Matt's PCLINK documentation package. I think this board will be
+   very useful.
+
+2. Got GAL documentation ready to release. Logg et. al. had disappeared
+   by the end of the day so I could not release them.
+   
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 28 June 1991
+
+
+
+Monday
+------
+1. I have released the GALs for Steel Talons. This is for DS III and DSPCOM. 
+   The GAL6001 on the MultiSync Board is McCarthy's.
+
+2. I gave Karen 14 Memory Expansion Boards and asked her to have them done
+   by Monday July 1. The boards are mostly sockets.
+
+3. I spent about 4 hours over the weekend on the Motor and Fan Amp.
+   I am almost done with Rev 2. I am working on the parts list.
+
+
+Tuesday
+-------
+1. Spent time working on the Motor and Fan Amp Board. Have made final plots.
+   I tried plotting the Drill Template directly to ID's Houston Instruments
+   Plotter. The drill symbols came out wrong on it, too. The only correct
+   Drill Templates have been made on the HP IIP. There is currently no
+   way to produce a correct Drill Template in a form that can be imported
+   into AutoCad.
+
+
+Wednesday
+---------
+1. Made the GAL address decoder for the PCLINK Board.
+
+2. Meeting: New Safety laws.
+
+3. Spent time with Logg et. al. figuring out boards for Steel Talons.
+
+4. Spent time with Erik and Rick evaluating the filter for the Motor and
+   Fan Amp Board. Threw out final plots after Rick changed the filter.
+
+5. Worked with Matt in starting to bring up the PCLINK Board.
+
+									2 of 2
+Thursday
+---------
+1. Worked with Matt in bringing up the PCLINK Board.
+
+2. Got Motor and Fan Amp working for Meyette. This one has the transformer
+   from Signal. 
+
+3. Added the Test for Bonnie: It does the random life testing of both the
+   Motor and the Fan together.
+
+4. Called OrCad and explained the problem: The only way to get a drill 
+   template with the Drill Symbols is to Print it on the Printer. Anything
+   else creates a template with holes marked by circles of the appropriate
+   size and no drill symbols. Therefore there is no way to get the real Drill
+   Template into AutoCad or even plotted on a real plotter.
+
+   The Orcad guy agreed.
+
+5. Worked on Self-Test for Steel Talons.
+
+ 
+Friday
+------
+1. Worked with Matt in bringing up the PCLINK Board.
+
+2. Gave Bonnie the new Self-Test that fixes the tachometer and includes a
+   life test for motor and fan together.
+
+3. Worked on Steel Talons Self-Test.
+============================================================================ 
+
+Road Riot
+---------
+Date		Parts Received 		Good	Bad
+----		--------------		----	----
+5/28/91		    470			437	33
+5/31/91		    450			435	15
+6/12/91		    372			325	47
+6/18/91		    528			516     12
+6/25/91		    280			272	 8	
+6/26/91		    325			317      8	
+		    ---			---	--
+		   2425		       2302    123
+		   	      Salvaged  +24    -24	
+			      	       ----    ---
+Total		   2425		       2326     99
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 8 July 1991
+
+
+Steel Talons
+------------
+1. I have finished two of the new Self-Test screens for the DSPCOM Board. I
+   have at least two more to do plus the Auto Self_test section. 
+
+   Glenn gave Manufacturing ROMs before I could give him the new screens. I
+   do not consider the version they got to be very useable.
+
+2a. Ed Log wanted some cost figures on the DS III, which I gave him. I am 
+    surprised he didn't already have them.
+
+ b. Ed Rotberg wanted a memory map so he could figure out how to
+    make the 6001/Slapstic work on addresses outside the the ROM
+    address. This means that the 6001 will be receptive to addresses
+    outside of the ROM 7 space. The first Slapstics were like that.
+    No one ever got them to work in the Shell mode. The only ones
+    to be made to work in that mode were the later Slapstics that 
+    responded to addresses within the ROM selected space.
+
+    I know for a fact that over the years I have deluged the Steel
+    Talons team with documentation and memory maps.
+
+
+BMX
+---
+1. I gave Bonnie the additional test she asked for.
+
+2. I received the Rev A Memory Expansion Boards from Karen. I made the
+   GALs and got eleven boards to work. Three of the boards have a 
+   visibly defective trace. I will ask Leon to look at the artwork.
+
+
+PCLINK
+------
+Matt wrote a routine that will allow us to download program code through the
+interface (it was my idea). 
+
+The PCLINK Board uses the same Boot ROM as the Steel Talons DSPCOM Board. 
+This has been integrated with Peter's code; however, they are not in the 
+Steel Talons games now being built.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 12 July 1991
+
+
+Steel Talons
+------------
+I am still working on the Self-Test screens.
+
+
+BMX
+---
+I gave Bonnie the ten Rev A Memory Expansion Boards she was scheduled
+to receive.
+
+Joe and I looked at the artwork for the Rev A Memory Expansion Board. There
+was nothing on it to explain the bad boards we received. 
+
+I am waiting for input on the Motor and Fan Amp Board.
+
+
+PCLINK
+------
+I have added two 12 Bit DACs to the board. I will add a 12 Bit A/D if
+there is room. 
+
+The A/D I have chosen (AD7870):
+	a. has a single input;
+	b. has a built-in sample and Hold;
+	c. does a conversion in about 10 us.
+	d. connects to the 2101's serial port.
+	e. costs $18 in 100s.
+
+I didn't ask what it would be in 1000s. The AD7582 we are using has a four
+input Multiplexer and costs $16.25 but takes 100 us for a conversion which is
+only 10KHz.
+
+Julie says that Margot is supposed to come back to work next week.  
+
+
+
+Jed
+_____________________________________________________________________________
+
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 19 July 1991
+
+
+Steel Talons
+------------
+I am still working on the Self-Test screens. There are three major areas left:
+
+	1. How to checksum the DSPCOM Boot ROM since there is no direct access
+	   to it. My solution is to checksum each Boot Page separately after
+	   it is booted. (Unfortunately, Peter did not leave any space in his
+	   boot page. I think I can do it anyway.) The Program Checksum will
+	   not be the same as the EPROM Checksum but it will serve to 
+	   determine if the EPROM was any good.
+
+	2. A test of the DSPLINK where the first unit sends data, the second 
+	   unit echos it, and the first unit receives it and compares it to 
+	   what it sent. This will establish the reliability of the link and
+	   allow us to determine how long the link cable can be.
+	   
+	3. Put the appropriate tests in the Automatic part of Self-Test.
+
+
+BMX
+---
+I need to figure out how to prevent single half-cycle glitches from occurring
+when the direction is changed.
+
+
+PCLINK
+------
+I have reviewed Joe's schematic and worked with him on IC placement. He has
+started routing the board.
+
+
+
+Road Riot
+---------
+I have given Mark Pierce two DSPLINK Boards along with schematics and 
+documentation.
+
+
+
+Jed
+
+_____________________________________________________________________________
+_____________________________________________________________________________
+_____________________________________________________________________________
+
+Motor and Fan Amp Mods  	7/22/91		J. Margolin
+
+
+1. Cut and Lift U12 pin 2
+
+2. Cut and Lift U12 pin 12
+
+3. Cut and Lift U13 pin 1
+
+4. Cut and Lift U13 pin 2
+
+5. Cut and Lift U13 pin 3
+
+6. Cut and Lift U13 pin 4
+
+7. Cut and Lift U13 pin 5
+
+8. Cut and Lift U13 pin 6
+
+9. Cut and Lift U13 pin 13
+
+10. Cut and Lift U16 pin 12
+
+11. Connect a wire jumper from U3 pin 11 to U12 pin 2
+
+12. Connect a wire jumper from U3 pin 10 to U12 pin 12
+
+13. Connect a wire jumper from U13 pin 9 to U12 pin 6
+
+14. Connect a wire jumper from U13 pin 10 to U12 pin 8
+
+15. Connect a wire jumper from U13 pin 12 to U13 pin 13
+
+16. Connect a wire jumper from U16 pin 12 to U13 pin 2
+
+17. Connect a wire jumper from U11 pin 5 to U13 pin 1
+
+18. Connect a wire jumper from U13 pin 3 to U13 pin 4
+
+19. Connect a wire jumper from U13 pin 4 to U13 pin 5
+
+20. Connect a wire jumper from U13 pin 6 to U16 pin 12 PAD
+
+_____________________________________________________________________________
+
+To: Bob Frye
+Fr: Jed Margolin
+Re: Hazard in the workplace
+Dt: 22 July 1991
+
+
+The games in the Common Area get plugged into one of two electrical circuits.
+
+With Panorama plugged into one circuit and the Slugfest Pinball game plugged
+into the other circuit, John Moore and I measured approximately 40VAC 
+between exposed metal on the respective games. We measured it because John 
+reported getting a mild electrical shock when he happened to touch both games
+simultaneously. (The games are next to each other.) 
+
+The problem turned out to be that the Ground Pin on the Extension Plugstrip
+had been removed. I have removed the Plugstrip from service so you may deal 
+with it as you see fit.
+
+
+Regards,
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 26 July 1991
+
+
+Steel Talons
+------------
+I am still working on the Self-Test screens. I have worked out a way to
+checksum most of the Boot ROM program.
+
+There are two major areas left:
+
+	1. Put the appropriate tests in the Automatic part of Self-Test.
+
+	2. A test of the DSPLINK where the first unit sends data, the second 
+	   unit echos it, and the first unit receives it and compares it to 
+	   what it sent. This will establish the reliability of the link and
+	   allow us to determine how long the link cable can be.
+	   
+
+Dennis has delivered an EPROM containing the new ASIC65 program and approved 
+the part made from it. I have shown Glenn how to use the programmer; now he
+can make as many parts as they need.
+
+The original window parts are approaching the end of their lifetimes. I have 
+four that I am still able to program. (The Eds have two of them.) The Atari 
+part number for the window parts is 137665-0020 . We now have an additional
+six window parts.
+
+
+BMX
+---
+I have fixed the problem of single half-cycle glitches. I expect to finish
+the Rev 2 board after the filter is officially approved. I will need Erik's
+help to make some 2X plots so I can check them before sending out for boards.
+
+
+PCLINK
+------
+Joe has delivered plots for us to check.
+
+
+Other
+-----
+Now that Jim Petrick has written a program to enable the animators to print
+their pictures on the QMS, it has become impossible for regular users to use 
+said printer. 
+
+1. The animators' pictures take an enormous amount of time to download. 
+2. The QMS loses ordinary text files after being put into PostScript mode
+   by the animators jobs.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 2 August 1991
+
+
+Steel Talons Self-Test
+----------------------
+1. Matt has helped me find the bug in the DSPCOM program where the unit would
+   not Receive until it had first sent something. I have put my latest 2105
+   code with Peter's latest 2105 code and created and checksummed a new Boot 
+   ROM Version 1.9/5.3 (Self-Test 1.9/Peter's code 5.3). I have given the 
+   files to Peter for confirmation.
+ 
+2. There is one major Self-Test area left:
+
+      A test of the DSPLINK where the first unit sends data, the second unit
+      echos it, and the first unit receives it and compares it to what it 
+      sent. This will establish the reliability of the link and allow us to 
+      evaluate link cables and determine how long the link cable can be.
+
+3. I spent time with Andrea showing her the new parts of Self-Test.
+   I have also marked up the MultiSync schematic for the manual.
+   I received the preview copy of the manual on Friday, and reviewed and 
+   returned it the same day. It is horrible. Not only does it contain 
+   eggregious errors that Andrea would have caught if she had looked at the 
+   game that is right outside her office door, it contains 'boiler plate' from
+   other hardware.
+
+4. At this point, the MultiSync board has a TimeKeeper but Logg does not
+   seem interested in using it.
+
+5. I spent time with Logg and McCarthy discussing their plans for the SLOOP.
+   (I gave them more memory map information.) Logg's mode will respond to all 
+   addresses not in ROM7. This is really asking for trouble. And will probably
+   make it impossible to use the DS III Sound when they run out of SCUMs.
+
+   I did the timing analysis and decided that ROM 7 could handle an extra 35ns
+   delay so Pat can do his fancy SLOOP thing.
+
+6. The first credible program release date to appear on the schedule was 
+   8/23/91.
+
+   This was then changed to 8/19/91. 
+
+   In a mail message dated 7/24/91 Logg said he wanted it two and a half 
+   weeks early, before 7/31/91. 
+
+   This does not give me time to do the things I had planned. 
+
+   I have given Logg the most current Self-Test. I have not tested it as 
+   completely as I would like.
+
+   As of today I do not have a SLOOP; and therefore cannot test the code that
+   uses said device.
+
+									2 of 2
+BMX
+---
+I have given Melanie a Floppy and a Fab drawing (curtesy of Erik) with the 
+information needed by the vendor to make Rev 2 Motor and Fan Amp boards and 
+have filled out a Purchase Req. 
+
+
+PCLINK
+------
+1. I have checked Joe's plots and had him make some some minor changes. 
+   I would have preferred changes of a more substantial nature but I don't 
+   have time to do things over again with Joe. 
+
+   They are: a. Not all ICs have bypass caps; and 
+	     b. There are several traces under the 2105 socket that I would 
+	        prefer not be there.
+
+   When we get protoype boards I will visually inspect each one for bad traces
+   under the 2105 socket before it is stuffed.
+
+2. We have ordered boards. I recommended 25; I don't know how many we 
+   actually ordered.
+
+
+Other
+-----
+Jeff Bell is working on a program that will flag any parts that are not on
+the Preferred Parts List. 
+
+I want this stopped right now.
+
+I will not sign off any parts list that contains any indication that there are
+any parts therein that are not on John Ray's Preferred Parts List.
+
+Also, I suggest that, in the interests of accuracy, the Preferred Parts List
+change its name to one of the following:
+
+	6. John Ray's Stupid Preferred Parts List;
+	5. Permissible Parts List;
+	4. Permitted Parts List;
+	3. Preferred Pat's List;
+	2. Private Parts List;
+
+and the number 1 suggestion for the proper name for the Preferred Parts List
+{ drum roll }:
+
+	1. John and Pat's Private Parts.
+
+{ music }
+
+But Wait There's Moore
+----------------------
+I spent time with John Moore discussing some aspects of the MultiSync board. 
+I thought it was so he could add an Expansion Bus Interface to one of his 
+boards. Towards the end of the discussion he said he had been told by McCarthy
+to investigate some of the timing paths. He only came to see me because he
+couldn't find where some signals came from. What is going on here?
+
+
+Jed
+
+From:	KIM::LOGG          2-AUG-1991 10:55:07.07
+To:	MARGOLIN,MONCRIEF
+CC:	
+Subj:	Hardware problem
+
+
+Jed;
+
+	I seem to have a hardware problem with the 8 bit ADC.  I have an 
+intermitent problem with the pot reading moving without any change in the pot.
+I have experienced this with the PCB on Rotberg's bench and I have recieved
+reports of it occuring on field test and on my bench.
+
+	I have a scope hooked up to the pot output and to the input on the ADC.
+The value on the ADC input will change when the pot value doesn't.  The ADC will
+slowly move until it snaps back to the correct reading.
+
+	Could you give us some help here?
+
+						Thanks
+
+
+From:	KIM::MARGOLIN      3-AUG-1991 21:06:18.47
+To:	LOGG,ROTBERG,MCNAMARA,MONCRIEF
+CC:	MARGOLIN
+Subj:	A/D Problem
+
+Although I have not been able to duplicate the problem I believe it is due
+to the unused A/D inputs floating.
+
+In this regard, Input 6 may be the worst because, having been used only 
+internaly to read the output of the Strain Gage Brake Amplifier, it has no 
+bypass capacitors whose leakage can keep the A/D's input reasonably biased.
+It does, however, have a very nice resistor to ground which, unfortunately, 
+was not loaded.
+
+Plan A: Load R193 (1K, on Sheet 16)
+
+Plan B: Load R193 (1K, on Sheet 16);
+	Replace C5, C6, C7, C8, and C14 with 100K 1/8W Resistors (110027-104)
+
+
+I have added R193 to Rotberg's board so we can get a headstart in deciding
+which solution to use.
+
+We are under severe time constraints because Manufacturing is scheduled to
+start building the boards this week.
+
+If we choose Plan B we will need Meyette's blessing because these capacitors
+may affect FCC.
+
+Also: I need a SLOOP to verify Self-Test (and the SLOOP).
+
+Also: I have done the Board Test Procedure for Manufacturing. Copies are 
+available upon request.
+
+
+Regards,
+
+Jed
+_____________________________________________________________________________
+
+Inter-Office Memo				       Atari Games Corporation
+-----------------				       -----------------------
+
+To: Takaichi, Jang, Hata, Perez, Fluty, Lichac, Aknin, Loper, Winblad, 
+Jackson, Fritts, Dieu, Cameron, Landaverde, McCarthy, Lee, Hubbersty,
+J. Moore, Drobny, Nguyen, McNamara, Khodadadi, Moncrief, Margolin, Durfey,
+Meyette, Sherman, Bell, Owens, Smith, Bryant, Freitas, Wrightnour
+
+From: Jed Margolin
+CC: Moore, Downend, Stewart
+
+Subject: Preferred Instructions List			Date: August 8, 1991
+=============================================================================
+Purpose: The Preferred Instructions List (PIL) is a tool to help Software
+Engineers to choose common Microprocessor Instructions. By standardizing the 
+Instructions used in our products Manufacturing will be able to plan, 
+purchase, and stock these microprocessors with these common instructions more 
+economically. The PIL could result in fewer vendors, fewer purchase orders,
+fewer instructions to keep in stock, and less obsolete inventory. All of these
+savings can help to reduce the factory overhead costs.
+
+PIL Usage: When deciding which instruction to use, the Software Engineer is
+strongly encouraged to use an instruction that is on the PIL. Howvever, if
+a non-PIL instruction has significant economic or functional advantages, it 
+may be used. If you choose a non-PIL instruction, be prepared to justify your
+choice to your supervisor.
+
+History: Various members of Engineering and Manufacturing have generated the
+PIL. The intent was to provide a single preferred instruction out of a group 
+of similar instructions. Jeff Bell has put this list into the computer. Jeff
+will send out a mail message in the next couple of days that will tell you
+how to access the PIL file (which gets updated daily). The instructions 
+listing on the AIL (Approved Instruction List) also identify instructions
+on the PIL with a "PREFERRED INSTRUCTION" flag.
+
+Additions to/ Removals from the PIL:
+The Electrical Design Supervisor (Pat McCarthy) will be responsible for 
+maintaining the electrical portion of the PIL. Requests for additions to the
+electrical portion of the PIL should be forwarded to him. He will review the
+PIL quarterly and decide if any instructions should be removed.
+
+The Design Services Director (Pete Takaichi) will be responsible for 
+maintaining the hardware and wiring portions of the PIL. Requests for 
+additions to these portions of the PIL should be forwarded to him. He will 
+review the PIL quarterly and decide if any instructions should be removed.
+
+Tools for PIL: Pat McCarthy, Pete Takaichi, and Jeff Bell are working on a
+method whereby you will be able to get a listing of your program that flags
+preferred and non-preferred instructions. These methods will be published
+as they are available.
+
+Feel free to contact John Ray if you have any questions or suggestions for
+making the PIL more useful.
+_____________________________________________________________________________
+
+To: Jim Demelo, DAVILA INT'L CIRCUITS
+Fr: Jed Margolin, ATARI GAMES
+Re: Motor and Fan Amp Board 049304-01 Rev 2
+
+
+Jim,
+
+	This is to confirm our telephone conversation of August 8, 1991.
+
+The Silkscreen is correct as per your plot that was faxed to me, and your 
+
+proposal for generating the Solder Mask sounds very acceptable.
+
+
+
+						Sincerely yours,
+
+
+			
+
+						Jed Margolin
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 9 August 1991
+
+
+Steel Talons 
+-------------
+1. I have written deviations to:
+     a. Load R193 (1K, on Sheet 16)
+     b. Replace C5, C6, C7, C8, C10, and C14 with 100K 1/8W Resistors 
+        (110027-104)
+
+   I plan to ECN the parts list.
+
+   I have received a SLOOP and verified that it works with Self-Test.
+
+   There is one major Self-Test area left: The Cable Test
+
+     A test of the DSPLINK where the first unit sends data, the second unit
+     echos it, and the first unit receives it and compares it to what it 
+     sent. This will establish the reliability of the link and allow us to 
+     evaluate link cables and determine how long the link cable can be.
+
+
+2. I have writen a test procedure for testing the boards and given it to 
+   Manufacturing.
+
+
+3. The MultiSync board that was brought back from location with the pot 
+   problem had the Strain Gage Amp loaded. Removing it from the A/D input
+   instantly cured it. 
+
+
+BMX - Motor and Fan Amp
+-----------------------
+1. We have ordered boards.
+
+2. I have given Karen a parts list and asked her to procure parts for 19 
+   boards. (I will get the transformers.)
+
+3. I have filled out a Purchase Req for Transformers, Fuseholders, and Triacs.
+
+4. I have given Bonnie a Program RAM Board and shown her how to use it.
+
+
+PCLINK
+------
+1. We have ordered boards, due on 8/16/91.
+
+2. I have given Karen a parts list and asked her to procure parts for 10 
+   boards.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 16 August 1991
+
+
+Steel Talons 
+-------------
+1. I am waiting to ECN the parts list for a little while.
+2. I have finished the Cable Test; Self-Test is released.
+3. Tam has programmed 293 ASIC65s. There have been no failures.
+
+
+Road Riot
+---------
+Mark reports success with the DSPLINK boards. I gave him another board.
+He needs more, and we have three built-up boards and 14 blank boards, but I 
+suggested he talk to you about it. I do not have time to be responsible for 
+supplying boards for his project. We will also need some of these boards for 
+the PCLINK/DSPLINK Super Downloader.
+
+
+BMX - Motor and Fan Amp
+-----------------------
+1. On Tuesday (8/13/91) we received the boards. 
+
+   On Wednesday, Karen and Emmette scrounged parts to build two, both of 
+   which worked. I gave one to Rick Meyette for UL. (Also schematics and a 
+   parts list.)
+
+   On Thursday, UL examined the BMX game and gave its blessing to the Motor
+   and Fan Amp Board. The rest of the game did not fare quite so well, and
+   some of it may have to go back for regrooving.
+
+   The polarity of something got reversed. We fixed it by reversing two
+   wires in the Filter. Thus will have to be documented.
+
+   On Friday we got the MAC15A6 triacs in. Karen will have Emmette build more
+   boards on Monday.
+
+2. We are still waiting for transformers.
+
+3. I have given Bonnie a Program RAM Board and shown her how to use it.
+
+
+PCLINK
+------
+1. The boards were due on 8/16/91 and arrived on schedule. They are very 
+   pretty.
+
+2. I have given Karen a parts list and asked her to procure parts for 10 
+   boards.
+
+									2 of 2
+Other
+-----
+1. McCarthy is thinking about getting a Logical Devices ALLPRO 88 logic
+   device programmer instead of a Data I/O Unisite. This is probably a very
+   good idea. For PLCCs, DataI/O uses that funny foam/wire/bezel method
+   that does not work. The Logical Devices ALLPRO 88 uses real sockets for
+   PLCCs, assuming Pat gets the version that comes with PLCC sockets. 
+   According to their list of supported devices, it could do the ASIC65.
+
+2. Dan Ashe of Analog Devices called me. I am addressing the situation in a 
+   separate report.
+
+3. I have signed off Dennis' time card. Now that I am a manager, where is
+   my company stock?
+
+
+ToDo
+----
+Street Driver:
+    Document MultiSync for operation with AT Power Supply; Do parts list.
+    Document DS III for operation with AT Power Supply; Do parts list.
+    Do Self-Test (Needs mostly DS III Sound tests).
+
+BMX:
+    MultiSync: Document board, do parts list.
+    DS III: Document board, do parts list.
+    Motor and Fan Amp: Document Rev A.
+    Finish Self-Test.
+
+Driver Documentation:
+    I have been waiting until the Department gets its own printer because
+    using a Public Printer is really aggravating.
+
+
+Jed
+
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: ADSP-2101
+Dt: 16 August 1991
+
+
+   On Friday, August 16, 1991, Dan Ashe of Analog Devices called to report 
+that the selection critera used to select 2101s for our use have been changed 
+so that the parts will no longer be selected to work when the Bus Request 
+input is used with Memory Wait States other than '0'. 
+
+   I reminded Dan that I had been told that the part was to have been fixed
+by the end of the summer, and, by golly, here it was, the end of the summer.
+
+   He said he didn't know anything about it but would have someone call me.
+(Damon Chu has left so I would be called by someone else.)
+
+   No one has called me yet.
+
+   Dan Ashe promised to fax me the new selection list. When I received it I
+compared it to the bug list we already had. 
+
+Bug #1: We already knew about the '0' Wait State Requirement and I redesigned 
+        it for '0' wait states.
+
+Bug #2: Bug #2 is completely NEW. We have NEVER seen it before. And I have
+        NO way of knowing if it affects us:
+
+Bug #1 applies to all temperature grades of the ADSP-2101-50 and the extended
+temperature range of the ADSP-2101-40. We do not use the extended temperature
+range 2101 so our exposure is to the ADSP-2101-50.
+
+We are getting the selected parts AD90461-7 so that the Bus Request works
+properly at an operating temperature of 85 degrees C and an operating voltage
+greater than 4.5V. 
+
+Bug #2 applies to all 2101 material. I would guess it includes 2105s.
+------------------------------------------------------------------------------
+Bug #2. "When using multifunction instructions that are type 1 with external
+memory, the following sequence causes anomalous operation:
+
+   When a type 1 instruction that contains an internal instruction fetch,
+   an external data memory fetch, and an internal program memory data read is
+   immediately followed with a type 1 instruction with both data fetched 
+   external, the latter instruction operates incorrectly. A simple work round 
+   is to place the instructions in the opposite order."
+------------------------------------------------------------------------------
+									2 of 2
+
+According to the manual, a type 1 instruction is an ALU/MAC instruction that
+allows two registers to be loaded from different memories in the same cycle.
+
+Example:	AX0 = DM(I0,M0), AY0 = PM(I4,M4);
+
+In the 2101 the external program and data memory share the same bus. 
+Therefore, there are only two ways to have a type 1 instruction operate
+in one cycle:
+
+	a. Instruction fetch from internal program ram,
+	   external data memory fetch,
+           internal program program memory data.
+
+	b. Instruction fetch from internal program ram,
+	   internal data memory fetch,
+           external program program memory data.
+
+The type 1 instruction where both data fetches are external cause the 2101
+to fetch them in consecutive cycles since it cannot fetch them simulaneously,
+unlike the 2100 which has two separate external data and program buses.
+
+They only mention the problem with type 1 'a' instructions. It may also apply
+to Type 1 'b' instructions as well. Also, the bug sheet specifically says 
+these are 'read' operations. Does it work ok with 'writes'?
+ 
+Since this applies to all 2101 material, it is probably a logic error, rather
+than a bug due to a violation of IC design rules, or an error in processing
+the IC. I am appalled by the negligence Analog Devices has shown by their
+failure to do even the most rudimentary testing; they apparently prefer to 
+have their customers discover and report bugs.
+==============================================================================
+I have not used any Type 1 instructions on the DSPCOM Board or on the DS III
+Board. 
+
+I looked at Peter's code in the 2105 on the DSPCOM board. I did not find any
+Type 1 instructions. I think we should ask him to look, too.
+
+I do not have access to the DS III 2101 code. It is urgent that someone
+look at it.
+==============================================================================
+
+
+Jed
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Analog Devices, The Plot Thickens
+Dt: 21 August 1991
+CC: Mary Burnias
+
+
+I received a call from Margot today. She faxed me a copy of a memo she had
+received from Lisa Quetchenbach, the Western Region Business Development
+Manager, who replaced Damon Chu.
+
+According to this letter she and someone else (which is the common meaning
+of 'we' ) discussed the following with me:
+ 	
+    1. The part Atari has been buying (90461-1) is having yield problems 
+       at 125 degrees C.
+
+    2. I participated in a discussion to establish new selection criteria
+       to allow them to ship us parts that will continue to meet our needs.
+
+Her memo is a pack of LIES.
+
+1. To my knowledge I have never met or spoken to this Quetchenbach person,
+   and certainly not in the past week. I think she was the person whom
+   Dan promised would call me, and didn't.
+
+2. When Dan Ashe called me last Friday it was to inform me that ADI had 
+   changed the selection criteria for the 2101 and that he would fax me a 
+   copy of the new criteria. This change only concerned the operation of the 
+   Bus Request line with Memory Wait States that are not zero.
+
+   After I got the fax I noticed that:
+  
+ 	a. The part we have been buying was a 90461-1 not a 90461-7.
+
+	b. The selection criteria I had agreed to already included using
+	   Bus Requests only with Zero Wait States.
+
+	c. There was an NEW anomoly, that was not part of the 90461-1
+	   specification.  
+	
+3. Dan never said anything about a yield problem at 125 degrees C. (or any
+   other temperature). 
+
+   We buy parts rated for the Commercial temperature range of 0 to 70 
+   degrees C. What's with this 125 degrees C. business?
+
+4. He never said there was a yield problem with -1 parts and he wanted to 
+   send us -7 parts. He said ADI was changing the selection criteria. Period. 
+   He also misstated the change in selection criteria. He did not tell me
+   there was a new, major anomoly. He did not ask me if I would approve it.
+
+5. The memo from Ms. Quetchenbach states: " If Atari can accept the new 
+   ADSP-2101 special, then we will have no difficulty in meeting Atari's
+   next delivery date of August 27."
+
+   The threat is clear: If you want parts, you will use the -7 parts.
+
+									2 of 2
+6. It is not clear if this problem already exits in the -1 and they just 
+   haven't told us.
+
+   It is not clear if this problem exits in the 2105.
+
+   It is not clear how long they have known about it. If they had told me
+   about it five months ago I could have used a 12 MHz ADSP-2100A instead
+   of the ADSP-2101. (this would have avoided all these problems.)
+
+7. I have checked Peter's code (which runs in a 2105 which may or may not
+   have this problem) and he does not use the now forbidden sequence of
+   instructions.
+
+8. I have started checking the DS III Graphics code (or what I think is the
+   DS III Graphics Code) and I have identified several sections which may
+   violate the new criteria. The problem is that for each section I must
+   identify:
+     1. Is this a type 1 instruction?
+     2. Where does the code live? 
+     3. Where is the data memory read from?
+     4. Where is the program memory data read from?
+     5. Is the next instruction also type 1 with both data fetches external?
+
+The problem is when a type 1 instruction contains an internal instruction
+fetch, an external data memory read, and an internal program memory data read,
+and is immediately followed by a type 1 instruction with both data fetches 
+external.
+
+Even if it looks ok to me, it will have to be checked by a programmer. Even
+if it looks ok to a programmer we will have to test it with actual -7 parts.
+
+9. If the code does not work with the 90461-7 part, then the code can be
+   be rewritten to avoid the forbidden instruction sequence. However:
+   	1. The programmer is not here this week;
+	2. The new code may run slower;
+	3. The new code will have to be thoroughly tested;
+
+   As a result we may not be able to ship games with 90461-7 parts until
+   the middle of September.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 23 August 1991
+
+
+Steel Talons 
+-------------
+1. ADSP-2101: Matt has checked the code and not found any forbidden sequences.
+   We are supposed to get two 90461-7 parts in Monday and will test them in 
+   a game at temperature.
+
+2. I have done a sample parts list for the DS III board to show the proposed
+   parts list system.
+
+3. Steel Talons ASIC65s:
+
+		Week ending	Good    Bad   Total 
+		  8/23/91	 345     1     346
+
+Road Riot
+---------
+  Dennis brought up four DSPLINK boards and gave them to Mark. Mark now has a
+  total of seven DSPLINK boards.
+
+
+BMX - Motor and Fan Amp
+-----------------------
+   Karen and Emmette made six boards. Dennis tested them and gave them to
+   Bonnie. Bonnie now has a total of nine Rev 2 boards.
+
+   I do not know if the Filter Polarity has been documented.
+
+
+PCLINK
+------
+   Karen expects to deliver four boards by Monday afternoon.
+
+
+Street Driver
+-------------
+    I am documenting it for operation with the AT Power Supply.
+    I am hoping to get the Self-Test in shape next week.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 27 August 1991
+
+
+Steel Talons Update
+-------------------
+
+1. I checked the game with the AD90461-7 parts. It was still working and had
+   experienced no Resets or Timeouts during the night.
+
+   I came back, explained the situation to Ray Sherman, and he immediately 
+   put the -7 part on the AVL.
+
+   We did not receive the parts today as Analog Devices has promised. They
+   claim the guy who marks the parts was ill on Friday. (I think they already
+   used the Hurricane Bob excuse last week.)
+
+
+2. Jim Buchanan showed me a board with the following problem:
+
+	Sometimes, after power-on, some of the VRAMs don't work. There
+	are lines of pixels missing on the screen, and the simple VRAM
+	Test shows two bad VRAMs. An attempt to run the game results in the
+	famous 'GSP Timeout Error'. (Even a single 'bad' VRAM will cause the 
+	GSP program to crash, generating the GSP Timeout message.)
+
+   Resetting the game does not help. It can only be brought up by power 
+   cycling it.
+
+   What makes this game different from other games?
+
+   We are now using Samsung VRAMs that have a slighly different power-up
+   requirement than the TI and Micron VRAMs we were using.
+
+   Samsung requires a 200 us reset time while TI and Micron require only 
+   100 us. 
+
+   I have checked my timing, and the shortest reset time I have been giving
+   it is 350 uS.
+
+   This is what I have done:
+
+        I have made Steel Talons Self-Test ROMs with the GSP Reset time
+        extended to 2 ms.
+
+   With Logg's knowledge and approval:
+
+        Glenn is going over to Manufacturing early Wednesday morning, bringing
+        back the board I got from them. (It wouldn't screw up on my bench.)
+        He will sit with Jim until they get a board that has the Problem, at
+        which point Glenn will produce the new ROMs and put them in the board.
+        They will then try to determine if the new ROMs have cured the 
+        problem.
+
+    Power Supply rise time could also have a bearing on the Problem.
+
+									2 of 2
+ 
+3. There is the Other Problem, which may, in fact, be related to the original 
+   Problem. The Right Seat Game has a tendency to generate errors of some
+   type or another. Not the Left Seat. Just the Right Seat.
+
+   The Right Seat produces +15V Reg. for both boards' 12 Bit A/D. It also
+   has the Rump Thump, the Fan, and the A/C Switch.
+
+
+PCLINK
+------
+ We have gotten some boards from Karen and fired them up. One of the parts
+ does not have Power and Ground connected.
+
+
+Jed
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 30 August 1991
+
+
+Steel Talons 
+------------
+This is what I know so far. I am distributing it so others can comment on it.
+
+The Big Sympton is the GSP Timeout Error.
+
+This is definitely caused by the GSP program crashing.
+
+The GSP program crashes because, after powerup, one or more of the VRAMs
+do not work, and nothing can be done in software to make them work. (The
+GSP Simple Memory Test identifies the miscreant VRAMs.)
+
+If power is removed and reapplied, sometimes it will work and sometimes it
+won't.
+
+I do not know of anything that will cause a VRAM to permanently not work
+in a circuit until power is removed and reapplied, except for Latch-Up.
+(This is when the voltage on an input is greater than the IC's VCC. This
+triggers an SCR that is part of the gate structure but is not a problem as
+long as the input does not get higher than the IC's operating voltage.)
+
+Things that have been tried:
+
+  1. I made Steel Talons Self-Test ROMs with the GSP Reset time extended 
+     to 2 ms. Made no difference.
+
+  2. I had Jim remove the +15V and -22V from a board at his test station; 
+     maybe it was causing the VRAMs to latch up. Made no difference.
+
+  3. As per Ken Williams' memo, when the Samsung VRAMs are replaced with 
+     Micron VRAMs, there does not seem to be a problem.
+
+  4. Mary has checked around; only Samsung and Hitachi still make 64Kx4 VRAMs.
+
+  5. Glenn brought a boardset back and we fired it up on a bench with a
+     variable supply. 
+
+     When we brought the voltage up slowly it screwed up every time. 
+
+     We kept the supply on and switched it with just wire leads. It didn't 
+     screw up. 
+
+     We returned to bringing it up slowly. It had stopped screwing up. A short
+     time later the VRAM in one particular position started screwing up every 
+     time. 
+
+     If, with the board powered, I remove the VRAM and plug it back in, it 
+     will usually work.
+
+     Replacing it with a Micron VRAM fixed it.
+
+     Swapping the Samsung VRAM with another one from a different location 
+     seems to fix it, at least temporarily.
+
+  6. We removed the 0.1 uF bypass capacitor associated with one of the VRAMs
+     and measured it. It was, indeed, 0.1 uF. We added a 1 uF tantalum 
+     capacitor to the area. Made no difference.
+
+  7. I thought that maybe there was a problem with the plated-thru holes to
+     +5V and Ground. I measured the resistance between +5V on every VRAM and
+     a +5V Testpoint with a low resistance Ohmmeter and they seemed ok. I did
+     the same with the VRAM Grounds. I also did it with the Bypass Caps. They
+     all seem solidly connected.
+
+The VRAMs are now being put in sockets and I think this is a good idea.
+
+  7. At this point Bonnie decided she needed some technical support because
+     she had some MultiSync Boards that didn't work. I explained what the 
+     Samsung symptoms were and that it didn't sound like what she was
+     experiencing. She still wanted me to fix it. I told her I didn't have
+     time but I suggested a few things anyway, starting with checking the +5V.
+
+     Shortly afterwards, she sent Farrokkh to see me, with a board to fix. I
+     asked him if he had checked the +5V. He said, "no."
+
+     Someone noticed that the Strain Gage Amp had been stuffed. I suggested 
+     to him that he remove the LED to disconnect the Amp from the A/D inputs.
+
+     He left.
+
+
+From:	KIM::MARGOLIN     28-AUG-1991 19:56:00.67
+To:	MCNAMARA
+CC:	MARGOLIN
+Subj:	You Know What
+
+I would like to find out if there is still a VRAM problem when the
+board is powered solely by +5V.
+
+On Jim's test setup, either turn off the appropriate supplies or use a 
+pin extractor to remove +15V and -22V from P1.
+
+On a real game with the Problem, unplug the Rump Thump Board.
+
+If you want to wait until I come in, that's fine.
+
+
+Jed 
+
+
+From:	KIM::MCNAMARA     29-AUG-1991 11:14:51.65
+To:	MARGOLIN
+CC:	
+Subj:	From Manufacturing
+
+From:	MIKE::WILLIAMS     29-AUG-1991 06:54:33.72
+To:	MCNAMARA
+CC:	
+Subj:	VRAMS
+
+GLEN, JIM GOT THE BOARD SET WORKING THIS MORNING AND INSTALLED THE MICRON
+TECHNOLOGY VRAMS. HE COULD NOT GET THE BOARD TO FAIL AFTER POWERING UP AND
+DOWN APPROXIMATELY 100 TIMES. AFTER REINSTALLIING THE SAMSUNG DEVICES, THE
+BOARD FAILED IMMEDIATELY. PLEASE PASS THIS INFO ALONG. WE NEED A FIX FOR 
+THIS PROBLEM ASAP. I HAVE ABOUT 30 BOARDS EXHIBITING THIS FAILURE IN MY 
+REPAIR AREA AND WHO KNOWS HOW MANY BOARDS ARE GOING TO FAIL OUT IN THE 
+FIELD.      THANKS     KEN W.   3909
+
+
+
+From:	KIM::MCNAMARA     29-AUG-1991 11:12:24.18
+To:	KIM::MARGOLIN
+CC:	MCNAMARA
+Subj:	RE: You Know What
+
+Jim fixed the board with the sockets and tried the other brand VRAM and could
+not get them to fail. If the Samsung VRAM are in they fail quite often. He 
+also noticed a glitch on the reset line immediately after power-on and is 
+wondering if this is ok. He gave me a power supply like the one he uses so I 
+can connect it to the board in the lab and try to duplicate the problem over 
+here. Also Don Wrightnour has initiated a deviation to go to sockets for the 
+VRAM.
+
+Glenn.
+
+
+From:	MIKE::WILLIAMS     29-AUG-1991 09:51:38.09
+To:	MARGOLIN
+CC:	
+Subj:	VRAMS
+
+THE LATEST ON OUR END.
+WE PULLED THE SAMSUNG VRAMS OUT OF A MULTISYNC WHICH WAS FAILING
+SOCKETS WERE INSTALLED AND JIM LOADED MICRON TECHNOLOGY 150ns PARTS AND
+THE BOARD WAS CYCLED ON AND OFF 100 TIMES AND IT WOULD NOT FAIL. THE SAM-
+SUNG DEVICES WERE REINSTALLED AND THE BOARD FAILED IMMEDIATELY. IT APPEARS
+THAT THE SAMSUNG ARE NOT COMPATIBLE ON SOME BOARDS. 
+I SENT A MAIL MSG TO GLEN BUT LATER HEARD HE WILL NOT BE HERE TODAY. I 
+HAVE 30 BOARDS IN TECH REPAIR NOW FOR THE SAME PROBLEM AND WE NEED HELP 
+TO FIND A FIX. OF COURSE WE ONLY HAVE THE SAMSUNG PARTS IN STOCK AND I DO 
+NOT KNOW AVAILABILITY OF OTHER MANUFACTURER PARTS. BURNIAS IS CHECKING THAT.
+PRESENTLY WE WILL BE INSTALLING SOCKETS IN ALL 16 VRAM LOCATIONS SO IF THE 
+DECISION IS MADE TO CHANGE ALL THE PARTS IT WILL BE MUCH EASIER. 
+COULD YOU PLEASE HELP US OUT IN THIS DILEMMA?
+
+THANKS     KEN W.   3909
+
+_____________________________________________________________________________
+
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 30 August 1991
+
+
+Steel Talons 
+------------
+This is what I know so far. I am distributing it so others can comment on it.
+
+The Big Sympton is the GSP Timeout Error.
+
+This is definitely caused by the GSP program crashing.
+
+The GSP program crashes because, after powerup, one or more of the VRAMs
+do not work, and nothing can be done in software to make them work. (The
+GSP Simple Memory Test identifies the miscreant VRAMs.)
+
+If power is removed and reapplied, sometimes it will work and sometimes it
+won't.
+
+I do not know of anything that will cause a VRAM to permanently not work
+in a circuit until power is removed and reapplied, except for Latch-Up.
+(This is when the voltage on an input is greater than the IC's VCC. This
+triggers an SCR that is part of the gate structure but is not a problem as
+long as the input does not get higher than the IC's operating voltage.)
+
+Things that have been tried:
+
+  1. I made Steel Talons Self-Test ROMs with the GSP Reset time extended 
+     to 2 ms. Made no difference.
+
+  2. I had Jim remove the +15V and -22V from a board at his test station; 
+     maybe it was causing the VRAMs to latch up. Made no difference.
+
+  3. As per Ken Williams' memo, when the Samsung VRAMs are replaced with 
+     Micron VRAMs, there does not seem to be a problem.
+
+  4. Mary has checked around; only Samsung and Hitachi still make 64Kx4 VRAMs.
+
+									2 of 2
+
+  5. Glenn brought a boardset back and we fired it up on a bench with a
+     variable supply. 
+
+     When we brought the voltage up slowly it screwed up every time. 
+
+     We kept the supply on and switched it with just wire leads. It didn't 
+     screw up. 
+
+     We returned to bringing it up slowly. It had stopped screwing up. A short
+     time later the VRAM in one particular position started screwing up every 
+     time. 
+
+     If, with the board powered, I remove the VRAM and plug it back in, it 
+     will usually work.
+
+     Replacing it with a Micron VRAM fixed it.
+
+     Swapping the Samsung VRAM with another one from a different location 
+     seems to fix it, at least temporarily.
+
+  6. We removed the 0.1 uF bypass capacitor associated with one of the VRAMs
+     and measured it. It was, indeed, 0.1 uF. We added a 1 uF tantalum 
+     capacitor to the area. Made no difference.
+
+  7. I thought that maybe there was a problem with the plated-thru holes to
+     +5V and Ground. I measured the resistance between +5V on every VRAM and
+     a +5V Testpoint with a low resistance Ohmmeter and they seemed ok. I did
+     the same with the VRAM Grounds. I also did it with the Bypass Caps. They
+     all seem solidly connected.
+
+The VRAMs are now being put in sockets and I think this is a good idea.
+
+I would like to find out if all the MultiSync Boards are made by the same
+vendor. If there are several vendors, is there a correlation between the
+Problem and the board vendor?
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 3 September 1991
+
+To Get to the Chase:
+
+1. If we can get a board that never fails and one that always fails, we should
+   swap the VRAMs and see if the problem travels with the VRAMs.
+
+2. We should build 100 boards with Samsung parts and 100 boards with Micron
+   parts, subject them to the same testing, and look at the results.
+=============================================================================
+
+Steel Talons 
+------------
+When a board fails regularly, swapping two VRAMs does not move the problem.
+This would indicate a problem with the board.
+
+But, when a board fails regularly, replacing a 'bad' Samsung VRAM with one
+made by Micron does cure the problem.
+
+There may be some kind of board problem to which the Samsung VRAM is 
+susceptible but the Micron part is not.
+
+In particular, because the symptom cannot be 'fixed' except by powering down
+the board, this implies that something in the Samsung VRAM is latching up.
+
+Things to Consider:
+
+1. We have shipped about 200 games (400 boards) with Samsung VRAMs soldered in.
+
+     a. Were the tests that were done on the games sufficient to insure that 
+        these games will be ok?
+
+     b. If not, what do we do?
+     	  1. Have them send the boards back for Atari to replace the VRAMs?
+	     Can the VRAMs be removed without damaging the board?
+
+	  2. Make a board that allows the game software to turn off its own
+	     power to 'try again' if the VRAMs don't come up properly?
+
+	  3. Can the problem be fixed by replacing the power supply with one
+	     that has a faster rise time? Can we use the old ones in other 
+	     games?
+
+     c. Who will pay? Will Samsung admit their VRAMs are defective? Will the
+        PCB vendor admit that their boards are defective? Do we sue them?
+
+2. Should I design and build a device to test that the VRAMs come up properly?
+   This would probably be a modified Motor and Fan Amp board that would be
+   used to power cycle the +5V power supply a few dozen times. Would that
+   even be enough? Assuming it was tested in the game would it shorten the 
+   life of the power supply?
+									2 of 2
+
+3. What are the implications for the Street Driver?
+    a. Can we find enough Micron parts?
+
+    b. Should we change to 128Kx8 VRAMs? 
+       1. TI's are not available yet in production quantities.
+       2. TI's are in the Small Outline J package. (DIP with J leads with 
+	  50 Mil lead spacing, normally surface mounted. Are sockets 
+	  available?)  
+
+    c. The most popular VRAM seems to be the 256Kx4, which is available in a
+       ZIP package. This uses standard thru-hole technology and sockets 
+       are available. The MultiSync with 34010 could not be converted easily;
+       perhaps it cannot be converted at all because of the dynamic bus
+       configuration. 
+
+    d. Should the MultiSync be redesigned with a 34020? Can it be done on
+       a four layer board? Should it use a Pallette IC instead of the current 
+       scheme to save $14? Should it use 1M EPROMs instead of 27512s? Should
+       it use a 68EC020 instead of the 68010? Where does it end? Who will 
+       design it?
+
+    e. Can the Street Driver use Sam's growth motion object board?
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 4 September 1991
+
+
+Tuesday:
+
+1. Joan Alpen from Merit is a Hitachi Distributor and will bring 16 parts
+   tomorrow for us to try out.
+
+2. I met with Samsung and explained the problem. Thy were very concerned about
+   it. One of them called me back later and said he had been told that it is
+   important that RAS and CAS power-up together; otherwise the chip could 
+   lock up. Hmmm. He will try to get more information from the factory 
+   tomorrow.  I will ask Glenn to bring his new Digital Storage 'scope over
+   for a look-see.
+
+3. Steel Talons ASIC65s:
+
+Incoming = 390	   Date	        Good    Bad    
+		  8/14/91	  20     0     
+		  8/15/91	 289     0
+		  8/20/91	  81	 0    
+		  		----	--
+				 390     0	
+
+
+Incoming = 475	   Date	        Good    Bad    
+		  8/21/91	 100     3   
+		  8/23/91	 240     3   
+		  8/26/91	 110     1   
+		  8/29/91	  18     0   
+    Salvaged			   5    -5
+		  		----	--
+				 473	 2
+
+
+Incoming = 300	   Date	        Good    Bad    
+		  8/29/91	 269     4   
+		  8/30/91	  27     0   
+		  		----	--
+				 296     4
+
+Incoming = 265	   Date	        Good    Bad    
+		  9/3/91	 257     8   
+    Salvaged			   2    -2
+		  		----	--
+				 259     6
+
+Total as of 9/3/91:	1430 parts	1418 good	12 bad	= 0.84%
+
+==============================================================================
+									2 of 2
+
+Wednesday
+
+1. Joan gave me 16 Hitachi 120 ns VRAMs which I installed and tested with at 
+   least 12 power-up cycles. They worked just fine. The parts Joan has been 
+   able to locate are 150 ns which should work with no problem but I asked to
+   to test some anyway.
+
+2. Chris Drobny came to see me about a Motor and Fan Amp board for Motomania.
+
+   a. I gave him a blank board and a transformer and recommended he ask Karen 
+      to build him a board. 
+ 
+   b. I suggested he get a schematic from Erik.
+
+   c. I went over the schematic with Chris and explained how the circuit 
+      worked.
+
+   d. I strongly recommended that his programmer implement the Self-Test for
+      the board that I did for Bonnie.
+
+   e. I told him that after having spent most of my time since last December
+      working on other people's projects I would no longer support other
+      people's projects. Like his. Especially when I found out that Dennis had
+      decided to use a Leta even though I told him (through Chris) that it 
+      wouldn't work in a feedback system because it loses counts.
+
+   f. I offered to give him the OrCad files so he could take over the board.
+
+   g. I told him he shouldn't use the Motor and Fan Amp board because there
+      was a better way to do it.
+
+  Shortly afterwards, Rich Moore came to see me to thank me for the work I
+  was doing on the Steel Talons VRAM problem and to ask me to provide full
+  information to Chris Drobny since I had decided not to support his project.
+
+  Drobny sure didn't waste any time. He must have gone directly from my office
+  to Rich's.
+
+
+3. Glenn and I have tried some pullup resistors to improve the RAS/CAS power-
+   up characteristics. Glenn will have Jim Buchanan try it on a few bad 
+   boards.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 5 September 1991
+
+
+Thursday
+--------
+1. Glenn had Jim Buchanan take one of his bad boards and remove the 10pF caps
+   on the Serial Clock Lines. (I promised Samsung I would try it.) It did
+   not fix it.
+
+2. Glenn had Jim add the four 10K pullup resistors to a bad board. The board
+   worked. They removed the resistors. The board still worked.
+
+3. Jim modified another board. It worked. He removed the resistors. It didn't 
+   work. He put the resistors back on. It worked.
+
+4. I have asked Glenn to have Jim modify the remainder of his 30 bad boards
+   so we can get a better idea of how effective it is.
+
+
+Warning: 
+   The information that Samsung has provided me on this bug came from Ron
+   Shick (Shuck?) whom I believe is their field applications engineer. The
+   information was that if RAS and CAS are not brought up together during
+   power-up the part might lock-up. I do not have specifics like how close 
+   together they must be. Is it 1V, 0.1V, 0.01V, or 1 ms, 1 us, or 1 ns?
+
+   These pullup resistors improve the way RAS and CAS come up but do not make
+   them come up perfectly together. 
+
+   All of the games that we have shipped with Samsung VRAMs have the potential
+   to have this problem. They should have the pullup resistors added.
+
+   All new games should be built with Hitachi VRAMs as much as is possible.
+
+     1. I do not know how good a fix the resistors are.
+
+     2. I do not have a lot of confidence in Samsung. What else haven't they
+	told us about?
+
+   Continuing to use Samsung VRAMs entails two risks:
+
+     1. The Samsung VRAMs may have another undocumented way to screw up games;
+
+     2. Manufacturing would request that the MultiSync board be changed so it 
+        would contain the mods. Making changes to a board this size that is 
+        already in production and for which there will be no prototypes is 
+        very risky. Do we still have the original SciCards system or would 
+        the board be done from data converted to the new system?
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 6 September 1991
+
+
+Friday
+------
+1. The Mods for MultiSync Boards with Samsung VRAMs:
+
+	1. Connect a 10K 1/8W Resistor from 120_U pin 18 to +5V.
+	2. Connect a 10K 1/8W Resistor from 120_U pin 16 to +5V.
+	3. Connect a 10K 1/8W Resistor from 120_U pin 14 to +5V.
+	4. Connect a 10K 1/8W Resistor from 160_U pin  8 to +5V.
+
+			and maybe
+
+	5. Cut and lift 120_U pin 1
+	6. Connect a wire jumper from 120_U pin 1 to 120_K pin 2.
+
+   I have asked Jim to make mods 5 and 6 to his test boards.
+
+2. I have gone over with Don some ideas for doing the mods.
+
+3. I have asked Tom Dempsy of TI for information on the use of the 128Kx8 VRAM
+   with the 34010.
+
+4. I have gone over with Andrea the errors and omissions from the Steel
+   Talons manual.
+==============================================================================
+5. Steel Talons ASIC65s:
+			              Date         Good    Bad    
+			           -----------     ----    ---
+	    Incoming = 390	   8/14 - 8/20	   390      0	
+
+	    Incoming = 475	   8/21 - 8/29	   473	    2
+
+	    Incoming = 300	   8/29 - 8/30     296      4 
+
+	    Incoming = 265	   9/3		   259      6
+
+Total as of 9/6/91:	1430 parts	1418 good	12 bad	= 0.84%
+==============================================================================
+6. Data Sheets
+
+   ADSP-21020: No
+
+   Waferscale PSD301- User Configurable Peripheral with Memory:
+	Does not do much, especially at $10-$12.
+
+   Benchmarq Real Time Clocks and NV Memory: I will definitely look into it.
+
+   OKI: The page marker fell out; I don't know what I was supposed to look at.
+
+
+
+Jed
+
+								9/6/91
+
+Jim,
+
+   These are the mods for MultiSync Boards with Samsung VRAMs:
+
+	1. Connect a 10K 1/8W Resistor from 120_U pin 18 to +5V.
+	2. Connect a 10K 1/8W Resistor from 120_U pin 16 to +5V.
+	3. Connect a 10K 1/8W Resistor from 120_U pin 14 to +5V.
+	4. Connect a 10K 1/8W Resistor from 160_U pin  8 to +5V.
+
+	5. Cut and lift 120_U pin 1
+	6. Connect a wire jumper from 120_U pin 1 to 120_K pin 2.
+
+
+   Let Rick know how mods 5 and 6 work out.
+
+
+Thanks,
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: This Weekend's Tests
+Dt: 22 September 1991
+
+
+I did more VRAM tests. They did not show any errors.
+
+I checked to make sure the 34010 is producing Refresh Cycles. It is.
+
+I removed the 34010 Oscillator module and installed pins so I could try
+different modules.
+
+There seemed to be fewer errors at 40 MHz, but there were still errors.
+
+There seemed to be the same errors at 48 MHz and 50 MHz.
+
+There seemed to be more errors at 60 MHz. but it still ran ok. The amazing 
+thing is that it worked at all. 
+
+For a time it seemed to run better at 48 MHz with an NDK oscillator instead
+of the Fox module that it came with.
+
+If you think we should pursue this I think we have a function generator
+that can be programmed for frequency and duty cycle. We would also need
+a fast oscilloscope.
+
+Otherwise, the following are the only other things I can think of right now:
+
+   1. Try to figure out some more memory patterns to test for.
+
+   2. Have a programmer set things up so we can have the GSP put up one thing
+      at a time and then stop. That way we can determine what operation is
+      making the VRAMs screw up. This would have to be interactive. The 
+      previous approach took four hours to try one thing.
+
+   3. Is there a correlation between the good and bad boards with the
+      manufacturer of the oscillator module at XOSC2?
+
+   4. Give up.
+
+
+It would be nice to figure this thing out because it might have implications
+for a board with 128Kx8 VRAMs.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hitachi VRAM Problem
+Dt: 23 September 1991
+
+
+There is a problem that occurs when Steel Talons boards use Hitachi VRAMs.
+
+Memory locations change when they are not supposed to.
+
+When this happens in the display buffer the result is bad pixels on the 
+screen.
+
+When this happens in the area that contains the GSP program the result is that
+the GSP program crashes.
+
+1. This problem does not happen when Samsung or Micron VRAMs are used.
+
+2. There is no common factor between good boards and bad boards other than
+   the VRAM manufacturer.
+
+3. The VRAMs pass the standard memory tests but still screw up in the game
+   depending on what is on the screen.
+
+4. On the bad board I have been examining I have checked evrything I can think
+   of checking.
+
+5. There does not seem to be anything that consistently affects the way things
+   screw up except:
+
+   	a. There are fewer errors when VCC is 4.75V or 5.25V than when it 
+           is 5.00V.
+
+	b. Changing the GSP clock from 48 MHz to 40 MHz seems to reduce the 
+	   rate at which the errors occur. Changing it to 60 MHz accelerates
+	   the rate at which errors occur.
+
+   If there were a system timing error, changing the clock from 48 MHz to 
+   60 MHz should have made it crash right away. It didn't. And it simply 
+   accelerated the VRAM errors; it did not change the type of error.
+
+6. There is insufficient programming support to do an extensive investigation
+   of the GSP code. 
+
+
+Recommendations:
+	1. Get rid of all Hitachi VRAMs.
+	2. Remove Hitachi VRAMs from the AVL.
+
+
+Jed
+
+
+cc: Jim Breshears, Rob Bryant, Allan Brumbaugh, Mary Burnias, Cris Downend,
+    Jim Freitas, Ed Logg, Rick Meyette, Rich Moore, Ray Sherman, Tom Smith, 
+    Bob Stewart, Ken Williams, Don Wrightnour 
+_____________________________________________________________________________
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: MultiSync II
+Dt: 24 September 1991
+
+
+I propose to make the following changes to the MultiSync Board to create
+MultiSync II.
+
+1. Replace the sixteen 64Kx8 VRAMs with eight 128Kx8 VRAMs. 
+
+   Polygon fill time will remain the same but we will have 1 MB of VRAM 
+   instead of 512K. This is the same as in the original Driver Main Board but 
+   it will not have the same peak polygon fill rate due to the memory 
+   orgination.  
+
+   MultiSync II can be configured to produce the Medium Res format (512x384).
+
+2. Change the sixteen 27512 program ROM sockets to accept 512K EPROMs, 
+   1M EPROMs, 1M Flash EPROMs, or 1M Static RAMs.
+
+   The configuration will be as follows:
+
+     ROM0 is always EPROM. (The program has to be able to start.)
+
+     ROM1 and ROM2 are EPROM, Flash EPROM, or RAM depending on jumpers
+     1.P0 and 1.P1 .
+
+     ROM3 and ROM4 are EPROM, Flash EPROM, or RAM depending on jumpers
+     2.P0 and 2.P1 .	
+
+     ROM5 and ROM6 are EPROM, Flash EPROM, or RAM depending on jumpers
+     3.P0 and 3.P1 .
+
+     ROM7 is EPROM, Flash EPROM, or RAM depending on jumpers 4.P0 and 4.P1 .
+     ( ROM7 is connected to SLOOP)
+
+     All sections must select 512K EPROM if any one does. In 1M modes the
+     sections may be mixed and matched. (27512s may still be used in sections
+     selected as 1M EPROM as long as the programmer is aware of the address
+     gap.)
+
+3. With my luck the 8Kx8 SRAMs will become history. I propose to replace the
+   two pair of 8Kx8s with one pair of 32Kx8s. This will also give twice as 
+   much program RAM.
+
+ 
+There are two consequences of these changes.
+
+1. To accomodate the extra Program RAM I will have to move the address of
+   the ZeroPower RAMs and the DUART. Therefore the board will not be able
+   to use existing EPROMs. The program would have to be recompiled.
+
+2. In order to free up board space to accomodate the GALs needed to do the 
+   EPROM thing, I will have to remove the SCUM circuitry.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status
+Dt: 23 October 1991
+
+
+I was planning on working on the MultiSync II Board with 128Kx8 VRAMs.
+
+If you want me to keep working on the Hitachi VRAM problem instead of
+MultiSync II, then fine.
+
+If you want me to work on MultiSync II then go to the section on MultiSync II.
+
+
+Pursuing the Hitachi VRAM problem:
+
+1. What are the results of running the board from a linear supply?
+
+2. I will compare each Hitachi VRAM timing spec with TI's. This will take a 
+   day or two.
+
+3. I would like to run Race Drivin' (with ADSP II and not DS III) on a board 
+   with Hitachi VRAMs. 
+
+4. Was the GSP Code changed from Race Drivin' to Steel Talons?
+
+5. I am rewriting the VRAM memory tests in 34010 assembly and adding more
+   tests. I do not have the source code for Max's tests but I suspect they
+   are in C.
+ 
+6. If none of the above produces results the only thing left is to set up
+   a system where we can go to the screen that shows the problem, and
+   selectively enable pieces of code in hopes of being able to associate
+   the problem with specific VRAM operations.
+
+   This requires someone familiar with the GSP Code. 
+
+   My previous experience with getting GSP CODE changed indicates that there
+   is no person in this company who knows anything about the GSP CODE or who
+   cares; especially the Steel Talons programmers.
+
+									2 of 2
+MultiSync II
+------------
+
+     The 34010 will only produce /RAS-only refresh cycles for VRAMs with RAS 
+and CAS separated by 8 bits or fewer. The 48C121 has 9 bits of RAS address, 
+therefore requiring that /CAS-before-/RAS Refresh mode be used. (/CAS-before-
+/RAS Refresh mode uses a refresh counter that is internal to the VRAM.)
+
+     The 34010 can be programmed to produce /RAS-before-/CAS Refresh but the
+MultiSync hardware was not designed for it. That is the reason for the
+circuit change.
+
+     In order to verify that it works I would like to modify a MultiSync
+board in a Steel Talons board set, since Steel Talons seems to be 
+particularly hard on the hardware.
+
+     Even though the new circuit will still work with RAS-only Refresh cycles
+the object of the exercise is to test the /CAS-before-/RAS Refresh mode.
+The current 64Kx8 VRAMs also support this mode so they can be used for this
+test even though it would be nice to test the 48C121s as well.
+
+     The GSP Initialization code MUST BE CHANGED TO SELECT /RAS-Before-/CAS
+REFRESH MODE. In Self-Test this initialization is done by the 68010 and I will
+take care of it.
+
+     Someone has to change the Routine in the GAME. This initialization might 
+also be performed in GSP CODE; therefore the GSP CODE would have to be 
+changed.
+
+     I will not take responsibility for changing GAME CODE. 
+
+     I will not take responsibility for changing GSP CODE. 
+
+     My previous experience with getting GSP CODE changed indicates that there
+is no person in this company who knows anything about the GSP CODE or who
+cares; especially the Steel Talons programmers.
+ 
+     If there is no programmer willing to take responsibility for making these
+changes, then any further work on this board is a waste of my time.
+
+
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status
+Dt: 25 October 1991
+
+
+Road Riot
+---------
+I spent time with Farrokh so he could release the EPROM and the GAL on the
+DSP COMLINK Board which is what they called the DSP LINK Board after they
+moved the connector and added some other things.
+
+The Boot EPROM appeared to be unchanged from Steel Talons (since it reported
+the same Self-Test and Program Version Numbers and had the same checksums as
+the Steel Talons part) so I gave Farrokh the Steel Talons Programmed Part
+Number.
+
+The GAL is used to decode addresses and is the same one that I gave them
+with the DSP LINK Board. I made a new file and changed the documentation to
+say 'Road Riot' and changed the User Signature to the part number Farrokh
+is going to use.
+
+Total time was about 30 minutes.
+
+
+Driver Documentation
+--------------------
+I have printed out the documentation for the Driver Hardware.
+
+I have given copies of some of the documentation to Chip and Terry.
+
+These files are available on Floppy upon request.
+
+
+Steel Talons ASIC65s:
+--------------------	              Date         Good    Bad    
+			           -----------     ----    ---
+	    Incoming = 390	   8/14 - 8/20	   390      0	
+	    Incoming = 475	   8/21 - 8/29	   473	    2
+	    Incoming = 300	   8/29 - 8/30     296      4 
+	    Incoming = 265	   9/3		   259      6
+	    Incoming = 110	   9/9		   107      3
+	    Incoming = 100	   9/17		    98      2
+	    Incoming = 100	   9/24		    99      1
+	    Incoming = 100	   10/2		    94      6
+	    Incoming = 100	   10/7		    95      5
+	    Incoming = 130	   10/14	   128      2
+	    Incoming = 100	   10/23	    95      5
+	    Incoming = 100	   10/24	   100      0
+
+Total as of 10/24/91:	2270 parts	2234 good	36 bad	= 1.59%
+
+									2 of 2
+
+Steel Talons RFI Problem
+------------------------
+Thursday (1 hour):
+
+   Rick Meyette informed me that the Steel Talons unit sent to Japan failed
+   the MITI RFI test.
+
+   He determined that the problem is a 43 MHz spike coming from the board set 
+   on the Left Side but he could not find what was causing it.
+
+   I recommended that he swap the left and right board sets. Ricks Owens did 
+   so and reported the problem was still on the Left Side.
+
+Friday (4 hours):
+
+   Both Boardsets are clean; they are not producing the problem. The video
+   cable in the game harness is very long and is cabled with every other
+   cable in the game. Connecting the video to the monitor by a separate cable
+   instead of the video cable in the harness improved the situation a great
+   deal but did not fix it completely.
+
+   I asked Rick to connect his Video Test Generator. He did. It still did it.
+   The problem is in the monitor. This one was a Hantarex. 
+
+   The monitor in Japan is a Wells Gardner. So we have to do this thing over
+   again. We do, however, already know that emissons can be reduced by 
+   modifying the video harness. We also know that we could increase the 
+   capacitors on the video outputs if necessary, without degrading the 
+   picture. (The filter time constant is currently 4.7 ns.) 
+
+   
+Other
+-----
+Mary Burnias has informed me that she has been ordered to not give parts
+to me ever again. All parts are to go through Components. This is 
+unacceptable. This places the timely development of MultiSync II at risk. 
+
+Rick Meyette didn't know anything about it.
+
+I have not done anything else about it because I am waiting for you to come 
+back first.
+
+ 
+
+   Jed
+_____________________________________________________________________________
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status
+Dt: 1 November 1991
+
+
+Steel Talons RFI Problem
+------------------------
+I have spent several hours with Rick Meyette on this.
+
+What it has come down to is:
+
+   1. The problem RF is related to GSP activity.
+
+   2. Changing the VRAMs from Samsung (120ns) to TI (150ns) reduced
+      the 48 MHz component considerably but increased the one at 32 MHz.
+
+   3. The game passes FCC but not MITI.
+
+   4. The problem is made worse because the game boards are mounted on
+      the back door. This increases the harness length considerably which
+      makes it a better antenna for RF. Meyette also would have liked the
+      board sets mounted differently. They should have listened to him.
+
+Rick Meyette and I have run out of ideas, so he is going to try a shield.
+
+
+Hitachi VRAMs
+-------------
+I have written more VRAM Tests. Unfortunately, Alan took my one and only
+MultiSync board for testing Hitachi VRAMs.
+
+He did manage to find it. It was returned without the Steel Talons EPROMs
+which included the special pair that disabled screen Erase.
+
+The new tests did not find any VRAM errors.
+
+This board had the Hitachi VRAMs that I received from Joan for testing.
+I put Steel Talons ROMs in the board and let it warm up. Pixel errors do
+appear on the Blue attract screen but are almost unnoticeable without
+Erase disabled.
+ 
+I installed the original Hitachi VRAMs that I had sent to Hitachi for 
+testing. (Hitachi could find noting wrong with them.)
+
+After warmup the pixel errors were very noticeable, but the memory tests
+could not detect any errors.
+
+I have compared 20 timing specifications of TI and Hitachi VRAMs and found
+nothing to suggest there would be a problem. (There are about 50 more check.)
+
+I am informed that we have disposed of the Hitachi VRAMs and that there is no
+need to continue the investigation. Good.
+ 
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: MSP DRAMS
+Dt: 6 November 1991
+
+
+Regarding the 64Kx4 DRAMs used with the MSP. The most elegant solution is to
+replace these four parts with two 128Kx8 DRAMs. Unfortunately, TI seems to be
+the only company that makes the part.
+
+These are the current possibilities for MSP memory:
+
+     1. Keep the 64Kx4 DRAMs and hope we will be able to get them if we need 
+        them. (we last paid $1.35; that makes it $1.35 x 4 = $5.40 .
+
+     2. Use two TI 128Kx8 sole source DRAMs. (?)
+
+     3. Use Four 256Kx4 DRAMs that everybody makes. (about $7.00 x 4 = $28)
+
+     4. Use two 128Kx8 VRAMs. (about $8.00 x 2 = $16.00)
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status
+Dt: 8 November 1991
+
+
+Steel Talons RFI Problem
+------------------------
+The shield must have worked; they shipped the game to Japan.
+
+
+Road Riot
+---------
+Rick Meyette has been having some problems getting Road Riot to pass FCC.
+He is having capacitors added to the Road Riot DSPCOMLINK Board. Somehow
+it got made without them. (The Steel Talons DSPCOM Board has the caps
+because he was able to determine that they were needed before they were
+ordered.) He will try to have the boards held up if they haven't been made
+yet.
+
+
+Hitachi VRAMs
+-------------
+The new tests have failed to provide a clue as to why the Hitachi VRAMs won't 
+work properly in Steel Talons.
+
+Since we have now disposed of the Hitachi VRAMs there is no need to continue 
+the investigation. 
+
+But I am going to somehow determine if Steel Talons is turning off the
+VRAM refresh.
+
+
+MultiSync II
+------------ 
+I have had a Steel Talons MultiSync board modified with the new refresh
+circuitry and have changed the Self-Test software to have the GSP produce
+CAS-before-RAS Refresh. It seems to work. (The 64Kx4 VRAMs also have the
+capability to do CAS-before-RAS Refresh.)
+
+I have asked Logg to supply me with EPROMs to make Steel Talons work with
+CAS-before-RAS Refresh as a final test.
+
+The following companies are alleged to make 128Kx8 VRAMs:
+
+   Texas Instruments:	TMS48C121-80, -10, -12   (80 ns, 100 ns, 120 ns)
+   Micron:		MT42C8127-10, -12        (100 ns, 120 ns)
+   Hitachi:		HM538121JP-10, -12, -15  (100 ns, 120 ns , 150 ns)
+   Toshiba:		TC528126BJ-80, -10	 (80 ns, 100 ns)
+   Mitsubishi:		N5N48128		
+   NEC:			uPD424400
+
+I am in possession of samples from TI and Micron.
+
+Regarding the 64Kx4 DRAMs used with the MSP. The most elegant solution is to
+replace these four parts with two 128Kx8 DRAMs. Unfortunately, TI seems to be
+the only company that makes the part.
+
+									2 of 2
+These are the current possibilities for MSP memory:
+
+     1. Keep the 64Kx4 DRAMs and hope we will be able to get them if we need 
+        them. (we last paid $1.35; that makes it $1.35 x 4 = $5.40 .
+
+     2. Use two TI 128Kx8 sole source DRAMs. (?)
+
+     3. Use Four 256Kx4 DRAMs that everybody makes. (about $5.00 x 4 = $20)
+       (In my last memo they were $7 ea.)
+
+     4. Use two 128Kx8 VRAMs. (about $8.00 x 2 = $16.00)
+
+I have asked Mary to look into it.
+
+
+Other
+-----
+I had a talk with Rich Moore on Friday. He basically wanted to know how I
+felt about my Steel Talons Bonus share.
+
+I basically told him:
+     1. I had been satisfied with the bonus split within Applied Research
+	that we had originally come up with for the Steel Talons share.
+
+     2. The original Applied Research share of Steel Talons was too low.
+
+     3. On an absolute basis the amount I am slated to receive from
+	Steel Talons was not worth the aggravation.
+
+     4. I didn't know enough about what other people's shares were to know
+        how I felt.
+
+     5. There were enough other issues with the Company so that the Steel 
+        Talons bonus was small potatoes. I explained how the Company was 
+	eliminating my job.
+
+
+Things to do
+------------
+
+  1.	Reorganize GSP Tests.
+  2.	Finish DS III Sound Tests.
+  3. 	Convert Self-Test source to run under Microtek tools.
+  4. 	Finish Documenting the secret of the Universe (if I have time).
+
+
+
+   Jed
+
+
+To: Ed Logg
+Fr: Jed Margolin
+Re: MultiSync II
+Dt: 6 November 1991
+
+
+In MultiSync II the 64Kx8 VRAMs will be changed to 128Kx8 VRAMs. 
+
+Because the 34010 produces VRAM RAS-only refresh for 8 bits and the 128Kx8 
+requires 9 bits of refresh it is necessary to change the refresh mode to 
+CAS-before-RAS Refresh. (This mode utilizes the VRAM's internal 9 bit refresh 
+counter.) 
+
+This will require both a hardware and a software change.
+
+I have had a Steel Talons MultiSync board modified with the new refresh
+circuitry and have changed the Self-Test software to have the GSP produce
+CAS-before-RAS Refresh. It seems to work. (The 64Kx4 VRAMs also have the
+capability to do CAS-before-RAS Refresh.)
+
+However, before I can proceed with the MultiSync II board I need to verify 
+that Steel Talons will work with this change. I would like a set of EPROMs
+(checksummed) with the changes. It may only be one pair.
+
+The change consists of initializing the GSP's CONTROL register with RM=$1
+instead of RM=$0.
+
+Max thinks that you are probably using his initialization code (which he
+got from me) in a 68010 routine called GSPINIT. The registers are
+initialized from a table. You need to change the table and make sure there
+is no other code that changes the refresh mode. 
+
+It is possible that there is GSP code that changes the CONTROL register, so 
+the GSP code must be examined to make sure it does not change the refresh 
+mode.
+
+If I change the MSP DRAMs from 64Kx4 to 128Kx8 you will need to make a similar
+change in the MSP initialization code.
+
+I would like to have these EPROMs this week to avoid delaying MultiSync II.
+
+If you decide to not make these changes for me at this time, I will not be 
+able to warranty that Steel Talons will work on MultiSync II.
+
+Note that CAS-before-RAS Refresh will not work on unmodified hardware.
+
+
+Jed
+
+
+cc: Rick Moncrief, Rich Moore
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status
+Dt: 13 November 1991
+
+MultiSync II
+----------------------------------------------------------------------------- 
+I have received EPROMs from Logg that have the GSP produce CAS-Before-RAS
+Refresh. It turns out that all of the Game Code we have released has the 
+GSP generate a refresh cycle every 5 us. It only needs to to produce one 
+every 10 us. (Self-Test has it generate refresh every 10 us.)
+
+The game runs but produces pixel errors on some screens. The error count
+on a game run overnight was Zero in all categories. 
+
+I have measured the signals coming from the GAL and they look very good.
+I have tried a bipolar PAL but there was no difference.
+
+Freezing the 68010 makes the pixel errors disappear. Since the 68010 tells the
+GSP when to change buffers we may be looking at buffers that are out of sync.
+
+This board, with the GAL, when loaded with the original program, runs 
+perfectly with no pixel errors.
+
+Theory: The pixel errors may be due to an error introduced when the Eds were
+        changing GSP code.
+---------------------------------------------------------------------------- 
+On Tuesday Mary Burnias called me to say that Tom Dempsey from TI was
+here and could we meet. Naturally, I said ok.
+
+Imagine my joy when I saw Tom Smith at the meeting. The reason for his
+presence was not explained.
+
+In the course of the meeting Tom Smith wanted to know why I wasn't putting
+2M Byte EPROMs on MultiSync II. I expect he will bring it up at the staff 
+meeting so here are the reasons:
+
+   1. I divided the Program Memory space into four sections:
+
+      a. ROM 0 can be 512K EPROMs or 1M EPROMs.
+      b. ROM1, ROM2, ROM3 can be 512K EPROMs, 1M EPROMs, 1M Flash EPROMs, 
+         or 1M SRAMs.
+      c. ROM4, ROM5, ROM6 can be 512K EPROMs, 1M EPROMs, 1M Flash EPROMs, 
+         or 1M SRAMs.
+      d. ROM7 (which is connected to SLOOP) 512K EPROMs, 1M EPROMs, 
+         1M Flash EPROMs, or 1M SRAMs.
+
+      Adding another mode would require giving up an existing mode and/or 
+      increasing the complexity of the decoding scheme and increasing the
+      number of GALs to implement it. I do not have space for more GALs.
+
+   2. Increasing the Program memory space from 2M Bytes (16 x 1M EPROMs) to
+      4M Bytes (16 x 2M EPROMs) would require extensive changes to the
+      board's memory map. Going to 2M EPROMs without increasing the Program
+      Memory space would mean limiting the number of 2M EPROMs to eight, two
+      of which would be connected to SLOOP. Program and data residing in
+      SLOOPed EPOMs is very inconvenient to access. There would now be twice
+      the amount accessed by SLOOP.
+									2 of 2
+
+   3. I envision programmers using the mix and match capabilty of 1M EPROMs 
+      and 1M SRAMs during development to work on portions of the program in
+      SRAM and then make EPROMs. Mixing 1M SRAMs and 2M EPROMs would require
+      the programmers to compile code at different addresses depending which
+      part of the code they were working on.
+
+      Of course, they could do all the development using 1M SRAMs and 
+      1M EPROMs and wait for the Day of Production to try their program
+      in 2M EPROMs.
+
+      Either way, they would blame me for making their life difficult.
+
+   4. Redoing the memory would take time and its complexity would increase the
+      chance of an error. I am already running out time to do this board.
+----------------------------------------------------------------------------- 
+The choices for MSP Memory:
+
+	1. 128K x 8 DRAMs	[2 x 4.95 = $9.90]
+	2. 256K x 8 DRAMs	[4 x 3.75 = $15.00]
+	3. 128K x 8 VRAMs	[ 2 x $8.50 = $17.00]
+
+The 128K x 8 DRAMs are sole sourced by TI. Lead times are 2 - 14 weeks.
+
+They have 30K - 40K in inventory. If they are still in inventory when we
+need them, the lead time is 2 weeks.
+
+If they have to make more, the lead time is 14 weeks.
+
+The die is the same as the 256K x 4 DRAM except for the metalization.
+
+The 256K x 4 DRAMs are made by lots of people. Using them in the MSP
+will not, however, produce more useable memory than the 128K x 8s because
+of the 34010's Bus multiplexer. It only supports an 8 bit offset between
+RAS and CAS; the 256K x 4 DRAM has a 9 bit offset; so half of the memory is 
+wasted.
+
+So......
+
+   If I use 128K x 8 DRAMs I will be a Bum if the parts delay production
+
+   				or
+
+   If I use 256K x 4 DRAMs I will be a Bum for increasing the cost of the
+   game unnecessarily.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Pots for Street Driver
+Dt: 18 November 1991
+
+
+I talked to Ray Sherman who is an old hand at pots. A few years ago he was 
+asked to find an off-the-shelf pot, and did, but it was never used.
+
+I asked him to find a pot with the following characteristics:
+	Single Section;
+	10K Audio Taper;
+	3/8" threaded bushing panel mount
+	Solder Terminals
+
+He already has one except it has pc terminals. He expects to be able to find
+one off-the-shelf with solder terminals.
+	
+I had Dennis MTO a few 119022-103 pots to get a look at it. According to
+MANMAN they are cheap and we have 2534 in inventory. Unfortunatey they 
+are PC-mount only and cannot be panel mounted.
+
+I created a list of all "119" part numbers and looked them up in MANMAN.
+I then eliminated all parts that were not potentiometers or which had
+zero quantity in stock.
+
+
+This leaves us with:
+
+PART NUMBER: 119006-103                  	Has 3/8 Bushing, can be used
+DESCRIPTION: POTENTIOMETER,DUAL,10K_OHMS 	until we get the real ones.
+TOTAL UNIT COST:                 2.622
+QUANTITY ON HAND:                 557.   
+
+PART NUMBER: 119008-1001                         Linear Taper. And too 
+DESCRIPTION: POTENTIOMETER,LONG_LIFE,5KOHM       expensive. 
+TOTAL UNIT COST:                 3.290
+QUANTITY ON HAND:               17746.   
+
+PART NUMBER: 119016-500  			Arg.
+DESCRIPTION: RHEOSTAT,WW,50_OHM,12.5W
+TOTAL UNIT COST:                 4.100
+QUANTITY ON HAND:                3114. 
+
+PART NUMBER: 119022-103
+DESCRIPTION: POT,10K_OHM,.25W,AUDIO_TAPER	Not panel mount.
+TOTAL UNIT COST:                 1.023
+QUANTITY ON HAND:                2534.
+
+I recommend we design the panel for the pot I asked Ray to find (3/8" threaded
+bushing) and in the meantime use up the 119006-103 .                 
+
+This means that we need to verify that there actually are a few hundred 
+119006-103 parts in inventory. We also need to make sure Tom Smith doesn't
+scrap them before we can release a parts list with it on it.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status Report
+Dt: 27 November 1991
+
+
+Monday
+------
+I came in to find:
+
+   1. Joe had been pulled off MultiSync II to finish Leon's work on the Sound 
+      Board for Relief Pitcher because Leon was on vacation. 
+
+      It seems that McCarthy did this on his own authority. It also seems that
+      on one or more days last week Joe was taken off MultiSync II during the 
+      morning. It explains why progress on MultiSync II has been so slow. 
+
+      I cannot work like this.  
+
+      I recommend that you have all your future board work done by an outside 
+      service bureau because Art's group cannot be trusted.
+
+   2. The VAX lines to my both my PC and my AMS were down due to a Server
+      Serial Board burning up. Service was restored to my PC late in the
+      day. Service to the AMS was not restored until Tuesday.
+
+I spent most of the day working on the 2105 code for DS III Sound. I also
+starting bringing up the Street Drivin' DS III boards. This required
+burning EPROMs because I could not download from the VAX. If I ever have
+time I will convert to PC-based Tools.
+
+
+Tuesday and Wednesday
+---------------------
+I did my part to support the push to get the Street Drivin' field test units 
+out.
+
+I continued to work on Street Drivin' Self-Test.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 6 December 1991
+
+
+Street Driver Documentation
+---------------------------
+Matt and I generated an AROMREL1.DOC file for all of the software used in the 
+Field Test Unit and created the directory [Driver.Street] . The object code
+for the Field test Unit is in [Driver.Street.ROMREV1] .
+
+
+DS III
+------
+I worked with Matt in integrating the Sound Program with Sound Self-Test.
+
+I continued with the 68010 part of DS III Sound Self-test.
+
+I have brought up additional DS III Boards.
+
+
+DSK Board Addressing
+--------------------
+I persuaded the guys to use a DS II Graphics board for program RAM (512KB)
+instead of the Program RAM Board (1MB). The Program RAM Board would have 
+required changing the GALs to relocate the DSK addresses. Program updates
+would have to be coordinated with GAL changes. On Field Test units, too.
+Then they would have to be changed back when the MultiSync II Board becomes 
+real because the only place to put the DSK memory was where the DS II Graphics
+RAM lives.
+
+I moved the Self-Test addresses for the DSPLINK Board only to find out that
+it uses Peter's code and for some inexplicable reason he took Self-Test out
+of the Boot ROM.
+
+Therefore the DSPLINK cannot be tested except by removing Peter's ROM and
+installing mine. This is stupid.
+ 
+
+DS III Filters
+--------------
+I have not had the filters changed yet because I need to be able to play 
+sounds on it first. It was more important to integrate Self-Test with the
+Sound Program first. I have not gotten Self-Test to the point where it can 
+play sounds.(The new filters have a higher frequency than the old filters.)
+
+
+									2 of 2
+MultiSync II
+------------
+Plots were delivered on Thursday. I am taking Friday and the weekend to check
+them.
+
+I have submitted a CER for the VRAMs (TI and Micron) and requested Restricted
+Approval until I test the parts in a MultiSync II board.
+
+I have marked up the MultiSync II schematics and asked Joe to work on it right
+away and generate a parts list so Karen can get the parts from Manufacturing
+before they close.
+
+ 
+Getting it made
+---------------
+I don't expect it will be possible to receive boards until January. 
+
+Assuming boards are received on January 2 they must first have the VRAMs 
+mounted (they are SMD). Tom Smith's approval is required to have Purchasing 
+issue a work order with Fine Pitch Technology. (You get to arrange it with
+Tom Smith.) 
+
+Then, assuming that Karen was able to get the parts before Manufacturing
+closed on Dec 20, she will stuff the boards. I want the boards wave soldered, 
+I do not want the boards hand soldered. Don Wrightnour is willing to come in 
+during the first week of January to fire up the wave solder and do the boards 
+if you will arrange it with Bob Stewart.
+
+
+Pots
+----
+Ray Sherman has found some nice cheap volume control pots. 
+
+The best one is by Bourns: 10K, Audio Taper, panel mount, 3/8" bushing, comes 
+with mounting hardware, shaft is 1/4" diameter and 3/4" long.
+
+Quote:	100	$1.81
+	500	$1.05
+	1K	$0.85
+	5K	$0.76
+
+Atari p/n is 119028-103
+
+Lead Time: 8 weeks
+
+I thought this was going to be an off-the-shelf item but it apparently didn't
+work out that way.
+
+   1. Is the 3/4" long shaft ok?
+
+   2. We should either order 100 for prototypes ($181.00)
+			or
+      Manufacturing should order 1000 for the Street Driver run ($850.00)
+
+Ray expects samples in 3 weeks. We can't wait that long to order them.
+
+ 
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Status Report
+Dt: 13 December 1991
+
+
+MultiSync II
+------------
+I checked the MultiSync II plots last weekend and found:
+	1. The footprint for the 32Kx8 SRAMs had not been done for dual 
+           (0.3/0.6) packages.
+	2. There were several voids (in the form of slots) in both the Ground 
+           and +5V layers.
+
+I marked the plots and placed them on Joe's desk Sunday so they would be there
+when he got in.
+
+When I came in on Monday  he explained that the slots had something to do with
+heat transfer during wave solder. They had done it on the Road Riot FSG board
+and apparently thought they were supposed to do it on every board. Joe didn't 
+know who had made this decision. 
+
+I told him that these rectangular slots disturbed the distribution of currents
+in the Ground and +5V planes and were, in fact, antennas. I asked him to take
+them off, and he did. 
+
+Late Monday he sent out for Film.
+
+I spent the rest of Monday in a department meeting.
+
+
+The film arrived on Tuesday. I spent most of Tuesday trying to get the boards 
+ordered. 
+
+I also corrected Joe's initial parts list. The idea is to have Karen get parts
+from Manufacturing before they close. Karen is out with a back injury and
+Emmette does not know when she will be back.
+
+So far we have ordered:
+	(26) MultiSync PC Boards
+	(100) 1MB SRAMs (for development)
+	(100) 128Kx8 VRAMs
+	(100) GAL16V8-15
+	(100) 10K Audio Pots (8 weeks) 
+	(100) 74BCT29843 9-bit transparent latches
+
+We should have enough of these parts to build 17 boards
+
+The remainder of the parts were used on Steel Talons and we presumably have
+them in inventory.
+
+
+DS III
+------
+I am continuing to make slow but steady progress on Self-Test.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Status Report
+Dt: 20 December 1991
+
+
+MultiSync II
+------------
+The boards are due in on January 2 (Thursday).
+
+Rob Bryant very kindly volunteered to pull kits for the boards. We will
+do it for the 25 boards. Since I didn't order enough VRAMs for all 25
+boards Rob will order the remainder and charge it to John Ray's account
+(with his permission, of course).
+
+Rob Bryant has also set up the deal to have have Fine Pitch attach the
+VRAMs (which are 40 pin SOJ) on January 6 (Monday). Fine Pitch wants a
+Solder Paste Mask and I have informed PC of this.
+
+After the VRAMs are attached Karen or Emmette will presumably stuff a few 
+boards and have them wave soldered by Don Wrightnour.
+
+
+
+DS III
+------
+I am continuing to make slow but steady progress on Self-Test.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 20 December 1991
+
+
+MultiSync II
+------------
+The boards are due in on January 2 (Thursday). I have sent Melanie a Mail 
+Message asking her to have the boards delivered to our building. If they are 
+sent to Receiving we won't get them.
+
+We are scheduled to deliver the boards to Fine Pitch on January 6 (Monday)
+and receive them with the VRAMs attached on January 10 (Friday). Rob Bryant 
+has set up the deal with Fine Pitch. Fine Pitch wanted a Solder Paste Mask 
+so Joe did one and gave it to Rob.
+
+I don't know who is going to stuff them, or if Don Wrightnour will be
+available to run them through Wave Solder.
+
+Rob Bryant very kindly volunteered to pull kits for the boards. We will
+do it for the 25 boards. Since I didn't order enough VRAMs for all 25
+boards Rob will order the remainder and charge it to John Ray's account
+(with his permission, of course).
+
+Dennis filled out purchase reqs to get the parts that were not in stock.
+
+
+DS III
+------
+I am continuing to make slow but steady progress on Self-Test.
+
+Most of the menu tests for DS III Sound are almost done. There is a problem
+with the DAC circuits that cause a 2.5 MHz oscillation. I have used this
+circuit in Driver Sound and DS II and not had this problem. The boards that
+oscillate use a PMI DAC. The boards that do not oscillate use an AMD DAC.
+I will investigate further.
+
+DS III Sound presents a special problem because Matt did not integrate it
+with Self-Test. He changed his software so it would work with Self-Test
+and also so it would fit in a 2105. I have all the software but it will 
+require changes of an unspecified nature in the 68010 code. We also need
+to install Play Sounds.
+
+I still need to do the Automatic part of Self-Test.
+
+
+Other
+-----
+After reviewing the Patent Application "DRIVER TRAINING SYSTEM WITH MULTIPLE
+DRIVER COMPETITION" I signed the Patent Application and Assignment.
+
+
+ 
+Jed
+_____________________________________________________________________________

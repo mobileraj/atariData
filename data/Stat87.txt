@@ -1,0 +1,2310 @@
+   Atari/Atari Games   Memos and Status Reports 1987   Jed Margolin
+___________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 9 April 1987
+
+
+I am 80% done with the Polygon Fill section and am currently
+working on the memory function decoding in addition to debugging
+the Model hardware.
+
+I have not yet received the quote from Brooks Technical Group for the 
+Centralab R2R Network.
+
+I have also not yet received the A/D converter samples from National 
+Semiconductor.
+
+	Jed
+
+_____________________________________________________________________________
+
+Irwin, I am sending you a copy of my correspondance on the R2R Ladder Network.
+
+The question of what matches within 0.25% has never come up before. In order
+
+for this thing to work, each "R" must be within 0.25% of every other "R".
+
+Since "R" is nominally 1K, 0.25% is 2.5 ohms so that each "R" is plus or minus
+
+2.5 Ohms and each "2R" is plus or minus 5.0 Ohms. If the "R"s don't track
+
+with the "2R"s, it doesn't work. The absolute tolerance on "R" is not 
+
+critical, only the relative tolerance.
+
+
+
+2 April 1987
+Atari Games Corp.
+675 Sycamore Drive
+P.O. Box 361110
+Milpitas, CA	95035-1110
+
+
+
+
+Richard Ponce de Leon
+Brooks Technical Group
+883 Stierlin Road
+Mountain View, CA  94043
+
+
+
+Dear Richard,
+
+	As Evelyn suggested I am faxing the drawing for the R2R Resistor
+Network for which I would like a quote.
+
+	I would like the quote for quantities of 1K, 5K, 10K, and 25K.
+I expect the game that I am considering this part for will be produced
+in the 3rd Quarter this year.
+
+	I would also like cost and delivery information for 100 prototype
+units.
+
+
+						Sincerely yours,
+
+					
+
+
+						Jed Margolin
+						Senior Staff EE
+						Atari Games Corporation
+
+
+4/22/87	  From Richard Ponce de Leon
+
+	NRE for Soft Tooling and 10 prototypes	-  $250. [8-10 weeks]
+
+	NRE for Soft Tooling and 50 prototypes	-  $300. [8-10 weeks]
+
+	NRE for Hard Tooling - $250.	[18 weeks]
+
+	 25K     10K      5K      1K
+	-----   -----   -----   -----
+	$0.38	$0.43	$0.49	$1.14
+
+
+
+24 April 1987
+Atari Games Corp.
+675 Sycamore Drive
+P.O. Box 361110
+Milpitas, CA	95035-1110
+
+
+
+
+Jim Calhoun
+Moulthrop Sales
+
+
+Dear Mr. Calhoun,
+
+	As Judy suggested I am faxing the drawing for the R2R Resistor
+Network for which I would like a quote. 
+
+	I would like the quote for quantities of 1K, 5K, 10K, and 25K.
+I expect the game that I am considering this part for will be produced
+in the 3rd Quarter this year.
+
+	I would also like cost and delivery information for 100 prototype
+units.
+
+	I have included the quote from LTI that you got for us three years 
+ago but you may select whatever company you feel is most appropriate.
+
+
+
+						Sincerely yours,
+
+					
+
+
+						Jed Margolin
+						Senior Staff EE
+						Atari Games Corporation
+
+						Phone: (408) 434-1730
+
+						FAX: (408) 434-3776
+
+
+
+5/6/87	from Moulthrop Sales, Janet
+
+LTI Resistor Network:
+
+	100 prototypes - $3.15 ea + $400 NRE	6-7 weeks ARO
+
+	1K	 5K	 10K	 25K
+	-----	-----	-----	-----
+	$0.63	$0.46	$0.43	$0.38
+
+_____________________________________________________________________________
+
+Information for Purchase Requisition
+------------------------------------
+
+Project: Driving Simulator	421xx
+
+Requestor: Jed Margolin		X1730	6/2/87
+
+Reason for Request: Prototypes
+
+Dept./Acct Code: 2502/?????
+
+Date Material Required: Samples are quoted 8-10 weeks. Please order by June 9.
+
+Deliver to: Jed Margolin
+	    675 Sycamore	
+
+
+Item 	Description		Quantity	Price
+----	--------------------	--------	---------
+	
+1	R2R Resistor Network	 50 pcs		$300.00/50 pcs
+
+
+	Atari P/N 118015-001
+
+Quote attached (This is a custom part)
+
+Order from:
+
+	Rich Ponce de Leon
+	Brooks Technical Group
+	883 Stierlin Road
+	Mountain View, CA	94043
+
+	Phone: (415) 960-3880
+
+	FAX:   (415) 960-3615
+
+
+Information for Purchase Requisition
+------------------------------------
+
+Project: Driving Simulator	421xx
+
+Requestor: Jed Margolin		X1730	6/2/87
+
+Reason for Request: Prototypes
+
+Dept./Acct Code: 2502/?????
+
+Date Material Required: Samples are quoted 6-7 weeks. Please order by June 9.
+
+Deliver to: Jed Margolin
+	    675 Sycamore	
+
+Item 	Description		Quantity	      Price		
+----	--------------------	--------	--------------------
+	
+1	R2R Resistor Network	 100 pcs	$3.15 ea. + $400 NRE = $715.
+
+
+	Atari P/N 118015-001
+
+Quote attached (This is a custom part).
+
+The quote was provided by:
+
+	LTI Corp.
+	6445 N. Hamlin
+	Lincolnwood, IL  60645
+	Phone: (312) 679-7500
+	
+The Sales Rep is:
+
+	Jim Calhoun
+	Moulthrop Sales
+	7080 Commerce Dr.
+	Pleasanton, CA  94566
+
+	Phone: (415) 463-0450
+	FAX:   (415) 463-1756
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 30 April 1987
+
+
+The schematics for the GSP Turbo video section are completed.
+
+I am about 40% done with the schematics for the remainder of the
+board. Since the video section is about half the board, I am 80%
+done with the schematics.
+
+
+I have received the quote from Brooks Technical Group for the 
+Centralab R2R Network.
+
+	For 50 prototypes: $300.	(8-10 weeks)
+
+	NRE for production tooling: $250.
+
+	 25K	 10K	 5K	 1K	 (18 weeks)
+	-----   -----   ----    -----
+	$0.38   $0.43   $0.49   $1.14
+
+
+I have also sent out for a quote from LTI through Moulthrop Sales.
+
+Unless the lead time from LTI is significantly less, we will have to
+order the parts soon if we are to produce this thing.
+
+
+Tests on the R2R Network procured for System 4 indicate a 25-30 ns fall
+time for the Network and circuit together as a DAC. I expect new prototypes
+to be faster. (This is because Centralab screwed up the Network for Ted.)
+When the test fixture is fully debugged it will give more complete information
+on the operation of the Network.
+
+I have received several samples of the 10 bit A/D converter from National 
+Semiconductor.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 7 May 1987
+
+
+I have given Gary the changes for the ADSP Board so he can get started on it.
+
+	He has finished the schematic and has started with the board.
+
+
+I am about 95% done with the schematics for the Main Board.
+
+
+I have submitted CERs for the following parts:
+
+	TMS34010-40	(Graphics System Processor, 40 MHz)
+	TMS34010-50	(Graphics System Processor, 50 MHz)
+	ADC1021CCJ-1	(10 Bit A/D)
+	Custom R2R Resistor Network
+
+
+Custom R2R Resistor Network - 
+
+I have received the quote from Moulthrop Sales.
+
+LTI Resistor Network:
+
+	100 prototypes - $3.15 ea + $400 NRE	6-7 weeks ARO
+
+	1K	 5K	 10K	 25K
+	-----	-----	-----	-----
+	$0.63	$0.46	$0.43	$0.38
+
+For comparison, from Brooks Technical (Centralab):
+
+	For 50 prototypes: $300.	(8-10 weeks)
+
+	NRE for production tooling: $250.
+
+	  1K	  5K	 10K	 25K		(18 weeks)
+	----- 	-----	-----	-----
+	$1.14	$0.49	$0.43	$0.38
+
+
+
+Five thousand units from LTI would cost:
+
+		100 Prototypes @ $3.15	$   315.
+		NRE			$   400.
+		5K @ $0.46		$ 2,300.
+					--------
+					$ 3,015.
+		
+		14 weeks to production
+
+
+Five thousand units from Centralab would cost:
+
+		50 Prototypes 		$   300.
+		Production Tooling  	$   250.
+		5K @ $0.49	    	$ 2,450.	
+					--------
+					$ 3,000.
+
+		26 weeks to production
+
+
+We should buy 100 prototype units from LTI ($550.)
+and to be safe we should also buy 50 prototype units from
+Centralab ($300.) .
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 14 May 1987
+
+
+
+Driver ADSP Board
+-----------------
+Gary has finished the placement and has started routing traces. It would be 
+nice to resolve the question of the bypass capacitors so Gary can use the 
+caps on 0.3" centers.
+
+
+Driver Main Board
+-----------------
+The schematics have been completed (with 12 Bit A/D). Erik is working with 
+Lorraine in laying out the wirewrap board. She will be able to start wrapping 
+the board today (Friday).
+
+
+5 Volt Supply
+--------------
+A preliminary estimate of power consumption indicates that the Driver Main 
+Board will draw 6.9 Amps and the Driver ADSP Board will draw 3.5 Amps for
+a total of 10.4 Amps.
+
+The supply used on System 2 and on Gauntlet supplied 13 Amps, so we have 
+2.6 Amps for the Sound Board.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 22 May 1987
+
+
+
+Driver ADSP Board
+-----------------
+Gary has about a week to go on the PC board.
+
+
+Driver Main Board
+-----------------
+Lorraine has about a week to go on the wirewrap board.
+
+
+TI VRAMS
+--------
+Despite heroic efforts by Max, Stephanie, Erik, and myself, we were
+unable to get TI VRAMs to work on the GSP Test Board. I am
+hoping for better results on the new wire-wrap board since it has
+a ground plan section for the GSP and VRAMs, and the GSP Test Board 
+did not.
+
+  The VRAMs from Hitachi and Mitsubishi were fully functional.
+
+  The VRAMs from NEC did not support Shift Register-To-Memory Transfers 
+  which are necessary in order to do fast screen clears.
+
+
+Memory Map/User's Guide
+-----------------------
+I have delivered a preliminary version of the Memory Map/User's Guide
+to Stephanie and am incorporating her suggestions into a new edition.
+
+
+Power Supply
+------------
+I have asked Erik to secure a 720 power supply for the prototype.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 29 May 1987
+
+
+
+Driver ADSP Board
+-----------------
+The ADSP-2100 shape was changed in the library but unfortunately did
+not get brought over to the board. Gary has to redo a large part of the
+board. He estimates about a week.
+
+
+Driver Main Board
+-----------------
+Lorraine has been making excellent progress on the wirewrap board and
+expects to be done on Monday.
+
+I have given Gary the schematics for the Main Board.
+
+
+TI VRAMS
+--------
+John Hendricks is trying to get us some TMS samples of the VRAMs.
+
+
+Memory Map/User's Guide
+-----------------------
+The Memory Map/User's Guide is continuing to grow.
+
+
+Power Supply
+------------
+Erik is still looking for 720 power supply for the prototype.
+
+
+R2R Resistor Network
+--------------------
+We have an Atari Part Number for it. We need to order prototypes.
+
+
+68681 DUART
+-----------
+Motorola says they are $4.63 . (I asked for prices for 1K, 5K, and 10K. Clint
+Chao just gave me his 'Best Price'.)
+
+Signetics (via Magna Sales) says they are:  	 1K     5K     10K
+					    	-----  -----  -----
+						$4.00  $3.90  $3.75 
+
+Samples are on the way.
+
+
+	Jed
+
+
+_____________________________________________________________________________
+
+Steve:
+
+The TimeKeeper is available from Marshall (a distributor).
+
+	336 Los Pochase, Milpitas
+	942-4600	
+
+	48TO2B-15	$23.17 (1-25)	TimeKeeper (150 ns)
+	48ZO2B-15	$11.50 (1-25)	RAM only   (150 ns)
+
+
+I expect they have a Will Call.
+
+I have a data sheet you can have.
+
+I also have included a write-up that I did for the Driving Game that covers the
+main points. (I have modified the addresses for byte accesses.)
+
+
+
+
+	Jed	6/4/87
+
+
+Clock Calender
+--------------
+
+The 48TO2 contains a 2K x 8 RAM, a Clock Calender, a Lithium Battery, and
+Power Failure Detection circuitry in the package. When the voltage falls
+below 4.5 Volts, Writes are disabled. When it falls below 3 volts the internal
+power switching circuit powers the device from the Lithium Battery.
+
+For a game powered up 50% of the time, in an ambient of 75 degrees Fahrenheit,
+the Lithium Battery can be expected to last for 6 years. (99% will still be
+working.) After 8 years about 50% can be expected to still work.
+
+The TimeKeeper has a mechanism for communicating whether the battery is ok.
+After VCC is applied, if the battery is too low, the first Write to the RAM
+will be blocked. Mostek's recommended procedure after power-up is:
+
+	1. Read Data at any RAM address (other than the clock)
+	2. Write the complement of the data back to the same address
+	3. Read data at the same address again
+
+	If the data is the complement of the original data:
+		The Battery is OK.
+	Write the original Data back to the same address.
+
+	If the data is NOT the complement of the original data:
+		The Battery is NOT OK.
+	Figure out how to communicate this to the Authorities.
+
+To minimize battery drain the oscillator can be turned off. This of course 
+kills the clock/calender and so would only be done if the game were to be 
+stored for a long time. This is not likely.
+
+However, the TimeKeeper parts are shipped with the oscillator turned off so it
+is necessary to be able to start it up. (A game may also go beserk and turn
+it off by accident.) To restart the oscillator:
+
+		1. Set Write Bit to '1'.
+		2. Set Stop Bit to '0'.
+		3. Set Kick Start to '1'.
+		4. Set Write Bit to '0'.
+
+		5. Wait two seconds.
+
+		6. Set Write Bit to '1'.
+		7. Set Kick Start to '0'.
+		8. Set the correct time and date.
+		9. Set Write Bit to '0'.
+
+Clock Calender:
+---------------
+
+Note:	a. Leaving Kick Start = '1' will cause the Clock to draw excessive
+	   current and will shorten the battery life.
+
+	b. In step 8 the time and date don't have to be correct, but they 
+	   do have to be at least a VALID time and date. Otherwise it
+	   tends to not work.
+
+
+Calibration:
+
+	Calibration is in sign magnitude. 
+	Sign = '1' is positive, Sign = '0' is negative.	  
+
+	Each unit causes the clock to gain (or lose) about 5.35 seconds 
+	per month. 
+
+Setting the Clock:
+
+	Set the Write Bit to '1'.
+	Update the desired registers.
+	Set the Write Bit to '0'.
+
+	The KS and FT bits, as well as the bits marked with zeros must be 
+	written with zeros to allow normal TimeKeeper and RAM operation.
+
+Clock Calender
+--------------
+
+		D7 D6 D5 D4 D3 D2 D1 D0				BCD
+		-- -- -- -- -- -- -- --				-----
+
+7FF		__ __ __ __ __ __ __ __		YEAR		00-99
+
+7FE		0  0  0  __ __ __ __ __		MONTH		01-12
+
+7FD		0  0  __ __ __ __ __ __		DATE		01-31
+
+7FC		0  FT 0  0  0  __ __ __		DAY		01-07
+
+7FB		KS 0  __ __ __ __ __ __ 	HOUR		00-23
+
+7FA		0  __ __ __ __ __ __ __		MINUTES		00-59
+
+7F9		ST __ __ __ __ __ __ __		SECONDS		00-59
+
+7F8		W  R  S	 __ __ __ __ __		CONTROL
+
+
+	ST = Stop Bit
+	W = Write Bit
+	R = Read Bit
+	S = Sign Bit (for calibration 0-31)
+	FT = Frequency Test 
+	KS = Kick Start
+
+For normal operation:
+
+		Keep the Read Bit = 0
+		Keep a duplicate set of YEAR, MONTH, DATE, DAY, HOUR, 
+			MINUTES, SECONDS
+
+		When the Duplicate SECONDS is different from the Real
+			SECONDS, update the duplicate set. This is to
+			prevent reading the SECONDS while it is changing.
+			(Read it more than once per second.)
+
+Refer to the 48TO2 Data Sheet for more Information.
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 5 June 1987
+
+
+
+Driver ADSP Board
+-----------------
+Gary expects to go out for Film and Fab on Monday.
+
+
+Driver Main Board
+-----------------
+Erik and I have started bringing up the wirewrap board.
+
+I have given Gary the schematics for the Main Board.
+
+
+TI VRAMS
+--------
+We have not yet received TMS samples of the VRAMs.
+
+
+Memory Map/User's Guide
+-----------------------
+The latest edition of the Memory Map/User's Guide is now available.
+
+
+R2R Resistor Network
+--------------------
+Purchase Reqs have been filled out and are awaiting signatures.
+
+
+68681 DUART
+-----------
+I have received samples from Signetics and am waiting for an appropriate
+opportunity to see if they work.
+
+
+	Jed
+
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 12 June 1987
+
+
+
+Driver ADSP Board
+-----------------
+We have Film and Fab and are sending out for boards.
+
+
+Driver Main Board
+-----------------
+Erik and I have brought up a large portion of the wirewrap board.
+We are currently working on the Video Ram section.
+
+Lorraine has done a good job on this board and I am very pleased with it.
+
+Gary has started entering the Main Board schematics .
+
+
+TI VRAMS
+--------
+We have not yet received TMS samples of the VRAMs.
+
+
+R2R Resistor Network
+--------------------
+Purchase Reqs have gone out to meet their fate.
+
+
+PC Boards
+---------
+According to Don Writenower(sp?) in Manufacturing:
+
+	The Auto-Insertion equipment uses fairly permanent heads. There
+	is one for ICs with 0.3" centers, and one for two wire components.
+
+	Therefore, the Video RAMs must be inserted by hand, whether they
+	are the 0.4" DIPs or the 0.2" ZIPs.
+
+	The heads are in a fixed position. ICs that are 90 degrees from the 
+	rest of the board must either be loaded by hand or be done by rotating
+	the board and making a second pass.
+
+	Also, the maximum board area that can be Auto-Inserted on one pass
+	is 18" x 18".
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 19 June 1987
+
+
+
+Driver Main Board
+-----------------
+Most of the wirewrap board is working. We have fixed the problem of screen
+glitches caused by nasties on the serial clock line. (Found with Max's help.) 
+
+The VRAMs did not pass Stephanie's memory test (and had obvious screen errors)
+so we used the results of her memory test to replace four of the Mitsubishi
+VRAMs with TI TMP VRAMS. This fixed most of the screen errors. Stephanie's
+test still reports a few errors but not as many as before.
+
+
+Gary is continuing to enter the Main Board schematics.
+
+
+
+Driver ADSP Board
+-----------------
+We have apparently sent out for boards.
+
+
+R2R Resistor Network
+--------------------
+The networks have apparently been ordered.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 29 June 1987
+
+
+
+Driver Main Board
+-----------------
+The VRAMs seem to be finally working. They became fully functional when
+Max pulled out the remaining TI VRAMs and put in some Mitsubishi parts.
+
+The MSP seems to be working.
+
+Next comes:
+	1. Bringing up an ADSP Board on System 4.
+	2. Modifying the ADSP Board to run on the Driver Main Board.
+	3. Writing a program to test the A/D Converters.
+
+Gary is continuing to enter the Main Board schematics.
+
+
+
+Driver ADSP Board
+-----------------
+We are waiting for boards.
+
+
+R2R Resistor Network
+--------------------
+We are waiting for prototypes.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 2 July 1987
+
+
+
+Driver Main Board
+-----------------
+
+The Board is running (including the ADSP Board interface). 
+The only things left to test are the A/D Converters.
+
+Gary is more or less finished with the Main Board schematics and is
+getting the data to go through the Interface. He expects to start working 
+on the PC Board early next week.
+
+
+
+Driver ADSP Board
+-----------------
+We are waiting for boards.
+
+
+R2R Resistor Network
+--------------------
+We are waiting for prototypes.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 10 July 1987
+
+
+
+Driver Main Board
+-----------------
+
+We have tested everything we can think of to test and the board appears
+to be working.
+
+Gary has started on the PC Board. (I am working with him on IC placement.)
+
+
+
+Driver ADSP Board
+-----------------
+We are waiting for boards.
+
+
+
+R2R Resistor Network
+--------------------
+We are waiting for prototypes.
+
+
+
+TI VRAMS
+--------
+I Talked to Frank Miu, an engineer in TI's VRAM group. 
+
+He said that TI's VRAMs are NMOS which is why they are more susceptible 
+to noise than Mitsubishi's VRAMs which are CMOS.
+
+When they first turned their VRAMs over to the 34010 Group there were problems
+with their Wire-Wrap boards, too, but they were able to reduce the noise and 
+make it work.
+
+Our noise problems are probably worse because of the large number of VRAMs 
+in the system. (My Theory)
+
+I think the TI parts will work in our PC Board. (Also my Theory.)
+
+The parts are now in TMS Rev G, and they are now in the process of releasing 
+Rev H, which is a mask shrink, and should therefore consume less current and 
+have lower current surges. (Frank's Theory.)
+	
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Vacation
+Dt: 15 July, 1987
+
+
+
+I need to take two weeks vacation as soon as the Driver Main prototype PC 
+boards are ordered.
+
+Gary was originally scheduled to be done with the board around August 14. 
+Somehow this has gotten changed to July 31. Gary and I believe that the 
+original date is more realistic. The plan is to try to finish the board by 
+Friday, August 7 and have the next week for checking.
+
+This means I would have to postpone my vacation to Monday, August 17 
+through Friday, August 28. I would return on Monday, August 31.
+
+This presents a problem. As of 7/15/87 I have 197.99 vacation hours accrued. 
+Because of Atari's vacation policy, if I don't take any until August 17 I will 
+lose 7.99 hours because of the 200 hour limit.
+
+I have already lost 1.66 hours in that manner by postponing my last vacation
+in order to get the project hardware through a critical juncture.  
+
+
+
+	Jed
+
+
+By the way, it is bad enough that I've already lost 1.66 hours. Did they have
+to round 200 to 199.99, too?
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 17 July 1987
+
+
+
+Driver Main Board
+-----------------
+
+The board appears to be still working.
+
+Gary is almost done with IC placement (with my assistance).
+We are planning on two weeks for running traces and one week for
+checking.
+
+
+Driver ADSP Board
+-----------------
+We are waiting for boards.
+
+
+
+R2R Resistor Network
+--------------------
+We are waiting for prototypes.
+
+
+Signetics 68010
+---------------
+I have received two 10 MHz 68010s from Signetics and
+turned one over to Erwin. 
+
+	
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 24 July 1987
+
+
+
+Driver Main Board
+-----------------
+
+The board appears to be still working.
+
+Gary has started routing traces.
+
+
+
+Driver ADSP Board
+-----------------
+We have received the boards and have had one stuffed.
+We expect to test it soon.
+
+
+R2R Resistor Network
+--------------------
+We are waiting for prototypes.
+
+
+
+	Jed
+
+
+Number of Driver Main Boards to Buy		
+-----------------------------------
+
+A. (1) Game Play Development
+
+B. (1) Algorithm Development
+
+C. (1) Sound Development
+
+D. (1) Hardware Evaluation and Test Program Development
+
+E. (1) Blank Board for Debugging
+
+F. (3) Field Test Units
+
+G. (6) Super 6 channel demo
+
+H. (?) Other Groups
+
+
+Total = 14 or more
+
+
+
+Note: There are only five Driver ADSP Boards and six Sys 4 ADSP Boards 
+      (System 3D has one and one is blank).
+
+Consider an initial buy of 10 Main Boards. This takes care of
+A - F and two extra. After it is debugged we should buy 10 more, as
+well as 5 more Driver ADSP Boards.
+
+We should buy parts for twenty Main boards since there will not be more 
+available until production in January.
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 31 July 1987
+
+
+
+Driver Main Board
+-----------------
+
+The board appears to be still working.
+
+Gary is about 80% done routing traces. There is a possibility that
+it will not be finished by the end of next week as scheduled. 
+
+
+Driver ADSP Board
+-----------------
+The board is running the program and appears to be 100%
+functional with no mods.
+
+
+R2R Resistor Network
+--------------------
+We are waiting for prototypes.
+
+
+Development Systems
+-------------------
+In order to support Game Play Development, Algorithm Development, Sound 
+Development, and Hardware Evaluation and Test Program Development we will 
+need another AMS development system. It probably should be for 68000.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 7 August 1987
+
+
+
+Driver Main Board
+-----------------
+
+The board appears to be still working.
+
+Max and I figured out a nifty way to do scrolling. It required an additional
+IC which is being put on the PC Board.
+ 
+Gary is almost finished routing traces and has started working on all the 
+other stuff (rezoning, renaming, silkscreen, etc.) We are planning on sending 
+out for film by Thursday.
+
+
+Driver ADSP Board
+-----------------
+The board is running the program and appears to be 100% functional with no mods.
+
+
+R2R Resistor Network
+--------------------
+I received a call from Bernie Doerrwaecter of Mepco-Centralab. The networks are
+almost done; we should get them in a few days.
+
+
+Driver Sound Board
+------------------
+The schematics are done; Lorraine has finished the IC layout and has started 
+wrapping the board.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 4 September 1987
+
+
+
+Driver Main Board
+-----------------
+
+The PC Boards were promised for today; first for noon and then for 
+for 5pm. As of 7:00 pm there were no boards.
+
+
+
+Driver ADSP Board
+-----------------
+The board is running the program and appears to be 100% functional with no mods.
+
+
+R2R Resistor Network
+--------------------
+I have received the networks from Mepco/Centralab and from LTI.
+
+The Mepco/Centralab sample is excellent while the one from LTI is merely 
+satisfactory.
+
+In the video circuit both produce rise and fall times of about 10 ns each.
+
+In quantities of 5K Mepco/Centralab wants $0.49 ea + $250 for the first 
+production run. Delivery is promised 18 Weeks ARO. (This comes to $0.54 for 
+the first 5K.)
+
+LTI has increased their quote for 5K from $0.46 to $0.575. (We have already
+paid $400 NRE in the purchase of the prototypes.) Delivery is promised 6 weeks
+ARO.)
+
+Erwin is going to check into why they changed their quote so much.
+
+If we want the Mepco/Centralab networks we would have to order them now in order
+to get them for January.
+
+
+Driver Sound Board
+------------------
+The wirewrap board is now operating, including the Speech Synthesizer
+as well as the 32010 (which is now running standalone.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 11 September 1987
+
+
+
+Driver Main Board
+-----------------
+The PC Boards are in and waiting to be stuffed.
+
+
+Driver ADSP Board
+-----------------
+The PC board is running the program and appears to be 100% functional 
+with no mods.
+
+
+R2R Resistor Network
+--------------------
+I have received the networks from Mepco/Centralab and from LTI.
+
+LTI has increased the price to $0.575 (5k) because their yield was only 25%.
+Jim Calhoun (Moulthrop Sales) says the 6 week lead time is still correct.
+
+Mepco/Centralab wants $0.43 (5K) but has an 18 week lead time.
+
+Erwin is getting quotes from other companies.
+
+
+Driver Sound Board
+------------------
+The wirewrap board is functional.
+
+
+Other
+-----
+I need an AMS 68010 Development System in order to work on the hardware.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 18 September 1987
+
+
+
+Driver Main Board
+-----------------
+Erik and I are bringing up Main PC Board #1.
+
+The Switching Supply "sings" unless the Remote Voltage Sensing is
+shorted at the supply.
+
+
+Driver ADSP Board
+-----------------
+The PC board is still running the program and appears to be 100% functional 
+with no mods.
+
+
+R2R Resistor Network
+--------------------
+No Change
+
+
+Driver Sound Board
+------------------
+The wirewrap board is still functional.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Dt: 9/29/87
+Re: Gate Array for Driver Turbo
+
+
+The area circled in Blue on the attached sheet is a candidate 
+for the use of a Gate Array.
+
+The 74ALS245s at 40P and 60Y provide bidirectional access to the VRAM
+Data Bus during Program Memory accesses.
+
+The 74ALS574s at 50P and 70Y form the Pixel Color Register. During Polygon 
+Writes their contents are written into the VRAMs.
+
+The 74LS244s at 160S and 170W produce all zeros during Polygon Reads. This
+allows the Read-Modify-Writes to operate properly.
+
+The 74ALS158s at 80M, 90M, 110Y, and 130Y provide appropriate Write Strobes 
+to the VRAMs. During Polygon Writes the Write Strobe to each VRAM is
+gated by the Write Strobe and the data on the LAD Bus. During Program Memory 
+Writes, all the Writes are gated by the Write Strobe. (Whether a VRAM is
+actually written to during Program Memory Writes is determined by its CAS.)
+
+Required maximum propagation delay on these parts is 15ns.
+
+The Gate Array should be in a PLCC.
+
+LAD0 - LAD15 = 16 Pins
+VD0 - VD15   = 16 Pins
+WE0 = WE15   = 16 Pins
+Ground	     = 4 Pins
++5V	     = 4 Pins
+Control	     = 7 Pins
+	       ------
+  Total	     = 63 Pins
+
+
+A 68 Pin PLCC would be fine.
+
+
+
+	Jed 
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 2 October 1987
+
+
+
+Driver Main Board
+-----------------
+Main PC Boards #1 and #2 are working and appear to be fully operational.
+
+I have replaced several ALS parts with LS, mostly buffers.
+
+I am investigating a timing path that should work with LS but doesn't.
+
+As per Max's request I am changing the reference for the 12 Bit A/D to reduce 
+the noise.
+
+
+The problem with display glitches being caused by Host Interface accesses
+seems to have been solved by buffering /HSYNC, /VSYNC, and /BLANK.
+
+The noise on these lines was caused by noise at one of the 34010s VCC
+pins, noise which does not appear at the point where the socket pin is
+soldered to the board.
+
+I asked TI about it. They said they have the same problem on their boards, too.
+
+The noise is probably caused by a combination of large surge currents and 
+socket lead inductance. (The PLCC socket converts each single edge of 0.050"
+contacts to a double row of pins on a 0.1" grid.)
+
+
+Driver ADSP Board
+-----------------
+The PC board is still running the program and appears to be 100% functional 
+with no mods.
+
+
+R2R Resistor Network
+--------------------
+Irwin has received a new quote from Mepco/Centralab.
+
+	  1K      5K     10K      25K		
+	------  ------  ------   ------
+	$0.750  $0.510  $0.474   $0.450		
+
+	NRE = $100.
+
+	Design Time = 2-4 weeks
+	Production  = 8-10 weeks
+
+Therefore, the first order would take 10-14 weeks.
+
+The last quote from LTI was for $0.575 (5k) and a 6 week lead time.
+
+
+
+The previous quote from Centralab was:
+
+	  1K	  5K	 10K	 25K		
+	----- 	-----	-----	-----
+	$1.14	$0.49	$0.43	$0.38
+
+	NRE for production tooling: $250.
+
+	(18 weeks)
+
+
+Cost change from last quote:
+
+	  	  1K      5K     10K      25K		
+		------  ------  ------   ------
+	       -$0.39  +$0.02  +$0.044  +$0.07		
+
+
+Driver Sound Board
+------------------
+The wirewrap board is still functional.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 9 October 1987
+
+
+
+Driver Main Board
+-----------------
+
+I expect to receive Main PC Boards #3 and #4 early next week.
+
+I have programmed the display to show a picture of the VRAM section as well
+as the entire ADSP Board. These will be used to show the results of Stephanie's
+Test Programs.
+
+EPROM Memory Speed Requirements:
+
+  ADSP Board: 4 x 27512, 250ns.
+
+  Sound Board: 12 x 27512, 250ns. (Sound Data)
+  	        2 x 27256, 250ns. (Program ROM)
+
+  Main Board:  16 x 27512, 200ns.
+
+	Most 68010 games use a 7.16 MHz processor clock. If they want to use
+	250ns EPROMs in their games, it's fine with me.
+
+	The Driver Main Board uses a 68010 at 8 MHz and needs 200ns EPROM.
+	Explicit Raw Data will be furnished upon request.
+
+	(The Sound Board also runs at 8MHz but does not have buffers)
+
+	With ALS244 Buffers and 250ns Memory, the margin is 7ns.
+
+	I have been trying to reduce the number of ALS parts on the board
+	because of problems caused by their fast rise time. 
+
+	If AMD is willing to guarantee (in writing and by testing) that their 
+	250ns parts are really 220ns at 70 degrees C, and I am guaranteed a 
+	cabinet design that produces a temperature rise of less than 5 degrees
+	C then I would consider using the 250ns AMD parts. 
+	
+	Otherwise, it's 200ns EPROMs in the Program Memory. 
+
+	I do not want my hardware becoming unreliable in the field because 
+	someone relied on an AMD salesman's oral promise.
+
+
+Driver ADSP Board
+-----------------
+The PC board is still running the program and appears to be 100% functional 
+with no mods.
+
+
+R2R Resistor Network
+--------------------
+No Change
+
+
+Driver Sound Board
+------------------
+Gary has started entering the schematic into the system.
+
+The wirewrap board is still functional.
+
+
+
+	Jed
+
+
+Explicit Raw Data
+
+68010 Timing		Jed Margolin	10/9/87
+-----------------------------------------------
+
+Summary: Driver Main Program ROM Speed Requirements.
+
+	An 8 MHz 68010 operating at 8 MHz requires data 290ns after the
+	address becomes valid.
+
+	With LS244 Buffers and 200 ns Memory, there is 49 ns margin.
+	With LS244 Buffers and 250 ns Memory, it is 1ns short.
+
+	With ALS244 Buffers and 250ns Memory, the margin is only 7ns.
+
+	I want to use 200ns EPROMs in the Program Memory. 
+
+
+Address Decoders and Data Buffers:
+
+F04	 6	F04	 6	
+ALS138	17	ALS138  17	
+LS244	18	ALS244  10	
+	---		---	
+	41		33	
+
+
+					    tacc    Memory    Margin
+					    ----    ------    ------
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 41 = 249	     200	49ns
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 33 = 257	     200	57ns
+
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 41 = 249	     250	-1ns
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 33 = 257	     250	 7ns
+
+
+
+Explicit Raw Data
+
+68010 Timing		Jed Margolin	10/9/87
+-----------------------------------------------
+
+Summary: Driver Main Program ROM Speed Requirements.
+
+	An 8 MHz 68010 operating at 8 MHz requires data 290ns after the
+	address becomes valid.
+
+	With LS244 Buffers and 200 ns Memory, there is 49 ns margin.
+	With LS244 Buffers and 250 ns Memory, it is 1ns short.
+
+	With ALS244 Buffers and 250ns Memory, the margin is only 7ns.
+
+	I have been trying to reduce the number of ALS parts on the board
+	because of problems with their fast rise time. 
+
+	I want to use 200ns EPROMs in the Program Memory. 
+
+	If AMD is willing to guarantee (in writing and by testing) that their 
+	250ns parts are really 220ns at 70 degrees C, and I am guaranteed a 
+	cabinet design that produces a temperature rise of less than 5 degrees
+	C then I would not hesitate to use the 250ns AMD parts. 
+	
+	Otherwise, it's 200ns EPROMs in the Program Memory. 
+
+	I do not want my hardware becoming unreliable in the field because 
+	someone relied on an AMD salesman's oral promise.
+
+	
+
+Address Decoders and Data Buffers:
+
+F04	 6	F04	 6	
+ALS138	17	ALS138  17	
+LS244	18	ALS244  10	
+	---		---	
+	41		33	
+
+
+					    tacc    Memory    Margin
+					    ----    ------    ------
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 41 = 249	     200	49ns
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 33 = 257	     200	57ns
+
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 41 = 249	     250	-1ns
+8 MHz   62.5*6 - 70 - 15 = 290,  290 - 33 = 257	     250	 7ns
+_____________________________________________________________________________
+
+Proposal to Do Some Small PC Boards		J. Margolin	10/9/87
+-----------------------------------
+
+Board #1 - RAM Card
+
+	1M Byte RAM (32 x 32Kx8 Static RAMs)
+	Plugs into Driver Main Expansion Connector.
+
+	Allows programmer to develop the full 1M Byte ROM program.
+ 	(It will not be the the ROM address space, however.)
+
+
+Board #2 - Applied Research Brain
+
+	68010
+	128K Byte Program ROM (2 x 27512)
+	64K Byte Program RAM (2 x 32Kx8 RAMs)
+	2K Byte Zeropower RAM
+	DUART with RS-232 (68681)
+
+	Useful to try out ideas.
+	Can be used with Boards #1, #3, #4.
+
+Board #3 - ROM Emulator
+
+	Replaces up to four independent 27512s.
+	Uses eight 32Kx8 RAMs
+
+	Plugs into Board #2 - Used between the terminal and the AMS.
+	
+
+Board #4 - Simple GSP
+
+	34010
+	8 x 64Kx4 VRAMs
+	34070 Palette IC
+
+	Plugs into Board #2
+
+	Provides an easy entry to those wanting to evaluate the 34010.
+
+_____________________________________________________________________________
+
+The Multi-Sync Turbo is now working.
+
+Because we have half the memory of the full Turbo a Memory-to-Shift
+Register Load on every line only requires an address update of 512
+words, not 1024.
+
+It works.
+
+To try it, download [Margolin.Sgsptst]Gsptst.hex
+
+
+		Jed
+
+_____________________________________________________________________________
+
+Driver Gate Array (TWIG)
+
+This is what we have so far:
+
+	1. Be able to read back the Color Pixel Register from the same address
+	   used for writing to it.
+
+	2. Write the security word to the address that turns the LED off.
+
+	3. Have a non-obvious address to reset Security.
+
+	4. Have a non-obvious address for reading the security word.
+
+
+								Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 16 October 1987
+
+
+
+Driver Main Board
+-----------------
+Main PC Board #3 appears to be working.
+
+
+Driver ADSP Board
+-----------------
+The PC board is still running the program and appears to be 100% functional 
+with no mods.
+
+
+R2R Resistor Network
+--------------------
+No Change
+
+
+Driver Sound Board
+------------------
+Gary has finished entering the schematic into the system and has started
+board layout.
+
+The wirewrap board is still functional.
+
+
+Costs
+-----
+The latest quote for Mitsubishi and Hitachi VRAMs is for $6.95  .
+I have recalculated the costs on the attached sheets.
+ 
+
+Jed
+
+
+Driver Main and ADSP Costs			10/16/87	J Margolin
+
+Prices are Stuffed and Tested.
+Prices include program ROM but do not include overhead and certain other costs.
+System does not include Sound Board.
+Does not include extra Zeropower RAM.
+
+==============================================================================
+GSP Turbo 48 MP/sec, 32 VRAMs @6.95:	    =   $706.10
+ADSP Board				    =   $255.90
+					        --------
+					        $962.00
+
+
+(Main Board Comes with 16 Program ROMs, 200ns, OTP.) 
+(ADSP Board comes with 4 Graphics ROMs, 250ns, OTP.)
+(Without ROMs, $962.00 - 16*4.80 - 4*4.10 = $868.80)			
+
+
+The big chunks are:
+	(32)	64Kx4 VRAMs		$6.95		$222.40
+		ADSP-2100				$105.00
+	(16)	27512 (Main)		$4.80		$ 76.80
+    		34010-40		$50.00		$ 50.00
+   		34010-50		$88.00		$ 88.00
+		PC Board  16x16 	$0.30		$ 76.80	
+	(20)	SRAMs (ADSP)		$1.85		$ 37.00
+		PC Board  15x8 	 	$0.30		$ 36.00
+	(4)	27512 (ADSP)		$4.10		$ 16.40	
+		AD7582 12B A/D				$ 15.00
+		68010					$ 15.00
+		Timekeeper				$ 15.00		
+							-------
+							$753.40
+
+		This represents  78.3% of the cost.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+GSP Turbo 24 MP/sec, 16 VRAMs @6.95:	    =   $594.90
+ADSP Board				    =   $255.90
+					        --------
+					        $850.80
+
+
+(Main Board Comes with 16 Program ROMs, 200ns, OTP.) 
+(ADSP Board comes with 4 Graphics ROMs, 250ns, OTP.)
+(Without ROMs, $850.80 - 16*4.80 - 4*4.10 = $757.60)			
+
+
+Driver Main Costs:
+(1)	68010	uP			$15 (Plastic)		$15.00
+
+(1)	68681	DUART  	  		$4.00			$ 4.00
+
+(4)	6264	8k x 8 SRAMs	  	$2.25			$ 9.00
+
+(16)	27512	64kx8 200ns, OTP  	$4.80			$76.80
+
+(1)	48TO2	2k x 8 Timekeeper	$15.00			$15.00
+
+(32)	4461	64k x 4 VRAMs	  	$ 6.95			$222.40
+
+(4)	4464	64k x 4 DRAMs		$ 3.00			$12.00
+
+(3)	R2R Ladder Networks		$ 0.50			$ 1.50
+
+(6)	1Kx4 SRAMs			$2.00			$12.00
+
+(1)	34010-40 (MSP)			$50.00			$50.00
+(1)	34010-50 (GSP)			$88.00			$88.00
+	 
+(1) 	32 MHz Oscillator Module	$1.50			$ 1.50
+(1) 	48 MHz Oscillator Module	$1.50			$ 1.50
+(1) 	40 MHz Oscillator Module	$1.50			$ 1.50
+
+(26)	AS,F				$1.00			$26.00
+(46)	ALS				$1.00			$46.00
+(30)	LSTTL				$1.00			$30.00
+
+(1)	ADC0809, 8 bit A/D		$2.00			$ 2.00
+
+(1)	AD7582, 12 Bit A/D		$15.00			$15.00
+
+(1)	PC Board, 256 sq.in. 		$.30/sq.in.		$76.80
+								-------
+
+Driver Main	32 VRAMs @6.95:				Total	$706.10
+
+
+ADSP Board Parts - Full Data and Program Memory
+
+(1) 	ADSP-2100					105.00
+
+(1)	32 MHZ CLOCK MODULE		  	  	  1.50
+
+(20)	4Kx4 SRAM, 45 NS	@1.85	 	 	 37.00
+
+(4)	8Kx8 SRAM		@2.25 			  9.00
+
+(4)	27512-250, OTP		@4.10			 16.40
+
+(27) 	LS			@1.00		 	 27.00
+
+(17) 	ALS			@1.00		 	 17.00
+
+(7) 	AS			@1.00		 	  7.00
+ 
+(1) 	PC Board (8 x 15 = 120 x 0.30)	 		 36.00
+							-------
+							$255.90
+
+
+For ADSP Board with 1/2 Program and 
+			1/2 Data RAM: (10) * $1.85      -$18.50
+							-------
+							$237.40
+
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 23 October 1987
+
+
+
+Driver Main Board
+-----------------
+Main PC Board #3 appears to be working.
+
+Stephanie's VRAM memory test is working and reporting the results to
+the program that shows the board layout on the screen.
+
+
+Driver ADSP Board
+-----------------
+The PC board is still running the program and appears to be 100% functional 
+with no mods.
+
+Stephanie is working on the memory test routines.
+
+
+R2R Resistor Network
+--------------------
+No Change
+
+
+Driver Sound Board
+------------------
+Gary has finished the board layout and has started routing traces.
+
+The wirewrap board is still functional.
+
+
+Driver RAM Board
+----------------
+I have finished the schematics for the Driver RAM board. The Board will
+contain 1M Byte RAM to permit development for the entire ROM space.
+
+It will also contain a Hard Disk Interface to facilitate program development. 
+
+Lorraine has finished a wirewrap board with just the Disk Interface, which
+we can try out as soon as we get a Controller and Disk Drive.
+
+
+Half-Fast Turbo
+---------------
+I have begun working on how to modify the Main Board to use only half the VRAM
+(which would reduce the maximum polygon drawing speed to 24M Pixels/sec.)
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 30 October 1987
+
+
+
+Driver Main Board
+-----------------
+The Test Menu is functional. From it we can call up Test Patterns,
+A/D Tests, and Stephanie's Memory Tests for VRAM, DRAM, and ADSP Memory.
+
+The Menu Tests were very helpful when Erik and I brought up Board #4.
+Now we can start bringing up the other Main Boards.
+
+
+Driver ADSP Board
+-----------------
+The PC board is still running the program and appears to be 100% functional 
+with no mods.
+
+Stephanie memory test routines are working.
+
+
+R2R Resistor Network
+--------------------
+No Change
+
+
+Driver Sound Board
+------------------
+Gary has finished the board. After we check it he will send out for film.
+(That should be Monday.) We should be able to order boards on Tuesday.
+
+
+Driver RAM Board
+----------------
+We are waiting for a Controller, Disk Drive, and Power supply so we can 
+try out the Disk Drive Interface.
+
+
+Half-Fast Turbo
+---------------
+Still in progress.
+
+
+
+Jed
+_____________________________________________________________________________
+									1 of 2
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 6 November 1987
+
+
+
+Driver Main Board
+-----------------
+The Test Menu has been very useful in bringing up Main PC Boards.
+Erik and I have now brought up 6 Main Boards. (Lorrain wrapped a small 
+Test Board for me with pots and switches to run the Test Menu.)
+
+Bringing up the boards has pointed out the need for additional test routines:
+
+	1. Grayscale to test the DACs. (Done)
+	2. Test the ADSP memory: Determine and report if there are any Address
+	   or Data lines that are:
+		a. Stuck Low
+		b. Stuck high
+		c. Shorted to each other.
+	3. Test the ADSP Sequential Input Memory.
+
+I plan on adding pictures to Test Menu/Self-Test to show the results of 
+Program ROM tests and Video Palette tests.
+
+I have received Part Numbers for the VRAMs.
+
+I have added SLAPSTIK to future Revs of the board.
+
+I have provided Don with information to do a gate array. 
+	
+
+Driver ADSP Board
+-----------------
+Still works.
+
+
+R2R Resistor Network
+--------------------
+The Networks have a lead time of from 7 weeks (LTI) to 18 weeks (Centralab).
+
+
+Driver Sound Board
+------------------
+Rev 1 PC Boards have apparently been ordered.
+
+									2 of 2
+
+
+Driver RAM Board
+----------------
+I have delivered schematics to Gary. He expects to start entering the schematics
+on the PC-AT system on Monday or Tuesday.
+
+The Disk Drive Interface section has not been tested because the Controller, 
+Disk Drive, and Power supply were not purchased.
+
+
+Half-Fast Turbo
+---------------
+I am planning on having several jumper-selectable display options:
+
+	1. 512x384	Medium Speed, Standard Resolution
+	
+	2. 320x240	Standard Speed, Standard Resolution
+
+	3. 640x240	Standard Speed, Standard Resolution
+
+	4. 512x240	Standard Speed, Standard Resolution
+	
+
+Other
+-----
+
+	I was sick during most of my "vacation" in August. I would like eight
+
+	days back, to be taken Nov. 23, 24, 25, 30, Dec 1, 2, 3, 4.
+
+
+
+Jed
+
+_____________________________________________________________________________
+
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 13 November 1987
+
+
+
+Driver Main Board
+-----------------
+I have added Stephanie's VRAM Verify Test to the Menu.
+
+
+Driver ADSP Board
+-----------------
+Still works.
+
+
+R2R Resistor Network
+--------------------
+The Networks have a lead time of from 7 weeks (LTI) to 18 weeks (Centralab).
+
+
+Driver Sound Board
+------------------
+Rev 1 PC Boards have apparently been ordered.
+
+
+Driver RAM Board
+----------------
+Gary has started entering schematics on the PC-AT system.
+
+
+
+Half-Fast Turbo
+---------------
+The VRAM section has been converted and seems to work. 
+
+I have converted the Test Menu to run on the system.
+
+The next step is to put in the jumper-selectable display options
+and try it out. (It means converting the Test Menu again.)
+
+
+
+Jed
+
+_____________________________________________________________________________
+
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 20 November 1987
+
+
+
+Driver Main Board Rev 1
+-----------------------
+Still Works.
+We ought to get the PC Film back from the vendor.
+
+
+Driver ADSP Board Rev 1
+-----------------------
+Still Works.
+
+
+R2R Resistor Network
+--------------------
+The Networks have a lead time of from 7 weeks (LTI) to 18 weeks (Centralab).
+
+
+Driver Sound Board Rev 1
+------------------------
+Waiting for PC Boards.
+
+
+Driver RAM Board
+----------------
+Gary is still at it.
+
+
+
+Multisync Turbo
+---------------
+The VRAM section has been converted.
+
+The Sync options work.
+
+
+
+
+Jed
+_____________________________________________________________________________
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 11 December 1987
+
+
+
+Driver Sound Board Rev 1
+------------------------
+It seems to work.
+Lorrain did a very nice job stuffing the board.
+
+
+Gate Array
+----------
+Don is working on it.
+
+
+Driver Main Board Rev 2
+-----------------------
+Waiting for PC to do it.
+
+
+Driver RAM Board
+----------------
+Gary is still at it.
+
+
+Multisync Turbo Test Board
+--------------------------
+Still works.
+
+
+	Jed
+_____________________________________________________________________________
+
+Game Description - TomCat GSP 		Jed Margolin	12/14/87
+----------------------------------------------------------------
+
+
+The following is the description for the updated TomCat game using the latest
+GSP raster hardware.
+
+************************ Flying Game - Jet Fighter ************************ 
+
+The player is flying a jet fighter on various missions. In completing these
+missions the player will encounter computer generated opponents. Opponents
+may be in the air (other aircraft) or on the ground (anti-aircraft fire,
+missiles, tanks, tanks firing missiles, etc.)
+
+In linked games the other player could be an opponent or the two (or more)
+players can fight as a team.
+----------------
+TRAINING:
+
+At the beginning of the game the player selects whether he wishes full
+control of his aircraft or whether he wants some measure of computer assist.
+
+The player may also choose which mission level to start the game with.
+
+There will be at least two Training Missions:
+
+   	1. The computer gives the player a course on how to fly. 
+
+	2. Training with easy opponents to shoot down.
+----------------
+COMBAT: 
+
+Combat missions start with the player taking off (either under computer control
+or by himself) and receiving instructions on his mission and a vector to
+fly. (The vector is what direction to fly.) Examples of combat missions are:
+
+	1. The target is an oil refinery. Opponents are few (and easy).
+
+	2. The target is a railway line. (Extra points for derailing the train.)
+	   Opponents are few but more aggressive than before.
+
+	3. The target is an airfield. More targets enroute. Try to destroy the
+	   enemy aircraft while they are still on the ground.
+
+	4. The target is a radar station.
+
+	5. The target is an oil tanker.
+
+	6. The target is an aircraft carrier. (Opposition can be expected to 
+	   be fierce.)
+
+	7. The target is an enemy missile base. The player must destroy the 
+	   base before it can launch its missiles. A countdown timer will
+	   be provided.
+	
+Game Description - TomCat GSP 		Jed Margolin	Page 2
+----------------------------------------------------------------
+	  
+A High-Score table will be kept for each mission, with the time and date the
+high score occurred.
+
+The Time-Keeper RAM can be used to periodically introduce additional missions 
+and mission elements. For example: On a certain date the opponent will receive
+a new kind of aircraft. All the games in the country will change on the same 
+day, WITHOUT THE OPERATOR DOING ANYTHING.
+----------------
+Hardware:	The GSP hardware provides a 3D display with the objects made up
+		of polygons. The Full Turbo can do about 500 polygons with an 
+		update rate of 20 Hz. It is able to change the memory display
+		buffer on the fly which makes the instrument panel easier.
+		It also does PIXBLTs. 
+		
+     		MultiSync Turbo (or Full Turbo for increased performance)
+     		ADSP Board (For Math)
+     		A/R Sound Board
+
+Monitor:	The hardware will support standard or medium speed, high or 
+		low resolution.
+
+Top Of The Line Game:	A sitdown with three 25" Medium Speed Monitors. 
+Economy Model:		An upright with a single low resolution monitor.
+
+Display Format:	  512 x 384.  The bottom 128 will be used for the instrument 
+		panel, leaving 	512 x 256 for the cockpit window.
+
+		The instrument panel will display airspeed, altitude, heading,
+		fuel remaining, ammunition and missiles remaining, etc.
+		
+		It will have an area for messages from the aircraft's 
+		computer.
+
+		It will have a Radar.
+
+
+************************ Flying Game - Helicopter ************************ 
+
+It is remarkably similar to the "Flying Game - Jet Fighter" except the player
+flies a helicopter. A helicopter is more effective for dogfights because it
+can turn faster than a fixed-wing aircraft.
+
+_____________________________________________________________________________
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 18 December 1987
+
+
+
+Driver Sound Board Rev 1
+------------------------
+PC Board #2 is working.
+
+
+Driver Main Board Rev 1
+-----------------------
+Erik and I have brought up Boards #8 and #9.
+
+In the process of bringing up the boards we have discovered that if one 
+of the VRAMs in the middle of the array is missing, Stephanie's RAM Test 
+program says that the entire column is bad. It needs to be fixed.
+
+
+Gate Array
+----------
+Don is working on it.
+
+
+Driver Main Board Rev 2
+-----------------------
+Waiting for PC to do it. Art removed the board 
+from the schedule on his own initiative.
+
+
+Driver Main Board Rev 3 (With the Gate Array)
+---------------------------------------------
+Waiting for PC to do it. Art removed the board 
+from the schedule on his own initiative.
+
+
+Multisync Turbo PC Board
+--------------------------
+Waiting for PC to do it. Art removed the board 
+from the schedule on his own initiative.
+
+
+Driver RAM Board
+----------------
+Gary has delivered the schematic to me.
+
+It fails to meet the primary requirement of a schematic which
+is that it be legible and unambiguous.
+
+Whether the board made from this schematic is any good, I don't
+know. It would require 100% handchecking, which I will not do.
+
+Gary has stated that he will not fix it until the next schematic is
+done on SCI Design.
+
+This is unacceptable. I would like it redone on SCI Cards.
+
+
+Disk Interface
+--------------
+Max and Mike have gotten it to work with the Disk Drive.
+
+
+
+Jed
+
+_____________________________________________________________________________
+
+Driver Main Parts List 
+-----------------------
+
+
+On P/L A044425-21 the following parts should be socketed:
+				      ------
+
+
+137414-002	IC, 68010, Microprocessor, 8 MHz, Plastic	190K
+137543-001	IC, 68681, DUART				200A
+137545-001	IC, AD7582, 12 Bit A/D				30D
+137540-150	IC, 48T02-15, Timekeeper RAM			200E
+137442-150	IC, 48Z02-15, Zeropower RAM			210E
+
+137538-001	IC, 34010-40					55L_MSP
+137538-002	IC, 34010-50					180S_GSP
+
+
+136052-0105     IC,Pr_EPROM,421,137444-200,200R
+136052-0106     IC,Pr_EPROM,421,137444-200,200S
+136052-0107     IC,Pr_EPROM,421,137444-200,200T
+136052-0108     IC,Pr_EPROM,421,137444-200,200U
+136052-0109     IC,Pr_EPROM,421,137444-200,200V
+136052-0110     IC,Pr_EPROM,421,137444-200,200W
+136052-0111     IC,Pr_EPROM,421,137444-200,200X
+136052-0112     IC,Pr_EPROM,421,137444-200,200Y
+136052-0113     IC,Pr_EPROM,421,137444-200,210R
+136052-0114     IC,Pr_EPROM,421,137444-200,210S
+136052-0115     IC,Pr_EPROM,421,137444-200,210T
+136052-0116     IC,Pr_EPROM,421,137444-200,210U
+136052-0117     IC,Pr_EPROM,421,137444-200,210V
+136052-0118     IC,Pr_EPROM,421,137444-200,210W
+136052-0119     IC,Pr_EPROM,421,137444-200,210X
+136052-0120     IC,Pr_EPROM,421,137444-200,210Y
+
+
+
+The following parts should not be socketed:
+			   ---
+
+137413-001  	IC, 74AS823			20S,20U,20W
+137441-001	IC, RAM, 8Kx8, 150 ns		200C,200D,210C,210D
+137243-001	IC, ADC0809, 8 Bit A/D		30B
+
+
+On P/L A044425-01 add sockets for the 34010s:
+
+179237-068  2	Socket, IC, PLCC, 68 Pin	55L_MSP, 180S_GSP
+
+_____________________________________________________________________________
+

@@ -1,0 +1,2627 @@
+   Atari/Atari Games   Memos and Status Reports 1992   Jed Margolin
+___________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 3 January 1992
+
+
+VRAM Sockets
+------------
+The only known manufacturer of Production Sockets for 40 pin SOJ with 50 mil 
+leads and 0.4" wide is:
+
+	Yamaichi			Tel (408) 452-0797
+	1420 Koll Circle		Fax (408) 452-0799
+	San Jose, CA  95112		Rep is Irma
+
+The preferred part is:		IC170-4040-200	 (Without Positioning Pin)
+We could probably substitute:	IC170-4040-201	 (With Positioning Pin)
+
+Alleged Reps: 	Erik's Electroncs	432-1111
+		PSC			737-1333
+		Low Down West		415-592-4900
+
+
+MultiSync II
+------------
+We have received 26 boards plus one solder sample.
+
+We are scheduled to deliver the boards to Fine Pitch on January 6 (Monday)
+and receive them with the VRAMs attached on January 10 (Friday). Rob Bryant 
+has set up the deal with Fine Pitch.
+
+I don't know if we have received the parts needed to build them.
+
+I don't know who is going to stuff them, or if Don Wrightnour will be
+available to run them through Wave Solder.
+
+
+Digital 'Scope
+--------------
+The proper method for choosing a DSO is to have several manufacturers bring
+theirs in and give a hands-on demo.
+
+We should buy only a new one. Buying a used one is asking for trouble.
+
+This requires a bunch of time that I do not have.
+
+Also, this should be done by the person who will be using it.
+
+
+DS III
+------
+I will investigate the PMI DAC oscillation problem as time permits.
+
+As it stands, DS III Sound Self Test is worthless because:
+	1. Matt did not integrate his 2105 code with 2105 Self-Test code. 
+	2. 68010 game code would have to be changed to work with it.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Fine Pitch Technology
+Fr: Jed Margolin, Atari Games, 434-1730
+Re: MultiSync II VRAMs
+Dt: 6 January 1992
+CC: Rob Bryant, Rick Moncrief
+
+
+I would like the following:
+
+	(2) Boards with TI  TMX48C121DZ-80
+
+	(2) Boards with Micron MT 42C8127DJ-10
+
+	(2) Boards with Sockets (If we can get them in time)
+
+	(1) Board with Toshiba VRAMs (If we can get them in time)
+
+	(18) Boards with Micron MT 42C8127DJ-80
+
+
+1. Do not mix VRAMs from different manufacturers on the same board.
+
+2. Do not mix VRAMs of different speeds on the same board.
+
+3. All manufacturers should be used (currently Micron and TI; we are expecting
+   Toshiba VRAMs soon).
+   
+4. If we can get sockets, make two boards with sockets.
+_____________________________________________________________________________
+
+To: Karen and Emmette
+Fr: Jed
+Re: MultiSync II Stuffing Changes
+Dt: 7 January 1992
+
+
+A. On all 25 boards: Please put the DRAMs in sockets:
+
+     (4)   179259-020	Socket, 20 pin, 0.3 wide	5K, 15K, 25K, 35K
+
+
+B. On two boards only: 
+	
+	1. Use sockets for 200C and 210C (32k*8 SRAMs).
+
+	2. Use sockets for 30S, 30U, and 30W (2k*8 SRAMs)
+
+	3. Stuff the parts for the 12 Bit A/D:
+
+
+C. On all other boards: Please mask the area of the board containing 
+   30D, 60D, 15B, and associated circuitry so we can add the parts at a later 
+   time (for the Training People):
+
+D. I would like to see the first boards before they are Waved because the
+   parts list might be wrong and I would like to catch the errors before
+   they are Waved. 
+
+
+These changes are for the 25 Rev 1 prototypes only. I do not expect this
+circuits to be used in Production Boards. If they are, I will change the
+parts list to reflect these changes.
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 9 January 1992
+
+
+MultiSync II
+------------
+Rob Bryant delivered 25 boards to Fine Pitch on January 6 (Monday). We
+received 23 boards with the VRAMs attached on January 9 (Thursday). Two boards
+were left blank and are waiting for VRAM sockets. Rob has the two blank 
+boards.
+
+Emmette is stuffing the boards and will run them through Wave Solder.
+
+I have given Emmette instructions for making two special boards. They will
+have the 12 Bit A/D stuffed and will have other selected parts in sockets.
+
+ToDo:
+	1. Do the GALs for the MultiSync II Board.
+	2. Get AT Supply for my bench to power the MultiSync II Boards.
+	3. Make the required changes to Self-Test.
+	4. Test the Boards.
+
+
+DS III
+------
+I will investigate the PMI DAC oscillation problem as time permits.
+
+Thanks to a collective group effort we have made the change to the Sound
+Boot ROM with Self-Test. (Rick, Terry, and Chip)
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 16 January 1992
+
+
+MultiSync II
+------------
+I have received three stuffed boards and have started on the board with
+the TI VRAMs.
+
+So far the board seems to work although it requires one Cut and two Jumpers.
+
+I have changed the VRAM test done by the 34010 so it tests the additional
+memory. It passes. And the pixels come out in the right order. I need
+to change the picture of the board.
+
+Stephanie wrote the VRAM test done by the 68010. I will need to have her
+change it to handle the additional memory and to report errors for the
+new memory configuration.
+
+The new Color RAM has eight pages instead of four. It passes the test for
+four.
+
+The old MSP DRAM tests report ok. I have not changed them yet. I will need 
+Stephanie for the 68010 tests.
+
+The new program memory EPROM/RAM system seems to work. I will have to do
+a new Table Driven Macro for Self-Test checksums.
+
+The real test will be to bring up Race Drivin' on the board. I expect to 
+deliver a board for this purpose next week.
+
+
+Other
+-----
+The MultiSync IIs are configured to operate from an AT Power Supply. They may
+not be plugged into the old power supply system unless the boards are
+modified.
+
+I drew up a simple circuit with green and red LEDs to test that the AT Supply
+Connectors are wired correctly. If the connectors are correct, you get three
+Greens. If any supply is reversed, you get Red. Dennis did a nice job building
+it.
+
+
+DS III
+------
+I have not had time to investigate the PMI DAC oscillation problem.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 23 January 1992
+
+
+MultiSync II Self-Test Status
+-----------------------------
+The following have been checked:
+
+1. 1M Byte VRAM Test done by 34010 GSP. The VRAMs appear to work and the 
+   pixels come out on the screen in the right order.
+
+2. 256K Byte DRAM Test done by 34010 MSP. The DRAMs appear to work.
+
+3. Stephanie has modified the GSP VRAM Tests done by the 68010 and they seem 
+   to work. She has also modified the MSP DRAM Tests done by the 68010 and
+   they work, too.
+
+4. 8 Bit A/D.
+
+5. Expansion Bus: DS III Board
+		  DSK Board
+		  DSPLINK (at new address)
+
+6. Timekeeper and ZeroPower RAM (at new address).
+
+7. DUART (at new address).
+
+8. OPTO Coupler Circuit.
+
+9. GSP Scroll Register operation.
+
+The VRAM Loop Test by the 34010 ran overnight and logged 295 tests with no 
+failures.
+
+Remaining to be tested:
+	Color RAM
+	12 Bit A/D
+	Motor Interface
+	Shifter Interface
+	
+The Yamaichi sockets have come in. Erik has removed the orientation pins and I
+will give the parts to Rob Bryant.
+									2 of 2
+
+Other
+-----
+I have received a letter from OrCad saying that the 12 month support we 
+received when we bought OrCad PCB is about to expire. 
+
+Normally they would want $295 to renew it for another 12 months. This would 
+include an update to the PCB program when it came out. 
+
+Because the release of PCB IV has been postponed they have decided to extend
+technical support until 30 days after PCB IV is shipped, after which they
+will want $295 to renew it. Sound fair to me.
+
+[PCB IV was supposed to be released in January '91. It wasn't. There have been
+lots of angry subscribers on the BBS accusing OrCad of using their PCB 
+subscription money to fund OrCad's expansion into Sun workstations instead
+of working on PCB IV.]
+
+[Many have stated their intention of refusing to renew their subscriptions 
+because the haven't gotten anything for it. Several have said that the reason 
+they bought OrCad in the first place was because of advertisements last summer
+promoting PCB IV.]
+
+[Some have accused OrCad Management (which did a leveraged buyout last summer)
+of abandoning the loyal customer base that made the company a success and
+are predicting the company's eventual demise if they continue their course
+of action.]
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 31 January 1992
+
+
+MultiSync II Self-Test Status
+-----------------------------
+I have tested everything I can think of testing so I have turned a board over 
+to Stephanie, Terry, and Max who have brought the game up on it, first with
+512K EPROMs and then with 1M EPROMs and SRAMs.
+
+Things to do:
+
+   1. New ROM Checksum table routines to handle mixing and matching EPROMs.
+   2. Medium Speed Self-Test.
+   3. Convert program to Microtek tools.
+   4. Document things.
+   5. Give Training a board.
+
+There need to be four different sets of Self-Test ROMs:
+	1. Standard Speed in 512K EPROMs.
+	2. Standard Speed in 1M EPROMs.
+	3. Medium Speed in 512K EPROMs.
+	4. Medium Speed in 1M EPROMs.
+
+Boards with Sockets
+-------------------
+We are still waiting for the board from Emmette.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 6 February 1992
+
+
+Boards: MultiSync II Rev 1
+--------------------------
+The current disposition of boards is as follows:
+
+	VRAM Mfg.	Speed
+	---------	-----
+#1	TI		-80	  Jed
+#2	Toshiba		-100	  Chip		Standard Sync, 1M EPROM
+#3	Micron		-8(S)	  Terry		Standard Sync, 1M EPROM
+#4	Micron		-100	  Ray		Standard Sync, 1M EPROM
+#5	Micron		-8(S)	  Max		Medium Sync, 1M EPROM
+
+#T1	Micron		-8(S)	  Training	Standard Sync, 512K EPROM,
+						with 12Bit A/D
+
+
+The new ROM Checksum Table handles the mixing and matching of EPROMs and 
+SRAMs.
+
+Medium Speed Self-Test works.
+
+I am still documenting things.
+
+We have given Training a board, documentation, and two sets of EPROMs (27C512s
+and 27C010s)
+
+
+
+Boards with Sockets
+-------------------
+I have received the board from Emmette and will test it presently.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 14 February 1992
+
+
+Boards: MultiSync II Rev 1
+--------------------------
+A. I have done a new block diagram for MultiSync II/DS III and given it
+   to Dennis.
+
+B. I propose the following procedure for approving VRAMs: 
+
+	Run a game for at least 12 hours after which there should be no 
+	errors on the Error Screen.
+
+   I need to start doing this soon because I put all the 128Kx8 VRAMs on
+   the AVL as 'Restricted'.
+
+C. I talked to Thom Dempsey of TI. The TMS version of the 128Kx8 VRAM will not
+   be out until April. 
+
+
+Steel Talons
+------------
+Erik and I went to Production to investigate the report of a game with the
+Rainbow Problem. (We brought Pete with us to introduce him to everybody
+and to show him around.)
+
+The game with the Rainbow Problem had Hitachi VRAMs in both Board Sets. 
+It was theorized that these boards had come from Customer Service.
+
+There was one other game with a problem that was traced to there being
+one Hitachi VRAM on the board.
+
+By the time we left, Jim Breshears had decided to unbox some or all of the
+30 games ready to be shipped, to check for Hitachi VRAMs.
+
+When we got back Erik realized that none of the boards he had seen had the 
+mods.
+
+
+Boards with Sockets
+-------------------
+I have received the board from Emmette and have started to test it.
+
+
+DSPLINK
+-------
+It appears that Lipsons's new Drop code is not compatible with the 68010 code
+he wrote for Steel Talons.
+
+_____________________________________________________________________________
+
+To: Chip
+Fr: Jed
+Re: VRAM Testing
+Dt: 18 February 1992
+CC: Rick
+
+
+I need your help in qualifying the VRAMs in your MultiSync II. 
+
+The final test is to run the board in attract mode for 12 hours with no 
+errors. (This assumes the program runs with no errors.)
+
+To do this test:
+	1. Before you go home tonight put the game in attract mode.
+	2. Enable WatchDog.
+	3. Go to Self-Test, Operators Screen, Error Log. Zero the errors.
+	4. Go back to the game.
+
+	5. Go home.
+
+	6. Come back the next day.
+	7. Go to Self-Test, Operators Screen, Error Log. Record any errors.
+	8. You are done.
+
+This test must be done exactly as specified.
+
+Thank you.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 21 February 1992
+
+
+
+Boards: MultiSync II
+--------------------
+I have given Art the corrections to the Board and the Parts List and asked
+him to have Rev 2 done.
+
+I have finished converting the Diagnostics part of Self-Test for MultiSync II.
+
+
+Boards with Sockets
+-------------------
+The board with the VRAM sockets was working until I unplugged a VRAM a couple
+of times. That socket is now flakey. Erik will try to fix it.
+
+
+ASIC65s
+-------
+I had Erik go through the pile of bad ASIC65s and neutralize them. We now have
+137 safely bad parts.
+ 
+
+Cox MultiSync II
+----------------
+If you want Self-Test for a Cox version of MultiSync II, I will need the 
+following information:
+
+   MultiSync II Board:
+	Program EPROMs: How many; what type; and where loaded?
+	Sloopstic: Yes or No?
+	Are the 8B A/D and 12B A/D inputs the same as Panorama?
+	
+   DSK Board:
+   	Are you using the Program EPROM?
+	Are you using the Program RAM?
+	Are you using the ZeroPower RAM?
+
+   DS III Board:
+   	Graphics EPROMs: How many; what type; and where?
+   	Sound EPROMs: How many; what type; and where?
+
+I will need access to a Sitdown Motor Amp and Steering Wheel to test the code.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 28 February 1992
+
+
+MultiSync II VRAMs
+------------------
+I have asked Components to approve the two VRAMs that I have tested (with
+Terry's and Chip's help):
+
+	Micron MT42C8127DJ-8	(80ns)
+	Toshiba TC528126BJ-10	(100ns)
+
+I have a board with 100 ns Microns but they must be tested in a game.
+
+The TI parts we have are TMX which there is no point in approving. TMS parts
+are due out in April.
+
+Erik fixed the board with the VRAM sockets. 
+
+
+
+MultiSync II Flash EPROMs
+-------------------------
+TI Flash EPROMs are not available but Atmel makes some that appear to be
+electrically compatible, although the programming procedure is different.
+Their Flash EPROMs are only rated for 1,000 programming cycles.
+
+Atmel also makes 1M EEPROMs that appear to be electrically compatible. They
+claim to have parts that are rated for 100,000 programming cycles. 
+
+I will pursue it if people are interested.
+
+
+
+DS III Sound
+------------
+I believe I have reduced the oscillation problem to manageable proportions
+by adding a bypass to each DAC reference.
+
+  1. I need to hear what it sounds like with the real sound program.
+  2. I need to know what your plans are for the board and whether to do a
+     new rev. Yours plans for Play Sounds also affect this decision.
+
+
+	     EYES ONLY			BURN BEFORE READING
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Pirates
+Dt: 26 February 1992
+
+
+1. From the evidence, the Pirates have broken security on ASIC65. Guardians 
+   has a problem because they use the same system. Consider the following:
+
+   When Guardians comes out, the Pirates will obtain a board and be very 
+   pleased to discover it is the same board as in Road Riot. The first thing
+   they will do is plug in their counterfeit ICs to see if they work in the
+   new game.
+
+   We can do arrange it so that when they plug in their counterfeit ASIC65, it
+   will work. For five minutes. After which it can do something like:
+   	1. Give free credits.
+	2. Give no credits.
+	3. Make the game slower and slower. (Attract mode should be normal)
+
+   They might not discover the problem right away. It might buy us some time.
+   With any luck they might even burn OTPs.
+
+   As an added wrinkle, we can make it so the M Jumper must be installed in 
+   the new version. They will see the jumper on the board (that wasn't on Road
+   Riot) and discover that their counterfeit part 'works' with the jumper
+   removed. Hopefully, they will thereupon congratulate themselves for having 
+   defeated us so easily and miss the real boobytrap. 
+
+
+2. Street Driver. This is what we have so far:
+
+   The Pirates seem to be able to break security on parts with EPROMs although
+   we don't know how long it took them to do it. 
+
+   They have broken security on the GAL which is EEPROM based. That is a real
+   disappointment.
+
+   So far they have not counterfeited a game with a motor. (The counterfeit
+   Compact Hard Drivin' didn't even have a motor interface.) If we determine
+   the absence of a motor we can crash the game.
+
+   Gate Arrays slow them down (as long as the gate arrays are not from 
+   Toshiba).
+
+   Custom Cell Arrays would slow them down even more because they would have 
+   to figure out all the layers.
+
+   Full Custom might slow them down even more if the designer played process
+   tricks. (It is also riskier for us.)
+ 
+   Places in the Street Driver that could use a Gate Array or Standard Cell
+   Array to perform an existing function and add a security function:
+
+   	1. The circuit that reads the OptoCoupler;
+	2. The Parallel Interface with Full Handshaking used in two places
+	   (DS III Graphics and DS III Sound).
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 6 March 1992
+
+
+Security
+--------
+A. Classified
+
+B. TI claims that their FPGA should be secure against being copied because:
+
+   1. The physical size of an anti-fuse is on the order of 1.5 micron.
+
+   2. The part is programmed from the inside out, which suppossedly means 
+      that as the anti-fuses are formed, the inside fuses become inaccessible.
+      This is even before the security bit is set.
+
+   3. They say the part has a user signature (8 bytes) that can be read after
+      the security bit is set but that the Data I/O cannot read it; their
+      programmer can.
+
+   4. Prices for TPC1010AFN-068C (1K) are $15.95 .
+
+   5. The part takes about five minutes to program. If done in-house the
+      overhead adds $5.83 to the cost of the part. 
+
+
+   If we put it in a game we will find out if it can be ripped.
+
+
+
+34020
+-----
+I have started looking at the part.
+_____________________________________________________________________________
+_____________________________________________________________________________
+
+To: Texas Instruments GSP Hotline	Fax   (713) 274-2558
+
+Fr: Jed Margolin, Atari Games		Phone (408) 434-1730
+					Fax   (408) 434-3910
+
+Dt: 10 March 1992
+
+Re: TMS34020 SCLK and VCLK Timing
+
+
+On page 71 of the TMS34020 data sheet:
+
+						  TMS34020-32
+ No.	Parameter				  Min	  Max	  Unit
+-----------------------------------------------------------------------
+ 117   tc(SCK)  Period of video clock SCLK    	   35      50	  ns
+
+
+ 123   tc(VCK)  Period of video input clock VCLK   62.5   100     ns
+
+
+Is this a misprint or what? This would mean that VCLK has to be between
+10MHz and 16 MHz. [On the 34010, VCLK had a minimum period of 133ns which
+corresponded to a maximum frequency of 7.5 MHz., but there was no maximum
+period (minimum frequency)].
+
+The SCLK parameters indicate a range of 20 MHz to 28.6 MHz . The system I am
+designing will be 8 bits/pixel with a resolution of 512 x 384 with a Bit
+Clock of 16MHz. Since each SCLK brings out 4 pixels, SCLK will be 4MHz. 
+If the Parameters for VCLK and SCLK stand as shown on the data sheet I will
+not be able to use the 34020.
+
+
+Questions:
+
+	1. Are the parameters for SCLK (117) correct as per the data sheet?
+
+
+	2. Are the parameters for VCLK (123) correct as per the data sheet?
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 13 March 1992
+
+Motor Amp Board
+---------------
+I do not have the Film for the Rev 2 board so I have done two things:
+
+   1. I have the original Gerber and Documentation files on a floppy.
+      Getting a board made from these files would require a Plot of the
+      Drill Template (which I have) and the Fab Drawing (which Erik would
+      have to Plot on Mechanical's Plotter.)
+
+   2. I called Davila Circuits which fabricated the board. Patty reports
+      that they have the film and would be more than happy to make more boards
+      for us. Just send them a Purchase Order for Atari Board 049304-01 Rev 2.
+      Davila's number for the board is 32599.
+
+
+Motomania
+---------
+I spent some time with Dennis Harper and Farrokh. They were having a terrible
+problem with the Motor Amp. It seems that with the rear motor set to low 
+speed, as they turned on the front motor, it would reach a point that would 
+make the rear motor run at full speed without being commanded to.
+
+This is what I found:
+   1. The Motor Amp received its line power AFTER the Line Filter. The
+      Line Filter is not rated for the zillion Amps that the motors require.
+      The glitches were so bad it was causing the low voltage power supply on
+      Motor Amp Board to drop out of regulation. Powering the Motor Amp 
+      directly from the power line fixed most of the problem.
+
+   2. The Filters connected to the motors introduce enough phase shift
+      so that the pulse produced to command the motor to run at low speed
+      (the pulse would therefore come at the end of the half-cycle) was
+      spilling over to the beginning of the next half-cycle, which then
+      became a full power pulse.
+
+      The front motor requires so much current that it changes the phase
+      relationship on the power line and therefore affects how the rear
+      motor behaves.
+
+The solution was:	
+   1. Increase the minimum value that can be sent to control a motor. 
+
+   2. If the value is less than the minimum, then send nothing to the 
+      Motor Amp. The Motor Amp watchdogs in a frame or less (I do not 
+      remember exactly) and prevents any pulse from being sent to its 
+      respective Triac.
+
+Also:
+   1. The mechanical arrangement of the front motor is very poor. It
+      is required to produce full power over 1/4 turn. This puts a
+      real strain on the motor.
+
+   2. I suggested to Farrokh and Dennis that they connect all the various
+      parts of the game to a common source and measure the RMS current
+      requirements.
+									2 of 3
+	
+Texas Instruments
+-----------------
+I am not happy with the support I have been getting from Texas Instruments.
+
+1. I have been trying for at least a month to get data and pricing for the
+   320C31 which is a cost reduced floating point DSP. Thom Dempsey turned me
+   over to Rex and Rex turned me over to a Marshall Field Application 
+   Engineer. I have attached a copy of the 'pricing' information that I have 
+   received.
+
+2. I had a question about the 34020 VCLK and SCLK signals. VCLK (which drives
+   the 34020's sync counters) has a narrow range specified from 10 MHz to 
+   16 MHz. Medium Speed will have a VCLK of 16.0 MHz and this range is 
+   probably ok for the other speeds but it seemed so limited I thought there 
+   was a misprint in the data sheet. The 34010 was rated at a VCLK period of 
+   133 ns minimum (7.5 MHz maximum). There was no minimum frequency.
+
+   	a. I called the GSP Hotline and received a recording instructing me
+	   to fax my question to another number. I did.
+
+	b. The answer I received was that it is not tested below 10 MHz in 
+	   order to reduce testing costs. It would probably work down to
+	   1 MHz but since it was not tested I would doing it at my own risk.
+
+   Having to fax questions makes it impossible to have any kind of dialog.
+
+   The reply I received has an 'attitude' that I really don't care for.
+
+   They should have at least guaranteed VCLK for a 2:1 frequency range. The
+   TMS34020 was clearly designed for the PC Market and they don't seem to care
+   if anyone else uses it.
+ 
+On Friday I told Thom Dempsey of my dissatisfaction with the Hotline response 
+and that there were other things, too. He is scheduled to come in on Monday.
+ 
+Shortly afterwards I received a call from Scott Huckaby (a marketing type at
+713-274-2573) and someone else; I think it was Bob Milhaupt. 
+
+I explained why I was unhappy and Scott basically repeated what was in the 
+Milhaupt fax. He went on to explain that they would consider setting up a
+special screening for parts to meet my spec. 
+
+I told him flat out that I was not about to pay $20 for $0.03 worth of extra 
+testing.
+
+He said the reason for making the GSP Hotline Fax-only was to better serve
+the customers since the TI people could ask the experts and not have to
+give an answer cold on the phone. [This will be exposed as crap shortly.]
+
+He started giving me a line about his not wanting to get into a pissing 
+contest with me and there was no point in keeping Bob(?) on the line
+if I didn't have any technical questions. So I read him the Riot Act.
+									3 of 3
+
+	I told him that I had used the 34010 in a very successful product
+	that TI had been very happy to show to prospective customers to
+	show what a 34010 could do. He was familiar with Hard Drivin'.
+
+	During that time I had called the GSP Hotline several times and most
+	of the time received an answer immediately. On a few occasions they
+	had to find out the answer and call me back later. I considered
+	my experience to be positive.
+
+	When I have a question I want to talk to a human being. A Fax-only 
+	Hotline is not interactive, and I don't like it.
+
+	I don't like their attitude about testing or customer support and I 
+	don't need the aggravation.
+	
+	If I design new hardware I don't seem to have much choice about the
+	34020. It is the best graphics chip in town. (Actually, it may be
+	the only graphics chip in town). But there are other people who make
+	VRAMs and there are other people who make DSPs.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 20 March 1992
+
+
+
+Texas Instruments 
+-----------------
+I met with Thom Dempsey on Monday and discussed my concerns with the 34020
+(GSP) and the 320C31 (Floating Point DSP).
+
+On Wednesday I received a call from Scott Huckaby to tell me that they were 
+expanding the 34020s test range for VCLK from 10-16 MHz to 8-16 Mhz as I 
+recommended.
+
+I need to find out what VGA Sync is in order to determine if the SCLK
+range will work as it is currently specified.
+
+I have prices and a users manual for the 320C31. I received a call from Erik 
+West who is a DSP Apps guy. I asked him mostly about development software.
+The Assembler, Linker, C Compiler is $1500. The simulator is another $500 and
+it supposedly works like Codeview. I can arrange a demo of the software if
+people are interested.
+ 
+
+
+MultiSync II Rev 2
+------------------
+I have received Plots and a parts List and they appear to be correct. In order
+to release Rev A I need to know whether the DUART and/or the MSP should
+be loaded.
+
+
+
+GSP Evaluation Board 
+---------------------
+The purpose of this board is to allow Applied Research to try out some new
+ideas for hardware. 
+
+This board will connect to the MultiSync II Expansion Board so it will be
+easier to design and build. It does not mean this is the final configuration.
+
+There may be several GSP Evaluation Boards designed in order to try out
+different ideas.
+
+The first GSP Evaluation Board will probably have the following:
+   (1) TMS34020
+   (8) 256K x 4 VRAMs (1M Byte of VRAM)
+   (2) DSP32C Floating Point DSPs.
+	 Each one is attached to the 34020 Local Bus;
+	 The DSP32C Serial Ports are connected to each other;
+	 One DSP32C has four 1M SRAMs with ability to upgrade to 4M SRAMs;
+	 The other is naked.
+   (1) Standard PC Color Palette IC
+
+Inputs to Art are scheduled for April 24.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 27 March 1992
+
+
+Cox Self-Test
+-------------
+I am working on new Self-Test for Main Front Display to use DS III Graphics 
+and Sound and for the MultiSync Side Displays to use DS III Graphics and
+DSK Helpers.
+
+
+Dallas Semiconductor
+--------------------
+I talked to Mike Alwais about their secure 8051 derivative. The DS2252(T) 
+comes with RAM and a lithium battery. It is also available with a real-time
+clock.
+
+The Program is loaded unencrypted through a port; the part encrypts it
+into memory. The part does random dummy fetches to confuse bus analyzers, 
+and the part has a metallic-die layer that they claim prevents microprobing.
+
+We would have to make a special programming station so the unencrypted code
+is not in the game. 
+
+Mike suggests developing code on an unencrypted part.
+
+He is sending literature. The part does not use full DES encryption (it would 
+be too slow) and therefore we should be able to export it with no problem.
+
+
+Tektronix
+---------
+I talked to  Sharon Russel about digital oscilloscpes. She is sending
+literature.
+
+In four-channel 'scopes they have two model that look within range:
+	TDS 420	  100 MHz sampling  $5995 + $340 for two more probes
+	TDS 520   1 GHz sampling    $9490 + $350 for two more probes
+
+       (Their four-channel 'scopes come with only two probes.)
+
+
+Texas Instruments 
+-----------------
+I have asked for complete documentation for using the 34020 Emulation Port.
+The reason is that everything (including Host Interface data) is on
+the LAD (Local Address and Data) bus. If something on the bus shorts out, the 
+Host Interface won't be able to talk to the 34020 to find out what is wrong. 
+
+The Emulation Bus is separate and has only four lines. It is very slow but is
+ok for rudimentary testing.
+ 
+(In the 34010 the Host Interface is completely separate from its LAD Bus.)
+
+
+GSP Evaluation Board 
+---------------------
+It has been put on hold because of Training DSPLINK and Cox Self-Test.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 3 April 1992
+
+
+Cox Self-Test
+-------------
+I have done Self-Test for the following:
+
+	1. Side Display:   MultiSync
+			   DS III Graphics
+			   Fast Downloader
+
+	2. Center Display: Main Board
+			   DSK
+			   DS III Graphics (no DS III Sound)
+			   Fast Downloader
+
+	3. Center Display: Main Board
+			   DSK
+			   DS III Graphics
+			   DS III Sound (no Fast Downloader)
+
+There wasn't room for both DS III Sound and the Fast Downloader so I did two
+versions.
+
+The programs cannot be considered complete until they are tested in the
+actual unit.
+
+Also, I haven't been told exactly what is being loaded.	   
+
+Also, the ROMs I have seen have not been checksummed.
+
+Also, there is a bug in the Fast Downloader code that Terry supplied me for
+the Center Channel. Chip and Terry have decided not to fix it. I am very 
+disappointed in them because of their lack of cooperation. Someone will 
+probably need to work on the Cox code sometime in the future. By not fixing 
+the Downloader now when it would be easy to do, they are making a lot for work
+for someone in the future. They have already wasted the time I spent doing the
+special version for them. I will not work on this code again and will delete 
+the directory I created for them. I do not have space for useless programs.
+ 
+Self-Test is a program; in the future the programmers should do it.
+
+
+Dallas Semiconductor
+--------------------
+I have not received anything from them.
+
+
+Tektronix
+---------
+I have received some FAXed sheets but not the catalog I was promised.
+
+
+Texas Instruments 
+-----------------
+I have not received the documentation for using the 34020 Emulation Port that
+I asked for.
+									2 of 3
+
+GSP Evaluation Board 
+---------------------
+It has been put on hold because of Training DSPLINK and Cox Self-Test.
+
+
+DS III Board
+------------
+Software: 1. There is no Play Sounds in Self-Test because the software does 
+	     not exist, either in the 68010 or the 2105.
+
+	  2. Ray seems to be in charge of the 2105 Sound Boot ROM (which
+	     contains Self-Test). Is this correct?
+
+	  3. The way I am doing Graphics ROM Checksums is to have the 68010 
+	     read the jumper that selects 512K or 1M EPROMs. The checksums are
+	     compared to those from a table that also indicates whether the 
+	     part is loaded or not.
+
+	  4. The way I am doing Sound ROM Checksums is to have everything 
+	     table driven. This means that Self-Test has to know which EPROMs 
+	     are loaded, what size they are, where they are loaded, and what
+	     their checksums should be.
+
+	     The Sound software requires only that EPROMs be loaded in sockets
+	     starting from a particular socket but does not require that they 
+	     be in any particular order.
+
+	     If you want Self-Test changed to adapt to this system the 
+	     hardware must be changed so that:
+	        a. It can read the ROM select size,
+	        b. pullups are added to the Sound ROM data bus so that it
+		   will not be confused by reading a floating bus.
+
+	     In addition, some provision must be made so the software can
+	     determine whether the EPROM is a 1M part or a 512K part in a 
+	     1M address space.
+
+	     Since I do not have access to the documentation of the header
+	     table you will have to have one of your programmers program
+	     and integrate these functions if you decide you want them.
+
+
+Hardware: 1. The 12 Bit DACs each need a 0.1 uF capacitor. Are we going to 
+	     do a new Rev of the board or just have them tacked on?
+
+	  2. If we are doing a new Rev do I need to pull up the Sound ROM
+	     data Bus.
+	     								3 of 3
+
+VRAMS
+-----
+1. Micron: When I put the 128Kx8 VRAMs into the MultiSync II I told them I
+   was concerned about using part that might not be supported. They said
+   not to worry, that they would be producing them (MT42C127DJ) for a long 
+   time.
+
+   I was recently told that this part has become obsolete, and that they are
+   now recommending the MT42C128DJ in its place. I have samples of them.
+
+   Approving VRAMs takes a lot of effort. Most of the VRAMs were surface 
+   mounted. I can't do that anymore because I can't get Karen to do boards
+   for me. I have one board with VRAM sockets. We have already had problems 
+   with these sockets and I don't know if they will work. 
+
+   Testing VRAMs requires first, that they pass Self-Test, and second, that
+   they run the game. I do not have a game, or access to a game. Your 
+   programmers are busy working on Cox and Street Driver and I have not had 
+   much success getting them to do things for me.
+
+   The result is that the time I spent testing the parts that Micron has 
+   discontinued has been wasted. What reason is there to believe that they 
+   will not discontinue this new part in six months, probably in favor of
+   the 2M VRAM they are pushing?
+
+
+2. TI: TI promised that production parts of the 128Kx8 VRAM would be available
+   in April. Mary's memo of 4/3/92 refers to samples available now. I don't
+   have any samples of production parts.
+_____________________________________________________________________________
+
+To: Scott Huckaby, Texas Instruments GSP Hotline	Fax   (713) 274-2558
+
+Fr: Jed Margolin, Atari Games				Phone (408) 434-1730
+							Fax   (408) 434-3910
+
+Dt: 3 April 1992
+
+Re: TMS34020 SCLK Timing
+
+
+
+The board I am designing with the TMS34020 will be required to work with
+several sync formats. One format is NTSC.
+
+The Bit Clock will be 14.31818 MHz. (four times chroma) and the screen format
+will be 700 x 480 (Interlaced) with eight bits/pixel. Each serial clock will
+bring in four pixels.
+
+I need to be able to use mid-line reload. Otherwise I will either have to 
+waste memory or lose the capability of bulk memory clears.
+
+How do I do this when the SCLK parameters indicate a range of 20.00 MHz to 
+28.57 MHz ? 
+
+Even assuming I use a custom (and more expensive and longer lead time)
+oscillator of 14.31818 x 2 = 28.63 MHz I am outside your SCLK parameters.
+
+(Even this assumes that DPYMSK can be configured to operate appropriately
+with these paramters.)
+
+You need to support NTSC if you ever want someone to use the 34020 in a
+home video game. Or cable box.
+
+
+Regards,
+
+
+ Jed
+_____________________________________________________________________________
+
+To: Scott Huckaby, Texas Instruments GSP Hotline	Fax   (713) 274-2558
+
+Fr: Jed Margolin, Atari Games				Phone (408) 434-1730
+							Fax   (408) 434-3910
+
+Dt: 13 April 1992
+
+Re: TMS34020 Emulator Port
+
+CC: Thomas Dempsey, Mary Burnias, Rick Moncrief
+
+
+I am designing a board so that I can evaluate the performance of the 34020.
+
+The board will have: one 34020; eight 256Kx4 VRAMs; one RAMDAC; and two
+Floating Point DSPs. It will plug into an existing mother board.
+
+To enable me to perform hardware diagnostics I want to have my host processor
+talk to the 34020's Emulator Port. (This would be built into each game.)
+
+I have been asking your representative Thomas Dempsey for this information for
+several weeks but with no results.
+
+I am out of time.
+
+The design of this board must be finished by April 24 when it is scheduled
+to be delivered to the PCB Group.
+
+I must have full, complete, and clear documentation for the 34020's Emulation
+Port by Tuesday afternoon, April 21, or I will be faced with three options:
+   1. Do the board without an interface to the Emulation Port, thereby
+      giving up the ability to do meaningful hardware diagnostics;
+   2. Reschedule the board, thereby losing weeks or months depending upon when
+      I can get another slot with the PCB Group;
+   3. Cancel the board.
+
+I do not consider any of these options very attractive.
+
+I would appreciate any help you can give me in this matter.
+
+
+Regards,
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 13 April 1992
+
+
+Dallas Semiconductor
+--------------------
+I have information and prices. The one that we would want to use is the 
+DS 2252T. This is a module that contains: 12MHz DS5002 processor (has a 8051 
+core); 64K Bytes RAM (for program and data); Real Time Clock, and Lithium 
+Battery. It comes in a 40 pin SIMM.
+
+The price in 1K is $60.60 . This would enable us to replace: 
+	2Kx8 ZeroPower RAM	$ 7.30	
+	2Kx8 Timekeeper		$14.59
+	ASIC65			$17.00
+				------
+				$38.89
+
+It would therefore cost $21.71 more than we are already spending. Depending
+how the 64K RAM was used, we could dedicate more than the 4K bytes of 
+nonvolatile memory we are now getting from the Zeropower and Timekeeper RAMs.
+
+Someone would have to figure out how to do development.
+
+
+Tektronix
+---------
+They will try again to get me the catalog.
+
+
+Texas Instruments 
+-----------------
+I faxed Scott Huckaby a question about how SCLK can be used in an NTSC
+system with a clock of 14.31818 MHz when SCLK has a lower limit of 20 MHz.
+
+I received a very nice reply saying that both SCLK and VCLK will be tested
+down to 1 MHz.
+
+Emboldened by my success I sent him another fax about how Thom Dempsey
+hasn't given me the information I need on the 34020 Emulation Port and
+that I am running out of time.
+
+Scott called me to say that he had gotten the document in question 
+declassified and would send it to me if I promised, in writing, not to ask
+any questions about it. I figured that I didn't have anything to lose so I
+did.
+
+I also found out that there is an errata sheet for the 34020 that Dempsey
+hadn't told me about. Scott faxed it to me. 
+ 
+I have told Mary what I have been doing.
+									2 of 2
+
+
+Micron
+------
+I have the new Micron MT42C128DJ VRAMs in a board and they pass Self-Test. 
+Before I can approve them they have to run in a game. We should do it
+this week.
+
+I participated in a conference call with Robert Pescosolido and Jeff Mayhoo
+who is Micron's Manager of Special DRAM Products. There still is no particular
+reason to believe that they will be making this part "for a long time" .
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 24 April 1992
+
+
+Tektronix
+---------
+I have received the catalog.
+
+
+Texas Instruments 
+-----------------
+The information I received about the emulation port is basically useless.
+
+Thom Demsey has informed me that Atari Games is such an important account
+that we will have two people to serve us. Purchasing gets him. Engineering
+gets someone else.
+
+I told him it sounds like I am being dumped.
+
+Monday we are having a meeting on ASIC65 failures.
+
+
+Cox
+---
+After testing Self-Test in the actual unit I found and fixed a few things. 
+
+
+GSP Evaluation Board
+--------------------
+On 4/24, I turned the following documentation over to Joe:
+   1. Schematics
+   2. 34020 PGA signals and pinouts
+   3. 34020 Emulation Connector
+   4. 44C251DZ signals and pinouts
+   5. ATT478 signals and pinouts
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 30 April 1992
+
+
+Texas Instruments 
+-----------------
+Monday I had a meeting with Tom Smith, Mary Burnias, and three guys from
+TI: Thomas Dempsey; Philip Davis (Technical Sales Rep); and R. Gregory
+Delagi (District Sales Manager, and their boss).
+
+I had been told that the purpose of the meeting was to discuss ASIC65
+failures. We did discuss it but not until later.
+
+The new setup is that Mary gets Dempsey and I get Davis. I told them I didn't 
+think it would work because Salesmen have all the power and Engineers have 
+none. Delagi said they were going to give it a shot anyway.
+
+I told them that in that day's mail was a promotional item from Texas 
+Instruments for a seminar ($700 or so) all about JTAG and Design-For-
+Test and that they had a lot of nerve, considering how they had handled
+the 34020.
+
+The general consensus seemed to be that since they couldn't do anything
+about the 34020 emulation port (it is not JTAG) and they didn't want to
+support it, I should just forgive and forget and get on with things.
+
+I decided to take my best shot.
+
+I told Delagi flat out that this had cost me a lot of time and that the
+board I was doing didn't meet my standards for testability. If I go
+ahead with the board I have no choice about the 34020; and Mary is free
+to buy their VRAMs; but they could forget about DSPs. Based on their
+support of the 34020 there is no way that I am going to subject myself
+to even more aggravation by using their DSP. 
+
+We then talked about the ASIC65. I was suspicious about entire tubes being
+bad. Some were non-blank, some would not program correctly.
+
+Tom Smith says the tubes were not opened in Receiving. TI says the ICs
+left the factory 100% good. Davis wanted to know about the unit being used
+to program them.
+
+Davis wanted to send some samples back but I had to tell him "no" . I did
+agree to bring him to the lab and show him the parts.
+
+At the end of the meeting Tom Smith and Mary Burnias, who had both been
+pretty quiet, went on the record to state that Atari Games had a very
+good relationship with Texas Instruments and they didn't want it to change.
+
+Smith then volunteered that most of the games on the schedule were from
+McCarthy's group. 
+
+That was the end of the meeting.
+									2 of 2
+
+I brought Dempsey and Davis to the lab and did a dump of six parts that were
+received non-blank. A blank part should read all '1's. These all had the same 
+bytes bad with the same data at the same addresses. I explained that if a
+part is flagged as non-blank, my programmer stops right there and does not
+try to program it.
+
+Davis recorded the information and promised to look into it; maybe there was
+a test vector that was inadvertantly left in the part.
+
+On Tuesday I received a call from Davis. What we have in our parts are not
+leftover test vectors. He really can't do anything without parts to analyze.
+
+I suggested that he do the following: Have Thomas Dempsey talk to Rich Moore
+and get his approval for me to give him four parts that were received
+non-blank and four parts that did not program correctly. Since these last
+ones have most of the real code intact, Dempsey is to promise Rich Moore
+that these parts will not be read out; they will have the plastic removed
+and the part erased; then they will try to program the part.
+
+I recommend that all future ASIC65s be programmed on Programmers approved by 
+TI, which limits it to either Manufacturing or McCarthy's Data I/O. I want to
+get out of this loop.
+  
+
+Becky Depew
+-----------
+Becky did it again. She told me to sign something. When I asked a few simple
+questions (like "what is it for?") she said it was something about a Canadian 
+Patent but other than that she didn't know. She got angry and basically dared 
+me to not sign it. So I didn't sign it. 
+
+
+Micron
+------
+Robert gave me some 100 ns parts. The 80 ns parts are on a board and have
+passed the memory tests but have not been tested by running a game on them.
+
+
+Other
+-----
+My new 486 is very nice. Thank you.
+
+My SNOBOL4 interpreter does not run on a 486 so I am converting my SNOBOL4
+programs to C .
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 5 May 1992
+
+
+
+GSP Evaluation Board
+--------------------
+I worked with Joe on IC placement and now he is routing the board.
+
+
+DSK Rev B
+---------
+Inputs are ready. The board will accept 1M or 4M SRAMs. With a cut and
+four jumpers it will accept the old 32Kx8 SRAMs.
+
+I have a quote from Merit for NEC 1M SRAMs (85ns). The price is $13.75 (1K).
+
+
+Micron
+------
+We have tested the 80 ns parts in a game and they seem to work, although the
+sockets are getting flakey again. I will submit a CER at my earliest
+opportunity. Next we will test the 100 ns parts.
+
+
+ADSP-2105
+---------
+I have sent the following mail message to the same distribution list that
+Peter Lipson used when he defamed the 210X.
+
+"Peter Lipson's VAX Mail "210X DSP serial failures" implies that there is a
+newly discovered bug in the 2105.
+
+I talked to Dan Ash and it appears the "bug" in question is really that a
+glitch on the Serial Clock input that is shorter than the minimum serial
+clock specified in the data sheet can cause the state machine that performs
+the serial operations to get screwed up so that it needs to be reset.
+
+The Party Line Bus used in Steel Talons and in the Police Trainer allow the
+bus to float after one unit has released it and before another unit
+takes it.
+
+The work we did on the Police Trainer System showed that when the bus is
+floating, the output of the Bus Receivers will be one or zero, depending
+on its own input offsets. (The receivers are actually op-amps in disguise.)   
+
+This led to a real problem on the Frame Sync signal, which we fixed by 
+introducing just enough bias so that a floating bus would be pulled to the
+correct inactive polarity. 
+
+It appears that something like this should be done with the Serial Clock.
+
+Note: 1. The way this is done on a terminated bus is different from the way
+         it is done on a non-terminated bus.
+
+      2. I have not seen the SPACE circuit. It may or may not be the same as
+         in Steel Talons.
+
+      3. The 'filter' Dan recommended is about 9 ns and may or may not help
+         glitches caused by the switching between Bus Masters. "
+									2 of 2
+
+MotoRama
+--------
+As a result of a meeting with various people alleged to be involved with the
+project, it was discovered that the new higher current thyristors they were 
+unable to get were, in fact, SCRs, and would not have worked. 
+
+I have been in contact with Rich Comeau of Motorola. It seems that they
+are in the process of making extensive changes to the fabs that make their 
+thyristors and, basically, they can't deliver parts until October.
+
+Rich Comeau checked all around and the ONLY Triacs he could find are
+MAC223A10s from Future Electronic in Boston. They have 4,000 parts.
+(The MAC223A10 is 25 Amps and 800 Volts.) Note, there are no MAC15A6s to be
+had.
+
+According to MANMAN we have 141 MAC223A8s in inventory (132004-001). They are
+rated for 25 Amps and 800 Volts and were used in the Rump Thump Board.
+
+SGS-Thompson also makes Triacs and someone could check with them if they
+wanted to.
+
+
+The MotoRama Motor Amp, Continued:
+---------------------------------
+ 
+At 60 Hz a half cycle is 8.33 ms. 
+
+The counter that determines the conduction angle has a maximum length of 
+8.19 ms.
+
+At 50 Hz a half cycle is 10 ms. 
+
+Therefore, what would be a low-power cycle at 60 Hz will be 2 ms 
+(out of 10 ms) at 50 Hz.
+
+If this needs to be fixed in hardware there are three options:
+
+	1. Change the 1 MHz oscillator oscillator to 830 KHz.
+
+		Not a standard frequency.
+
+	2. Change the Divide Ratio from 64 to 78	[Board Change]
+
+		Requires changing LS393 to GAL16V8.
+
+	3. Change Divide Ratio to 128.			[One Cut, One Jumper]
+
+		Reduces Programmable range from 128 to 78.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report, Tektronix Digital Oscilloscope
+Dt: 19 May 1992
+
+
+The two digital 'scopes from Tektronix that look promising are the TDS460 and
+TDS540. Both have four channels.
+
+Erik and I met with the Tektronix rep (Michael J. Martin) on Thursday. We 
+spent some time discussing specs and then Michael J. demonstrated the TDS540.
+
+The information I got from him (and from the rep in Oregon) did not always
+agree with the catalogs or brochures. I have since been in contact with Dave 
+Nelson in Oregon (800-835-9433, X4357) and have received what I believe are
+satisfactory answers.
+
+I recommend the TDS540 because:
+	It is available with RS232 and Centronics Interfaces;
+
+	The software will produce TIF and PCX files;
+
+	The TDS540 has the ability to trigger on a logical combination (AND, 
+        OR, NAND, NOR) of the four input channels. 
+
+	It has a higher maximum sampling rate.
+
+The TDS460 would require a GPIB Bus interface before it could be used with
+a printer. Also, someone would have to write software to convert one of its 
+data formats to TIF or PCX. Even if this were done, it still would lack the 
+540's ability to trigger on a logical combination of the four input channels. 
+------------------------------
+Specifications:
+
+PROBES	Both now come with four probes.
+
+GUI	Both have a Graphical User Interface that is supposed to make it 
+	easier to use. It comes with online help.
+ 
+SAMPLING
+        TDS460:	100 MS/s on each channel.
+	TDS540: 1 GS/s 1 channel
+		500 MS/s 2 channels
+		250 MS/s 4 channels
+
+	The sampling rate on the 460 is, indeed, 100 MS/S. The way it works
+	on single events is as follows: 
+	
+	There are 512 points on the screen.
+
+	At 0.5 us/division you will see 5 us of the waveform on the screen.
+	(That must mean that there are 10 divisions on the screen). If you 
+	have the extended memory (for a total of 30,000 points) you will be 
+	able to	store 30,000/512 * 5 us = 293 us for a single event.
+ 
+	If you select 1.0 us/division you will get 10 us of the waveform
+	on the screen but since there are still only 512 points on the
+	screen the theory is that it will digitize at 50 MS/s.
+
+	The 540 presumably operates in like fashion. 
+								2 of 2
+
+VIDEO	The TDS540 has a 7" Raster Scan CRT with a display of 640 x 480. It
+	may be VGA but is not specified. It has no video output jack.
+
+	The TDS460 has a video output at VGA speeds but is monochrome.
+
+PRINTER PORT
+
+	The TMS540 can dump the screen to a printer (or other device) in 
+	several formats, including PostScript, PCX, and TIF. PCX is the
+	format used in various PC Paint programs; TIF is used by the
+	Macintosh. This means that waveforms can be sent to a file to
+	be directly integrated into Andrea's manuals. GPIB is standard
+	with RS232 and Centronics available.
+
+	The TMS460 does not currently support TIF and PCX although it
+	does support PostScript. It is not currently available with RS232
+	and/or Centronics ports. GPIB is standard.
+
+	(Tektronix made a glaring omission by not allowing the user to add a 
+	label to the display.)
+
+
+TRIGGERING:
+	The TDS540 has the ability to trigger on a logical combination (AND, 
+        OR, NAND, NOR) of the four input channels. 
+
+	There have been times when I have had to add circuitry to a board
+	in order to create the trigger point that I needed.
+
+	(The TDS460 has no such capability.)
+
+	
+PRICES:		
+
+TDS460 	with 4 P6138 probes, 					$  7,495.00
+OPT 1M 	Extended Memory						$    995.00
+
+K212	CART							$    385.00
+OPT 12	W/Second Tray						$     80.00
+								 ---------
+								$  8,955.00
+
+
+
+TDS540  with 4 P6139A probes					$ 14,340.00
+OPT 1M	Extended Memory						$  1,950.00
+OPT 13  RS232-Centronics Interface				$    495.00
+
+K218	Cart							$    695.00
+								 ----------
+								$ 17,480.00
+
+
+cc: Erik J. Durfey
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 15 May 1992
+
+
+GSP Evaluation Board
+--------------------
+I am checking the plots.
+
+I am getting Don Wrightnour to check the surface mount devices.
+
+
+
+Micron
+------
+The 128Kx8 VRAMs (100 ns) have been added to the AVL.
+
+
+
+Tektronix Digital Oscilloscope
+------------------------------
+The two digital 'scopes from Tektronix that look promising are the TDS460 and
+TDS540. Both have four channels.
+
+Erik and I met with the Tektronix rep (Michael J. Martin) on Thursday.
+
+We spent some time discussing specs and then Michael J. demonstrated the 
+TDS540.
+
+The information I got from him (and from the rep in Oregon) did not always
+agree with the catalogs or brochures. I have since been in contact with Dave 
+Nelson in Oregon (800-835-9433, X4357) and have received what I believe are
+satisfactory answers.
+
+
+Specifications:
+
+PROBES	Both now come with four probes.
+
+GUI	Both have a Graphical User Interface that is supposed to make it 
+	easier to use. It comes with online help.
+ 
+SAMPLING
+        TDS460:	100 MS/s on each channel.
+	TDS540: 1 GS/s 1 channel
+		500 MS/s 2 channels
+		250 MS/s 4 channels
+
+	The sampling rate on the 460 is, indeed, 100 MS/S. The way it works
+	on single events is as follows: 
+	
+	There are 512 points on the screen.
+
+	At 0.5 us/division you will see 5 us of the waveform on the screen.
+	(That must mean that there are 10 divisions on the screen). If you 
+	have the extended memory (for a total of 30,000 points) you will be 
+	able to	store 30,000/512 * 5 us = 293 us for a single event.
+ 
+	If you select 1.0 us/division you will get 10 us of the waveform
+	on the screen but since there are still only 512 points on the
+	screen the theory is that it will digitize at 50 MS/s.
+
+	The 540 presumably operates in like fashion.
+
+
+VIDEO	The TDS540 has a 7" Raster Scan CRT with a display of 640 x 480. It
+	may be VGA but is not specified. It has no video output jack.
+
+	The TDS460 has a video output at VGA speeds but is monochrome.
+
+
+PRINTER PORT
+
+	The TMS540 can dump the screen to a printer (or other device) in 
+	several formats, including PostScript, PCX, and TIF. PCX is the
+	format used in various PC Paint programs; TIF is used by the
+	Macintosh. This means that waveforms can be sent to a file to
+	be directly integrated into Andrea's manuals. GPIB is standard
+	with RS232 and Centronics available.
+
+	The TMS460 does not currently support TIF and PCX although it
+	does support PostScript. It is not currently available with RS232
+	and/or Centronics ports. GPIB is standard.
+
+	(Tektronix made a glaring omission by not allowing the user to add a 
+	label to the display.)
+
+
+TRIGGERING:
+	The TDS540 has the ability to trigger on a logical combination (AND, 
+        OR, NAND, NOR) of the four input channels. 
+
+	There have been times when I have had to add circuitry to a board
+	in order to create the trigger point that I needed.
+
+	(The TDS460 has no such capability.)
+
+	
+PRICES:		
+
+TDS460 	with 4 P6138 probes, RS232 and Centronics Ports 	$  7,495.00
+OPT 1M 	Extended Memory						$    995.00
+
+K212	CART							$    385.00
+OPT 12	W/Second Tray						$     80.00
+								 ---------
+								$  8,955.00
+
+
+
+TDS540  with 4 P6139A probes					$ 14,340.00
+OPT 1M	Extended Memory						$  1,950.00
+OPT 13  RS232-Centronics Interface				$    495.00
+
+K218	Cart							$    695.00
+								 ----------
+								$ 17,480.00
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Status Report
+Dt: 22 May 1992
+
+
+This is not my usual Status Report.
+
+This company is in trouble. Big Trouble.
+
+We've been in trouble before, like when Ruport Murdock tried to take over
+WCI. It totally distracted Warner's management, and when WCI paid huge 
+amounts of Greenmail to fend him off, it drained the Company of the cash 
+needed to operate. Both of these things led to the demise of Atari, Inc.
+(From a conversation with James Morgan, Atari Inc.'s last president.)
+
+We've been in trouble for a long time, taking on Nintendo, a company ten times
+our size, in the legal arena, distracting the current management and draining 
+the Company of cash that could be more profitably spent in other areas. Does
+anyone remember the big beautiful piece of land at Tasman and Vista Montana
+that was to be Atari's new home? Does anyone remember when we were not livivg 
+in each other's armpits?
+
+We've been in trouble for a long time, trying to compete with companies that
+consider their Coin-Op business an excellent way to develop and pre-sell games
+for the Consumer market. They sell their coin-op games at little or no
+margin, giving them a greater chance at the magic #1 and #2 spots on the 
+Equipment Polls.
+
+Yes, we've been in trouble before, but not like this.
+
+Some Programmers want really cheap hardware because they don't feel they
+are capable of creating a game that is good enough to justify more expensive
+hardware.
+
+Some Programmers create games specifically with an eye toward its eventual
+translation to the home market, thereby producing "dumbed-down" coin-op
+games. (But they make great kits.)
+
+Programmers in the Game Groups don't get the Engineering support they feel
+they are entitled to. Imagine wanting to actually have an Engineer assigned
+full time to their game? (Or even half-time?)
+
+Some Engineers, faced with trying to support more games than they possibly
+have the resources to support, want to design the Be-All and End-All Hardware
+that contains everything any Programmer could ever possibly want (in a $100
+Hardware).
+
+Everybody is mad at the Audio Group because the teams don't get the sounds 
+and music they want for their games. The games all end up sounding alike,
+anyway, due in part to the rather limited nature of the Sound Hardware, which,
+unfortunately, is the only hardware the Audio Group is willing to support.
+
+Everybody is mad at Marketing, which comes by every few months and demands
+major changes to the game based the five minutes they have played it.
+
+Marketing is mad at everybody because no one will do what they tell them to
+do.	
+									2 of 2
+
+Mechanical Engineering seems to have learned its craft from watching 
+"MacGyver".
+
+Manufacturing is mad at Engineering because Engineering isn't supplying enough
+product to keep Manufacturing going. Also, Engineering keeps wanting to use
+new parts, instead of using up the old parts, of which we tend to have alot 
+because Sales doesn't seem to be able to sell many games.
+
+Engineering is mad at Manufacturing because Manufacturing won't stock even
+commodity parts beyond which is needed for the next build. And when people
+find out what the new Overhead rate is, they will (or should be) Furious.
+
+Everybody is (or should be) mad at Sales and Marketing for not selling more
+games.
+
+Well, Now We Have The Solution. 
+
+Let's contract everything out. We are already contracting out hardware
+and game development.
+
+By contracting out the hardware, Engineering Management finally has the
+control it wants over costs, technology, and schedule. Of course, the
+hardware may need a few finishing touches for Testability and Manufacture-
+ability, but the Engineers will be happy to finish someone else's hardware, 
+put it into production, and thereby contribute to this someone else's 
+royalties. This has the added advantage that licensed product is not eligible
+for Bonus.
+
+By contracting out the game development, and making Marketing the main
+contact, Marketing can finally enforce their decisions on game play. (Do It 
+My Way If You Want To Get Paid.) Perhaps they can do for game play what they 
+did for Side Panel Graphics.
+
+I don't think we should stop there.
+
+Let's contract out Sound and Music so that the team (which is now Marketing) 
+will get what it wants. Dittos for I.D., Mechanical, Harness, PCB, 
+Publications, and Animation. Did I leave anyone out?
+
+Let's contract out Manufacturing to eliminate overhead (and unused Production 
+Capacity). Or, we could deal with unused Production Capacity by having
+Manufacturing become a Contract Manufacturer for other companies. (Outside
+contracts always have priority over internal product, so internal product
+will have to be contracted out, anyway.)
+
+Finally, after having completed the total disintegration of the Company, we 
+can contract out Management.
+
+
+Regards,
+
+
+	 Jedidiah (The Mad Prophet)
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 29 May 1992
+
+
+GSP Evaluation Board
+--------------------
+Went out for Boards.
+Filled out a Purchase Req for the 34020, VRAMs, RAMDAC, and fast 1M SRAMs.
+Gave Karen the Parts List and asked her to get the other parts. 
+
+I have converted the character set and will convert as much software as I can 
+while I am waiting for boards.
+
+
+DSK Rev B
+---------
+Gave Inputs to Art.
+
+
+Tektronix 'Scope
+----------------
+Michal J. brought in a TDS460. It does not change my recommendation of
+the TDS540.
+
+
+Micron
+------
+I have tested and approved the 100 ns parts. In order to test the 80 ns parts
+Erik has removed the sockets and asked Karen to attach the parts directly.
+
+
+The MotoRama Motor Amp, Continued:
+---------------------------------
+I have received no replies to my memos about 50 Hz operation. I will therefore
+assume they will compensate for it in software. Somehow.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 5 June 1992
+
+
+GSP Evaluation Board
+--------------------
+I am still working on software conversion.
+
+The boards came on Friday and I have given five to Karen.
+
+The VRAMs came on Thursday but Dave Pasquinelli decided to sit on them
+until someone came looking for them.
+
+
+DSK Rev B
+---------
+I have gotten a part number for the 128Kx8 SRAMs.
+
+The hardware that is necessary to run the old SciCards software has died
+and apparently can't be fixed (like I predicted would happen).
+
+Art was supposed to receive the conversion program but neither of us expects
+it to work.
+
+Art wants to make an exact copy of the DSK board on the new system (like they
+did on the Motor Amp board).
+
+I have had experience with old SciCards hardware and software not working
+so I told him ok.
+
+
+Micron
+------
+The 80 ns parts have been soldered to the board. It looks good except it
+does not consistently pass the memory tests. 
+
+
+MultiSync II
+------------
+A recent inventory has revealed the following:
+   Board #: 1	Jed
+	    2	Chip
+	    3	Terry	(Bench)
+	    4	Tim
+	    5	Max
+	    6	Micron 80 ns VRAMs, Flakey
+	    7	rack
+	    8	Terry (Game Cabinet)
+	    9	rack
+	   10	rack
+	   11	rack
+	   12	rack
+	   13	rack
+	   14	Sockets, unbuilt
+	   15	Totally Blank
+	   16	Partially Built (Emmette)
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 4
+Fr: Jed Margolin
+Re: Status Report
+Dt: 15 June 1992
+
+
+GSP Evaluation Board
+--------------------
+The boards came back from Fine Pitch. I have asked Karen to have some done 
+by Tuesday.
+
+I have come up with a method of interfacing the GSP Evaluation Board with a 
+MultiSync Board. It involves using a GAL to create an additional 2M Bytes of 
+address space on the Expansion Bus that will accept the DTACK signal from the 
+34020. Existing peripherals will work with no mods.
+
+I am still working on 34020 test software.
+
+
+DSK Rev B
+---------
+Art promised me an exact copy of the DSK board with the new system. The plots
+I received were not an exact copy.
+
+Since I have to treat this as a new board I have redesigned parts of it that
+I was unhappy with and have also done the following:
+	1. Removed Slapstic and its associated pair of ROMs;
+	2. Increased the RAM from two 32Kx8s to two 128Kx8s.
+
+I have redone the GAL to relocate most of it to the lower 1M of the Expansion
+Bus address space.
+
+I am less than thrilled at having to do a board over again. Yes, I know it
+can't be helped. There is just no end to this.
+
+
+									2 of 4
+Texas Instruments
+-----------------
+Phil Davis, the TI guy they gave me so I wouldn't bother Thom Dempsey, came to
+see me without an appointment.
+
+When I went out to the lobbly he explained that he had actually come to see
+someone else and thought he might as well see me, too. (That me me feel
+really special.)
+
+I asked him if the 128Kx8 VRAMs had been production released yet. He said
+he didn't know anything about it but he would look into it and get back to
+me.
+
+I asked him if they had evaluated the dead P15s yet. He said they hadn't
+been able to work things out with Rich Moore because of his recent trip out
+of the country.
+
+I explained to him that we had been using the P15 for security and no longer
+had a use for it since it had been ripped. He expressed surprised because
+he seemed to think it was such a terrific part that we were using it to
+run the game. 
+
+I wanted to see how much he actually knew about the part so I mentioned
+that it was difficult to interace anything to it because the address bus does 
+not go tristate except during Reset; unfortunately the internal Data RAM is 
+dynamic and does not get refreshed during Reset. I had, of course, developed
+several very successful techniques for interfacing to it.
+
+He said he didn't know anything about it but would look into it and get back
+to me. 
+
+I informed him that I hadn't asked him a question, that instead, I had told
+him something.
+
+This guy doesn't know anything and he doesn't listen. He is an idiot.
+
+									3 of 4
+I received the following memo from Rob Bryant:
+
+From:	MIKE::BRYANT       15-JUN-1992 11:15:23.64
+To:	MARGOLIN
+CC:	
+Subj:	
+
+      Hello, Jed.  If the "Trainer" team wants me to build up 27
+   prototype Multisync II boards, might you know if there are any
+   128Kx8 VRAMS 120ns around anywhere?  Or perhaps 256Kx4 DRAMS?
+   I'd be looking for 216 VRAMs and 108 DRAMs (8 per and 4 per).
+   If there aren't any over in your building I'll ask Mary B to
+   get some.  Thank you for any input you can give.
+
+					Rob
+
+This was my reply:
+
+Rob, there are some things you should know:
+
+   1. The parts list you seem to be building the boards from appears to
+      be a preliminary version for Street Driver.
+
+   2. I informed the Training group several months ago that they need to
+      come up with their own parts list. Apparently they have not done so.
+      This will lead to several people doing a bunch of otherwise
+      unnecessary work.
+
+   3. As far as I know, the Training group is not using the MSP. If this is
+      true you do not need the following:
+
+      MSP Parts:
+	(1) 	137502-001 	74F244		
+	(1)	137547-001	AS573		
+	(2)	137440-001	ALS245		
+	(4)	137694-120	256Kx4 DRAM	
+	(1)	137538-002	34010-50	
+	(1)	144008-005	50 MHz Osc	
+
+      Notice that the 256Kx4 DRAMs are among the unneeded parts.
+					
+   4. I believe they are using the 12 Bit A/D which is not used by Street
+      Driver. The 12 Bit A/D and associated parts are not on the Street
+      Driver parts list.
+
+   5. Note: VRAMs are specified as 120 ns with alternates of 100 ns and 
+            80 ns.
+
+	    DRAMs are specified as 120 ns with an alternate of 100 ns.
+
+   6. The MultiSync II with sockets has failed and I have no way to test
+      VRAMs other than to build boards, which isn't going to happen.
+      (There was only one of the two boards with sockets built because
+      Chris Downend decided that Karen had more important things to do.)
+									4 of 4
+      There are currently two approved VRAMs:
+		Toshiba: TC528126BJ-10
+		Micron:	 MT42C8128DJ-10
+
+      The boards we have already built used mostly Micron MT42C8127DJs which
+      have been discontinued and TI TMX48C121DZs. The TMX means it is a
+      Pre-Prod part which I will not approve. The Production parts (TMS)
+      were supposed to be out last April; they weren't. Then they were 
+      supposed to be out in June. Phil, the TI guy, doesn't know anything 
+      about it (or anything else for that matter).
+
+      When you buy VRAMs please try to get some Micron MT42C8128DJ-8
+      and some TI TMS48C121DZ-10 and -80 if they are available. No TMX
+      parts, please.
+      
+  7. This word just handed to me: ManMan reports there are 4000 VRAMs in
+     inventory. 
+
+     137693-100  IC,VRAM,128KX8,100NS,CMOS,40P SOJ
+
+      
+Regards,
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 25 June 1992
+
+
+GSP Evaluation Board
+--------------------
+On Monday I received a MultiSync board modified to be used with the GSP
+Evaluation Board. It uses a GAL to create an additional 2M Bytes of address 
+space on the Expansion Bus that will accept the DTACK signal from the 
+34020. Existing peripherals will work with no mods.
+
+On Tuesday I received GSP Evaluation Boards ready to be tested. So far:
+
+  I have tested most of the GALs used for addressing and they operate as 
+  designed;
+
+  I can flash the LEDs, including the one on the GSP local bus;
+
+  VRAM Refresh works;
+
+  The board produces Video Sync;
+
+  I have found the cause of the stuck data bit;
+
+I hope to have video on the screen soon.
+
+
+DSK II and DSK II Dev
+---------------------
+The plots for DSK II appear to be ok, but the board has been put on hold to 
+do the DSK II Development board with the DSP32C PGA version so it can be used 
+with the ICE.
+
+I have approved the plots for the DSK II Dev Board and we should have film
+and fab by now.
+
+How many boards to order?
+
+I suggest we buy a DSP32C PGA (WE-DSP32C-R33-100) for each board. Otherwise
+the ICEs will end up sans DSP32Cs. (Note, the PQFPs are F33 and the PGA is 
+R33.)
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 10 July 1992
+
+
+GSP Evaluation Board
+--------------------
+It produces sync and I am able to put video on the screen through the 34020 
+host interface.
+
+It passes the VRAM test through the host interface.
+
+It runs some of the 34010 memory test code but not all of it. I believe the
+VRAMs are working; if they aren't we will need a digital 'scope and a
+logic analyzer to fix it.
+
+The DSP32Cs seem to work although I can't get the memory tests to properly 
+work through the 34020 host interface. I believe the DSP32Cs are working.
+if they aren't we will need a digital 'scope and a logic analyzer to fix it.
+
+I had a problem getting the AT&T RAMDAC to work properly. The Brooktree
+didn't work, either. The problem was solved by a Brooktree applications
+engineer who asked if I had initialized the Pixel Read Mask Register.
+(I hadn't.)
+
+As a result of this problem I have discovered that the the Brooktree 478 and
+AT&T 478 are not the same. The AT&T part has a internal reference, while the
+Brooktree part does not. I will change the circuit to use the Brooktree part. 
+I believe it will then be able to use either.
+
+I believe the board is now working and ready to be programmed.
+
+I have three working boards (two of which need minor mods) and one board
+that needs all the mods.
+
+I have one MultiSync that has been modified and tested with a GSP board,
+one MultiSync II that has been modified and tested with a GSP Board, and
+another MultiSync II that has been modified and is still being tested.
+
+Dennis has done a very nice job in getting the GSP Boards built and the 
+MultiSync IIs modified.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 16 July 1992
+
+
+GSP Evaluation Board
+--------------------
+It is now running all the memory tests. The problem turned out to be that
+while, in a system with no host the 34030 stuffs the low 4 bits of the
+Interrupt Vector into the CONFIG register (to set up the memory 
+configuration), it isn't supposed to do it when you DO have a host.
+
+Well, it does it anyway.
+
+I have fixed the white line on the left side of the screen.
+
+I still haven't gotten the DSP32C memory tests to work although I believe the 
+DSP32Cs are working.
+
+Phil Davis from TI is going to try to get us an emulator on loan for next 
+week.
+
+
+Other
+-----
+I talked to Brian Smith from Intel and suggested they do an IC for use with 
+the i860 that would be used with VRAMs. It would have:
+
+   1. Address multiplexing for the VRAMs;
+   2. VRAM Refresh;
+   3. Display Refresh;
+   4. Sync Generator;
+   5. A secondary cache that knows about VRAM page mode and block writes.
+
+These things should all be programmable.
+
+These are all things that the 34020 does. Unfortunately the 34020 does not
+have a FPU and TI seems to have dropped plans to produce a 34020 with a
+34082 FPU built-in.
+
+Without a secondary cache (or even a buffer) that knows about VRAM page mode 
+and block writes the i860 is a crippled machine.
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: P15 Failures
+Dt: 17 July 1992
+
+
+Summary:
+
+Date	    Parts	Fail  Fail % 
+-------	    ---------   ----  ------
+6/30/90	    170	 	 2     1.2%
+
+8/3/90	    617 total   10     1.6%	7 Address Line	
+					1 not blank
+					1 RBIT not set
+					1 RBIT set and verified but can still
+					     read EPROM
+
+1/18/91	    2941 total	133    4.5%	39.8% of bad parts were received 
+					non-blank
+
+2/8/91	    3741 total  163    4.4%
+
+
+5/31/91	    batch of	 33    7.0%
+	      470
+
+	    batch of 	  6    1.3%
+	      450
+
+   "Out of the first batch of 470 parts there were 437 good ones and 33 bad 
+   ones for a failure rate of 7.5% . Eight parts were originally classified 
+   'bad' because the RBIT did not verify. I checked these parts manually and 
+   verified that the RBIT was working even if it did not verify.
+
+   I don't know when this batch of parts was bought, or if they are TMS parts,
+   but they all (the 470) seem to have the TI logo on them. 
+
+   Out of the second batch (450 parts) so far Tam has had 240 good parts and 
+   6 bad parts for a failure rate of 2.4%
+ 
+   Tam has noticed that when the parts come in the plastic tubes they have a
+   high failure rate (about 8%). When they come in the blue carriers they have
+   a much lower failure rate (about 2%). However, this also correlates to the
+   part's label. Lately, the ones that come in the blue carriers have the 
+   correct silkscreen label; the ones that come in the tubes are incorrectly 
+   labeled (they have TI's logo on them and the other information is 
+   incorrectly placed.)"  from Status Report 31 May 1991
+
+
+6/21/91	  from Status Report
+
+   "I talked to Thom Dempsey, Boyd Reed, and Ken Kelly (product engineer) from
+    TI in a conference call.
+
+    According the Ken Kelly:
+   	a. The data retention tests in Houston have been ok, they shipped
+	   parts to us today.
+
+	b. The parts we received that were filled with zeros may have been
+	   the result of operator error; the operator may have inadvertantly 
+	   selected an EPROM test which is fatal since OTPs cannot be erased."
+
+
+ASIC65s made for Road Riot as of 6/26/91:
+
+Date		Parts Received 		Good	Bad
+----		--------------		----	----
+5/28/91		    470			437	33
+5/31/91		    450			435	15
+6/12/91		    372			325	47  
+   [Out of these three batches of 1292 parts, there were 87 failures (that 
+    were not salvaged) of which 20 were received non-blank. This accounts 
+    for 23% of the failures.]
+
+6/18/91		    528			516     12
+6/25/91		    280			272	 8	
+6/26/91		    325			317      8	
+		    ---			---	--
+		   2425		       2302    123
+		   	      Salvaged  +24    -24	
+			      	       ----    ---
+Total		   2425		       2326     99  (4.3%) 20% of the failures
+							   were non-blank.
+
+
+
+Steel Talons ASIC65s (from STAT118.DOC, 10/25/91):
+-------------------------------------------------	              
+				      Date ('91)   Good    Bad    
+			           -----------     ----    ---
+	    Incoming = 390	   8/14 - 8/20	   390      0	
+	    Incoming = 475	   8/21 - 8/29	   473	    2
+	    Incoming = 300	   8/29 - 8/30     296      4 
+	    Incoming = 265	   9/3		   259      6
+	    Incoming = 110	   9/9		   107      3
+	    Incoming = 100	   9/17		    98      2
+	    Incoming = 100	   9/24		    99      1
+	    Incoming = 100	   10/2		    94      6
+	    Incoming = 100	   10/7		    95      5
+	    Incoming = 130	   10/14	   128      2
+	    Incoming = 100	   10/23	    95      5
+	    Incoming = 100	   10/24	   100      0
+
+Total as of 10/24/91:	2270 parts	2234 good	36 bad	= 1.59%
+
+
+More Road Riot:
+				Date ('91)   	Good    Bad    
+			       -----------   	----    ---
+	    Incoming = 102	   11/8	     	102      0
+	    Incoming =   6	   11/13     	  6      0
+	    Incoming =  60	   11/26     	 60      0
+	    Incoming =  80	   12/2	     	 80      0
+	    Incoming = 105	   12/3	     	102      3
+	    Incoming = 340	   12/4	     	327     13
+	    Incoming = 240	   12/5	     	236      4
+	    Incoming = 100	   12/11     	 99      1
+	    Incoming =  23	   12/13     	 22      1
+	    	     -----			-----	----
+		      1056			1034	22  (2.0%)
+---------------------------------------------------------------------------
+				Date ('92)   	Good    Bad    
+			       -----------   	----    ---
+	    Incoming = 270	   2/14	     	268      2  (0.7%)
+	    Incoming = 250	   2/19	     	243      7  (2.8%)
+	    Incoming =   9	   3/3	     	  4      5  (55.5%)
+	    Incoming = 300	   3/4	     	275     25  (8.3%)
+	    Incoming = 350	   3/17     	314     36  (10.3%)
+	    	This batch of 350 parts had, from one tube:
+	      	   1 passed;
+		   2 failed to Set the RBIT
+		  23 failed to program
+	    Incoming =  66	   3/26	     	 39     27  (40.9%)
+	    Incoming =  27	   3/26	     	 26      1  (3.7%)
+	    Incoming = 200	   3/31	     	169     31   
+	    Incoming =  34	   4/3	     	 34      0  
+	    Incoming = 100	   4/6	     	 53     47  
+	    Incoming =  47	   4/7	     	 47      0  
+	    Incoming = 121	   4/9	     	120      1  
+	    Incoming = 144	   4/13	     	142      2  
+	    Incoming =   3	   4/22	     	  3      0  
+	    Incoming = 200	   5/6	     	200      0  
+	    Incoming = 255	   5/13	     	255      0  
+	    	      -----			----	---
+		      2376			2192	184 (7.7%)
+
+Guardians:
+				Date ('92)   	Good    Bad    
+			       -----------   	----    ---
+	    Incoming =  34	   5/27	     	 31      3   (8.8%)  
+	    Incoming = 104	   5/28	     	 96      8   (7.7%)  
+	    Incoming = 143	   6/1	     	136      7   (4.9%) 
+	    Incoming = 101	   6/2	     	100      1   (1.0%)  
+	    Incoming = 152	   6/4	     	151      1   (0.6%)  
+	    Incoming = 122	   6/5	     	120      2   (1.6%)  
+	    Incoming = 120	   6/8	     	108     12   (10.0%)  
+	    Incoming = 135	   6/9	     	135      0   (0%)  
+	    Incoming = 119	   6/10	     	119      0   (0%) 
+	    Incoming = 178	   6/15	     	164     14   (7.9%)  
+	    Incoming =  87	   6/16	     	 80      7   (8.0%)  
+	    	      -----			-----	----
+	    		1295			1240	 55  (4.3%)
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 24 July 1992
+
+
+GSP Evaluation Board
+--------------------
+I have turned it over to Max and Stephanie. Max has gotten stuff on the
+screen.
+ 
+We have received the loan of an emulator for the 34020. It doesn't work.
+
+
+
+GSP Evaluation Board Test Software
+----------------------------------
+The GSP Evaluation Board test software comes in two versions:
+
+   1. It runs on a MultiSync Board at $2 0000 and lives on the VAX in 
+      [MARGOLIN.GSPE]
+
+   2. It runs on a MultiSync II Board at $4 0000 and lives on the VAX in 
+      [MARGOLIN.GSPEMS2]
+
+
+There are two things to note:
+
+   1. The Emulator memory must be mapped for the program being run.
+
+   2. The GSP Evaluation Test Program is considered an Application Program
+      by Self-Test; it is run by taking the system out of Self-Test.
+
+
+DSK II
+------
+I hereby pronounce it working. 
+
+I have turned one over to Terry and he has brought the game up on it. 
+
+I have updated MultiSync II Self-Test to use this board. [MARGOLIN.MS2]
+
+The current version is ms2_103.vlda for slow standard speed (512 x 288) and 
+ms2_103M.vlda for medium speed (512 x 384).
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: My Resignation
+Dt: 24 August 1992
+CC: Sandra Brown
+
+
+This is to inform you of my resignation from Atari Games, effective
+15 September 1992.
+
+ 1. I would like to continue my medical insurance (including dental) as 
+    provided under COBRA.
+ 
+ 2. I would like a lump sum distribution of my 401K money as soon as possible,
+    in any event not to exceed 30 days from my termination date.
+
+If there are forms that I need to fill out in order do these things, then I
+would like these forms this week so I can study them before filling them out.
+
+
+The highlights of my contribution to the company are as follows:
+
+						 		 Gross Sales
+Games:								(Approximate)
+								-------------
+	BattleZone (graphics algorithms 			  
+		    and hardware sounds) 			  $62,500,000
+
+	Star Wars (project engineer and				  
+		   graphics algorithms)			  	  $45,000,000 
+
+	Hard Drivin'/Race Drivin'/Stun Runner/
+	Panorama/Steel Talons (project engineer,
+	self-test, instant replay, and integer 
+	3D graphics algorithms)			  		  $70,000,000
+								 ------------
+								 $177,500,000
+
+
+Other: Rick Moncrief and I performed RFI field studies in California, Oregon, 
+       and Nevada in 1980 and, with communications attorney Jamie Cook, wrote
+       the proposal that pursuaded the Federal Communications Commisssion to
+       reclassify Coin-Operated Games from Class B to the less restrictive
+       Class A, thereby saving the company millions of dollars that would have
+       otherwise been required to meet Class B standards. The other companies 
+       in the coin-op business have similarly benefitted from this work.
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 28 August 1992
+
+
+GSP Evaluation Board
+--------------------
+I have identified what is causing the problems that Max reported and I am
+working on a fix.
+
+
+Other
+-----
+When people leave Atari the tendency is for their VAX files to become lost
+when their accounts are deactivated.
+
+If you don't want this to happen to my files (which contain all the Self-Test
+code) I suggest that you have someone with a PC and Network Card download all
+my files and then back them up on Tape. They can then be deleted from the
+PC if desired.
+
+I have created a listing that shows what was used where. [margolin]dirs.doc
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 4 September 1992
+
+
+
+GSP Evaluation Board
+--------------------
+1. The new mods appear to fix the problems that Max reported.
+
+2. I have fixed the 68010 routines that test the DSP32C memory. 
+
+   The DSP32C External Memory Simple Test takes 5 minutes. 
+
+3. I am working on a memory test that lives in the DSP32C. By the time the 
+   DSP32C C Compiler got through with my C program it was too to fit in the 
+   Internal Memory. The Assembly code it produced was also really ugly. I
+   will continue to work on it.
+_____________________________________________________________________________
+
+To: Texas Instruments DSP Hotline	Fax   (713) 274-2324
+
+Fr: Jed Margolin, Atari Games		Fax   (408) 434-3910
+
+Dt: 8 September 1992
+
+Re: TMS320C30 Emulation Port
+
+
+Can you provide documentation for the TMS320C30 Emulation Port? I am
+
+considering using it during Self Test.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: My Last Status Report
+Dt: 10 September 1992
+
+
+GSP Evaluation Board
+--------------------
+   The program runs with the new mods so I pronounce the board finished.
+   I have fixed the 68010 routines that test the DSP32C memory. 
+
+   The DSP32C External Memory Simple Test takes 5 minutes. I did not have time
+   to get the software done so the DSP32C can test its own external memory.
+
+Files
+-----
+[margolin]dirs.doc is a listing of what is where in my VAX files.
+
+On my PC I have created a file called pcdirs.doc on drive E: that
+lists PC files relevent to the Self-Test programs I have done.
+
+The files in drive E: contain the source code for 2101/2105 and 34010 test 
+routines as well as the OrCad schematics for the GSP Evaluation Board.
+
+I put them on drive E: so they would all be in one place; they also exist 
+on drive D: .
+
+
+MIDI
+----
+I came across the mods we did to make the TomCat DUART into a MIDI Port.
+I have done a schematic showing how this can be accomplished on Main/
+MultiSync/MultiSync II Boards.
+
+
+Texas Instruments
+-----------------
+In the course of trying to get documentation on the 34020 Emulation Port from
+Thom Dempsey and his idiot boss Greg Delagi, they said that the 34020's 
+Emulation Port was different from the ones used in their DSPs.
+ 
+When we got the '34020' Emulator it became obvious that they had lied.
+
+On Tuesday I called the DSP Hotline and asked for documentation for the 320C30
+Emulation Port, expecting them to say no.
+
+On Thursday I received voice mail informing me that I would be sent the
+"Emulation Porting Guide" and "Fundamentals of MPSD" (whatever that is).
+
+I am really curious about whether this is the Real Stuff. Unfortunatey, it 
+will arrive too late for me.
+
+
+Other
+-----
+As of Tuesday, September 15, 
+
+	   I
+	   	Am
+			Out-A-Here
+_____________________________________________________________________________
+
+{ On Tuesday, September 15, 1992, I handed Rick a piece of paper on which I 
+  had written the password to my Vax account. The password was "swordfish" .}

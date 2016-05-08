@@ -1,0 +1,4938 @@
+   Atari/Atari Games   Memos and Status Reports 1989   Jed Margolin
+___________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 12 January 1989
+
+
+
+Driver MultiSync
+----------------
+Leo is working on the MultiSync Board.
+
+I have submitted a CER for programmed part numbers.
+
+
+
+Driver ADSP II
+--------------
+I am ready with the inputs. We need to know which 1M ROMs to use.
+
+
+
+Self-Test
+---------
+I am working on the last routine.
+
+
+
+Parts to Manufacturing
+---------------------
+Manufacturing still owes us:
+	(8)	TWIG ICs
+	(180)	VRAM sockets
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 20 January 1989
+
+
+
+Driver MultiSync
+----------------
+We have ordered Rev 2 boards.
+
+
+
+Driver ADSP II
+--------------
+I have given Leon the inputs.
+
+
+
+Self-Test
+---------
+I have added a monitor test pattern at Rick Meyette's request.
+
+I have added the menu selection to disable broken controls.
+
+
+Manual
+------
+I have reviewed Rosalind's latest draft and made appropriate comments.
+
+
+
+Parts to Manufacturing
+---------------------
+I have received the eight TWIG ICs.
+
+They still owe us 180 VRAM sockets.
+
+
+
+Self-Test
+---------
+Norm Maeder is planning on having the Motor Amp PCB tested at two of the
+Tech Stations which are also used for repairing all the game boards.
+
+He would like to be able to test all the boards without having to change the 
+Test ROMs. Note that testing the boards includes running the game program.
+
+If I give him a special set of ROMs that allows him to set the motor force
+to 250 but which do not run the game (or the other tests) then they will
+have to change ROMs to test the Motor Amp.
+
+If I give him a special set of ROMs that does allow him to set the motor force
+to 250 and does run the game (and the other tests) then:
+
+	1. There is the chance that the ROMs will mistakenly get shipped
+	   in a game.
+
+	2. If Max changes the program he will also have to burn a special set
+	   of ROM 0 EPROMs so they will continue to be able to set the motor
+	   force to 250.
+
+	Now that Max has taken control of ROM 0 I cannot update the test 
+	programs on my own and still have them run the game.
+
+
+Tell me what you want me to do.
+
+
+
+	Jed
+_____________________________________________________________________________
+To:  Norm Maeder
+Fr:  Jed Margolin
+Re:  Driver Main Test Procedure
+Dr:  25 January 1989
+
+
+On the Test Procedure for the Driver Main PCB please add, starting with
+step 4:
+
+Step 4:	Select MONITOR TEST PATTERNS.	
+
+--->	The screen should show the Color Bars. Verify that the colors are
+	present.
+
+	Press Right Coin to bring up the MONITOR BRIGHTNESS screen.
+	Ignore this screen.
+
+	Press Right Coin again to bring up the Gray Scale Screen.
+	The screen starts with a white line on the left of the screen.
+	It then goes to black and gradually increases until it is
+	again full white on the right of the screen. 
+
+	There will probably be a faint line down the middle of the screen 
+	and two fainter ones (one at one-quarter screen and one	at 
+	three-quarters screen). These are normal.
+
+--->	What we are looking for are dots that are obviously out of place.
+	Dots that are out of place will typically repeat every eight lines.
+==============================================================================
+Note to Norm:
+
+	These 'dots out of place' are VRAM defects. In about 20 prototype
+and preprod boards (640 VRAMs) I have only seen one VRAM with this problem.
+I do not know if it will be a problem in production.
+
+	This problem cannot be detected by a test program. It must be checked
+visually. 
+
+	If it is determined that a VRAM is defective it must be located and
+replaced. I have written a program that produces a line on the screen and
+indicates which VRAM is producing that line. The Left and Right Coin switches
+cause the line to move left or right, again and indicating which VRAM is 
+producing that line. 
+
+	This is an undocumented test program that is run from Diagnostics mode.
+It is undocumented because I do not know how useful it will be. (I only have
+one VRAM with this problem.)
+
+	If you find Driver main boards with these VRAM problems please let me
+know. Erik and I will try to figure out if my test program can locate these
+VRAMs with Dots-Out-Of-Place.
+
+
+ 
+	Jed
+_____________________________________________________________________________
+
+To:  Norm Maeder
+Fr:  Jed Margolin
+Re:  Driver Main Test Procedure
+Dt:  30 January 1989
+
+
+I thought of another thing we should add to the test procedure.
+
+
+In the new Step 4, after verifying that there are no dots out of place,
+
+--->	Go on to the Scroll Test Screen. This shows diagonal lines and
+	a hex number (0-F). 
+
+	(There is a screen that just shows diagonal lines. Keep going until 
+	you find the diagonal lines with the number.)
+
+--->	The diagonal pattern should move smoothly left and right as the hex
+	number changes.
+
+	(The hex number is the value put into the scroll register at 140M to
+	scroll the display.)
+
+
+
+	Thanks,
+
+		Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 30 January 1989
+
+
+
+Driver MultiSync
+----------------
+We have ordered Rev 2 boards.
+
+I have converted the Driver Test program to run on the MultiSync Board at
+medium speed. I am waiting for a standard speed monitor which I need in order
+to convert the program to run at standard speed.
+
+
+
+Driver ADSP II
+--------------
+I have received plots but have not had time to check them.
+
+
+
+Manual
+------
+I have reviewed Rosalind's last draft and made appropriate corrections.
+
+
+
+Manufacturing
+-------------
+I have reviewed Jim Buchanan's proposed test procedure, made appropriate 
+comments, and returned it to him.
+
+I have asked Norm Maeder to add to the test procedure:
+
+   1. Check the Monitor Gray Scale Test to look for bits-out-of-place (There
+      are some VRAM shift register defects that cannot be detected in software.)
+
+   2. Check the Monitor Scroll Register Test.
+
+
+Self-Test
+---------
+I have added the ability for Manufacturing to run the Steering Wheel force
+up to 250, while normally it will only go up to 100.
+
+I have changed the Line Voltage Calibration program so it can be set to 220V.
+The calibration factor now changes as long as one of the Coin Switches is held
+down, instead of requiring a pulse for each change. Going from 120 to 220 takes
+about 30 seconds.
+_____________________________________________________________________________
+_____________________________________________________________________________
+									1 of 2
+Driver Main Test Procedure
+Jed Margolin
+2 February 1989
+
+
+DOTS-OUT-OF-PLACE
+-----------------
+
+On the Test Procedure for the Driver Main PCB please add, starting with
+step 4:
+
+Step 4:	Select MONITOR TEST PATTERNS.	
+
+--->	The screen should show the Color Bars. Verify that the colors are
+	present.
+
+	Press Right Coin to bring up the MONITOR BRIGHTNESS screen.
+	Ignore this screen.
+
+	Press Right Coin again to bring up the Gray Scale Screen.
+	The screen starts with a white line on the left of the screen.
+	It then goes to black and gradually increases until it is
+	again full white on the right of the screen. 
+
+	There will probably be a faint line down the middle of the screen 
+	and two fainter ones (one at one-quarter screen and one	at 
+	three-quarters screen). These are normal.
+
+--->	What we are looking for are dots that are obviously out of place.
+	Dots that are out of place will typically repeat every eight lines.
+=============================================================================
+Note:
+
+	These 'dots out of place' are VRAM defects. In about 20 prototype
+and preprod boards (640 VRAMs) I have only seen one VRAM with this problem.
+I do not know if it will be a problem in production.
+
+	This problem cannot be detected by a test program. It must be checked
+visually. 
+
+	If it is determined that a VRAM is defective it must be located and
+replaced. I have written a program that produces a line on the screen and
+indicates which VRAM is producing that line. The Left and Right Coin switches
+cause the line to move left or right, again and indicating which VRAM is 
+producing that line. 
+
+	This is an undocumented test program that is run from Diagnostics 
+mode. It is undocumented because I do not know how useful it will be. (I only 
+have one VRAM with this problem.)
+
+	If you find Driver main boards with these VRAM problems please let me
+know. Erik and I will try to figure out if my test program can locate these
+VRAMs with Dots-Out-Of-Place.
+
+
+Driver Main Test Procedure						2 of 2
+
+SCROLL REGISTER TEST
+--------------------
+
+In the new Step 4, after verifying that there are no dots out of place,
+
+--->	Go on to the Scroll Test Screen. This shows diagonal lines and
+	a hex number (0-F). 
+
+	(There is a screen that just shows diagonal lines. Keep going until 
+	you find the diagonal lines with the number.)
+
+--->	The diagonal pattern should move smoothly left and right as the hex
+	number changes.
+
+	(The hex number is the value put into the scroll register at 140M to
+	scroll the display.)
+==============================================================================
+STEERING WHEEL TESTS (Motor Amp PCB)
+
+	The normal force limits are +/- 100.
+
+	To properly test the Motor Amp PCB the limits need to be changed to
+	+/- 250.
+
+	This is done by grounding connector J4, pin 4.
+==============================================================================
+SLAPSTIK TEST
+
+   	Insert test ROMs into 200Y and 210Y. (Test ROMs with known checksums 
+	will be supplied.)
+
+	Go to Main Test Menu and select 'Special Functions'.
+
+	In the Special Functions Menu select 'Main Board Checksums'
+
+	The Checksum listed next to ROM 7 H should be the same as the checksum
+	of the ROM in 200Y.
+
+	The Checksum listed next to ROM 7 L should be the same as the checksum
+	of the ROM in 210Y.
+
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 4 February 1989
+
+
+
+Self-Test
+---------
+I have added the on-screen display of the program version number for both
+the Main Board and the Sound Board.
+
+The Self-Test programs for the Main and Sound Boards are ready to be released.
+
+
+
+Driver MultiSync
+----------------
+We have received the Rev 2 boards; one is almost stuffed. (It was delayed 
+because Manufacturing was shut down for Inventory and Karen couldn't get parts
+from them.)
+
+I have converted the Driver Self-Test to run on the MultiSync at medium speed
+and am almost done converting it to run at standard speed. I will need to
+convert the steering wheel tests to use the Optical Steering Wheel reader.
+
+
+
+Driver ADSP II
+--------------
+I have shown Leon a schematic (and therefore board) error but have still
+not had time to check the plots.
+
+									2 of 2
+Electronic Coin Mechs
+---------------------
+1. Powering an electronic coin mech from the existing transformer is marginal.
+The ideal solution is for Ireland to use a 5 volt switcher that also has a
++12 volt output. 
+
+   If that cannot be done for Hard Drivin' they should use a separate 12 volt 
+supply. The electronic coin mech requires 11 - 15 volts at 220 ma continuous, 
+700 ma peak (assuming no sorter). A linear supply with a 12 V transformer, 
+four 1N5401 diodes, a 3300 uF capacitor, a 12 volt 3-terminal regulator with 
+heat sink, a 10 uf capacitor and a few 0.1uF capacitors should do the job.
+
+2. In reading the manual I could find nothing to suggest that it could be
+set up to produce more than one pulse per coin.
+
+   A question that only the manufacturer can answer is:
+
+	If two channels are both programmed for the same coin will both
+	outputs be pulsed, and if so, will they pulse at the same time?
+
+   That might take care of having a two Swiss franc coin produce two pulses but
+would not help a five Swiss franc coin produce five pulses.
+
+How about this:
+
+   For a 2 franc coin to produce 1 credit:
+	Set Coin Mode to: 1 coin/1 credit
+	Set Right Mech Multiplier to: 1 coin counts as 1 coin. 
+
+   For a 5 franc coin to produce 3 credits:
+	Set Coin Mode to: 1 coin/1 credit
+	Set Left Mech Multiplier to: 1 coin counts as 2 coins 
+	Set Bonus Adder to:	2 coins gives 1 extra coin
+
+Unfortunately, if they were both set up sumulanteously:
+	two 2 franc coins will also give 3 credits. oops.
+
+
+There is a hardware solution: a circuit that outputs 3 pulses for every 1 input.
+
+The real solution is: Add the capability to the SOFTWARE, either in the game or
+in the coin mech. 
+
+In the game this would require adding to the Left Mech Multiplier:
+	1 coin counts as 3 coins.	{5 franc coin}
+
+The other settings would be:
+	Coin Mode:			1 coin/1 credit
+	Right Mech Multiplier:		1 coin counts as 1 coin {2 franc coin}
+	Bonus Adder:			No Bonus Adder
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 4 February 1989
+
+
+
+Self-Test
+---------
+The Self-Test programs for the Main and Sound Boards have been released.
+
+
+
+Driver MultiSync
+----------------
+We have received the Rev 2 boards; one is almost stuffed. (It was delayed 
+because Manufacturing was shut down for Inventory and Karen couldn't get parts
+from them.)
+
+I have converted the Driver Self-Test to run on the MultiSync at medium speed
+and am almost done converting it to run at standard speed. I will need to
+convert the steering wheel tests to use the Optical Steering Wheel reader.
+
+
+
+Driver ADSP II
+--------------
+I have shown Leon a schematic (and therefore board) error but have still
+not had time to check the plots.
+
+
+
+Optical Steering Wheel
+----------------------
+I have given Art the circuits for the Single and Dual Optical Readers.
+
+
+
+Manufacturing
+-------------
+I was told that the Driver Main Boards were being held up because of parts 
+shortages caused by parts having recently been scrapped. I called around
+but was unable to verify it.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 13 February 1989
+
+
+
+Manufacturing
+-------------
+
+2000 pf capacitor on the Motor Amp Board:
+----------------------------------------
+
+The capacitor originally specified (2000 pF, 5%, NPO, 100V axial) was not 
+available.
+
+Candy found some 2000 pF, 5%, 500V Mica radial capacitors which were
+determined to be acceptable.
+
+The only other ones she could find were 1800 pF, 5%, NPO, 100V axial.
+
+The axial capacitor is within acceptable parameters and has the advantage of
+being auto-insertable.
+
+I advised her to take that into account along with the cost and to use her 
+own judgement.
+
+
+
+The 4066 gets real hot:
+----------------------
+
+Jim Buchanan and his group have noticed that the 4066 at 205B on Driver Main
+gets hot.
+
+When we looked at it we discovered that the 4066 is being supplied with
+Ground to +5V instead of -5V to +12V which is what I specified in my
+inputs to PC and which, indeed, appear on the schematic.
+
+The PC Board does not match the schematic.
+
+Since this circuit is essential for certain kinds of kits we could do later, I 
+agreed with Jim that the boards should all be modified.
+
+Since there is a good chance that the 4066s that have been powered up have been
+damaged I have also asked Jim to have them replaced on the Driver Main Boards 
+that have been powered up. (He thinks about 50 boards have been powered up.)
+
+I will do a test program to test the DUART circuit and add it to the Test Menu
+(as soon as I can).
+
+Art has been notified of this PC Design problem. 
+
+
+
+Driver MultiSync
+----------------
+I have received a Rev 2 MultiSync Board.
+
+I have converted the Driver Self-Test to run on the MultiSync at standard
+speed and am almost done converting it to run the compact Steering Wheel.
+
+
+
+Driver ADSP II
+--------------
+It is on hold until I am able to give it proper attention.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 15 February 1989
+
+
+
+Driver MultiSync
+----------------
+1. The Rev 2 board is up and working without mods, except as explained in
+item #4.
+
+2. I have converted Driver Self Test to run on MultiSync Standard speed,
+including steering wheel tests for thr Optical Steering Wheel.
+
+3. I have signed the film for the Opto-Coupler boards for the
+Steering Wheel . The boards are 'Dual OSR' and 'Single OSR'. (OSR stands
+for Optical Steering wheel Reader.)
+
+4. During a chance meeting in the hall with Gary Stempler he informed me that 
+some time ago he had made some component changes in his SCUM circuit and
+that he had recently told Glenn to make these changes on the MultiSync Board.
+
+He also recommended that I change the SCUM clock buffer to an 'F' part 
+because of some problem they had had in Blasteriods.
+
+I reminded him that when I first came to him to ask his help in putting the
+SCUM circuit on the board he told me to just copy the circuit from a game, 
+which I did.
+
+When I tried to establish whether he knew about these changes when he directed
+me to copy the circuit from a game manual he got huffy and walked away.
+
+I now have a MultiSync Rev 2 board which we had planned to turn into Rev A 
+on which the SCUM circuit may or may not work properly.
+
+If he had informed me of these changes in a timely manner it would not have
+been a problem.
+
+Also, his having instructed Glenn to make changes on the MultiSync Board
+without asking me first, is totally unacceptable.
+
+
+Manufacturing
+-------------
+I am working on the test for the DUART circuit.
+
+
+Driver ADSP II
+--------------
+Still on hold.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+19 February 1989
+
+
+Rick and Erik,
+
+
+	This is where we are so far,
+
+
+On the production board set we have:
+
+1. The reason the program crashes is because the ADSP board has a flakey RAM.
+
+   When the screen says 'GSP Timeout' it means the GSP timed out waiting for 
+   the ADSP board.
+
+2. I found a bent lead under the board. The Color RAM passes the test, even at
+   5.5 Volts.
+
+   I would like to see more boards with 'bad' Color RAMs.
+
+   There are several new Diagnostic programs to test Color RAMs. I have 
+   documented them at the end of this memo.
+
+   The new GSPTST correctly reports the locations of the Color RAMs that
+   fail the test.
+
+3. The new GSPTST Version 8.1 is available [Margolin.GSPTST]GSPTST_R8_1.VLDA .
+   I have made some ROMs but they will not run the Game. (Max has to do his
+   thing with them.) 
+
+------------------------------------------------------------------------------
+
+Erik:
+
+1. Replace R165.
+
+2. On my Rev A Board:
+
+   The Color RAMs (30W, 40W, 30U, 40U, 30S, 40S) have bravely given their
+   lives in order to verify that the color RAM test correctly identifies
+   the locations of Color RAMs that have failed the test.
+
+   Please have Karen remove them, put sockets on the board, and install
+   new RAMs.
+
+   The old Color RAMs should be disposed of with full honors.
+
+
+	
+
+   Jed
+
+
+
+Tests that are not documented in the Manual
+-------------------------------------------
+
+1 1 1 1 1 1 1 1	     Switches are All ON (In case people read the manual
+		     which says that Up is OFF.
+
+X X 1 1 1 0 0 0	     Identify VRAM	(ORs ones) Use INC and DEC to scroll
+		     the line Left and Right.
+
+X X 1 1 0 0 0 0	     Identify VRAM (ANDs zeros) Use INC and DEC to scroll
+		     the line Left and Right.
+
+X X 0 0 0 0 1 0	     Write, then Read Red/Green Color RAM, adr=155, data=5555
+
+X X 0 0 0 1 1 0	     Write, then Read Red/Green Color RAM, adr=2AA, data=AAAA
+
+X X 0 0 1 1 1 0	     Write, then Read Blue Color RAM, adr=155, data=5555
+
+X X 0 0 1 0 1 0	     Write, then Read Blue Color RAM, adr=2AA, data=AAAA
+
+X X 0 0 1 1 0 0	     Color RAM Test Loop
+
+_____________________________________________________________________________
+
+Mary,
+
+	Would you please find out the lead time for:
+
+138000-001  Opto Sensor, Dual, Custom
+
+138001-001  Opto Sensor, Single
+
+We are using them on the Driver Compact and the Dual unit is custom.
+
+Thanks,
+
+	Jed 
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 24 February 1989
+
+
+
+Manufacturing
+-------------
+
+1. I investigated a production board set that had been approved by Test.
+
+   The screen had said 'GSP Timeout' but it was not a GSP problem.
+
+   The reason the program crashed was because the ADSP board had a bad 
+   RAM. The Test Program reported the location of the bad RAM. We replaced it
+   and the program ran.
+
+   I found a bent lead under the board in the Color RAM section. The Color RAM 
+   passes the test, even at 5.5 Volts. I have advised Jim Buchanan to watch out
+   for bent leads in this section.
+
+   The Color RAM test had a bug that prevented it from reporting the RAM 
+   location if more than one Color RAM failed the test. I have fixed the problem
+   in Version 8.1 .
+
+   I have also added several Diagnostic programs to test Color RAMs. They will 
+   not be documented for public use.
+
+2. I have added routines to test the DUART (internal loop) and DUART circuit 
+   (with a Test jumper at J2/J3).
+
+------------------------------------------------------------------------------
+3. On Tuesday it was determined that there was some kind of problem causing
+   Game Resets. We modified three board sets to generate an NMI instead of
+   a WatchDog and ran them overnight in Attract Mode.
+
+   By Wednesday morning all three games were hung.
+
+   The problem appear to be caused by noise on the /GSPWAIT wait that 
+   occasionally causes the 68010 to miss /DTACK, causing it to hang.
+
+   The Bus Error Timeout Counter is less susceptible to this noise and
+   thus did not generate a Bus Error signal.
+
+   We tried two different fixes. One was to use a different address validation
+   strobe on the GSP; the other was a resistor/capacitor to reduce the noise,
+   generating a 1 ns delay in the signal which is ok.
+
+   On Thurday Morning both modified games were still running. The unmodified
+   game had hung.
+
+   The preferred fix is to clean up the signal rather than move the noise
+   burst, so that is what we have given Manufacturing. (a 33 ohm resistor in
+   series with /GSPWAIT at 190E with a 39 pF capacitor to ground.)
+
+   Between Wednesday night and Thursday morning I figured out a better fix,
+   which is use a spare section of the LS244 at 170P to clean up /GSPWAIT.
+
+   The timing margin in the GSPWAIT circuit is 23 ns so the 18 ns of the LS244
+   is ok.   
+
+   We tried it Thursday night and gave it to Manufacturing on Friday. 
+   This is the preferred fix.
+
+   I have given the information to Art; he will ECN the assembly drawing and 
+   start the artwork for the next rev board.
+   
+
+   Assisting in the investigation: Max, Erik, and Stephanie.
+------------------------------------------------------------------------------
+4. We have released Version 8.1 software. Rick Owens has the appropriate 
+   documentation.
+
+   I have given Art a copy of the ROM Release Sheet and he will ECN the
+   parts lists.
+
+   Since we will have several different versions because of languages and
+   Left and Right Hand Drive he will maintain different separate parts
+   lists rather than have everything on one parts list.
+
+
+Oops Board for the Gate Array
+-----------------------------
+
+1. The Gate Array has some differences from the original circuit. The original
+   circuit would have to be modified and tested.
+
+2. Because the Oops Board would be physically separated from the ground plane,
+   ground noise might be an insurmountable problem.
+
+3. The original circuit has 17 chips.
+
+4. How would the Oops Board connect to the PLCC footprint?
+
+5. Security is lost.
+
+6. A more workable solution is to do a new Main. Unfortunately there are
+   only 13 empty spaces.
+
+7. Increasing the space between boards to accomodate the Oops Board will
+   increase the length of the Expansion Bus Interconnect Cable with
+   possibly deleterious results.
+
+
+
+As per your order I have given Art a copy of the original circuit and asked
+him to analyse it but not to do anything about it.
+
+
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 10 March 1989
+
+
+
+German Version
+--------------
+I have completed work on the German Version of Self-Test.
+
+
+MultiSync
+---------
+Film and fab for MultiSync Rev A is ready to be signed off.
+
+We need to decide on the 40 MHz oscillator module before releasing
+the parts list.
+
+
+
+Driver Compact
+--------------
+We have received the boards for the Single Optical Steering Wheel Reader
+and for the Dual Optical Steering Wheel Reader. Karen has built some up.
+We should test them electrically.
+
+The Dual Opto Sensor (138000-001) is listed as a custom part. I have asked 
+Mary Burnias to find out the availability of this part as well as the 
+Single Opto Sensor (138001-001).
+
+
+Stun Runner
+-----------
+I have given them a Rev 2 MultiSync Board (Board #2) so they can verify that 
+the SCUM circuit still works.
+
+I do not have a monitor cable so I was not able to test the board. When Glenn
+put it on his system it worked except for the DUART, which he said he will fix.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 17 March 1989
+
+
+Driver Main - Color RAM Problem
+-------------------------------
+There is a problem with about 7% of the boards; the Color RAM fails 
+Self-Test but the monitor test patterns are ok and the game is ok.
+
+The problem is a circuit whose timing is marginal. The quick fix is a
+resistor and capacitor. Erik has given this mod to Manufacturing and
+and has also faxed it to Ireland. I have given it to Art and asked him
+to ECN the Assembly drawing. Erik and I are working on a real fix for 
+the next PC Board Rev.
+
+
+MultiSync
+---------
+We have signed off Film and Fab for MultiSync Rev A.
+
+We need to add the Color RAM fix to it; it looks like we will be 
+able to do it before Purchasing buys boards.
+
+We need to decide on the 40 MHz oscillator module before releasing
+the parts list.
+
+
+Driver Compact
+--------------
+We have received the boards for the Single Optical Steering Wheel Reader
+and for the Dual Optical Steering Wheel Reader. Karen has built some up.
+We should test them electrically.
+
+
+Opto Sensors
+------------
+According to ManMan the stock status and cost are as follows:
+
+138000-001  Dual Opto Sensor		238	$2.61
+138001-001  Single Opto Sensor		790	$1.00
+
+Melanie Martin has checked into the availability of the Opto Sensors.
+Accoring to Honeywell (who makes the sensors) they are available
+in 6-8 weeks, maybe sooner. There is stock of fewer than 200 in distribution.
+
+
+Stun Runner
+-----------
+Glenn has repaired the DUART in the Rev 2 MultiSync Board (Board #2) and the   
+board is now 100% functional, including the SCUM. He has also repaired the 
+REV 1 board so that it now works. Altogether, they have three working 
+MultiSync Main Boards.
+
+
+	Jed
+_____________________________________________________________________________
+_____________________________________________________________________________
+
+To: Pat Brosnan
+Fr: Jed Margolin
+Dt: 21 March 1989
+Re: Problem with Hard Drivin' board set in France
+
+
+
+"ADDRESS ERROR" indicates a software bug, possibly because it is trying to
+report a hardware problem with the ADSP board that was not simulated in
+testing that software version.
+
+
+Please find out:
+
+1. Was this one of the games at ATE that was sold?
+
+2. What version of software is it? The software version appears on the 
+   Main Test Menu on all production software.
+
+3. Does the ADSP Test in Automated Self-Test report bad ADSP Memory?
+
+4. Does it do it at the start of the ADSP Test or at the end?
+
+5. Does the game run?
+
+
+
+If I know what software release it is I can simulate an ADSP memory error 
+and determine if the problem is software. 
+_____________________________________________________________________________
+
+To: Pat Brosnan
+Fr: Jed Margolin
+Dt: 22 March 1989
+Re: Problem with Hard Drivin' board set in France
+
+
+It sounds like a problem with the ADSP Board.
+
+There are actually two problems:
+   1. The game doesn't run.
+   2. Self-Test gets an Address Error when it tests the ADSP Memory.
+-----------------------------------------------------------------------------
+Part 1 (In order to be rigorous about this thing):
+
+1. The most recent software available in English Language, Left Hand Drive
+   is Version 8.1  . Please confirm this is what they have. (The software 
+   version appears on the Main Test Menu.)
+
+2. Does the Driver Main PC Board have the mod to the GSPWAIT circuit?
+   This is shown on Drawing No. A044425-01 "ASSEMBLY, SUB, DRIVER MAIN PCB"
+   The mod to the GSPWAIT circuit is the mod that starts:
+
+   MODIFICATIONS TO ASSEMBLIES USING 044426-01 REV A,B and C PC BDS:
+	1. COMPONENT SIDE OF PC BOARD:
+	   FOLLOW THE TRACE FROM 190E PIN 1 TO THE FEEDTHROUGH.
+
+	and so on.
+
+3. Did the game ever run? 
+------------------------------------------------------------------------------
+Part 2:
+
+4. This sounds like a problem on the ADSP Board. 
+
+   Could you give them a new ADSP Board and send the old one to me?
+   (Sending me the whole board set would be better.)
+   
+   The reason is that I don't think I have seen this problem before. When I 
+   test the memory routines I usually pull out the RAMs, one at a time. (I have
+   a board set with all the RAMs in sockets.)  This may be a problem that only
+   causes this software reporting problem when the RAM errors are at certain 
+   addresses.
+
+5. Rick has told me it is a chore to be sending boards through Customs and has
+   suggested that the main Distributor in each country where we sell these 
+   games have a spare board set so that individual boards can be more easily 
+   swapped.  What do you think?
+------------------------------------------------------------------------------
+Part 3:
+
+6. We will probably do a flying game on Hard Drivin' hardware but it won't be 
+   much like the TomCat game you saw. And it certainly won't be called TomCat.
+   I was really unpopular with management for insisting on doing the game and 
+   as a result now I only do hardware (and some test programs).
+
+
+	Regards,
+_____________________________________________________________________________
+
+To: Pat Brosnan
+Fr: Jed Margolin
+Dt: 23 March 1989
+Re: Problem with Hard Drivin' board set in France
+
+
+3. Audio problem: 
+
+    A. It is possible that in working on the ADSP board the Interconnect Cable
+       has become flakey. Try a new one.
+
+    B. If the Interconnect Cable is not the problem: 
+       If the Sound Wave ROM checksums are bad it could be because the ROM is 
+       bad or because there are circuit problems. One way to find out is to 
+       plug the ROMs into an empty socket on the Main Board and do ROM 
+       checksums in 'Special Functions'.
+
+       Location 200 V is ROM 4 H and 210 V is ROM 4 L. Do not unplug existing 
+       ROMs. Also, the ROM 7 pair will not work because they are connected 
+       through Slapstic which is not loaded.
+
+       This only works with 27512s. The Sound Program ROMs are 27256s which 
+       cannot be checked this way.
+
+4. Spare Board Sets at Distributors: Rick suggests one board set per Customs
+   boundary.
+
+5. I am sending you some block diagrams.
+
+6. Erik says he wants his case back first.
+
+
+
+	Regards,
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 23 March 1989
+
+
+
+Driver Main - Color RAM Problem
+-------------------------------
+
+I have given Art the real fix for the Color RAM problem, to update the
+board.
+
+
+
+MultiSync
+---------
+We have signed off Film and Fab for MultiSync Rev A.
+
+We need to add the Color RAM fix to it; it looks like we will be 
+able to do it before Purchasing buys boards.
+
+We need to decide on the 40 MHz oscillator module before releasing
+the parts list.
+
+
+Driver Compact
+--------------
+We have received the boards for the Single Optical Steering Wheel Reader
+and for the Dual Optical Steering Wheel Reader. Karen has built some up.
+We should test them electrically.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 27 March 1989
+
+
+
+Driver Main - Color RAM Problem
+-------------------------------
+We have gone out for Film for the new boards with the real fix for 
+the Color RAM problem.
+
+
+MultiSync
+---------
+Art had Gary do the board even though Joe had been scheduled to do it.
+
+I have received plots and schematics for the MultiSync board and sent the 
+schematic back with several part value corrections.
+
+
+Driver Compact
+--------------
+We have received the boards for the Single Optical Steering Wheel Reader
+and for the Dual Optical Steering Wheel Reader. Karen has built some up.
+We should test them electrically before they are released.
+
+
+Pat Brosnan
+-----------
+I responded to several faxes from Pat Brosnan. It appears that there was a 
+Hard Drivin' in France that:
+
+	Was a production game;
+	Had Software release 8.1 (English, Left Hand Drive)
+	The game did not run, it said 'ADSP Timeout' in Attract Mode;
+	The ADSP Test in Automatic Self-Test said the ADSP RAM was ok;
+	In 'Special Functions ADSP' the RAM Test terminated in an address 
+		error at 810003 and did not display the board picture.
+
+Not all the information is consistent. Although I explained that I had not
+seen that failure before and that it would be really useful if they returned
+the board to me, they elected to replace some (all?) the 6264s on the ADSP
+Board, thus solving the problem. Now we will never know.
+
+His last fax was that now the Sound Board didn't work, that there were ROM
+checksum errors. He didn't say if the checksum errors were Sound Program ROM or
+Sound Wave ROM. I relayed Erik's suggestion that the Interface Cable may have
+been damaged while they were playing with the ADSP Board. I also suggested
+that if the ROM errors were Sound Wave ROMs, he could check them by putting
+them in ROM 4 sockets on the Main Board and running the ROM Checksum test.
+This would identify whether the ROMs were really bad or if there was a circuit
+problem on the Sound Board.
+
+He asked for information about how the hardware worked. I sent him a block 
+diagram.
+
+I have not received a response.
+
+
+	Jed
+_____________________________________________________________________________
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Reply to Jim Seward's Fax
+Dt: 28 March 1989
+
+
+A. The split pad to enable coin counters to operate independently cannot be
+   accessed when the board is assembled. Cutting a resistor on the audio board
+   as is used on other games is preferable.
+
+Answer: 
+   The Driver Main board was the first board I did for this project; the 
+APU board came later. I had originally planned to run the cable from the Main 
+Board directly to the Coin Counters in order to simplify the harness. That is 
+why the split pad is on the Main Board.
+
+   I do not agree that the split pad cannot be cut when the board set is 
+assembled. The ADSP Board and Sound Board do not come out to the edge of the 
+Main Board and there is room to use an Exacto knife to cut the split pad. As 
+long as it is done before the board set is installed in the game it should not
+be too difficult.
+
+   I agree it would have been preferable to use a resistor on the APU Board. 
+I will keep that in mind for future projects.
+------------------------------------------------------------------------------
+
+B. The Motor Amp PCB should have been designed to operate on either 110VAC or
+   220VAC without using a stepdown transformer, as was done with the TRIAC 
+   PCB on APB.
+
+Answer:
+
+   The TRIAC PCB on APB turns an incandescent lamp on or off. (The lamp must
+be a 220V lamp when used on 220VAC.) The Motor Amp PCB uses Pulse Width 
+Modulation and is considerably more complicated than a Triac Switch.
+
+   The standard method for making a 110/220VAC compatible unit is to have
+a jumper so that at 220 VAC the circuit operates as a full wave bridge but at 
+110 VAC it operates as a voltage doubler. This means that the motor circuit 
+would always operate at 320 VDC instead of 160 VDC as it does now.
+
+   The circuit uses both N and P channel FETs. Even today, the P channel 
+FETs that we would need are not available above 200V.
+
+   Of course, the circuit could have been done totally differently, but it
+would cost more to build and would have taken more time to design and test.
+
+   Also, in the TRIAC PCB used in APB there are only a few places where an 
+unwary technician can contact the line, and when operated at 110VAC that is 
+the voltage. In the Motor Amp PCB, even when connected to 110VAC, there would 
+always be 320 VDC on the board, thereby increasing the danger. If we had found
+it necesary to enclose the Motor Amp because of this, it would have increased 
+the cost.
+------------------------------------------------------------------------------
+									2 of 2
+C. I have not made any provision to power Electronic Coin Mechs.
+
+Answer: You are right.
+
+   The problem was FIRST brought to my attention in late January of this year,
+long after the hardware was designed and released. At that time I was given 
+copies of the correspondence on the subject, most of which was between Pat 
+McCarthy and yourself. Although you might have reasonably expected Pat to keep
+the other engineers informed on the matter, such was not the case.
+
+   My recommendation is that games intended for use with Electronic Coin Mechs
+come with 5V Power Supplies with a 12V output.
+------------------------------------------------------------------------------
+
+D. The Component Bracket cannot be secured when two coin counters are fitted.
+
+   I am using the same Component Bracket that I used on Star Wars five and
+a half years ago. I assumed that since no one had complained in that time, it 
+was ok.
+
+   I have passed your complaint on to Jerry Lichac.
+------------------------------------------------------------------------------
+
+E. You seem to be saying that I should not have used the Coin Switches to
+   run Self-Test.
+
+   I needed three accessible, momentary switches to have Self-Test be of the
+most amount of use for the factory and for the Operators.  
+
+   The Key Switch is mostly used to execute commands. The Abort switch alone
+would have made Self-Test clumsy to use.
+------------------------------------------------------------------------------
+
+My Turn:
+
+    The hardware for Driver Compact has either already been released or is
+too late to change.
+
+    If you had made your concerns known to me earlier I could have done
+something about them. (some of them)
+
+_____________________________________________________________________________
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 29 March 1989 (interim)
+
+
+MultiSync
+---------
+Have received the Parts List. Film and Fab are ready to be signed.
+
+
+Jim Seward
+----------
+I have replied to Jim Seward's fax wherein he whined about a bunch of stuff.
+
+
+ADSP Boards
+-----------
+Problem: If they order ADSP-2100s in PQFP for Stun Runner, we cannot use them in
+	 Driver Compact.
+
+	 If they order ADSP-2100s in PGA for Driver Compact we cannot use them
+	 in Stun Runner unless we do another board (PGA with extra 27512s)
+
+	 If we ordered 2100s in the PGA would Analog Devices let us change 
+	 some of the order to PQFPs?
+
+	 The only way to be completely flexible is to do an ADSP Board with a 
+	 PGA and six 27512s. (This requires adding two 27512s to the existing
+	 ADSP Board.)
+
+Schedule:
+
+	Driver Compact		  	  STUN
+	--------------			---------
+	ADSP Board			ADSP II	Board
+	ADSP-2100 in PGA		ADSP-2100 in PQFP
+	4 x 27C512			6 x 27C512
+
+	Finished Goods May 22		Finished Goods July 14
+
+
+ADSP II  
+-------
+	Film and Fab 			April 13
+
+	Order Proto Boards 		April 14 --
+						    } 3 weeks
+	Build and Test Proto Boards	May 5    --
+						    } 1 week 
+	Order for Production		May 12	 --
+						    } 8 weeks
+	Production Build		July 14  --
+
+We get one shot at a prototype board. If there are problems with it we would
+probably have to correct it and buy production boards without another prototype.
+
+ADSP with PGA and six 27512s would have to meet the same schedule.
+
+
+
+	Jed
+_____________________________________________________________________________
+{ To PCB Department, Date Unknown }
+
+For the Driver Compact parts list:
+
+  Let's entitle the Top Parts list 'H.D. Compact PCB'
+
+  The Sub Parts List should remain 'MultiSync PCB'
+
+  Thanks,
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 31 March 1989 
+
+
+Driver Compact
+--------------
+Have signed off Driver MultiSync. Purchasing has ordered boards.
+
+We have received the boards for the Single Optical Steering Wheel Reader
+and for the Dual Optical Steering Wheel Reader. Karen has built some up.
+We should test them electrically before they are released.
+
+The monitors all look bad at fast Sync.
+
+
+Stun Runner
+-----------
+I gave Glenn a schematic for a circuit to detect video from the VCR. He built
+it and after some futzing we got it to work.
+
+
+ADSP Boards
+-----------
+Problem: 
+
+  If we order ADSP-2100s in Plastic Quad Flat Pack (PQFP) for Stun Runner, we 
+  cannot use them in Driver Compact which uses them in the Pin Grid Array (PGA).
+
+  If we order ADSP-2100s in PGA for Driver Compact we cannot use them in Stun 
+  Runner unless we do another board (PGA with extra 27512s)
+
+
+Solution #1:
+
+  Do an ADSP Board with a PGA and six 27512s. (This requires adding two 27512s
+  to the existing ADSP Board.)
+
+Solution #2:
+
+  Analog Devices has agreed that, if we order the ADSP-2100 in the PQFP, they
+  will allow us to change the order to PGAs if we give them three weeks notice.
+
+I like solution #2.
+
+   Memo from Tom Smith is reproduced:
+------------------------------------------------------------------------------
+From:	MIKE::SMITH        31-MAR-1989 16:32
+To:	KIM::MARGOLIN
+Subj:	RE: ADSP-2100s
+
+Jed,
+
+   We are going to spec the 500 units for the compact hard drivin. We all feel
+confident that it will be a real success.  If it should go the other way, Mary
+feels that we will not have any problem in returning them for full value 
+and/or exchange for the quad pack.
+----------------------------------------------------------------------------
+
+Schedule:								2 of 2
+
+	Driver Compact		  	  STUN
+	--------------			---------
+	ADSP Board			ADSP II	Board
+	ADSP-2100 in PGA		ADSP-2100 in PQFP
+	4 x 27C512			6 x 27C512
+
+	Finished Goods May 22		Finished Goods July 14
+
+
+ADSP II  
+-------
+	Film and Fab 			April 13
+
+	Order Proto Boards 		April 14 --
+						    } 3 weeks
+	Build and Test Proto Boards	May 5    --
+						    } 1 week 
+	Order for Production		May 12	 --
+						    } 8 weeks
+	Production Build		July 14  --
+
+We get one shot at a prototype board. If there are problems with it we would
+probably have to correct it and buy production boards without another prototype.
+
+ADSP with PGA and six 27512s would have to meet the same schedule.
+
+
+
+	Jed
+
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 10 April 1989 
+
+
+
+Driver Compact
+--------------
+The Dual Optical Steering Wheel Reader PCB is ok.
+
+The Single Optical Steering Wheel Reader needed the documentation changed
+to make sure the OptoCoupler is installed correctly.
+
+
+
+Hard Drivin Manual, 2nd Edition
+-------------------------------
+It seems that the file containing Chapter One was lost and had to be 
+regenerated from an earlier version. She forgot to check the Specifications 
+Table.
+
+She will do an errata sheet.
+
+
+
+ADSP Boards
+-----------
+Have received plots to check.
+
+
+
+Stun Runner
+-----------
+In order to use existing coin software:
+
+   1. The Coin Switches will be connected to the MultiSync Board instead of 
+      to the SA II.
+
+   2. One end of the Coin Counter will be connected to the Coin Counter driver
+      on the MultiSync Board.
+   
+      The other end will be connected the CC1+ on SA II to pick up +14V 
+      through a resistor.
+
+      Carole will find out if the Counter Counter has an internal protection
+      diode. If it doesn't, she will put one at the Coin Counter Connector.
+
+      Carole will add a power ground from SA II to the MultiSync Board to
+      augment the ground in the SCUM Cable.
+
+The Stun Runner current requirement from the +5 Volt supply is 7.5 Amps. Rick
+Meyette assures me that tne +5 Volt 10 Amp supply is rated to supply 10 Amps
+up to 50 degrees Celsius. Therefore, Stun Runner can use the +5 Volt 10 Amp 
+supply.
+
+I have obtained a series number for Stun Runner Programmed Parts.
+
+I have received a memo on diagnostic test results from RPM. I need to know:
+
+   1. What is the protocol for communicating to SA II?
+
+   2. How do I call S_STAT?
+
+   3. Is there a period after which, with no reponse, I can assume the
+      SA II is broken?
+
+   4. The Status bits indicate three ROMs (at 4000, 8000, and C000). The
+      SA II schematic shows only one program ROM. If this ROM is good will
+      all three ROM status bits be set or just one? If one, then which 
+      one?  
+
+   5. The situation for RAMs is similar.
+
+   6. Does the SA II program deliver ROM checksums?
+
+   7. Does the SA II test the ROMs connected to the MSM6295?
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Motor Amp
+Dt: 9 April 1989 
+
+
+Motor Amp Problem
+-----------------
+
+Board #1
+--------
+
+1. The problem is sensitive to the line voltage.		
+
+ 	Threshhold Force -250, line is 120VAC unloaded -> 108 loaded
+	Threshhold Force -180, line is 105VAC unloaded -> 100 loaded
+
+2. The problem is mostly with Negative Force, while turning the motor positive.
+   Some do it at maximum Negative Force without turning the motor. One board 
+   does it at Positive Force while turning the motor negative.
+
+2. Swapping Motor Amp Drivers makes no difference.
+
+3. No Difference: 1000 uF across CR4
+		  1000 uF across CR2
+		  1000 uF across CR2 to ground
+		  1000 uF across CR3
+		  1000 uF across CR2 and CR3
+		  0.01 uF Capacitor across the motor 
+
+		  10 uF across R36 makes it worse
+
+   Capacitors were attached with clip leads.
+
+4. Average Line current goes down when it happens.
+
+   With Current Probe and oscilloscope at primary - it does not appear that
+   there are any enormous peaks, such as would happen if two FETs in the same
+   leg were turned on at the same time.
+
+5. When the problem happens, the +20V goes below +10V, the +15V goes to 0V.
+   This turns off the motor, the +20V returns, the motor turns on, the +20V
+   goes away, the motor turns off, and so on.
+
+   Supplying the +20V Zener independently almost fixes it.
+
+   When supplied independently, the +20V circuit requires 30ma (motor off)
+   before going into zener limiting.
+
+ Theory: Current pulses on the positive and/or negative Rails are getting into
+ 	 the +20V zener circuit. Probably also the U15V Section. 
+
+ With: 	+20 supplied independently,
+	J4 unplugged,
+	Q2 off (R43 shorted),
+	Q6 shorted with a jumper,
+
+	It stopped doing it completely.
+
+Unfortunately, when I cranked it up I hosed the board. (Board #1)
+
+
+Board #2
+--------
+
+ With: 	+20V supplied internally,
+	J4 unplugged,
+	Q2 off (R43 shorted),
+	Q6 shorted with a jumper,
+
+	The negative force section died after a short period of vibration.
+	(The positive side still worked.)
+
+
+Board #3 (a good amp)
+---------------------
+ With:	 0 Force and Primary 120VAC (unloaded), current thru R36 is 40 ma.
+	 -250 Force ( Primary drops to 108 VAC), current thru R36 is 26 ma.
+ 
+
+Board #4 (a bad amp)
+--------------------
+Current thru R36 spikes up to 100 ma (and down to zero).
+
+With another 3K resistor in parallel with R36 the problem improved considerably
+but was not totally eliminated.
+
+
+Current thru R36
+----------------
+	Board #4 (Bad)	25 ma motor off, 32 ma with -250 force
+	Board #3 (Good)	25 ma motor off, 25 ma with -250 force
+	Board #2 (Bad)	25 ma motor off, 25 ma with -250 force
+
+
+Voltage on +Rail	Primary 120VAC (unloaded)
+----------------
+	Board #3 (Good)	160VDC with 0 Force, 110VDC with -250 Force
+	Board #4 (Bad)	same (voltage ripples due to motor chattering)
+
+
+Current sufficiency thru R36
+----------------------------
+Voltage across R36 = Vin - 15(CR3) - 5.1(CR2) - 15(CR4) = Vin - 24.9 = Vin = 30V
+
+Primary power of 120VAC produces +Rail of +150(unloaded) and +100(loaded)
+	The current thru R36 is (160-30)/3K = 43 ma  unloaded
+				(110-30)/3K = 26 ma  loaded
+
+	The power thru R36 is (160-30)**2/3K = 5.7 Watts  unloaded
+			      (110-30)**2/3K = 2.1 Watts  loaded
+------------------------------------------------------------------------------
+When supplied independently, the +20V circuit requires 30ma (motor off)
+before going into zener limiting.
+------------------------------------------------------------------------------
+Adding another 3K Resistor in parallel with R36 would produce, at maximum high
+line 132VAC, worse case conditions:		
+
+	VDC = 132*1.414-30 = 186-30=156V
+ 
+	Current is 156/1.5K = 124 ma  unloaded
+
+	CR3 Power = 15*124  = 1.86 W	(5W zener)
+	CR2 Power = 5.1*124 = 0.63 W	(1W zener)
+	CR4 Power = 15*124  = 1.86 W	(5W zener)
+==============================================================================
+Connecting a wire jumper across zero Ohm resistor R41 made no difference.
+
+Grounding the Control Ground (CGND) at +15V zener CR4 instead of at protection
+diode CR14 made it WORSE.
+==============================================================================
+Connecting a jumper from CR18 to the -Rail made it WORSE.
+==============================================================================
+A 10 uF Capacitor from 15VTP to Ground made no difference.
+******************************************************************************
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Motor Amp problem 
+Dt: 10 April 1989 
+
+
+1. The problem is sensitive to the line voltage.		
+
+ 	Threshhold Force -250, line is 120VAC unloaded -> 108 loaded
+	Threshhold Force -180, line is 105VAC unloaded -> 100 loaded
+
+2. Swapping Motor Amp Drivers makes no difference.
+
+3. Average Line current goes down when it happens.
+
+   With Current Probe and oscilloscope at primary - it does not appear that
+   there are any enormous peaks, such as would happen if two FETs in the same
+   leg were turned on at the same time.
+
+4. Voltage on +Rail was the same on both good and bad Motor Amps.
+
+5. Supplying the +20V Zener independently almost fixes it.
+
+When supplied independently, the +20V circuit requires 30ma (motor off)
+before going into zener limiting.
+
+With: 	+20 supplied independently,
+	J4 unplugged,
+	Q2 off (R43 shorted),
+	Q6 shorted with a jumper,
+
+It stopped doing it completely.
+
+Unfortunately, when I cranked it up I hosed the board. (Board #1)
+
+The current thru R36 appears to be insufficient for reliable circuit operation.
+
+6. With the motor force set to zero, using a variac to set the line voltage,
+the +20V circuit goes out of regulation with a +Rail below about 105V.
+
+This agrees with the +Rail voltage at full line and full motor load when it 
+screws up.
+==============================================================================
+With another 3K resistor in parallel with R36 the problem improved 
+considerably but was not totally eliminated.
+
+Adding another 3K Resistor in parallel with R36 would produce, at maximum high
+line 132VAC, worse case conditions:		
+
+	VDC = 132*1.414-30 = 186-30=156V
+ 
+	Current is 156/1.5K = 124 ma  unloaded
+
+	CR3 Power = 15*124  = 1.86 W	(5W zener)
+	CR2 Power = 5.1*124 = 0.63 W	(1W zener)
+	CR4 Power = 15*124  = 1.86 W	(5W zener)
+
+==============================================================================
+Theory: 
+	1. The current through the zeners is insuffient for reliable operation. 
+
+	2. Current pulses on the positive and/or negative Rails are getting into
+ 	   the +20V zener circuit. Probably also the U15V Section. 
+
+	3. Circuit parameters and board layout allow the FETs to break into
+	   oscillation at high currents.
+==============================================================================
+Connecting a wire jumper across zero Ohm resistor R41 made no difference.
+
+Grounding the Control Ground (CGND) at +15V zener CR4 instead of at protection
+diode CR14 made it WORSE.
+==============================================================================
+Connecting a jumper from CR18 to the -Rail made it WORSE.
+==============================================================================
+A 10 uF tantalum capacitor from 15VTP to Ground made no difference.
+==============================================================================
+The capacitance of a 'scope probe (10pF) across CR18 fixes it on my worst board.
+This is in addition to the resistor.
+_____________________________________________________________________________
+
+From:	KIM::MARGOLIN     10-APR-1989 21:08
+To:	MAEDER,MONCRIEF,MOORE,MARGOLIN    
+Subj:	Motor Amp Mods
+
+..... Make sure the board is completely discharged before doing these mods.....
+
+I have talked with Rick and he agrees on the following Mods:
+
+   1. Add another 3K Ohm 10 Watt in parallel with the existing one.
+
+      It is important that this new resistor assembly not come in contact
+      with the Case.
+
+   2. On top of the board, add a 100 pF, 5%, 500 Volt (or higher) Mica 
+      capacitor across CR18. This should be located close to CR18. It would be
+      ok to use the feedthrough located about 0.7" from the CR18 anode for one
+      end of the capacitor. The other end of the capacitor should go directly 
+      to where the CR18 cathode terminal connects to the board.
+
+      I believe this mod can be done to the board without removing it from
+      the heatsink.
+
+      I do not have a part number for this capacitor. Sorry. If necessary
+      you can use 100 pF, 10%, 500 Volt (or higher) ceramic.
+
+We should start these mods on the existing rejected boards. After we have
+done a few we will probably want to add the mods to all new boards as well.
+
+I will try to come in today in time to go over these mods with you but have
+sent this VAX Mail in case I don't make it.
+
+	Regards,
+
+		Jed
+
+_____________________________________________________________________________
+
+From:	KIM::MARGOLIN     10-APR-1989 21:08
+To:	MAEDER,MONCRIEF,MOORE,MARGOLIN    
+Subj:	Motor Amp Mods
+
+..... Make sure the board is completely discharged before doing these mods....
+
+I have talked with Rick and he agrees on the following Mods:
+
+   1. Add another 3K Ohm 10 Watt in parallel with the existing one.
+
+      It is important that this new resistor assembly not come in contact
+      with the Case.
+
+   2. On top of the board, add a 100 pF, 5%, 500 Volt (or higher) Mica 
+      capacitor across CR18. This should be located close to CR18. It would be
+      ok to use the feedthrough located about 0.7" from the CR18 anode for one
+      end of the capacitor. The other end of the capacitor should go directly 
+      to where the CR18 cathode terminal connects to the board.
+
+      I believe this mod can be done to the board without removing it from
+      the heatsink.
+
+      I do not have a part number for this capacitor. Sorry. If necessary
+      you can use 100 pF, 10%, 500 Volt (or higher) ceramic.
+
+We should start these mods on the existing rejected boards. After we have
+done a few we will probably want to add the mods to all new boards as well.
+
+I will try to come in today in time to go over these mods with you but have
+sent this VAX Mail in case I don't make it.
+
+	Regards,
+
+		Jed
+_____________________________________________________________________________
+								11 April 1989
+
+Erik,
+
+    I have a fix for the Motor Amp problem and have given it to Norm. A copy 
+
+is attached. 
+
+   Ralph has rescheduled the Compact drop test for Thursday. (He has the 
+
+unit.) Please see if you can bring up one, preferably two, Compact Motor Amps.
+
+   I have some good and bad Strain Guage Amplifiers to look at.
+
+   Rick says,
+
+	"Things went well at the Show. There were favorable comments about 
+	 both the Sitdown and the Compact..... . There was some concern about 
+	 the security of the cash box."
+
+   Also, 
+
+	 The flicker is bad in a dark environment. 
+
+   And,
+
+	 There was noticeable beating between the line frequency and the 
+	 vertical rate. Rick thinks it might have something to do with the 
+	 games having been powered through a 50' extension cord. He wants us 
+	 to power a game through a 50' extension cord.
+
+
+Rick will be back April 20
+
+Max and Stephanie will be back Monday, April 18.
+
+I expect to be in at my usual time today.
+
+
+	Jed
+____________________________________________________________________________
+_____________________________________________________________________________
+
+To: Norm Maeder
+Fr: Jed Margolin
+Re: THE NEW AND IMPROVED HARD DRIVIN' MOTOR AMP MODS
+Dt: 4/12/89
+
+
+..... Make sure the board is completely discharged before doing these mods....
+
+
+   1. Add the 3K Ohm 10 Watt in parallel with the existing one as in the
+      previous mod.
+
+   2. Add a ferrite bead (141003-001) in series with the Q8 Gate. Observe 
+      standard static control procedures when unsoldering the gate lead,
+      installing the ferrite bead, and resoldering the gate lead.
+
+   3. The 100 pF capacitor used in the previous mod is no longer used.
+
+
+I will initiate an ECN after it has been verified that these new mods solve 
+the problem.
+
+
+Jed Margolin
+Erik Durfey
+_____________________________________________________________________________
+{ Date Unknown }
+
+Monitor Problem:
+
+
+When I heard that the video output wasn't right, I assumed it was too low. 
+
+Rick Meyette says the problem is that the Stun Runner board produces Too Much
+video output voltage for the Sanyo Monitor. 
+
+The way to fix it is to install the 3.3K resistors at R97, R108, and R112.
+Heretofore they were not loaded in order to boost the video output.
+
+With these resistors loaded, the maximum video output should be 3.0 volts.
+If it isn't we will adjust the value of the resistors until it is.
+
+There may be a problem with threshhold brighness values. To wit:
+
+
+		Wells-Gardner		Sanyo
+		-------------		-----			
+Max Video	3.5 Volts (255 DAC)	3.0 Volts (255 DAC)
+Gray		1.5 Volts (85 DAC)	1.5 Volts (102 DAC)
+Threshhold	1.0 Volts (42 DAC)	1.0 Volts (51 DAC)
+Min Video 	0.5 Volts (0 DAC)	0.5 Volts (0 DAC)
+
+
+The Sanyo cannot be adjusted to work with Wells-Gardner video levels.
+Meyette say the Wells can be adjusted to work with Sanyo levels. I suggest
+we use Sanyo levels.
+
+Let's plan on adding the resistors to a board and connecting it to a
+Sanyo monitor. It may be necessary to adjust the gray levels in software.
+
+
+	Jed
+
+_____________________________________________________________________________
+{ Date Unknown }
+
+TIs request for a waiver is for the following parameters:
+
+
+Parmeter  From	 To	Datasheet	  Waiver
+--------  ----   --	---------	----------
+ TPLH	    D	  Q	6.0 ns max	8.0 ns max
+ TPHL	    D	  Q	6.0 ns max	7.0 ns max
+ TPLH	    C	  Q	11.5 ns max	13.0 ns max
+
+
+I have looked at the Driver Main circuit where the 74AS573s are used and I
+believe these degraded parts will work, BUT ALL BETS ARE OFF IF OTHER 
+PARAMETERS ARE ALSO DEGRADED, ESPECIALLY:
+
+	tsu   Setup time, data before enable C low transition
+	th    Hold time, data after enable C low transition
+
+Also, I object to their insistence that these parts be non-cancellable and 
+non-returnable. If these parts don't work properly in the circuit we ought to 
+be able to return the parts not used and cancel the parts not received.
+
+
+	Regards,
+
+		Jed
+_____________________________________________________________________________
+{ Date Unknown }
+
+When Ralph and the guys removed the front piece to clean the monitor on one of
+the H.D Compacts they are getting ready for shipment, they noticed that the 
+monitor bracket was bent.
+
+Nobody noticed it in the game. We were primarily concerned that it reach
+Ireland in one piece.
+ 
+The options were:
+
+    1. Replace the monitor which would require mechanical time as well as
+       electrical time to reverse the yoke wires and perform monitor setup.
+       Erik isn't here today so I would have to do it. (It would take me 
+       longer to do it than it would take him, and apparently the truck is 
+       waiting.)
+
+    2. Remove the monitor and ship it in a separate box.
+
+    3. Not send the game today.
+
+Ralph was pretty sure that the monitor bracket will hold together so we 
+decided to send the game as is.
+
+The reason for this memo is so:
+
+   1. You know what we did.
+
+   2. You will alert Ireland that the monitor bracket is bent.
+
+I assume we are sending it to Ireland so they can convert it to 220VAC 
+operation.
+
+
+	Regards,
+
+		Jed
+
+____________________________________________________________________________
+
+			Atari Confidential
+
+
+Hard Drivin' Status Report
+Date: April 13, 1989
+Reported by Margolin
+
+
+
+This week's top story, filed by correspondent Rick Moncrief, concerns the 
+Atari Games Distributers' Show. Moncrief reports:
+
+
+   "Things went well at the Show. There were favorable comments about both
+    the Sitdown and the Compact..... . There was some concern about the 
+    security of the cash box."
+
+
+In local news, the problem with the Hard Drivin' Motor Amp has been addressed
+and, with Erik Durfey's help, hopefully solved on this, the second attempt in
+as many days.
+
+A petition for an ECN will be filed after it has been verified that these new 
+mods solve the problem.
+
+
+
+-30-
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 19 April 1989 
+
+
+Sitdown Motor Amplifier Problem
+-------------------------------
+The problem seems to be fixed with the resistor added to R36 and a ferrite
+bead on the Q8 Gate. ECNs are in progress.
+ 
+
+
+RAM Tests
+---------
+I got an ADSP board from Al Vernon that does the same thing as the ADSP board
+in France, which is, the ADSP RAM test geta a 68010 Address Error Exception.
+
+The problem is due to one of the sections of the RAM test. (We got the RAM
+Test from Mike Albaugh.) The RAM Test usually is stopped after it finds a 
+single error; we log the error and keep on going. This particular section
+screws everything up when it is made to continue after finding an error.
+
+This section of the RAM test does not detect missing parts (which is how I
+tested the RAM tests).
+
+I propose we remove this section of the RAM test for the ADSP RAM tests.
+The RAM tests for GSP Color RAM, GSP Simple, GSP Complete, and MSP Complete
+appear to not use this test. The code for the GSP Verify and MSP Verify tests 
+should be checked and changed if necessary.
+
+The code requires changing ROM 0 High and ROM 0 Low. We should release new
+versions for all four languages so that all future games will have useable
+RAM tests and so that Customer Service can send an update to those who need
+it.
+
+ 
+
+ADSP II
+-------
+I have reviewed the plots and the parts list and sent them back for regrooving.
+
+
+
+Driver Compact
+--------------
+The movement on the right hand side of the screen is related to the line 
+frequency. It goes away at 53 Hz which, by an amazing coincidence, is also the
+Vertical rate. Unplugging the power to the flourescent lamp makes the movement
+go away.  The problem may be a ballast transformer located too near the CRT
+yoke.
+
+The flicker, even in a darkened room, is not objectionable.
+
+In both units that came back from the show the cable to the motor amp had
+become disconnected. After consulting with Rick Meyette, Stevie decided
+to use a ferrite bead with a smaller diameter so it will stay on the cable 
+near the Main board. Therefore it will not hang down, so it will not swing back 
+and forth and pull the other end out of the Motor Amp.
+
+									2 of 2
+
+Texas Instruments request for waiver
+------------------------------------
+Erwin asked me to look into a request TI made to Mary to accept 74AS573s that
+did not meet specifications.
+ 
+The following was my reply.
+===============================================================================
+TIs request for a waiver is for the following parameters:
+
+
+Parmeter  From	 To	Datasheet	  Waiver
+--------  ----   --	---------	----------
+ TPLH	    D	  Q	6.0 ns max	8.0 ns max
+ TPHL	    D	  Q	6.0 ns max	7.0 ns max
+ TPLH	    C	  Q	11.5 ns max	13.0 ns max
+
+
+I have looked at the Driver Main circuit where the 74AS573s are used and I
+believe these degraded parts will work, BUT ALL BETS ARE OFF IF OTHER PARAMETERS
+ARE ALSO DEGRADED, ESPECIALLY:
+
+	tsu   Setup time, data before enable C low transition
+	th    Hold time, data after enable C low transition
+
+Also, I object to their insistence that these parts be non-cancellable and non-
+returnable. If these parts don't work properly in the circuit we ought to be
+able to return the parts not used and cancel the parts not received.
+
+
+	Regards,
+
+		Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 28 April 1989 
+
+
+
+Driver
+------
+We have released new ROM versions with the ADSP RAM Test repaired.
+
+I have documented the error messages that are used in Self-Test. Max has 
+documented the error messages used in the game.
+
+Customer Service was working with a Rev A Main Board schematic. I gave them
+the newest set (Rev G) as well as:
+	The list of error messages (Both Max's and mine);
+	A write-up of the ZRAM;
+	A complete list of program versions with locations and checksums.
+
+
+Driver Compact
+-------------
+We were supposed to get some MultiSync Boards in by April 10 for a quick look
+but it didn't happen. We are scheduled to receive 420 production boards on
+May 4, which is next Thursday.
+
+
+ADSP II
+-------
+We are ordering prototype boards.
+
+
+Stun Runner
+-----------
+I have given to Glenn The Mod to eliminate the infrequent GSP lockup.
+
+
+Star Wars
+---------
+About two years ago Atari Games licensed Star Wars for a consumer home game to 
+Domark in Europe. Lately, they have also licensed it to Broderbund.
+
+According to Becky Depew the current bonus plan only goes back to Marble 
+Madness. Star Wars was developed before then. Although she did not come
+out and say it, the implication was clear that the game is considered to
+be exempt from the plan.
+
+Also, according to Becky Depew, They (the Executive Committee) will make
+a decision about it sometime in May.
+
+My position is that the fact that the current bonus plan started with Marble 
+Madness is immaterial; Star Wars bonus ought to be paid under the Bonus plan 
+that was in effect at the time the game was developed. 
+
+I have supplied Becky with a copy of the Bonus plan that was in effect at the
+time Star Wars was developed. 
+
+I would like to know what, if any, support I will receive from Engineering 
+Management in this matter.
+
+I would also like to know how much of the license fee is kept by Tengen and how
+much gets passed on to Coin Op for bonus purposes.
+
+
+
+	Jed
+
+
+
+Possible Stun Runner kit for Pole Position		
+------------------------------------------
+
+Prices are from John Ray's document distributed at the meeting.
+A kit for Stun Runner would require:
+
+    Material:		 $1150.52
+    Labor:		 $  22.00
+    Overhead:		 $ 127.60
+			 --------
+    Fully Burdened cost  $1300.12
+
+    Distributer's cost (40% margin) $1820.17
+
+==============================================================================
+PCBs:
+	Multisync PCB with VRAMs and EPROMs		$568.52
+
+	ADSP II PCB with OTPROMs			$256.60
+
+	SA II PCB with EPROM, OTPROM			$ 84.20
+
+	MultiSync/ADSP flat cable			$  5.00
+							-------
+							$914.32
+
+Power Supply (10A):		$ 52.00
+
+Flight Controller:		$110.00
+
+Flight Controller sub panel: 	$  9.00	   (This is a total guess)
+
+Attract Plex:			$ 10.00
+
+Attract Decal:			$  5.50
+
+Side panel decals:		$  7.20
+
+Main Harness:			$ 30.00
+
+Control Panel Harness:		$  7.00
+
+Labels and Manuals:		$  5.50	
+				-------
+
+	Material Total:		$1150.52
+
+
+PCB Labor Hours 2.20 * $10/hour			$22.00
+
+
+Overhead
+	Fixed		2.20 * $42.00		$ 92.40
+	Variable	2.20 * $16.00		$ 35.20
+						-------
+						$127.60
+
+_____________________________________________________________________________
+
+To: Pat Brosnan
+    Norm Maeder
+    Mark Sherman
+    Elaine Shirley
+    Bob Stewart
+    Al Vernon
+
+Fr: Jed Margolin, Rick Moncrief
+Re: New ROMs
+Dt: 28 April 1989
+
+
+We are releasing new ROMs for all four versions: North American, British, 
+German, and Japanese.
+
+Changes were made to Self-Test; there are no changes to the game play.
+
+
+1. The ADSP RAM Test should now work properly. There was a problem that
+sometimes resulted in a 68010 Processor Error instead of showing the
+RAM Test on screen.
+
+2. On the ADSP 'Scope Loop screen I have added a test to toggle the BCON 
+signal. This is to help find bad 74LS259s on the ADSP Board. In this test, 
+/BCON at 7K pin 7 should be high for 2 us and low for 11 us.
+
+New boards should have the new ROMs, there is no need to change ROMs on 
+existing boards. Customer Service should probably send new ROMs to any 
+customers who need them to fix a game.
+
+Note: Only ROMs at 200R and 210R are changed. 
+
+ECNs are in progress.
+
+We are also coming out with a list of error messages and what they mean.
+
+
+	Regards,
+
+
+
+		Jed
+
+
+
+
+		Rick
+_____________________________________________________________________________
+
+To: Al Vernon and Mark Sherman
+Fr: Jed Margolin
+Re: Writing to the ZRAM
+Dt: 28 April 1989
+
+
+
+   The ZRAM (Zero-Power RAM) stores information for High Scores, Game 
+   Statistics and Control Setup adjustments. It also contains the Timekeeper 
+   Clock/Calender.
+
+   The ZRAM package contains a Lithium Battery so it retains the information 
+   (and the Timekeeper continues to run) even with the power off.
+
+   The ZRAM can be read at all times without doing anything special.
+
+   ZRAM Writes must be enabled by writing to $604008 and $60401A.
+   You must write to both. (It doesn't matter what data you write.)
+
+   Once the ZRAM Writes are enabled they stay enabled until they are disabled.
+
+   ZRAM Writes are disabled by writing to either $60400A or $604018. You 
+   should write to both to make sure the ZRAM Writes are safely disabled and 
+   immune to program crashes or power down glitches. (It doesn't matter what 
+   data you write.)
+
+   The ZRAM address range is $FFFF 4000 to $FFFF 4FFE but
+   $FFFF 4FE2 - $FFFF 4FFE is used by the Timekeeper and should not be
+   written to. Writing to it can screw up the clock.
+
+   Therefore you should only write to:
+
+	$FFFF 4000 - $FFFF 4FE0
+
+   You should disable ZRAM Writes before powering down the board.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 19 May 1989 
+
+
+ADSP II
+-------
+The Rev 1 prototype board works completely. There are a few changes I want to
+make for Rev A.
+
+Originally, the board ran all the test programs but did not run the game. The 
+problem turned out to be that the graphics ROMs were in the wrong sockets.
+
+The ROMs were in the wrong sockets because the production parts are mislabeled
+and then swapped so they end up in the correct sockets.
+
+  Driver ADSP	Checksum	ROM	 Parts List PN
+  ------------	--------	---	 -------------	
+     10L   	  A701		1L	 136052-1104  
+
+     10K   	  DC02		0L	 136052-1103<--- Note 
+		
+     10J   	  CB03		1H	 136052-1102<--- Note
+	
+     10H   	  2C04		0H	 136052-1101
+
+Note: the parts we have from Manufacturing have -1102 and -1103 labels swapped.
+
+
+Stun Runner
+-----------
+I have given them the ADSP II Board and have asked Karen to make some more.
+
+I have given Ed an improved Self Test program with the changes he requested.
+
+I am working on the schematic for the ADSP Graphics RAM Board to accomodate 
+the extra memory space.
+
+
+Driver Compact
+-------------
+I have reviewed the draft of the H.D. Compact manual and made corrections to it.
+
+We received two MultiSync PC Boards on May 14. Gwen is on vacation and Karen and
+Emmitt are busy. Also, Leon refuses to provide her with a stuffing diagram
+and Karen does not have time to do one. Besides, it is PC's job to do stuffing
+diagrams.
+
+
+Electronic Coin Mechs in Europe
+-------------------------------
+I recommend that Components approve versions of the +5V switching supplies that
+come with a 12V output. According to Downend's memo the current required is 
+1.6 Amps. The data sheet I have calls for 11 - 15 volts at 220 ma continuous, 
+700 ma peak (assuming no sorter). 
+
+
+
+	Jed
+
+
+					
+Primary	   Secondary	x 1.414		- 0.7(diode) 	12V Regulator
+-------	   --------	-------		------------ 	---------------
+	
+120 VAC	   12 VAC	16.7 VDC	16.0 VDC 	16.0 - 12.5 = 3.5 VDC
+
+105 VAC	   10.5 VAC	14.8 VDC	14.1 VDC 	14.1 - 12.5 = 1.6 VDC
+
+
+120 VAC	   14 VAC	19.8 VDC	19.0 VDC	19.0 - 12.5 = 6.5 VDC
+
+105 VAC	   12.2 VAC	17.3 VDC	16.6 VDC	16.6 - 12.5 = 4.1 VDC
+
+132 VAC	   15.4 VAC	21.8 VDC	21.0 VDC	21.0 - 12.5 = 8.5 VDC
+
+
+
+A 7815  12 Volt regulator is 11.5 V to 12.5 V.
+Dropout Voltage at 1 Amp @25 degrees Celsius is 2.0 V.
+Recommended input voltage is 14.6 VDC.
+
+7812 is not recommended for currents greater than 1 Amp.
+
+DC Voltages do not take into account Ripple.
+
+
+A 14 VAC winding at low line will produce 16.62 VDC not including ripple.
+Assume enough capacitance to reduce ripple to 1 V which gives 15.62 VDC.
+
+This would be enough to power a 7812.
+
+Assuming a normal current of 220 Ma the dissipation will be 1.9 Watt high line.
+
+At 0.7 Amp it will be 6.0 Watt.
+
+
+A 12 VAC winding will not work reliably for this application.
+_____________________________________________________________________________
+
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 30 May 1989 
+
+
+
+Driver Compact Self-Test
+------------------------
+
+The Self-Test program is waiting for 'Play Sounds' so it can be released.
+
+Ditto on British and German versions.
+
+
+
+MultiSync
+---------
+
+The MultiSync PC Board has not been received. Norm thinks maybe tomorrow.
+
+To recap: Karen refused to stuff the board without a stuffing diagram and Leon 
+refused to do a stuffing diagram. If and when we do receive a board from 
+production it will be the start of the run, not a preliminary board. This is 
+not what was suposed to happen and it really stinks.
+
+
+
+
+Stun Runner
+-----------
+
+I have completed the schmatics for the ADSP II Graphics RAM. Presumably it is
+now being built.
+
+ADSP II board #2 was received DOA. Erik is working on it.
+
+I have contacted 3M and am getting samples of their PQFP socket.
+
+
+
+	Jed
+
+_____________________________________________________________________________
+
+To: Rick Moncrief								
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 2 June 1989 
+
+
+
+Driver Main
+-----------
+Production gave Erik two non-working Rev E boards and told him that practically
+all of the Rev E boards refused to work.
+
+We quickly figured out that the problem was that the 50 MHz oscillator modules 
+that run the 34010-MSP were bad. We fixed one and verified that the oscillator 
+on the other board was bad.
+
+Erik returned the boards with an appropriate note.
+
+In the process I have discovered that production is not using the new ROMs that
+we released last week.
+
+They are still using the original Version 8.1  .
+
+
+
+
+Driver Compact Manual
+---------------------
+I have marked up the MultiSync schematics for the manual as well as a memory 
+map appropriate for publication and given them to Rosalind. 
+
+I have proofed the final draft and passed it on.
+
+
+
+Driver Compact Self-Test
+------------------------
+The Self-Test program is ready to be released in North American, British, and
+German versions.
+
+
+
+MultiSync
+---------
+We have received a MultiSync PC Board from Production. It appears to work.
+
+I have given Art the inputs for the changes to the parts list. The last two
+digits of the part number will also be the last two digits of the checksum.
+For example, the checksum for the ROM with the part number 136068-1102 is
+xx02. 
+
+Rick Meyette did not want to let us do this but was persuaded to do so
+at the meeting.
+
+
+Stun Runner
+-----------
+ADSP II board #2 was received DOA. the problem was a trace short that would
+have been picked up in production by the board tester.
+
+I received samples of the PQFP socket made by 3M. They don't work with the 
+footprint for the AMP socket. (It is a mirror image.)
+
+I have informed the rep of this and will call 3M directly next week.
+
+Too bad, because the 3M socket is a better socket. It has locking tabs to hold 
+the IC in.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 8 June 1989 
+
+
+
+Driver Compact 
+--------------
+We have released the improved version (3.1) with the bugs fixed.
+
+We have provided Production with the Test Procedure for the hardware.
+
+
+
+Sound Board
+-----------
+We have released the improved version (3.2) with the bugs fixed.
+
+
+Driver ADSP
+-----------
+We have ECNed the parts list to use OTPs.
+
+
+Other
+-----
+I written a reply to the "Fan Mail" we received about XY.
+
+
+8 Bit A/D Converters
+--------------------
+National ADC0809CCN	
+
+Total Unadjusted Error is  
+
+		+/- 1 LSB for 0 to 70 degrees Celsius,
+
+		+/- 1.25 for TMin to TMax which is -40 to +85 Celcius.
+
+I expect that our temperature range is 0 to 70 degrees C.
+
+Total Unadjusted Error includes offset, full scale, linearity, and multiplexer 
+errors. We are not concerned about offset and full scale errors, only 
+differential linearity. Unfortunately, they do not separately characterize 
+differential linearity. However, the DAC section uses a 256R Ladder (instead
+of R2R) which guarantees monotonicity. Therefore I would expect the differential
+linearity to be less than 1 LSB. (Presumably the multiplexer errors affect only
+absolute error, not differential errors.)
+
+
+By comparison the ADC0808CCN specifies:
+
+		+/- 0.5 LSB at 25 degrees Celsius,
+
+		+/- 1 for TMin to TMax which is -40 to +85 Celcius.
+
+Notice the specsmanship. The ADC0808 is 0.5 LSB at 25 degrees C while the
+ADC0809 is 1 LSB from 0 to 70 degrees C.
+
+The above comments also apply to the Texas Instruments ADC0808 and ADC0809 
+except:
+
+They use capacitors in their ladder instead of resistors. It is a 256C ladder
+and they also guarantee monotonicity.
+
+They do specify differential linearity separately, which (at 25 degrees C) is:
+
+		ADC0808	is +/- 0.25 LSB
+		ADC0809	is +/- 0.5 LSB
+
+I tried to fill in a chart comparing how the 8 Bit and 12 Bit A/Ds read the
+steering wheel pot but it was impossible to get the mechanical resolution
+needed for such a task. I can write a program to do it in software if you
+want. Let me know if you do.
+
+
+I have submitted a CER for the ADC0808 anyway.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+
+									1 of 1
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 16 June 1989 
+
+
+
+H.D. Compact
+------------
+I have signed off the parts lists for H.D. Compact British and H.D. Compact 
+German.
+
+
+
+ADSP II
+-------
+Most of the prototype PC Boards have manufacturing errors: traces shorted
+to each other, to +5V, etc. Erik has managed to bring up four boards so far.
+
+The ADSP Graphics RAM board works and has been turned over to the Stun team.
+
+I have signed the ECNs to change from Driver ADSP to ADSP II on both
+Hard Drivin' and H.D. Sitdown on the next buy.
+
+AMP makes an extraction tool for the PQFP (821958-1) that costs $98. We probably
+won't buy very many.
+
+I have given Art the inputs to turn Rev 1 into Rev A. They are:
+
+------------------------------------------------------------------------------
+ADSP II REV 1 TO REV A				J. Margolin 6/13/89
+----------------------
+1. PQFP Silkscreen needs to be chamfered.		[see attached sheet]
+
+2. Add PQFP assembly instructions to the 
+   assembly drawing. 					[see attached sheet]
+
+3. Add 1K pullup resistors to /BUFF1 and /BUFF2.	[see attached sheet]
+
+4. Add traces as shown on attached sheet but do not
+   load the IC.						[see attached sheet]
+
+5. Create a -02 version (parts list) so we can use it on the
+   H. D. Compact.
+
+6. ECN both Hard Drivin' and H. D. Compact to use ADSP II, effective with the
+   next buy.
+------------------------------------------------------------------------------
+
+8 Bit A/D Converters
+--------------------
+The ADC0808 has been added to the AVL with its own number: 137651-001 .
+
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Review of Patent Applications
+Dt: 23 June 1989 
+
+
+The drawings are of execrable quality.
+
+
+Gearshift For A Vehicle Simulator ....
+
+	Page 1, line 11: 'field' should probably be 'feel' .
+
+
+Rear Entry Booth ...
+
+	Contains an additional set of drawings from the Gearshift application. 
+
+	The text does not contain line reference numbers (5, 10, 15, ...).
+
+
+Control Device ...
+
+	ok
+
+
+Driving Simulator with Moving Painted Dashboard
+
+	The text does not contain line reference numbers (5, 10, 15, ...).
+
+	Page 12, line 16: '4 mHz' should be '48 MHz'. (Also note that the 'M'
+		in MHz means 'Mega' (million) and must be capitalized. A small 
+		'm' in 'mHz' would mean 'milli-Hertz', or one-thousandth of a 
+		Hertz.) 
+		  
+	Page 14, line 9: 'lode' should be 'load'
+
+	Page 14, lines 17 thru 21: This explanation of memory-to-shift
+		register transfers is totally wrong. The signal he calls
+		'memory-to-shift register-transfer' (120) is clearly shown on my
+		schematics as '/TFR-SE' and is the signal that makes all the 
+		serial enables low for the purpose of allowing bulk screen 
+		clears. This signal has nothing to do with memory-to-shift 
+		register-transfers during the pixel scanning process other than
+		that the signal must not be low.
+
+
+	Page 15, lines 4 thru 6 and Figure 6: the writer does not understand 
+		the function of gates 112 thru 119. The signal on line 120 does
+		not act as a gate, it acts to force all serial 	enables low, 
+		thus permitting the simultaneous shift register	transfers 
+		needed to perform bulk clearing. This signal has nothing to do 
+		with pixel scanning other than that the signal must not be low.
+
+
+	Fig 5 appears to show the VRAM as '4401'. It should be '4461'.
+
+_____________________________________________________________________________
+									1 of 2
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Data Retrieval System
+Dt: 26 June 1989 
+
+
+Max and I have looked at the material supplied by Pat Brosnan. We have some
+questions for him when he comes back July 15 but it looks like something we
+might be able to do.
+
+This is what it looks like:
+
+1. They use an electronic coin mech such as the MARS or the SENTINEL.
+
+2. There is a box called the ECHO box (Electronic Coin Handling Optimiser)
+   connected to the elctronic coin mech's parallel interface. 
+
+   The ECHO box provides software control of the electronic coin mech and
+   does the following:
+
+	a. Allows the operator to set the coin modes with much more flexibility
+	   than our game software does;
+
+	a. Controls the electronic mech's lock-outs to ensure that money is
+	   only accepted when the system is operational;
+
+	b. Does not count coins if the door is open;
+
+	c. Allows the operator to selectively disable the acceptance of certain
+	   coins (apparently slugs are a problem over there);
+
+	d. Has an alpha-numeric interface;
+
+	e. Has diagnostic routines to help locate faults with the electronic 
+	   coin mech;
+   
+				AND
+
+	f. Has an RS-232 output to the Datapak 2.
+
+
+3. The Datapak 2 is the electronic data capture system. 
+
+   " It provides an automatic means of capturing and transferring information
+     from site to a central location for management and security purposes."
+
+   It has a realtime clock, an internal battery backup, and it connects to 
+   sensors to determine if a door is open.
+
+4. The information in the Datapak 2 is collected by the Datapak 2 Auditor which
+   is a self-powered, handheld unit that plugs into the Datapak 2. Data Dump
+   takes about 10 seconds. 
+									2 of 2
+
+What it records:
+
+	Name of site
+	Serial number of machine
+	Current Collection details comprising:
+		Name of Machine
+		Time and date of collection
+		Number of individual coins in
+		Number of individual coins out
+		Number of games played
+		
+	Entry log giving each occurrence of:
+		Time and date of entry
+		Time and date of exit
+		Identity of intruder
+		
+	Time log showing each occurrence of:
+		Time and date machine switched on
+		Time and date machine switched off
+		Games played in above period
+
+	The previous collection data
+	The accumulated recording of individual coins in and out
+
+How to combine information from ECHO and the game for Datapak 2:
+
+	The game has two RS-232 ports. Connect one port to ECHO and the other
+    port to Datapak2. (The +12V, -12V, and Power Ground signals between 
+    ECHO and Datapak 2 must be connected.) 
+
+	Normally, the game will simply take the data received from ECHO and 
+    retransmit it to Datapak 2. Similarly, it will take data received from 
+    Datapak 2 and retransmit it to ECHO. When it needs to send data to 
+    Datapak 2 it can determine when it would be a good time to do so. If 
+    necessary it can temporarily store the transmissions from ECHO whilst it 
+    is talking to Datapak 2, and transmit it afterwards.
+
+    The data is:
+	1200 Baud
+	Half Duplex
+	1 start bit
+	8 data bits (LS Transmitted first)
+	Odd parity bit
+	1 stop bit
+
+    Our DUART supports these parameters.
+
+The first question is: What information do they want from game stats that is
+not already provided by ECHO/Datapak 2? 
+
+The second question is: Where are they currently getting the -12V needed by the
+Datapak2?
+
+
+
+	Jed
+_____________________________________________________________________________
+_____________________________________________________________________________
+
+									1 of 2
+To: John Ray
+Fr: Jed Margolin
+Re: STUN RUNNER Parts that are common with Compact Hard Drivin'
+Dt: 6/27/89
+
+
+
+ADSP II
+-------
+
+We have ECNed Hard Drivin' and Compact Hard Drivin' to use ADSP II
+on the next buy. Therefore, ADSP II is common to Hard Drivin', Compact
+Hard Drivin', and Stun Runner. (Stun Runner will presumably make use of
+the two extra ROM sockets.)
+
+
+MultiSync Board
+---------------
+
+  1. Stun Runner uses a 40 MHz oscillator module at XOSC4 instead of the
+     32 MHz unit that Compact Hard Drivin' uses. Oscillator modules frequently
+     require several weeks' lead time.
+
+  2. To reduce costs the Timekeeper will be replaced with another ZeroPower 
+     RAM.
+
+  3. Slapstik 17 was reserved for Hard Drivin' but not used. I assume it is 
+     available for Stun Runner.
+
+  4. There are several parts that Compact Hard Drivin' uses that Stun Runner
+     does not.
+
+     The following are not used on Stun Runner
+
+   	5 	137540-150    1 IC, 48T02-15, RAM            200E
+
+   	8 	137543-001    1 IC, 68681         	     200A
+
+  	46 	137580-001    1 IC, 4066B                    205B
+  	47 	137546-003    4 IC, 4464, 64K X 4, DRAM      5K,15K,25K,35K
+
+  	83 	136068-1135   1 IC, PROM, 82S123             195U
+
+  	84 	137403-001    1 IC, MC1488                   210A
+  	85 	137263-001    1 IC, MC1489AL                 210B
+
+  	89 	137614-001    1 IC, AD711KN                  15B 
+
+ 	136 	144000-011    1 XTAL, 3.6864, STANDUP        XTAL1
+
+ 	138 	144008-005    1 XTAL, 50 MHZ, OSCILLATOR     XOSC3
+
+	miscellaneous other ICs, connectors, resistors, and capacitors
+
+									2 of 2
+
+  5. There are a few parts that Stun Runner uses that Compact Hard Drivin'
+     does not. They are:
+
+	137526-001	1	IC, SCUM		175W
+
+	137484-001	1	IC, AS08		175T
+
+	137134-001	1	IC, 74LS245		175R
+
+	144008-004	1	Oscillator, 40 MHz	XOSC4
+
+	137412-117	1	Slapstic 17		200K
+
+  6. Parts with changes in quantities:
+
+   	137538-002    IC, 34010-50    		Uses One instead of Two
+
+	179237-068    SOCKET, 68 PIN  		Uses Two instead of Three
+
+  	137442-150    IC, 48Z02-15, RAM 	Uses Two instead of One
+
+
+I need Ed to tell me that the special board I had made up for him works, so I 
+can give Art the schematic, so we can get an official Stun Runner parts list.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+			  ATARI CONFIDENTIAL
+
+			     HARD DRIVIN'
+
+			   APPLIED RESEARCH	
+
+Date: 29 June 1989					Number 478xx
+
+Reported by J. Danforth Margolin while Rick Moncrief is on a well deserved
+vacation.
+
+
+Hard Drivin'
+-----------
+Erik has tested the new seat post weldment and pronounced it satisfactory.
+
+
+Compact Hard Drivin'
+-------------------
+Now that we are using shielded speakers (in order to use them up, thereby saving
+money) the motor assembly, which was a tight fit, anyway, doesn't quite fit 
+anymore. The motor assembly will be ECNed at great cost in order to continue
+to use up the old speakers.
+
+Everything else is copacetic.
+
+
+ADSP II
+-------
+ADSP II has been released. ADSP II is a cost reduced version of the Driver ADSP
+board with the capability of using two additional graphics ROMs. It was 
+developed for Stun Runner but is compatible with Hard Drivin' and Compact Hard 
+Drivin'. We are phasing it in with the current buy.
+
+
+Stun Runner
+-----------
+I have had a MultiSync board regrooved to reflect how it will be stuffed for 
+Stun Runner. Ed has given the board his blessing and I have given the inputs
+to Art. (The bare board does not change, only how it is stuffed.)
+
+I have given Ed two more ADSP II boards.
+
+Max has been working on improving vector mode in the STUN RUNNER GSP code;
+Stephanie, while recuperating from her operation, has been making some
+modifications to the ADSP code to reduce the control to display lag.
+
+
+Data Retrieval for Compact Hard Drivin'
+--------------------------------------
+Max and I have looked at the material supplied by Pat Brosnan. We have some
+questions for him when he comes back July 15 but it looks like something we
+can do. The main question is, what information do they want the game to
+deliver that the ECHO/Datapak 2 system does not already have?
+
+
+Home Computer version of Hard Drivin'
+-------------------------------------
+Max has created a detailed map of the Hard Drivin' universe for Steve
+Calfee, and is working on supplying other needed information.
+
+	Jed
+_____________________________________________________________________________
+
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 30 June 1989 
+
+
+
+TI 34010
+--------
+Last week Max and I had a very nice conversation with Carrel Killebrew and Karl
+Guttag (the architect of the 34010).
+
+
+
+Stun Runner
+-----------
+I have had a MultiSync board regrooved to reflect how it will be stuffed for 
+Stun Runner. Ed has given the board his blessing and I have given the inputs
+to Art. (The bare board does not change, only how it is stuffed.)
+
+I have given Ed two more ADSP II boards.
+
+Erik has obtained and connected a Stun Sound Board so I can figure out how to 
+use Sound Self Test. 
+
+
+
+ADSP II
+-------
+ADSP II has been released. I have signed off the parts list for the Driver
+version of ADSP II. The version for Stun Runner is ready anytime.
+
+
+
+Patent Applications
+-------------------
+I have reviewed the patent applications and placed my comments in a separate
+memo.
+
+
+
+Data Retrieval for Compact Hard Drivin'
+--------------------------------------
+Max and I have looked at the material supplied by Pat Brosnan. We have some
+questions for him when he comes back July 15 but it looks like something we
+can do.
+
+I have generated a separate memo on the subject.
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 2
+To: Pat Brosnan, Atari Games Ireland Ltd.
+Fr: Jed Margolin, Atari Games Corp USA
+Dt: 6 July 1989
+
+Re: Echo/Datapak 2;
+    Bad GSP and PSP ICs;
+    Sound Board fixes.
+
+
+Echo/Datapak 2 
+--------------
+I looked at the information you sent Rick and am sending you a copy of my
+analysis. If my understanding of the Echo/Datapak 2 system is correct, 
+
+   a. What information do you want the game to provide that the 
+      Echo/Datapak 2 system does not already have?
+
+   b. Where do you get the -12 Volts for Datapak 2? If it is used only for
+      RS-232 can you use -5 Volts? (We do on our RS-232.)
+
+   c. No additional black box would be required to have the game add
+      information to the Datapak 2. The game has Two RS-232 ports. Port 1
+      would be connected to Echo, and Port 2 would be connected to Datapak 2.
+      The game would receive data from Echo on Port 1 and retransmit to 
+      Datapak 2 on Port 2. Similarly, the game would receive information from 
+      Datapak 2 on Port 2 and retransmit it to Echo on Port 1. The game
+      would add its own information to Datapak 2 as required.
+
+      This would require some programming (and replacing a pair of ROMs) but
+      it looks like something we can do. We would need a Echo/Datapak 2 system
+      as well as an Auditor in order test the code.
+
+
+Bad GSP and PSP ICs
+-------------------
+You are right; the 34010-50 and 34012-50 ICs you sent us are bad.
+
+Self-Test does not do everything. Here's the deal:
+	
+ a. The GSP Verify Test is a complete memory test that is run by the GSP, 
+    which means that the Verify program lives in VRAM. Any bad VRAM or problem
+    with the VRAM circuit can prevent the GSP Verify program from running.
+
+    The 68010 loads the GSP Verify program into GSP VRAM and tells it to run.
+    The 68010 periodically checks with the GSP to see if the program is done.
+    If it is not done within a certain amount of time, the 68010 says, "times
+    up", and reports that all the VRAMs are bad. It is unlikely that all of 
+    the VRAMs are actually bad.
+
+    The Verify test is the most difficult test for it to pass; it Verifies 
+    that the VRAM is ok. It is generally not very useful for anything else.
+
+ b. The GSP Complete Test is similar to the Verify test in that it is a 
+    complete test but it is run by the 68010 through the GSP interface. This 
+    means that the test will continue to run (and log errors) even with a bad 
+    VRAM or problem with the VRAM circuit. It takes a lot longer to run than 
+    the Verify test because the 68010 is a lot slower than the GSP.
+	
+									2 of 2
+
+   
+ c. The GSP Simple test is also run by the 68010 through the GSP interface. It
+    performs fewer tests than the complete test which is why it takes less 
+    time to run. Again, it will continue to run (and log errors) even with a 
+    bad VRAM or problem with the VRAM circuit. 
+
+ d. If a test reports that all the VRAMs are bad, this is a valuable clue 
+    since it is unlikely that all the VRAMs are actually bad. The problem is 
+    most likely a bad address bit (LAD bus, 1MA bus, or 2MA bus) caused by a 
+    short on the bus, a bad 34010, or a bad 34012. It could also be caused by 
+    a bad bus resistor (the 33 ohm bus resistors on 1MA and 2 MA as well as 
+    the signals going to 150U). I have seen at least one board with a hairline
+    crack in a bus resistor.
+
+    If a test reports that an entire row is bad, this is another valuable clue
+    since it is unlikely that all the VRAMs in an entire row are actually bad.
+    The problem is most likely a bad data bit caused by a short on the bus 
+    (LAD, VD), a bad 34010, or a bad 34012.
+ 
+ e. If the 48MHz oscillator is bad the 34010 will fail to respond to the 68010
+    and will generate a BERR (Bus Error).
+
+ f. "Complete" as in "Complete Test" means "as complete as is possible if you
+    want the results this week" .
+
+
+
+Sound Board Fixes
+-----------------
+I have seen Sound Boards that pass Self-Test but do not run game sounds during
+the game (or in the Play Sounds screen). The problem is in the COM RAM circuit
+and can usually be fixed by Changing R89 from 1K Ohms to 470 Ohms and/or 
+Changing 80S from a 74LS04 to a 74F04.
+
+
+	Regards,
+
+
+		Jed
+
+_____________________________________________________________________________
+									1 of 2
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Data Retrieval System
+Dt: 26 June 1989 
+
+
+Max and I have looked at the material supplied by Pat Brosnan. We have some
+questions for him when he comes back July 15 but it looks like something we
+might be able to do.
+
+This is what it looks like:
+
+1. They use an electronic coin mech such as the MARS or the SENTINEL.
+
+2. There is a box called the ECHO box (Electronic Coin Handling Optimiser)
+   connected to the elctronic coin mech's parallel interface. 
+
+   The ECHO box provides software control of the electronic coin mech and
+   does the following:
+
+	a. Allows the operator to set the coin modes with much more 
+	   flexibility than our game software does;
+
+	a. Controls the electronic mech's lock-outs to ensure that money is
+	   only accepted when the system is operational;
+
+	b. Does not count coins if the door is open;
+
+	c. Allows the operator to selectively disable the acceptance of 
+	   certain coins (apparently slugs are a problem over there);
+
+	d. Has an alpha-numeric interface;
+
+	e. Has diagnostic routines to help locate faults with the electronic 
+	   coin mech;
+   
+				AND
+
+	f. Has an RS-232 output to the Datapak 2.
+
+
+3. The Datapak 2 is the electronic data capture system. 
+
+   " It provides an automatic means of capturing and transferring information
+     from site to a central location for management and security purposes."
+
+   It has a realtime clock, an internal battery backup, and it connects to 
+   sensors to determine if a door is open.
+
+4. The information in the Datapak 2 is collected by the Datapak 2 Auditor 
+   which is a self-powered, handheld unit that plugs into the Datapak 2. Data 
+   Dump takes about 10 seconds. 
+
+									2 of 2
+
+What it records:
+
+	Name of site
+	Serial number of machine
+	Current Collection details comprising:
+		Name of Machine
+		Time and date of collection
+		Number of individual coins in
+		Number of individual coins out
+		Number of games played
+		
+	Entry log giving each occurrence of:
+		Time and date of entry
+		Time and date of exit
+		Identity of intruder
+		
+	Time log showing each occurrence of:
+		Time and date machine switched on
+		Time and date machine switched off
+		Games played in above period
+
+	The previous collection data
+	The accumulated recording of individual coins in and out
+
+How to combine information from ECHO and the game for Datapak 2:
+
+	The game has two RS-232 ports. Connect one port to ECHO and the other
+    port to Datapak2. (The +12V, -12V, and Power Ground signals between 
+    ECHO and Datapak 2 must be connected.) 
+
+	Normally, the game will simply take the data received from ECHO and 
+    retransmit it to Datapak 2. Similarly, it will take data received from 
+    Datapak 2 and retransmit it to ECHO. When it needs to send data to 
+    Datapak 2 it can determine when it would be a good time to do so. If 
+    necessary it can temporarily store the transmissions from ECHO whilst it 
+    is talking to Datapak 2, and transmit it afterwards.
+
+    The data is:
+	1200 Baud
+	Half Duplex
+	1 start bit
+	8 data bits (LS Transmitted first)
+	Odd parity bit
+	1 stop bit
+
+    Our DUART supports these parameters.
+
+The first question is: What information do they want from game stats that is
+not already provided by ECHO/Datapak 2? 
+
+The second question is: Where are they currently getting the -12V needed by 
+the Datapak2?
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 7 July 1989 
+
+
+
+Stun Runner
+-----------
+Last week I gave Art the inputs for Stun MultiSync, which requires marking the
+schematics to show what is loaded on the board and doing the parts list.
+It does not involve any PC layout changes.
+
+We have been bumped from the schedule by a job they are doing for Tengen. I
+have not been given a reschedule date.
+
+
+
+ADSP II
+-------
+The parts list for the Stun Runner version of ADSP II is ready to be signed off.
+This assumes they want all six graphics ROMs stuffed.
+
+
+
+Atari Ireland
+-------------
+I have sent Pat Brosnan a memo about:
+
+	a. Having the game send additional to the Echo/Datapak 2 system;
+	b. The bad 34010 and 34012 ICs he sent us (they were bad);
+	c. A detailed explanation of what the GSP memory tests mean;
+	d. The Sound Board fix if the Sound Board passes Self-Test but does not
+	   run game sounds.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+							
+									1 of 2
+
+To: Pat Brosnan, Atari Games Ireland Ltd
+Fr: Jed Margolin, Atari Games Corp
+Dt: 14 July 1989
+Re: Hard Drivin General Points and Queries
+
+
+Rick has asked me to relay his comments to you and to add some of my own.
+
+
+1. STC Ten Turn Pots: We would like the price and the specifications on
+   them. (The pots may degrade the steering.) Yes, please send us some
+   failed pots and some new STC ones.
+
+2. Problems with strain guages: We need more specific information on 
+   "problems".
+
+   Different Strain Guages used on the Compact: The substrate was changed by
+   Purchasing so they could get the part. All the important parameters should
+   be similar.
+   
+3. Prototype Compacts with pot problems in the Accelerator/Brake Assembly:
+   You can swap the assemblies with the Production Assembly but you may also 
+   need to update the software to the Production Version.
+
+4. I will refax my memo about the Data Retrieval system. 
+
+5. OK on waiting for information from Brent Leisure. 
+
+6. I am sending the printout on all EPROMs used in Hard Drivin'. 
+
+   The new Sound update adds a few more sounds for the Compact Driver. The new
+   Sound update can be used with the Hard Drivin' sitdown, but the old Sound 
+   program (for the sitdown) cannot be used with the Compact because it does 
+   not have the extra sounds.
+
+   The Sound PCB with the new program is completely interchangeable between
+   sitdown and Compact. 
+
+   The ADSP PCB is also completely interchangeable between sitdown and 
+   Compact. 
+
+   By the way, we are phasing in a new ADSP board (the ADSP II) that will also
+   be completely interchangeable between sitdown and Compact. The reason we 
+   are phasing it in has something to do with it being used in Stun Runner and
+   how parts are ordered. They are scheduled to be used in the last 300 
+   Compacts so you might end up with some.
+
+   I don't know if Mark Sherman is seeing the same problems with pots and
+   strain guages. He had gone by the time I was doing this (Friday evening).
+
+   New Information: I am not sure what you have so I don't know if there is 
+   anything else I should send you.
+
+   Training on the Boards: I am not planning on any. Generally I prefer to
+   write stuff down so I can think about it first. I also prefer to give 
+   written documentation to people so they can think about it, too.
+
+   Thanks for the compliment. <--- {Tell Management}
+
+
+	Regards,
+
+		Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 14 July 1989 
+
+
+
+
+Stun Runner
+-----------
+Two weeks ago I gave Art the inputs for Stun MultiSync, which requires marking 
+the schematics to show what is loaded on the board and doing the parts list.
+It does not involve any PC layout changes.
+
+We have been bumped from the schedule by a job they are doing for Tengen. I
+have not been given a reschedule date.
+
+I received a list of part numbers from Ed which someone gave to him, telling
+him the parts were long lead time items.
+
+I generated a list of descriptions and verified that Stun Runner did, in fact,
+use them, except for a 40 pin connector that was attributed to SA II. I also
+generated a list of MANMAN Inventory from the part numbers, and many of the 
+parts were either ordered or already in inventory.
+
+The exceptions were the ADSP 2100 in Plastic Quad Flat Pack, the PQFP Housing,
+and the PQFP Lid. I called Lori Robbins and she said we will be going to the
+ADSP II for the last 300 Compact Drivers and that the POs hadn't been entered
+in the system yet.
+
+
+
+ADSP II
+-------
+I have signed off the parts list for the Stun Runner version of ADSP II.
+
+
+Sound Board
+-----------
+I finally looked into the COM RAM problem. There are three options:
+
+	A. Change a 74LS04 to a 74F04 and Change a 1K resistor to 470 Ohms.
+
+	B. Do two cuts and two jumpers, and Change a 1K resistor to 470 Ohms.
+	   (No need to change the 74LS04.)
+
+	C. Do four Cuts and four jumpers. This is the optimum solution but
+	   should be done only if we are going to buy new boards. We have
+	   already ordered the Sound Boards for the current run of the Compact
+	   Driver. The question is whether they are going to release more.
+
+
+
+Pat Brosnan
+-----------
+I have responded to Pat Brosnan's fax of 14 July and sent him a bunch of stuff.
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 21 July 1989 
+
+
+
+
+Stun Runner
+-----------
+Stun MultiSync has been released. Art will do a Stun Runner MultiSync schematic
+showing which parts are not loaded for Stun Runner.
+
+
+
+ADSP II
+-------
+I have given Stun Runner two more (working) ADSP II boards, for a total of six.
+
+We have:	2 working boards;
+		1 board with shorted traces (by the vendor);
+		1 blank board.
+
+Out of the 9 stuffed boards there were about four with shorted traces by the 
+vendor. And each one was different. Perhaps the boards were not properly cleaned
+at some step in the process.
+
+
+Sound Board
+-----------
+I have signed a deviation to be followed by an ECN to:
+
+	Change a 74LS04 to a 74F04 and Change a 1K resistor to 470 Ohms.
+
+
+
+Pat Brosnan
+-----------
+I have not yet received a reply to the memo I sent.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 26 July 1989 
+
+
+
+ADSP II
+-------
+We have started using the ADSP II in the production of Compact Hard Drivin'.
+
+Upon investigating the report of PQFPs with bent leads:
+
+   Don Wrightnour showed me a package of 110 PQFPs. On the top section (55 
+   pieces) most had bent leads, some very badly bent.
+
+   Don said he had not been able to find out how they had gotten that way
+   but that they probably hadn't come that way from Analog Devices.
+
+   The PQFP Housings and Lids have not come in.
+
+   It is my fault because I hadn't alerted them that the part needed special
+   handling.
+
+   Some parts have apparently been put in standard plastic wrapping. That is
+   apparently my fault, too, because I did not alert them that the part is
+   CMOS and therefore static sensitive. (Not to mention the physical damage
+   caused by throwing them into a bag.) 
+
+   Apparently they will either try to unbend the leads when the lids come in
+   or they will send them back to Analog Devices for repair.
+
+   I have told Don that the PQFPs must stay in the shipping package until they
+   are put into the PQFP lid. If they need a special container to hold the
+   lidded PQFP then so be it.
+
+
+   Everything seems to be my fault because I did not tell anyone that this 
+   board was different from the Driver ADSP. 
+
+	1. I spent a lot of time making certain that Purchasing coordinated the
+           buy of the PC Board, PQFP, and PQFP socket assembly. 
+
+        2. Perhaps either the ADSP II documentation was not published in a 
+	   timely manner or it was and Manufacturing didn't read it.
+
+   
+   This problem will almost certainly be discussed in various staff meetings.
+
+   I suggest we offer to design the PQFP part out and the PGA back in if
+   Manufacturing is unable to handle the part properly. (Note, for Compact
+   Hard Drivin' we can go back to Driver ADSP; for Stun Runner we would need
+   to redo the board because of the extra Graphics ROM.) 
+
+   
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 28 July 1989 
+
+
+
+Driver ADSP
+-----------
+I am working on test routines to find out why some boards pass Self-Test but
+do not run the game.
+
+
+
+ADSP II
+-------
+We have started using the ADSP II in the production of Compact Hard Drivin'.
+
+The problem with handling the PQFPs was discussed in a previous memo.
+
+
+
+Stun Runner
+-----------
+I have signed off the schematic for the Stun Runner MultiSync Main.
+
+Joe needed programmed part numbers for the SA II board so I gave him some.
+The schematic called out 27512-300 which we do not have because they
+are NMOS and 300 ns, but Byron approved the use of 250 ns CMOS. 
+
+Soon they need to decide whether to use EPROM or OTP on the SA II.
+
+
+
+EPROM Prices
+------------
+					Standard	Current
+					  Cost		 Cost	     QOH
+					--------	-------	    ------
+137448-250	27C512-250 	EPROM	$6.50		$4.50	    52,238
+
+137454-250      27C512-250	OTP	$5.10           $5.10       46,559
+
+
+
+
+	Jed
+
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 4 August 1989 
+
+
+
+Strain Guage PWM Reference
+--------------------------
+I am working on it as my first priority and am making progress.
+
+
+
+ADSP II
+-------
+PQFP:
+
+They are about to start using the PQFP. Don reported that the PQFPs were loose
+in the housing. I explained that the PQFP had to be put in the Lid first; then
+the Lid assembly goes into the housing.
+
+PGA:
+
+A problem has developed recently where apparently the PGAs are coming in with
+one of the pins bent at about a 10 degree angle. They seem to be mostly the
+same pin each time. When it is put in the socket the pin is bent flat. 
+Attempting to unbend the pin snaps it off. Margot came in and collected some
+samples to send back to the factory. Sam is inspecting each one before she
+hands it out (and fixing the pin). I hope Analog Devices fixes it on their end
+soon.
+
+
+
+2101
+----
+Tom Clark is getting me some WW Sockets.
+
+
+
+Driver ADSP
+-----------
+Test routines are on hold while I work on the strain gauge centering circuit/
+software.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 16 August 1989 
+
+
+
+Strain Gauge PWM Reference
+--------------------------
+I have rewritten the Binary Rate Multiplier software so that the worst case
+has gone from 128 us to 40 us.
+
+
+
+ADSP II
+-------
+PQFP: The first ADSP IIs have been assembled, and they work.
+
+PGA: The 2100s with the bent pins were sent back. Apparently, Analog Devices
+     has determined that it was their error and has replaced them.
+
+
+
+2101
+----
+Tom Clark is still getting me some WW Sockets.
+
+
+
+Driver ADSP
+-----------
+I am making progress on the addional memory tests.
+
+
+
+Stun Runner
+-----------
+The resistors that establish the video levels (R97, R108, R112) were left off 
+the parts list. I have done a deviation to put them on. An ECN will be done
+after the Pre-Prods are built.
+
+
+
+	Jed
+
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 25 August 1989 
+
+
+
+
+2101
+----
+Tom Clark is still getting me some WW Sockets.
+
+
+
+Driver ADSP
+-----------
+I am making progress on the additional memory tests and am working on the
+complete memory tests performed by the 2100.
+
+
+
+Stun Runner
+-----------
+Various omissions are being corrected in the latest rounds of ECNs.
+
+I have asked Jeff Bell for a series number for the Stun Runner OTPs.
+136070 will be used for EPROMs.
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 25 August 1989 
+
+
+
+Driver ADSP
+-----------
+I have completed the following tests; most can be performed by both the 68010 
+and the 2100:
+
+	Output Buffers:
+
+	   Test that the Output Buffers can be switched.
+
+	   Shift various bits through data and address line and display 
+	   the bits onscreen.
+
+	   Test buffer with data equals address.
+
+	   Test buffer with pseudo-random data.
+
+	Data Memory:
+
+	   Shift various bits through data and address line and display 
+	   the bits onscreen.
+
+	   Test data memory with data equals address.
+
+	   Test data memory with pseudo-random data.
+
+	   2100 does standard complete tests and reports the results.
+
+	Remaining: Program Memory Tests;
+		   Redraw the board onscreen to look like ADSP II.
+
+
+
+Stun Runner
+-----------
+Various omissions are being corrected in the latest rounds of ECNs.
+
+I have asked Jeff Bell for a series number for the Stun Runner OTPs.
+136070 will be used for EPROMs.
+
+
+
+2101
+----
+Tom Clark is still getting me some WW Sockets.
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 5 September 1989 
+
+
+
+ADSP II
+-------
+I have completed the following tests:
+
+	Output Buffers
+
+	Data Memory: Bus tests and standard complete test performed by 2100 
+
+	Program Memory: standard complete test performed by 2100 
+
+Remaining: Program Memory bus Tests;
+	   Redraw the board onscreen to look like ADSP II.
+
+
+
+Stun Runner
+-----------
+Ed has given me the final configuration of EPROMs and OTPs for initial 
+production.
+
+Rick Meyette has given me the EPROM/OTP numbering scheme where we use
+get to do the checksum/part number thing while using only one programmed
+part series.
+
+Art is working on the ECNs.
+
+
+2101
+----
+Tom Clark is still getting me some WW Sockets.
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 8 September 1989 
+
+
+
+ADSP II
+-------
+I have completed the additional ADSP Tests.
+
+I have added the tests to the Compact Driver format and will give a pair of
+ROMs to Production and Customer Service. There are no plans to release
+a new version to retrofit games in the field. Also, Self-Test is now too big 
+to coexit with the game program in ROM 0.
+
+
+
+Stun Runner
+-----------
+I have signed off the final production parts lists for the PC Boards.
+
+I have given Ed and Andy the final Self-Test which includes the new ADSP
+tests.
+
+
+
+2101
+----
+Tom Clark is still getting me some WW Sockets.
+
+
+
+	Jed
+
+
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 15 September 1989 
+
+
+ADSP II
+-------
+I have given Test ROMs to Production and Customer Service. (They do not run
+the game, just Self-Test.)
+
+I have also given them documentation for the tests.
+
+
+Stun Runner
+-----------
+They have started Final Assembly on Stun Runner. There was a problem with the
+game playing the wrong sounds that was due to their not having received the
+latest ECN in a more timely fashion. The ECN was to change what ROMs went where.
+
+I have reviewed the final draft of the manual and made corrections.
+
+
+2101
+----
+Tom Clark has gotten me the WW Sockets for the 2101.
+
+
+Hyundai 8Kx8 SRAMs
+------------------
+Tom Clark has disqualified Hyundai 8Kx8 RAMs from the AVL.
+
+Even so, we will be using sockets for the 8Kx8 SRAMs on the ADSP Board and
+also on the MultiSync Board.
+
+Tom Clark and I met with Steven Hayes of I Squared and W.S. (Douglas) Chee of
+Hyundai. They said they knew about the pattern sensitivity problem with their
+RAMs. They claim the low power version of the part is probably ok and they 
+will either replace our inventory with said part or just take 'em back.
+
+
+ADSP-2101
+---------
+Analog Devices is changing the signal pinout of the PGA so that it will be
+compatible with the footprint of the socketed PLCC.
+
+
+Cellular Phones
+---------------
+I have started getting information on cellular phones.
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 22 September 1989 
+
+
+Atari Ireland
+-------------
+I have sent to Pat Brosnan:
+	Documentation for the new ADSP Tests;
+	Special Test ROMs for Compact Hard Drivin';
+	A 34010 Data Manual;
+
+
+Stun Runner
+-----------
+They are producing boards and have started Final Assembly today.
+
+
+Hyundai 8Kx8 SRAMs
+------------------
+Tom Clark, Mary Burnias, and I had a meeting with the Hyundai Senior Manager
+of the Reliability Engineering Department (Mr. Seung-Il Kim), the Regional
+Sales Manager (Mr. Patrick Bonham), the Applications Engineering Manager 
+(Mr. W.S. Douglas Chee), and the I-Squared Manufacturers rep (Mr. Steven Hayes).
+
+The results:
+    1. I agreed to provide a timing diagram for my RAM circuit. I actually
+       did one better by taking pictures of the 'scope display. I have
+       given the write-up to Tom to give to them.
+
+    2. Tom has agreed to test 100 samples of their low power part. They will
+       be tested on my ADSP Board with my ADSP tests. (Jacob has had my     
+       board modified with zero-insertion force sockets.) Tom will also 
+       have some tested in Production. If they are all good presumably we 
+       will swap the parts we have for the new parts. If any one part fails
+       he will reject the entire lot and Hyundai will buy back our inventory
+       of their parts.
+
+
+ADSP-2101
+---------
+Analog Devices is changing the signal pinout of the PGA so that it will be
+compatible with the footprint of the socketed PLCC.
+
+
+Cellular Phones
+---------------
+My initial survey is complete. 
+
+
+Street Driver Amp
+-----------------
+I have received from Karen an APU modified into a single supply bridge 
+amplifier.
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 29 September 1989 
+
+
+
+
+Stun Runner
+-----------
+Carole will ECN the harness so the Left and Right Coins Switches are correct.
+
+
+
+Street Driver Amp
+-----------------
+Bridge Amp Performance:
+
+		Sine Wave	
+	Load	Power Output	Current from +12VDC Supply
+
+
+The Bridge Amp will produce 4 Watts (Sine Wave Power) into 8 Ohms and
+6 Watts into 4 Ohms.
+
+The standard amp run from +/- 14 VDC produces about 6 Watts into 8 Ohms.
+
+I am ready for PC.
+
+
+
+AR340
+-----
+I have generated the cost figures for a low cost 34010 game system and
+am waiting for TI to get back to me so I can find out what the ICs
+will cost next year.
+
+
+Transputer
+----------
+I have received data books from Bill Woods. SGS Thomson now owns INMOS and
+has announced a price reduction on Transputers in order to increase market
+share.
+
+In quantities of 1K the T800 will cost $135.00 .
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 6 October 1989 
+
+
+
+Stun Runner
+-----------
+I have not been notified of any problems so I will assume everything is 
+copacetic.
+
+
+Street Driver Amp
+-----------------
+I have added a connector to supply +12V for the Electronic Coin Mechs in Europe.
+I have asked Tom Clark to find a knob for the volume control pot.
+I have given Leon the inputs.
+Leon has done the schematic and is working on the board.
+
+
+Transputer
+----------
+I am still reading the user's manual.
+
+
+Cycle-Tron
+----------
+I have made a new Opto-State PROM so that it will act as a tachometer with
+only one input (Q0), instead of requiring two quadrature signals. It will give
+half the number of counts but will allow the use of a Single OSR Board ($8.17) 
+instead of a Dual OSR Board ($9.87).
+
+
+Parametric Horizon
+------------------
+I expect to start designing a test circuit soon.
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 6 October 1989 
+
+
+
+Stun Runner
+-----------
+I have not been notified of any problems so I will assume everything is 
+copacetic.
+
+
+Street Driver Amp
+-----------------
+I have added a connector to supply +12V for the Electronic Coin Mechs in Europe.
+I have asked Tom Clark to find a knob for the volume control pot.
+I have given Leon the inputs.
+Leon has done the schematic and is working on the board.
+
+
+AR340
+-----
+I have gotten revised cost figures for ICs from Jeff at TI.
+
+	AR340 Board, Version 1 (Fully Loaded 68000-based 34010)	
+		$ 218.82
+		$ 203.95 (with Gate Array)
+		$ 203.82 (with 40 MHz 34010)
+		$ 188.95 (with 40 MHz 34010 and Gate Array)
+
+	AR340 Board, Version 2 (Partially Loaded 68000-based 34010)	
+		$ 194.91
+		$ 180.04 (with Gate Array)
+		$ 179.91 (with 40 MHz 34010)
+		$ 165.04 (with 40 MHz 34010 and Gate Array)
+
+	AR340 Board, Version 3 (34010 only)
+		$ 128.95
+		$ 123.95 (with Gate Array)
+		$ 113.95 (with 40 MHz 34010)
+		$ 108.95 (with 40 MHz 34010 and Gate Array)
+
+	
+Transputer
+----------
+I am still reading the user's manual.
+
+
+Cycle-Tron
+----------
+I have made a new Opto-State PROM so that it will act as a tachometer with
+only one input (Q0), instead of requiring two quadrature signals. It will give
+half the number of counts but will allow the use of a Single OSR Board ($8.17)
+instead of a Dual OSR Board ($9.87).
+
+
+Parametric Horizon
+------------------
+I expect to start designing a test circuit soon.
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: 13 October 1989 
+
+
+
+Stun Runner
+-----------
+I have not been notified of any problems so I will assume everything is 
+copacetic.
+
+
+
+Street Driver Amp
+-----------------
+We have gotten film and have presumably sent out for boards.
+
+
+
+AR340
+-----
+I have finished the schematics of the Main Board and have started on the 2101
+board.
+
+PC will not be ready for them until Nov 6.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: November 3, 1989 
+
+
+
+Stun Runner
+-----------
+I have not been notified of any problems so I will assume everything is 
+copacetic.
+
+
+
+Street Driver Amp
+-----------------
+We have received the 15 boards. Karen has built two that we will test
+presently.
+
+Tom has found a knob for the volume control:
+
+	Cosmo #39-7902-020-00-3-10
+
+	Setup up charge is $125.
+	
+	Cost is $0.98 .
+
+	Minimum order is 5,000.
+
+	(The Pot shaft is 3/16 and this is apparently nonstandard.)
+
+	$0.98 sounds like a lot for a knob. (The pot is only $0.64 .)
+
+
+AR340
+-----
+I have finished the schematics of the Main Board and the 2101 board which will 
+go by the name "DS II".
+
+I will give them to PC on Nov 6.
+
+Rich Comeau of Motorola is getting me some 35 ns SRAMs for the DS II board.
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 2
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: November 10, 1989 
+
+
+
+Street Driver Amp
+-----------------
+The amplifier seems to work.
+
+With +12V power it delivers:
+
+	18Vp-p no load
+
+	15Vp-p at 8 ohms,  = 7.5Vp = 5.3Vrms.  power = 5.3*5.3 / 8 = 3.5 Watts 
+					       Supply current is 0.7 Amps.
+
+	13Vp-p at 4 ohms,  = 6.5p = 4.6Vrms.   power = 4.6*4.6 / 4 = 5.2 Watts 
+					       Supply current is 1.2 Amps.
+
+At 4 ohms each amplifier is effectively seeing a 2 ohm load and has a peak 
+current of 1.6 Amps. The amplifiers are rated at 3.5 Peak Amps max.
+
+The standard amplifier runs on +14V and -14V, is single ended, and is used with
+an 8 Ohm speaker. It delivers 22Vp-p into 8 Ohms (7.5 Watts). Since there are 
+two channels this is a total of 15 Watts.
+
+
+Bridge Amp						Referenced to 15 Watts
+----------						----------------------
+
+1 x Eight Ohm Speaker				3.5 Watts	-6.3 dB
+
+1 x Four Ohm Speaker				5.5 Watts	-4.3 dB
+2 x Eight Ohm Speakers				5.5 Watts	-4.3 dB
+
+1 x Eight Ohm Speaker/channel x 2 channels	7 Watts		-3.3 dB
+
+1 x Four Ohm Speaker/channel x 2 channels	11 Watts	 -1.3 dB
+2 x Eight Ohm Speakers/channel x 2 channels	11 Watts	 -1.3 dB
+
+
+	The DS II Board has two channels and so is capable of delivering 
+	11 Watts into 2 four Ohm speakers.
+
+	Multiple speakers are generally more efficient acoustically than
+	single speakers.
+
+Acoustic Output in Driver Sitdown playing the 320 tune:
+
+	Bridge Amp	100-106 dB
+	Standard Amp	104-110 dB
+
+This agrees with the power differences between the two amplifiers. The Bridge
+Amp delivers 5.5 Watts into 2 eight Ohm speakers. The standard amp delivers 
+7.5 Watts/channel into eight Ohms; with two channels there are 15 Watts of
+audio.
+
+
+									2 of 2
+
+Whether a single Bridge Amp producing 5.5 Watts into a single four Ohm speaker 
+is loud enough depends on the acoustic design of the cabinet. In the Sitdown it
+produces a peak level of 106 dB which is certainly sufficient.
+
+
+AR340
+-----
+I have finished the schematics of the AR340 board, the DS II Board, and the
+DS II RAM board.
+
+Joe is currently working on the DS II board.
+
+Rich Comeau of Motorola is getting me some 35 ns 8K x 8 SRAMs for the 
+DS II board.
+
+
+
+AT&T DSP32C
+-----------
+
+Nilesh Amin of AT&T and Terry Speizer of Electec Sales (the rep) came in and
+gave a presentation on the DSP32C. The DSP32C does 12.5 MIPs and has a single
+cycle floating point multiplier that has a mode where it can do four floating
+point multiplies per cycle.
+
+The DSP32C costs about $90 (1K) for the 164 pin PQFP. Theye weren't sure if 
+that was for the 40MHz or 50 MHz part.
+
+They offer software tools that run under MSDOS. The assembler and linker and
+simulator costs $500, the C compiler costs $1000.
+
+They also have a simple ICE that connects to the PC for $270; the Pod 
+costs $540.
+
+Terry will get me more information and three more sets of data books.
+
+It has 1.5K of internal RAM.
+
+The downside is that is uses fast external memory: 25 ns.
+
+This device looks cheaper and faster than the Transputer.
+
+
+
+
+	Jed
+_____________________________________________________________________________
+									1 of 4
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: November 17, 1989 
+
+
+Driver Sound
+------------
+I have worked out the mods so Manufacturing can use 27256s for the Wave Table
+ROMs. It will be transparent to the software; however, checksums will now be 
+for pairs and the reported locations will be wrong. We should send out
+a sheet explaining the new locations.
+
+	  Reported location 	Locations with 27256s
+	  -----------------	--------------------
+		65A		 	65A, 55A
+		55A			45A, 30A
+		45A			20A, 5A
+		30A			65C, 55C
+		20A			45C, 30C
+		 5A			20C, 5C
+
+	A bad checksum means that one or both 27256s in the pair are bad.
+
+We should have Karen mod a board. (Someone will have to make the ROMs.)
+
+
+DS II
+-----
+Joe was doing a great job on the board until we got dumped by KLAX.
+
+
+DS II RAM
+---------
+Joe started on the schematics while he was doing DS II.
+
+
+AT&T DSP32C
+-----------
+I am ready to start drawing the schematics for the MSP Board.
+
+
+Street Driver Inputs
+--------------------
+	Gas		J8 - 7		A/D IN3
+
+	Brake		J8 - 5		A/D IN4
+
+	Steering 	J9 - 6		A/D IN0
+
+			J9 - 5		A/D IN1	(not currently used)
+
+
+
+   Jed
+
+
+									2 of 4
+DSP32C 
+------
+
+The 40 MHz part will require memory speeds of either:
+
+	25 ns with 1 wait state 
+
+		or
+
+	45 ns with 2 wait states
+
+Using 45 ns RAM permits the use of banked 8Kx8 SRAMs.
+
+
+A normal instruction cycle is 4 clocks (100 ns).
+
+This is apparently 2 clocks for reading the instruction and 2 clocks for
+reading or writing memory. 
+
+Note that if successive memory accesses are to the same physical memory a
+conflict wait cycle is inserted. [from "WE DSP32C Digital Signal" page 2-16]
+
+Internal RAM and External RAM are different physical memories. It is not
+clear whether Internal RAM 0, RAM 1, and RAM2 memory are considered
+physically different.
+
+
+>>> An instruction fetched from external memory that accesses internal RAM
+is 6 cycles. At 40 MHz this is 150 ns which is:
+
+		6.7 MIPS (also at least 6.7 MFLOPS)
+------------------------------------------------------------------------------
+
+DSP32C Memory Calculations
+--------------------------
+
+40 MHz	T = 25 ns	N = Wait States
+
+
+					N = Wait States
+					-----------------
+					0	1	2
+
+ASN (Address Strobe)  T - 5 + N x T	20 ns	45 ns	70 ns
+
+Data Setup	      10 ns (Assuming this is the same as for the 50 MHz part)
+
+Memory access				10 ns	35 ns	60 ns
+
+Memory Byte Select must
+be strobed with ASN
+Assume 6 ns for a 74AS139		4 ns	29 ns	54 ns
+
+Memory speed				 -	25 ns	45 ns
+
+------------------------------------------------------------------------------
+
+
+									3 of 4
+DSP32C Memory Calculations
+--------------------------
+
+50 MHz	T = 20 ns	N = Wait States
+
+
+					N = Wait States
+					-----------------
+					0	1	2
+
+ASN (Address Strobe)  T - 5 + N x T	15 ns	35 ns	55 ns
+
+Data Setup	      10 ns 
+
+Memory access				5 ns	25 ns	45 ns
+
+Memory Byte Select must
+be strobed with ASN
+Assume 6 ns for a 74AS139		-1 ns	19 ns	39 ns
+
+Memory speed				 -	15 ns	35 ns
+------------------------------------------------------------------------------
+
+
+									4 of 4
+Changing Driver Sound Board Wave ROMs from 27512s to 27256s
+-----------------------------------------------------------
+
+Method 1 (Top of board):
+
+   1. Cut and lift 55E pin 7.	
+
+   2. Connect a wire jumper from 45C pin 1 to 55C pin 28. 
+
+   3. Cut and lift 100C pins 12, 15, 16, and 19.
+
+   4. Connect a wire jumper from 55E pin 7 to 95A pin 1.
+
+   5. Connect a wire jumper from 100C pin 19 to 95A pin 2.
+
+   6. Connect a wire jumper from 100C pin 16 to 95A pin 3.
+
+   7. Connect a wire jumper from 100C pin 15 to 95A pin 5.
+
+------------------------------------------------------------------------------
+
+Method 2 (Neater but requires cutting traces on the bottom of the board):
+
+   1. On the bottom of the board, Cut the trace going to 55E pin 7.
+
+   2. On the bottom of the board, Cut the traces going to 100C pins 12, 15,
+      16, and 19.
+
+
+On the top of the board:
+
+   3. Connect a wire jumper from 45C pin 1 to 55C pin 28. 
+
+   4. Connect a wire jumper from 55E pin 7 to 95A pin 1.
+
+   5. Connect a wire jumper from 100C pin 19 to 95A pin 2.
+
+   6. Connect a wire jumper from 100C pin 16 to 95A pin 3.
+
+   7. Connect a wire jumper from 100C pin 15 to 95A pin 5.
+
+------------------------------------------------------------------------------
+
+Method 3 (Maybe):
+
+   1. Install a programmed PAL at 100C in place of the 74LS374.
+
+   2. Cut and lift 55E pin 7.
+
+   3. Connect a wire jumper from 45C pin 1 to 55C pin 28. 
+
+   4. Connect a wire jumper from 55E pin 7 to 95A pin 1.
+
+   This method should be done only on new boards so that the PAL at
+   100C can be installed before wave solder.
+
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: December 1, 1989 
+
+
+
+27256s
+------
+I have apprised Jim Freitas and Norm Maeder of the difficulties in modifying
+the MultiSync Main board and Driver Sound Board to use 27256s and of the
+problems that would be caused when we ship the Hard Drivin' 90 kit.
+
+They agreed it wasn't a good idea for 200 games.
+
+I told them about the DS II Board's use of a 27256 and they also agree we
+should hang on to our stock of these parts.
+
+
+
+DS II
+-----
+Joe was doing a great job on the board until we got dumped by KLAX.
+
+We are still dumped by KLAX. 
+
+Estimated film and fab for DS II is now 12/18/89.
+
+
+
+DS II RAM
+---------
+Joe started on the schematics while he was doing DS II.
+
+
+
+AT&T DSP32C
+-----------
+I have given Leon the inputs for the board.
+
+I have given Erik the inputs for the wirewrap.
+
+I am adding the RAM and ROM to the DSP32 board as requested.
+
+
+
+TI 320C30 (floating point)
+--------------------------
+Unfortunately, the chip is currently too expensive.
+
+Engineering samples are $500.
+
+If we ordered 1K in January for delivery in March, Jeff thinks he could
+get them to us for $200.
+
+Jeff estimates that in mid March they will be $120-$150 and in 1Q '91 maybe 
+$90 - $100.
+
+
+
+To: Rich Moore
+Fr: Jed Margolin
+Dt: 1 December 1989
+Re: xxxxx
+
+
+There is a possibility that someone is preparing to copy Hard Drivin'. There
+is no hard evidence, just something that caught my attention.
+
+According to a reliable source xxxxx has ordered 600 ADSP-2100s (8MHz PGA). 
+The parts will be billed to 'xxxxx' and they are being sent to xxxxx.
+
+The ADSP_2100 is one of the few parts in Hard Drivin' that is sole sourced and
+available only from the manufacturer. 
+
+Most of the parts in Hard Drivin' either have multiple sources or are 
+available from distribution. Someone could buy these parts without attracting 
+any attention.
+
+The two exceptions are the TWIG custom part from National Semiconductor and 
+the ADSP-2100 from Analog Devices.
+
+The ADSP-2100 is used in Hard Drivin', Compact Hard Drivin', and Stun Runner.
+We started with the 8 MHz part in the Pin Grid Array (PGA) package, which was 
+the only version available when we designed the Hard Drivin' hardware.
+
+Since then, Analog Devices has come out with faster versions (12 MHz) in
+less expensive packages like the Plastic Quad Flat Pack (PQFP) that we
+use in the ADSP II board that was phased in during the Compact run in August
+and was also used in Stun Runner.
+
+Analog Devices also makes an improved part (ADSP-2100A) and a cost reduced
+version (ADSP-2101) that we will be using the Street Driver. These last
+two are not interchangeable with the original ADSP-2100 that we used.
+
+Someone designing a new product would probably use one of the newer parts,
+not the 8MHz PGA that xxxxx has ordered.
+
+It is, of course, very possible that they are buying these parts for a
+legitimate purpose.
+
+I recommend that we not do anything, just be alert for counterfeit Hard
+Drivin' games. xxxxx would know how we found out (actually it was 
+xxxxxxxxxxxxxx) and I don't want her to get hurt.
+
+Enclosed is a copy of xxxxx's Fictitious Business Name Statement filed 
+12/23/87 in Santa Clara County.
+
+xxxxx is currently located at xxxxxxxxxxxxxxxxxxx. 
+
+
+
+P.S. There are companies that are in the business of "peeling" custom
+chips like the TWIG so they can be copied. It is expensive and has
+probably kept the game from being copied so far.
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: December 8, 1989 
+
+
+
+DS II
+-----
+I believe we have sent out for film and fab.
+
+
+
+DS II RAM
+---------
+I have checked Joe's schematic and he has started the board.
+
+
+
+AT&T DSP32C
+-----------
+We have received the WW from Emmette and I am in the process of checking
+it out before giving it to Max.
+
+Motorola is sending me a quote on the 45ns 32Kx8 SRAMs.
+
+I have received a checkprint from Leon.
+
+
+
+Other
+-----
+I have verified that the documentation for Hard Drivin' sitdown calls out
+the ADSP II board.
+
+On Wednesday I spent about 5 hours supporting the 34010 Overlay Processor that 
+I did for System 3D. I spent about 1 hour with Sam Lee and about 4 hours
+generating documentation for him to use.
+
+On Thursday I spent about 1 hour with Sam Lee.
+
+On Friday, Max and I spent some time with Ed Logg discussing aerodynamic
+simulation.
+
+
+  Jed
+_____________________________________________________________________________
+									1 of 2
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: December 18, 1989 
+
+
+
+We have film and fab and are ready to buy the following boards:
+
+	DS II (has been sent to the vendor)
+
+	DS II RAM
+
+	AT&T DSP32C
+
+Melanie's last day before vacation is Wednesday.
+
+
+
+Really Low Cost ADSP-2101 (They don't have a part number yet)
+--------------------------------------------------------
+According to Damon Chu of Analog Devices it will have:
+
+	1. 1024 words of program RAM (24 bits);
+	2. 256 words of Data RAM (16 bits);
+	3. Only one serial port;
+
+   and it will:
+
+	4. Be pin compatible with regular 2101 (and have access to external
+	   memory);
+	5. Run at 100 ns (10 MHz);
+	6. Be sampled in April 1990;
+	7. Cost $10 (quantities 1 - 1M) 
+
+
+AT&T DSP32C
+-----------
+After getting a checkprint from Leon I solicited input from Manufacturing
+(Norm, Tim, Don, and Kurt) because the DSP32C is the largest (164 leads) 
+fine pitch (25 mil) SMD we have used to date. 
+
+Tim, Norm, Don, and I met with Art and Leon and had a good discussion of what 
+we needed to do for this device, after which Leon made some layout changes.
+
+One of the more interesting facts that came out of this discussion was that
+we need to have the board done with the solder mask over bare copper (not
+tinned). The reason is that in attaching the SMD, the tinned solder plate
+has a tendency to melt, damaging the solder mask. It can also cause shorts
+between the teeny tiny traces.
+
+The only downside to having solder mask over bare copper is that if the
+boards are stored for a long time before they are built, the copper can
+corrode. Since we usually build the boards as soon as we get them this
+will not be a problem. 
+									2 of 2
+
+We will also need a separate mask for the vendor to apply the solder paste
+for attaching the SMD. 
+
+Also, Don says that the SMD station that Customer Service has will not
+work with our 164 lead device. Mark Sherman agrees; his rework station
+would not be able to do an IC the size of ours.
+
+This means that if the DSP32C has to be removed for rework it will mean 
+sending it out unless we get a new rework station, which is unlikely. (I hope 
+these boards don't need a lot of rework.)
+
+
+I have received a quote from Motorola for 45ns 32Kx8 SRAMs.
+
+	for 1990:	$18.00 (1K)	$17.00 (5K)  
+
+
+
+CERs
+----
+I have submitted CERs for:
+
+	ADSP-2101
+	DSP32C
+	12.000 MHx crystal for DS II
+
+
+
+  Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: December 22, 1989 
+
+
+We have film and fab and are probably buying the following boards:
+
+	DS II; DS II RAM; and DSP32
+
+
+DSP32 WireWrap
+--------------
+Max has fired up the board and it seems to work, so far.
+
+
+TWIG
+----
+According to Mark Sherman we have only sold 13 loose TWIGS. I told him
+about the problem and he will have the part flagged.
+
+
+Parts
+-----
+I have received part numbers for ADSP-2101 and DSP32C.
+
+Tom has flagged the DSP32C as possibly being subject to export restrictions.
+Jan Bautch used to handle it but she left. I discussed it with Rick Meyette 
+and Tom Clark and Rick agreed that they would handle it.
+
+
+Information from Margot via Max:
+
+  2101 - Cheapie
+  --------------
+  Samples in April ('90), Production quantities in May ('90).
+
+
+  2101 - Regular 
+  --------------
+	2101 has 6 week lead time
+
+	PGA	ADFP 2101KG-50X		$161.00	(ouch)	
+
+	PLCC	ADFP 2101KP-50X		$161.00	(ouch)	
+	(I think these numbers should probably be ADSP, not ADFP)
+
+	We only have one sample. We need at least ten more, with at least
+	some of them in the PLCC. (The board can take either package.)
+
+	ROM version available 4Q 90
+	for 5K/year $10K NRE + 15% price
+
+	It looks like the internal ROM can be read out very easily by a
+	program in external memory.
+
+  Jed
+_____________________________________________________________________________
+									1 of 1
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: January 3, 1990
+
+
+
+DS II
+-----
+We have received the DS II Board and it is being stuffed.
+
+
+
+Driver Sound Mods to accept 27256s
+----------------------------------
+The mods have been tested and seem to work. I will give them to Art.
+I will do a cross reference chart because the 27256s do not correspond
+to the locations reported by Self-Test. 
+
+The 27256s are made from, and contain, exactly the same data as the 27512s.
+However, someone will need to officially release them. We will also have
+to figure out Programmed Part Numbers.
+
+
+
+DSP32 Board - 320E14
+--------------------
+I talked to Lisa Johnson from TI about programming the Security Bit (which 
+they call the 'R Bit'). 
+
+With the other EPROM versions (320E15 and 320E17) the EPROM socket adaptor
+contains an R Bit programmer.
+
+The EPROM socket adaptor for the 320E14 does not.
+
+I called Data I/0 and talked to Tom Jett. He confirmed that their programmers
+do not support programming the R Bit on the 320E14. He said he would put the
+request on a list and send it somehere. He agreed that the fact that these 
+other DSP EPROMs that had been out for a while were not supported did not bode 
+well for the 320E14.
+
+Here are the choices:
+
+	1. Use it without setting the R Bit (no security).
+	2. Wait for Data I/O to support the 320E14.
+	3. Wait for TI to do an EPROM Socket/R Bit Programmer for the 320E14.
+	4. Use a 320E15 or 320E17.
+	5. Don't use anything.
+	6. Do our own R Bit programmer.
+
+
+Purchase Reqs
+-------------
+I have filled out purchase reqs for 2101s and DSP32Cs. I need to know the
+answer to the 320E14 question before filling one out for it.
+
+
+
+  Jed
+_____________________________________________________________________________
+{ Date Unknown }
+
+The following things remain to be done in order for Stun Runner Self-Test to
+be complete:
+
+	1. Turn on checksums for the program ROMs that will be used;
+
+	2. Use final Sound ID number for the test sound;
+
+	3. Integrate the ROM with the Stun Runner program. (Self-Test uses 
+	   about half of the ROM 0 pair.)
+
+
+I have specified Slapstic 17. According to MANMAN we have 2,745 Slapstic 17s
+in inventory and the part was assigned only to the Driver, which did not use
+it.
+
+If it is changed for any reason it will be necessary to change Self-Test which
+works through Slapstic to get ROM 7 checksums.
+
+Don Paauw is on vacation this week and therefore unavailable for comment if
+we are to release the Hardware this week.
+
+I have a list of the pulls and keys for Slapstic 17 if you want it.
+
+
+
+	Jed
+_____________________________________________________________________________

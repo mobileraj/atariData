@@ -1,0 +1,3110 @@
+   Atari/Atari Games   Memos and Status Reports 1990   Jed Margolin
+___________________________________________________________________________
+
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: January 4, 1990
+
+
+
+DSP32 Board
+-----------
+
+When we get the prototype boards in, the DSP32C PQFPs will have to be attached.
+
+We have two DSP32Cs. I propose that we arrange with Manufacturing to have the
+DSP32Cs attached by the company that we will use for production.
+
+Because the DSP32C has 164 pins on 25 mil centers (fine pitch) I believe
+they should only be attached by a company that uses an automated system.
+
+I would like to be present at the vendor when these protoypes ICs are attached
+so I can develop a feeling for SMD.
+
+
+
+  Jed
+_____________________________________________________________________________
+									
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Hardware Status
+Dt: January 5, 1990
+
+
+
+DS II
+-----
+I have received the two stuffed boards and will test them when I have time.
+
+
+
+320E14
+------
+From Jeff Twombly:
+
+   The current version of the 320E14 is 2.0 . There are several bugs in it but
+   we could probably use it anyway, although only at 20MHz instead of 25MHz.
+
+   If we wanted production quantities of version 2.0 we could probably get them
+   if we ordered them soon. They would cost about $35.
+
+   They are finishing version 3.0 now and expect samples in April with 
+   production quantities in June. They are ceramic EPROM versions. 
+   OTPs are not scheduled until 3Q '90.
+
+   We could, instead, use the 320E15, which is available now for $30 in ceramic
+   EPROM. The 320E15 has the same pinout as the 320C10 (40 pin DIP) but has
+   256 words of RAM and 4K words of EPROM.
+
+   (The 320E17 has a host interface but costs more than the 320E15.)
+   
+   Jeff says the reason the 320E14 has so many bugs is that they got it as
+   part of the license agreement with General Instrument (now Microchip
+   Technology) and GI did a poor job.  
+   
+
+320E14	2.0	April production	$35.	order soon
+
+	3.0	April samples
+		June production (ceramic EPROM)	
+		OTP not until 3Q '90 	
+
+320E15		available now		$30.
+
+
+
+     Jed
+_____________________________________________________________________________
+									
+To: Rick Moncrief						
+Fr: Jed Margolin
+Re: Things I am Doing
+Dt: January 8, 1990
+
+
+1. DS II:	Bring up the board;
+		Writing Test Routines.
+
+2. DSP32	Get board built when it comes in (with 164 pin SMD);
+		Bring up board;
+		Write test routines.
+
+3. 320___	Design subsystem and do a wire wrap board;
+		Put it on the next DSP32 board;
+		Write Test routines.
+
+4. Driver Self-Test: Rewrite Self-Test to incorporate new DSP32 Tests,
+		latest ADSP Tests, and change character size to 8x8.
+	
+5. Compact Self-Test:	Rewrite Self-Test to incorporate new DSP32 Tests.
+	
+6. Street Driver - Rewrite Self-Test to incorporate DS II Board.
+
+7. Driver Sound: Documentation for Hard Drivin' 90.
+
+
+
+Question for Analog Devices about the 2101:
+
+	If a Bus Request comes along and the 2101 is stalled because it is
+	doing an access to external memory, will the Serial Autobuffer
+	also be stalled even if its autobuffer is in internal RAM?
+_____________________________________________________________________________
+
+To: Rick Moncrief							
+Fr: Jed Margolin
+Re: Things I am Doing
+Dt: January 12, 1990
+
+
+1. DSP32	Get DSP32C mounted onto the board;
+		Get rest of board built;
+		Bring up board;
+		Write test routines.
+
+2. DS II:	Bring up the board;
+		Writing Test Routines.
+
+3. 320___	Design subsystem and do a wire wrap board;
+		Put it on the next DSP32 board;
+		Write Test routines.
+
+4. Driver Self-Test: Rewrite Self-Test to incorporate new DSP32 Tests,
+		latest ADSP Tests, and change character size to 8x8.
+	
+5. Compact Self-Test:	Rewrite Self-Test to incorporate new DSP32 Tests.
+	
+6. Street Driver - Rewrite Self-Test to incorporate DS II Board.
+
+7. Driver Sound: Release Documentation for Rev F (with 27256s).
+_____________________________________________________________________________
+
+To: Rick Moncrief					
+Fr: Jed Margolin
+Re: Status Report
+Dt: January 19, 1990
+
+
+DSP32:		We have had two boards built, I will start testing them next
+		week (Jan 22). Without a PC I will only be able to write 
+		routines run by the 68010 through the host interface.
+
+
+DS II:		I am bringing up the board and writing test routines.
+
+		I have been able to have the 68010 test the 2101's memory.
+	
+ 		Writing 2101 code is difficult because I do not have a PC.
+		The VAX tools only support the 2100 which means that I cannot
+		simulate the 2101's extra functions. Since there is also no
+		emulator, it makes for a lot of wasted time.
+
+
+320E15:		I will complete the design next week (Jan 22).
+
+		Presumably, I will write some Test routines.
+
+
+DS II RAM:	We have received the Rev 1 boards and will have some built.
+
+
+Driver Sound: 	We have officially released Rev F (with 27256s).
+_____________________________________________________________________________
+
+To: Rick Moncrief					
+Fr: Jed Margolin
+Re: Status Report
+Dt: January 26, 1990
+
+
+
+DS II		
+-----
+
+  I have written several test routines and the board seems to work.
+
+   1. Either the 2101 manual is incorrect or the 2101 has a bug in it that
+      causes the DO UNTIL counter to be loaded with the wrong value. Instead
+      of being loaded with N, it gets loaded with INT(N/2) + 1, so that,
+      for example, 8192 only does 4097 interations.
+
+   2. I need to change two resistor values to adjust the levels.
+
+   3. We need to hook two speakers up to make sure the amps don't oscillate.
+      (They are ok with just one, which is all I have.)
+
+   4. I need to program a sinewave sweep to evaluate the filters.
+
+
+	
+DSP32
+-----
+   I am almost ready to start testing it.
+
+
+
+320E15
+------
+   I designed the circuit and had a WW made. I will test it right after the 
+   DSP32 board. We need the 320E15 adapter socket in order to program it.
+
+
+
+DS II RAM	
+---------
+We had some built. I will test them when I have time.
+_____________________________________________________________________________
+
+To: Rick Moncrief					
+Fr: Jed Margolin
+Re: Status Report
+Dt: February 2, 1990
+
+
+320P15
+------
+40 pin DIPs in ceramic windowed packages are available now.
+
+40 pin DIPs in plastic OTPs will not be available until 3rd Q.
+
+44 pin Ceramic Quad windowed packages are available now. (They
+are ceramic but are mechanically compatible with PLCCs.)
+
+44 pin PLCC OTPs are expected to be available in TMX in April
+with TMS in May. (They expect to be able to supply us with
+enough TMX parts to meet our needs in April.)
+
+In order for the die to fit in a PLCC package, they had to do a
+die shrink. They expect to get the first parts Friday, and, by next
+week, find out if they work. If they don't work it is unlikely they
+will be able to supply PLCCs in April.
+
+	TMS320E15FZL	44 pin, Ceramic Quad, windowed
+	TMS320P15FNL	44 pin, PLCC, OTP
+	TMS320E15JDL	40 pin DIP, windowed
+	TMS320P15NL	40 pin DIP, Plastic, OTP
+
+
+DS II		
+-----
+  I lost several days' work last week because the 2101 has a bug in it that
+Analog Devices did not inform me about. Contributing to the waste of my time
+was the failure of Atari Games to supply me with a PC to run the 2101 tools.
+This forced me to use the 2100 tools on the VAX. When the 2101 program failed
+to work properly I spent (wasted) a lot of time trying to figure out if the
+problem was because of the tools.
+	
+
+DSK Board
+---------
+  I have started writing the test routines.
+
+
+320E15
+------
+  I designed the circuit and had a WW made. I will test it right after the 
+DSK board. I will ask Karen to make a programming adapter socket for the 
+40 pin DIP.
+
+Since we will be using the PLCC package, Jeff has changed our order to
+PLCCs for the parts as well as the programming adapter socket.
+
+I got them to send me the schematic for the R Bit programmer. It is
+very primitive. The programming pulse width is determined by how long
+you press the switch.
+
+
+DS II RAM	
+---------
+  We had some built. I will test them when I have time.
+_____________________________________________________________________________
+
+To: Rick Moncrief					1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: February 9, 1990
+
+
+
+Slapstics
+---------
+We have been assigned Slapstic 115 for the DSK Board. This is in addition to
+Slapstic 117 which is assigned to the MultiSync Board.
+
+As far as getting a few from another series for special purposes you need to
+see Don and Chris.
+
+
+
+DSK Board
+---------
+I have written several test routines and I believe the board works. I have 
+turned one over to Max.
+
+The other board also came up with no problem.
+
+Mike Felice has given us two more DSP32Cs.
+
+
+
+Manufacturing Meeting on Tuesday, Feb 6
+---------------------------------------
+Attendees: Jim Freitas, Norm Maeder, Pat McCarthy, Tom Clark, and myself.
+
+Results: In order to collect data on the usefulness of doing burn-in, they
+	 will do the following test on 100 Klax boards:
+	   
+	a. Build the boards;
+	b. Test the boards; 
+	c. Repair failed boards and log failures before going to the next step.
+	d. Burn-in the boards using Erik Peterson's test rack that allows the 
+	   video to be switched to each board during the test. The boards will
+	   be powered by supplies other than the ones currently with the ovens.
+	e. Test all boards again and log failures.
+
+	The object of the exercise is to determine how many early failures were
+	found by burn-in. (Atari has never tested boards before burn-in.)
+
+	Depending on the results of the test they will either continue 100%
+	burn-in or go to 10% sampling. Either way, they will get rid of the
+	old burn-in power supplies.
+
+								2 of 2	
+320P15
+------
+We have received eight windowed units in the ceramic PLCC package.
+
+Tom Clark has found a nice burn-in socket for me and will take care of the
+production sockets. According to his research, the ceramic parts really do 
+need a different socket than the PLCCs or they pop out, unless we use a 
+universal socket that comes with a clamp.
+
+Assembly has made for me a programming adaptor socket for the 40 pin DIPs.
+
+I have started writing software to test the 320E15 WireWrap board. The
+VAX tools that Mike Albaugh wrote for me do not work anymore. Dave Shepperd 
+is working on it but I have lost critical time that cannot be regained.
+In addition, the lack of a simulator or an emulator that I can run makes it
+impossible to debug code. Also, I was not able to program a part on the
+IMI. I was able to program one of the two 320E15s on the Data I/O after
+Shepperd fixed a bug in the Data I/O VAX program.
+
+
+
+DS II		
+-----
+We are limited to one working board because we have only one 2101.
+
+Margot says that the real 2101s will not be available until June and
+that even the phony parts won't be available in PLCC until April-June.
+
+It seems they are going to redesign the memory section because their yield is 
+so poor. The parts they got from their own fab were as bad as the parts they 
+got from Intel which apparently fabs a lot of their chips.
+ 
+I asked her to change our order from 8 PGAs and 2 PLCCs to 10 PGAs.
+
+
+
+DS II RAM	
+---------
+We had some built. I will test them if I have time.
+_____________________________________________________________________________
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: February 16, 1990
+
+
+
+320P15
+------
+On Monday I talked to Jeff. It seems that the wafer with the die-shrink
+for the Plastic package did come out of the oven last week but were not probed
+because nobody thought it was important. Jeff has vowed to build a fire under 
+them.
+
+I have gotten an interface test program running on the 320 that tests the
+interface timing. In order to get the Checksum program running I will need
+a Simulator.
+
+
+
+DSK Board
+---------
+I have given Leon the inputs for the 320 section.
+
+The burn-in socket has a different footprint than the production socket. We
+will lay out the board for the production socket and figure out a kludge
+for the burn-in socket.
+
+
+
+DS II		
+-----
+Margot is working on getting us more X-rated 2101s.
+
+
+
+DS II RAM	
+---------
+We had some built. I will test them if I have time.
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: February 16, 1990
+
+
+
+320P15
+------
+On Monday I talked to Jeff. It seems that the wafer with the die-shrink
+for the Plastic package did come out of the oven last week but was not probed
+because nobody thought it was important. Jeff has vowed to build a fire under 
+them.
+
+It turns out that they are doing the E17s first.
+
+We received the CLCC Programming Socket Adaptor, but no R-Bit Programmer. Jeff
+is working on it.
+
+I have gotten an interface test program running on the 320 that tests the
+interface timing. The 320 assember that Albaugh wrote ran under MAC65 and
+no longer works. Shepperd has converted it to MAC68K. Unfortunately, it can 
+no longer tack itself to the end of an existing 68010 program; its address must 
+be explicitly stated. This does not matter for the DSK Board, but if it were 
+necessary to redo Self-Test on the Driver Sound Board it would be a problem.
+
+There was a problem in programming the E15 on the Data I/O. It seems that 
+even when you give it a Family Code (in this case for a 27C64) the Data I/O 
+tries to get the Manufacturer's device code from the part. The E15 does not 
+support the Manufacturer's device code so the Data I/O would report it as an 
+error and would refuse to program the part. Shepperd fixed it. After being 
+programmed, the VAX reports an incorrect checksum, so it requires going into 
+local mode to get it.
+
+This is for the Data I/O in the DIO Room. The Data I/O in the Alpha Lab refuses
+to program it. It just times out.
+
+The IMI in the DIO room might work if the socket locking bar didn't force the 
+E15 adaptor socket out of the IMI socket.
+
+
+
+DSK Board
+---------
+I gave Leon the inputs for the 320 section. The first plots are bad because 
+on the DSP32C, SCI-CARDS connected all adjacent unconnected pins.
+
+The burn-in socket for the E15 has a different footprint than the production 
+socket. We will lay out the board for the production socket and figure out a 
+kludge for the burn-in socket.
+
+I will not approve the layout until I check it against the 44 pin PLCC socket
+that I spent Friday getting. Tom was supposed to get me a socket but didn't.
+
+									2 of 2
+
+DSK WireWrap
+------------
+I will mark up the latest SCI-CARDS schematic for WireWrap II.
+
+
+
+DSP32C
+------
+Mike Felice has delivered a new DSP32C Data Book (January 90) and will get us 
+more to replace the old ones (December 88). We also have a bug sheet now.
+
+
+
+DS II		
+-----
+Margot is working on getting us more X-rated 2101s.
+
+We are having more DS II boards stuffed.
+
+
+
+DS II RAM	
+---------
+We had some built. I will test them if I have time.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: February 23, 1990
+
+
+
+320P15
+------
+No News
+
+
+
+DSK Board
+---------
+We have film and Fab for Rev 2 and are ready to buy boards.
+
+I have a 44 pin burn-in socket from AMP that has the same footprint as the
+production socket (the rows line up).
+
+
+
+DSP32C
+------
+In going from version F32 to F33 they fixed some bugs and introduced others.
+
+We can live with the bugs in the F32 but not with the ones in the F33. 
+With the bug in the F33, host interface auto-increments do not work properly
+without extra hardware.
+
+The AVL listing had called out the F33 part. I have asked Tom Clark to change 
+it to F32 and have also told Mary Burnias.
+
+
+
+DS II		
+-----
+We have had more DS II boards stuffed. I will start bringing them up 
+when we get more 2101s.
+
+
+Other
+-----
+I have submitted a CER for the 27C010 (1 Meg EPROM).
+
+I have started working on the part numbers for Hard Drivin' The Race.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: March 5, 1990
+
+
+
+DSP32C
+------
+I have asked Tom Clark to disqualify the F33 part. (The F32 is on the AVL.)
+
+
+
+DSK Board
+---------
+Rev 2 boards are due in this week.
+
+I have gotten two more 44 pin PLCC burn-in sockets from the AMP salesman. He
+will try to get me more, later this week. He also gave me an extraction tool.
+This tool appears to be superior to the Burndy tool we are now using and
+will probably extract the device without breaking off the corners like the 
+Burndy tool does. We sould buy more. Also some for the 68 pin. (Different size
+PLCCs require different size extraction tools.)
+
+
+
+320P15
+------
+No News. No RBIT Programmer yet.
+
+
+
+DS II		
+-----
+We have had more DS II boards stuffed. I will start bringing them up when we 
+get more 2101s.
+
+
+
+Part Numbers
+------------
+I have received two new programmed part series. One is for Hard Drivin' The
+Race (Cockpit) and one is for Hard Drivin' The Race (Compact).
+
+I have prepared a list of proposed programmed part numbers which I will show
+to Rick Owens before giving them to Art.
+
+
+
+Other
+-----
+I have started updating the Driver Main Self-Test to include DSK tests. I have
+also converted the characters from 16x16 to 8x8.
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: March 9, 1990
+
+
+
+Hard Drivin' The Race Part Numbers
+----------------------------------
+I reviewed the part numbers with Jeff Bell, made some appropriate changes,
+and gave the list to Art. 
+
+I gave Art the corrected parts list for the DSK Board.
+
+I gave Art the list of MSP parts that will come out for The Race.
+
+
+DSK WW Board
+------------
+Have received the board.
+
+
+
+ADSP Graphics RAM WW Boards
+---------------------------
+Emmette is making two more ADSP Graphics RAM Boards for the Eds.
+
+
+
+DSK PC Board
+------------
+Have received ten Rev 2 boards and are having 8 stuffed.
+
+Once they are built and verified we can release Rev A.
+
+
+
+320P15
+------
+No News. No RBIT Programmer yet.
+
+
+DS II		
+-----
+We are still waiting for more 2101s.
+
+
+Other
+-----
+I have given Max the first preliminary version of the new Driver Self-Test.
+There is lots more to do.
+
+
+
+Boards with Rev D Fab are Assembly Rev E and are completely ok to use.
+
+
+
+Boards with Rev C Fab are Assembly Rev D and need a Mod. The Mod we did
+in production was not the mod we incorporated into Rev D Fab.
+
+
+
+(The production Mod was a lot easier to do and worked almost as well the one
+incorporated on Rev D Fab.)
+
+I believe the Production Mod was:
+
+  	Change 80S from 74LS04 to 74F04.
+ 
+	Change R89 from 1K Ohm to 470 Ohm.
+
+	Use only 74LS244 by Texas Instruments at 20K.
+
+
+
+Both these boards use only 27C512s for sound wave ROMs:
+
+	136052-1123	5A	Programmed EPROM, 137448-200, 27C512-200
+	136052-1124	20A	Programmed EPROM, 137448-200, 27C512-200
+	136052-3125	30A	Programmed EPROM, 137448-200, 27C512-200
+	136052-1126	45A	Programmed EPROM, 137448-200, 27C512-200
+
+The board is documented for 250 ns EPROMs in these positions but MANMAN shows
+none in stock. There are, however, 42335 200 ns parts in stock.
+
+
+
+The program ROMs are still:
+
+	136052-3121	45N	Programmed 27C256, 200 ns	
+	136052-3122	70N	Programmed 27C256, 200 ns	
+
+
+
+	Jed
+_____________________________________________________________________________
+To: Don Wrightnour							
+Fr: Jed Margolin
+Re: Driver Sound
+Dt: March 12, 1990
+
+
+
+Driver Sound Rev E Fab   (Rev F Parts List): 
+
+	Build to the released documentation, no mods required.
+
+
+Driver Sound Rev D Fab  (Rev E Parts List):
+
+	Build to the released documentation, no mods required.
+
+
+Driver Sound Rev C Fab  (Rev D Parts List):
+
+	A deviation was issued to:
+
+	  	Change 80S from 74LS04 to 74F04.
+	 
+		Change R89 from 1K Ohm to 470 Ohm.
+
+		Use only 74LS244 by Texas Instruments at 20K.
+
+
+The Mod we did in production was not the mod we incorporated into Rev D Fab.
+
+(The production Mod was a lot easier to do and worked almost as well the one
+incorporated on Rev D Fab.)
+
+This Mod is NOT required Rev D and Rev E Fabs. (But if it is done, the boards 
+will still work.)
+
+
+
+
+	Jed
+
+
+
+cc: Rick Moncrief
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: March 16, 1990
+
+
+
+DSK PC Board
+------------
+We have had one Rev 2 board built up. It passes the test programs I have
+written for it. We need to decide how to verify it so we can release Rev A.
+
+
+
+ADSP Graphics RAM WW Boards
+---------------------------
+Emmette made two more ADSP Graphics RAM Boards for the Eds.
+One worked right off, the other worked after a minor correction.
+
+
+
+Hard Drivin' The Race Part Numbers
+----------------------------------
+I have reviewed Art's parts lists, made corrections, and returned them.
+
+
+Production
+----------
+1. Production has some Rev C and Rev D Board Fabs for Driver Sound. I explained 
+   to Don Wrightnour what the differences are and what documentation applied to
+   which board.
+
+2. On the MultiSync Board I called out the Opto State PROM to be 35 ns. 
+   Production found some old parts (bought in October '88 under the old 37-
+   number) that were 50 ns. I verified the circuit timing and told Jim Freitas
+   that 50 ns parts were ok (and signed the deviation).
+
+   Tom Clark has sent a memo warning of the dangers of using old parts. I told
+   Jim Freitas that the Programmer that burns the parts also verifies them and
+   I believed that if the parts verify, then they are good. Unless the parts
+   were stored in a high humidity and/or high temperature environment (they 
+   weren't) they should still be ok. Presumably some PROMS from that batch
+   were used in games and are presumably still working in games that have been
+   powered up for 18 hours a day, which is harder on the part than it being in
+   storage.
+
+3. I went over the list of parts to be scrapped and found several that we could 
+   use, especially the VRAMs (quantity 1706).
+
+
+
+DSK WW Board
+------------
+Have received the board.
+
+
+
+320P15
+------
+No News. No RBIT Programmer yet.
+
+
+DS II		
+-----
+We are still waiting for more 2101s.
+
+
+Other
+-----
+I am continuing to work on the new version of Driver Self-Test.
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief					1 of 2	
+Fr: Jed Margolin
+Re: Status Report
+Dt: March 23, 1990
+
+
+
+DSK PC Board
+------------
+The Rev 2 board appears to be totally working. I have given Art the 
+corrections for the Silkscreen and the parts list in order to release Rev A.
+
+
+DSK WW Board
+------------
+The board works so far.
+
+
+320P15
+------
+Stephanie, Max, and I converted my VAX 320 program to PC format, decided how
+to integrate it with Stephanie's code, and figured out how to use the new
+software.
+
+We received the RBIT Programmer. It is very primitive.
+
+
+DS II		
+-----
+We received more 2101s along with a new bug sheet. Margot says they have
+new totally working working parts but will not give us (or anyone else) any
+until June.
+
+I have fired up DS II #2 and it works. 
+
+
+Other
+-----
+I am continuing to work on the new version of Driver Self-Test.
+
+
+Aces
+----
+I updated the ACES' Self-Test to include the DUART Test and the display of
+the 12 Bit A/D in the CONTROLs screen.
+
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Status Report
+Dt: March 30, 1990
+
+
+
+DSK PC Board
+------------
+I have signed off the DSK Board.
+
+
+DSK WW Board
+------------
+The board works and I have turned it over to Max.
+
+Mike Felice have given us a ME-DSP32C-R33 (the one without the bugs). The one 
+we have is a 'BL' that supposedly contains the bugs (although it works in the 
+board).
+
+I have done new GALs for the separate DSK and E15 WW Boards so they can
+coexist on the bus for development.
+
+
+320P15
+------
+I will start the RAM Test for Internal RAM soon.
+
+
+DS II		
+-----
+I have a working board set consisting of a DS II Board and a DS II RAM
+Board. I have documented each one appropriately for Brad.
+
+We have now received the ten 2101s that we ordered.
+
+Max and I have implemented the system wherein the 21010 Serial Download
+can be selected from the DS II Menu. It will download from a PC and
+start the 2101.
+ 
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Status Report
+Dt: 6 April, 1990
+
+
+DSK Board
+---------
+Mike Felice have given us a ME-DSP32C-R33 (the one without the bugs). We 
+need to try it to see if it works. The one we have is a 'BL' that supposedly
+contains the bugs (although it works in the board). 
+
+
+Slapstics
+---------
+According to Don Pauuw we will probably get 3,000 - 5,000 good Slapstics
+after they are packaged. Someone needs to make sure they get packaged on time.
+
+
+320P15
+------
+I am almost done with the RAM test for Internal RAM. The next step is to
+integrate it into Self-Test. Then comes the P15 programmer.
+
+
+DS II
+-----
+Erik has attached the DS II RAM board to the DS II Board with appropriate
+connectors and Max and I have worked out the software so that after
+selecting the Download option from the Self-Test Menu one can download
+code from a PC to the 2101 and run it. 
+
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Status Report
+Dt: 12 April, 1990
+
+
+
+Pat Brosnan
+-----------
+Pat Brosnan sent me a fax about two MultiSync boards (one Stun Runner and
+one Compact Driver) with problems he could not fix. I faxed him a list
+of suggestions.
+
+
+Harnesses
+---------
+Stevie is on vacation this week so I talked to Carole. She had already
+documented the Ribbon Cable Harness but did not know that the cable from
+Main Board to Sound Board needed to be longer. She promised to tell Stevie
+when she comes back.
+
+
+ 
+320P15
+------
+I have finished the RAM test for Internal RAM and integrated it into Self-
+Self-Test. Next comes the P15 programmer.
+
+
+Self-Test
+---------
+The memory test for DSP32C External Memory runs through its Host Interface 
+and is too slow. I need one that runs in the DSP32C.
+
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Status Report
+Dt: 20 April, 1990
+
+
+
+Harnesses
+---------
+Stevie has taken care of the documentation and released the harnesses.
+
+ 
+320P15
+------
+I am almost done with the design of the P15 programmer. I expect to have one
+section wirerapped next week to test the design. The PC Board version will
+have four mostly independent sections.
+
+
+Other
+-----
+I am getting more information from Direct Imaging on their PC Board Printer.
+
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Status Report
+Dt: 27 April, 1990
+
+
+
+320P15
+------
+I am done with the design of the P15 programmer and am doing the GALs. 
+I expect to have one section wirerapped next week to test the design. The 
+PC Board version will have four mostly independent sections, although it
+could have eight if necessary. 
+
+I have started writing the programming package.
+
+
+DSK Board
+---------
+I have given Art the inputs to change the 8Kx8 RAMs to 32Kx8 RAMs. This is
+a parts list change only; the board was laid out to accept either one with
+no mods or jumpers.
+
+According to Art, Purchasing has only just now asked for the tape for the
+DSK Board. (We now longer supply film to the board vendors; they make their
+own. We do have film made, but it is for our own use, in Receiving.)
+
+ 
+Other
+-----
+At Max's request I am having two ADSP II Graphics RAM WireWrap Boards made.
+It seems that we had given ours away.
+
+
+Cyclotron
+---------
+Bonnie is using a MultiSync Board with a Sitdown Motor Amp (which requires
+a different software driver than the Compact) so I changed Self-Test and 
+gave her a new set of ROMs so she can test the motor.
+
+She later complained that the CONTROLS Self-Test screen no longer worked with
+the 8 bit A/D inputs. The problem turned out to be that the Strain Guage Amp 
+was installed and saturating the A/D inputs. I unplugged the amp.
+
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1	
+Fr: Jed Margolin
+Re: Status Report
+Dt: 7 May, 1990
+
+
+
+ 
+320P15
+------
+I have received the WW board and expect to start working with it this week.
+
+I have started writing the programming package.
+
+
+
+DSK Board
+---------
+I have written tests to track down the problems Max and Stephanie had with 
+Board #1. The board totally works on my system but does not totally work
+on Max's system. Erik and I are working on it. 
+
+There is only one PAL Programmer and on Thursday it was broken. 
+
+
+ 
+Other
+-----
+At Max's request I am having two ADSP II Graphics RAM WireWrap Boards made.
+
+
+On Thursday, Max and I met with Margot and Dan from Analog Devices. The
+2101 with all the bugs is available now in production quantities. The
+fixed version should be available in June. The 2105 should also be
+available in June.
+ 
+
+
+
+  Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Tom Clark
+Dt: 14 May 1990
+
+
+
+Components has reactivated 179250-044 for the socket for the 44 pin PLCC.
+
+
+320P15
+------
+I have started working with the WW board and writing the programming package.
+
+Other
+-----
+According to the AVL, the change in part numbers did not occur until April 18,
+nearly two months after Tom's memo.
+
+When I signed off on the DSK board on March 29, 179250-044 was still active.
+
+
+
+(This transaction placed the AMP part in the inactive file)
+                                       VENDOR
+   PART                                 PART                  TRANSACTION  
+  NUMBER     GENERIC                   NUMBER   DESCRIPTION      DATE      
+
+179250-044            Socket,IC,PLCC,44pin                                 
+AMP_INC                        821575-1                  3    18-Apr-1990
+
+
+
+
+
+                                       VENDOR
+   PART                                 PART                  TRANSACTION   
+  NUMBER     GENERIC                   NUMBER   DESCRIPTION      DATE       
+
+179237-044            Socket,IC,PLCC,44pin                                  
+BURNDY                         QILE-44-P410T             0     7-Jul-1987
+
+
+179237-044            Socket,IC,PLCC,44pin                                  
+ITT_CANNON_ELECTRIC            LCS-44-02                 0     7-Jul-1987
+
+
+179237-044            Socket,IC,PLCC,44pin                                  
+JAPAN_AVIATION_ELECTRONICS     PLPS-44-T                 0     7-Jul-1987
+
+
+179237-044            Socket,IC,PLCC,44pin                                  
+METHODE                        213-044-001               0     7-Jul-1987
+
+
+179237-044            Socket,IC,PLCC,44pin                                  
+AMP_INC                        821575-1                  0    18-Apr-1990
+
+
+   Jed
+
+
+From:	BERT::CLARK        27-FEB-1990 08:51:10.15
+To:	MCCARTHY,CLARK,HOFF,MARGOLIN
+CC:	
+Subj:	DUPLICATE PLCC PART NUMBERS
+
+We are presently carrying three part numbers for PLCC sockets. they are 
+P/N 179252-XXX, 179250-XXX and 179237-XXX. Only, part number 179237-XXX shows
+any WHERE-USED, while, part numbers 179237-XXX and 179252-XXX shows any stock.
+
+I would like to inactivate for new designs part numbers 179250-XXX and 179252
+-XXX. This would require that the stock for part number 179252-084 be sold off
+or exchanged for credit. this stock is from 3M/TEXTOOL and needs a special 
+tool to remove the PLCC from the socket (Note: the sources for part number 
+179237 all use the same tool and 3M/TEXTOOL is changing over to the same style
+socket). We presently have 1250 pieces in stock of the 84 pin socket. If we 
+want to use them we can, but remember they need a special tool.
+
+On part number 179252; I believe that this was established for SHOWVIEW and 
+only called out the AMP sockets. After Geoff Barker and I ran shock tests for 
+Morgan, it was determined that other manufactures could be used in his 
+application. I would add AMP to part number 179237-XXX.
+
+If everyone is in agreement, I would like to do this, this week. Any 
+questions, please feel free to contact me.
+
+					THANKS
+
+						TOM C
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status Report
+Dt: 15 May 1990
+
+
+
+320P15
+------
+I have started working with the WW board and writing the programming package.
+
+
+Components
+----------
+Components has reactivated 179250-044 for the socket for the 44 pin PLCC.
+
+
+Other
+-----
+I met with Don Mullikin of TI and got the data sheet for the new 128Kx8 VRAM.
+I also got the new hardbound 34020 manual.
+
+The data sheet for the VRAM does not give enough detail to determine if it
+can be easily retrofitted into Driver hardware. The reason is that the
+34010 address bus is multiplexed for VRAMs with Row and Column addresses
+separated by 8 bits. (64K x n requires 8 Row address bits and 8 Column
+address bits. VRAM A0 is processor address A0 for /CAS and A8 for
+/RAS.)  
+
+The 256K x 4 VRAMs are definitely not easily compatible since the address
+requires 18 bits, 9 for /RAS and 9 for /CAS. VRAM A0 is processor address 
+A0 for /CAS and A9 for /RAS.  
+
+The question for the 128K x 8 is: how are the address lines apportioned
+between /RAS and /CAS? If they are A0-A7 during /CAS and A0-A8 during /RAS
+then it will work. Process address lines A0-A7 will go to VRAM A0-A7 during 
+/CAS; processor address lines A8-A16 will go to VRAM A0-A8 during /RAS.
+The address line will be 8 bits apart.
+
+Note: The 128Kx8 VRAM will not be available until the end of this year.
+
+
+The 34020 is neat. The address is available both as a complete bus and as
+a multiplexed bus for VRAMs with the address offset controlled by an
+internal register. It can be set up for offsets of 8, 9, 10, and 11 bits.
+
+
+
+   Jed
+
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status Report
+Dt: 21 May 1990
+
+
+
+DSK Board
+---------
+I have released the GALs (136077-1025 and 136077-1026) to Rick Owens.
+I have given him actual programmed parts as well a 5 1/4" Floppy containing 
+the JEDEC files.
+
+
+320P15
+------
+I have lost three days because Assembly was doing a 'Pilot Run' of
+15 games for Gumball Rally and could not work on my board.
+
+Now that I have it, I am almost done stabilizing the Power Supply
+switching circuits.
+
+
+DSP32C
+------
+Max has been using the new R33 and it seems to work.
+The DSP32C has had its AVL entry fixed and I have had the F33 added to it.
+
+(The R33 is in the PGA package used by our emulator; the F33 is the PQFP 
+that we will use in production.)
+
+	137661-080  AT&T  WE-DSP32C-F32-080
+	137661-080  AT&T  WE-DSP32C-F33-080
+
+	137661-100  AT&T  WE-DSP32C-F32-100
+	137661-100  AT&T  WE-DSP32C-F33-100
+
+
+	AVLNOTES will specify:
+
+	" This part to be marked with the Atari part number only"
+
+
+Driver Interface 
+----------------
+The Cable that Erik got at Fry's confirms Max's theory so I have given
+the information to Stevie.
+
+
+Driver Sound
+------------
+The 2Kx8 RAMs used the part number for the NMOS part (137211-001) in order
+to use them up. We must have done so because I keep signing deviations
+to use the CMOS part (137278-002). Therefore I have asked Art to ECN the
+parts list to use the CMOS part.
+
+
+ 
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 1 June 1990
+
+
+GAL Programmed Parts
+--------------------
+The vendor does not have a 1.2MB Drive and cannot read the files on the disk 
+I made for her. I have made one formatted for 360KB ('FORMAT A: /4') but I 
+don't know if it will be successful. My DOS book says that even though a disk 
+can be formatted for 360KB on a 1.2MB drive it is possible that a 360KB drive
+will not be able to read it.
+
+
+320P15
+------
+I have successfully programmed a part and set the Security Bit. 
+
+After more testing I will mark the schematics to have four units on one 
+board and will work with PC to have the board done.
+
+
+Driver Voltmeter
+----------------
+Self-Test will have the version of Line Calibration where the calibration 
+changes as long as you hold the switch down (instead of having to press
+the switch for each change).
+
+The voltage can be calibrated to a maximum of 237 volts.
+
+
+Driver Interface 
+----------------
+I am planning on adding a Link Connector Test to self-test.
+
+
+Driver Manual
+-------------
+I have started documenting the changes to Self-Test for Jean.
+
+
+									2 of 2
+DSK Board
+---------
+I have incorporated Max's DSK Test into Self-Test and Erik, Rick, and I 
+have started working on it.
+
+The Problem:
+
+	When doing a Read from the MOSEL 32Kx8 RAMs, a large glitch is 
+generated that gets into the expansion bus and makes the GALs go crazy and 
+select addresses that it shouldn't. It does not occur on Writes. 
+
+	The glitch is the result of the RAM sense amps turning on and
+propagating through the F245 bus drivers.
+
+So far we have found:
+
+   1. With slower GALs, the board will pass the test although the glitch 
+      is still evident.
+
+   2. The test runs and the glitch goes away with 8Kx8 RAMs instead of the 
+      32Kx8 MOSEL RAMs.
+
+   3. The problem also goes away with SONY 32Kx8 RAMs. The RAMS were 45 ns. I
+      don't know if SONY 85 ns parts are ok. The circuit should work
+      with parts as slow as 120ns. I chose 85 ns because there are already
+      four 85ns 32Kx8 RAMs on the board (on the DSP32C).
+
+The bus lines are clean when there is no RAM plugged in.
+
+The bus lines are clean when the Buffer control is disabled.
+
+
+Plan:	A. Replace F245s buffers with LS245s.
+
+	   In order for the 170 ns EPROMs to work we will have to continue
+	   using the fast GALs. Timing will still be close. I will do an
+	   analysis.
+
+   If this does not work, the other things to try are:
+
+	B. Do not use MOSEL RAMs.
+
+	C. Use slower RAMs.
+
+	D. Use faster RAMs.
+
+	E. Get a job at TOGO's.
+
+
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 11 June 1990
+
+
+DSK Board
+---------
+The Problem:
+
+	When doing a Read from the MOSEL 32Kx8 RAMs, a large 30ns glitch is 
+generated that gets into the expansion bus and makes the GALs go crazy and 
+select addresses that it shouldn't. The extraneous Reads reset the P15 
+Interface Flag.
+
+	It does not occur on Writes. 
+
+	The glitch is the result of the RAM sense amps turning on and
+propagating through the data bus drivers.
+
+	
+So far we have found:
+
+   1. The RAMs on the ADSP Board also generate a glitch but it does not affect
+      the bus address lines.
+
+      This suggests that the problem is related to PC Board layout. Doing a
+      new PC Board layout is not an option. (We have already bought boards.)
+
+   2. Wiring the data buffer inputs low does not result in bus noise. The
+      problem appears to be due to the glitch, not to a normal signal
+      transition.
+
+   3. The problem does not occur when using 45ns SONY RAMs (instead of the 
+      85ns MOSEL RAMs) because the glitch is much shorter and does not make
+      it down to a logic '0'.
+
+Solution:
+	1. I programmed the GAL to activate the RAMs on the early strobe
+	   (/EXT) so that the effects of the glitch have gone by the time
+	   the P15 signals (strobed by the late strobe) are activated.
+	   
+	2. I have also changed the GAL program so that it uses an input that
+	   is normally tied high to its own 10K pullup resistor. When left
+	   in this state (pulled high) the address decoding remains as it
+	   was and is fully functional.
+
+	   When this signal is connected to /ERD (Read, active low) it changes
+	   the data buffer enable on Read accesses to ROM, RAM, and the P15 
+	   so that the buffer is enabled by the late address strobe (/RVAS)
+	   instead of by the early address strobe (/EXT). This way when the
+	   glitch from the 32Kx8 RAMs occurrs it does not get through the
+	   data buffers. 
+
+status report, 11 June 1990						2 of 3
+
+	   The ZeroPower RAMs also produce a glitch from the sense amps and 
+	   since these RAMs are slower, some of the glitch does continue 
+	   into the late address strobe. The noise from this glitch
+	   appears to be within acceptable limits.
+
+	   Reads from the ROMs and the P15 interface are not affected, since
+	   the data buffer is enabled long before the data is required by the 
+	   68010.
+
+Plan A: 1. I will ECN the DSK Board to change the F245 data buffers to LS245s.
+	2. The GALs have the new program and will probably work with no 
+	   further action.
+
+Plan B:  If there is a problem, we will have Production add the single jumper
+	 which activates the change in data buffer timing.
+
+Plan C: We can use faster 32Kx8 RAMs. (The glitch from the sense amps is 
+	too fast to generate a logic '0').
+
+Plan D: We can change from the CMOS GALs to Bipolar PALs (PAL20L8) if the
+	GALs cause problems like they have in the past.
+
+
+
+GAL Programmed Parts
+--------------------
+The vendor does not have a 1.2MB Drive and cannot read the files on the disk 
+I made for her. I have made one formatted for 360KB ('FORMAT A: /4') but I 
+don't know if it will be successful. My DOS book says that even though a disk 
+can be formatted for 360KB on a 1.2MB drive it is possible that a 360KB drive
+will not be able to read it. If there is a problem I will put the files on
+a 3 1/2" floppy (Joan says they have a 3 1/2"drive.)
+
+I have given the 5 1/4" floppy to Rick Owens. The plan is that Joan will make
+some GALs from the files and Rick will verify them.
+
+Since they will be working from the JEDEC files supposedly the programmer will
+use the test vectors in it to test the programmed device. When we supply only
+a device to be copied they can only copy the GAL programming, they cannot do
+a functional test on the programmed device. They will apparently also set the
+security bit.
+
+status report, 11 June 1990						3 of 3
+
+
+Driver Interface 
+----------------
+I have added a Link Connector Test to self-test.
+
+
+Driver Manual
+-------------
+I have documented the changes to Self-Test for Jean.
+
+
+To Do
+-----
+I will do more tests on the P15 Programmer; then give it to PC.
+
+While they are doing it I will:
+
+	1. Finish the new Driver Self-Test;
+	2. Write the P15 Programmer Code.
+
+I will try to squeeze in a Motor Amp test during the automated self-test.
+
+
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 18 June 1990
+
+
+DSK Board
+---------
+  1. I have ECNed the DSK Board to change the F245 data buffers to LS245s.
+
+  2. The GALs have the new program and I have verified the parts from the
+     vendor. 
+
+  3. If there is a problem, we will have Production add the single jumper
+     which activates the change in data buffer timing.
+
+
+Driver Self-Test
+----------------
+I have finished the North American version except I may need to change the
+Program ROM checksum switches depending on how many ROMs we end up using.
+
+I have put in a simple automated Motor Amp test at the end of the automated 
+self-test.
+
+
+Driver Manual
+-------------
+I have been working with Jean on the changes to the manual. The Company
+has underestimated the amount of time required and Jean will not be able to
+make all the changes.  
+
+
+X Programmer
+------------
+I have gone over the schematics, made corrections, and they were waiting
+for Leon when he came to work Monday. I did it over the weekend. 
+
+
+To Do
+-----
+Work with Leon and Joe on the PC Board for the X Programmer.
+
+Write the X Programmer Code.
+
+
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 25 June 1990
+
+
+DSK Board
+---------
+Production is having ASIC 61 mounted.
+
+
+Driver Self-Test
+----------------
+I have finished the North American version except I may need to change the
+Program ROM checksum switches depending on how many ROMs we end up using.
+
+
+Driver Manual
+-------------
+I have not heard from Andrea about my last corrections.
+
+
+X Programmer
+------------
+I received schematics and PCB plots, checked them over the weekend, made a few
+changes and corrections, and had them ready for Leon on Monday morning.
+On Monday afternoon I approved his changes and asked him to send out for film.
+
+I have set up the menu structure and am filling it in. The menu includes
+hardware tests so I will be able to bring up the PC Board faster.
+
+
+Other
+-----
+I will start the slapstic encryption program as soon as I have time.
+
+
+
+   Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 10 July 1990
+
+
+DSK Board
+---------
+We have received some Rev A boards from production.
+
+They split the order between two different vendors.
+
+The boards are not the same. I am not thrilled with either one. Both
+have exposed traces not covered by solder mask, only in different
+places. Also, the alignment pads were done differently. One use a sold
+pad, they other used a doughnut.
+
+The boards do seem to work; however we have not tested the Helper
+circuitry yet.
+
+
+Cyclotron
+---------
+I received a call from Bonnie requesting help in reading the Opto-Coupler
+inputs because she is using the Center input independently of the Quadrature
+inputs. She also requested new self-test ROMs to deal with it.
+
+I went over the code in self-test so she will be able to put the appropriate 
+code in her program. I explained that I would not have time to do new
+self-test ROMs until August. I told her where Cyclotron self-test lives and
+invited her to use it as she wished.
+
+
+DSK GALs
+--------
+I was out of 15ns 20V8 GALs so I ran MANMAN to see if the programmed parts
+had come in yet. They had not. They had not even been ordered. They were
+not in MANMAN. They were not even on the AVL even though I released them
+several weeks ago and have even approved programmed first-article parts from
+Merit.
+
+It turned out we ordered blank parts from Marshall and they have come in,
+although they were rejected because the Lattice part number did not match
+the part number on the AVL. Mary said she had submitted a CER to correct
+the number but that no action had been taken. The parts will be sent to
+a different vendor for programming which I find strange.
+
+Thanks to the kind assistance from Erik (Durfey), Mary Burnias, Rob Bryant,
+and Mark Hoendervoogt I have received the parts I need for the field test
+units.
+
+ 
+Driver Manual
+-------------
+I went over my last corrections with Andrea.
+
+
+Status Report  7/10/90							2 of 2
+
+
+X Programmer
+------------
+We received the boards and had two stuffed.
+
+I have brought one up to the point where I have been able to test most of the 
+software, and I believe the hardware is working.
+
+(The software totally works on the wire-wrap board.)
+
+The problem is that the 3M Burn-in sockets DO NOT WORK. They do not make
+reliable contact with the PLCC pins. I have tried a brand new Helper and it 
+is no better.
+
+I can run a program where a data line is viewed on the 'scope and it goes
+from floating to logic high depending on how the helper is pushed while it
+is in the 3M socket.
+
+The PLAN:
+
+	1. Determine if a Yamaichi socket will fit. If so, see if I can
+	   locate and buy some. (TI used a Yamaichi on their program 
+	   adapter.)
+
+	2. Call the 3M rep and make him come over to look at it. Make him
+	   feel really bad so he will buy the Yamaichi sockets for us. 
+	   (They are sure to be expensive. This assumes they will fit
+	   and are available.)
+	   
+        3. Make an adaptor to use my two remaining AMP sockets. The problem is
+	   that the board was layed out for the staggered rows used by the
+	   3M (and Yamaichi) sockets. The AMP sockets have their rows 
+	   aligned. The other problem is that AMP stopped making them and I 
+	   only have two left. I will see if I can get more somehow. The AMP 
+	   salesman has always been very helpful and would probably make an
+	   even greater effort to find them after I tell him the 3M sockets 
+	   don't work.
+
+	   We might be able to remove the AMP burn-in sockets from existing 
+	   DSK boards and replace them with standard production sockets. 
+	   (I would really like to avoid doing this.)
+
+Plan B:	  Program the parts one-at-a-time on the wire-wrap board.
+
+Plan C:	  Program the parts on the EPROM Burner with the TI Adaptor socket.
+
+
+Other
+-----
+I have done some preliminary work on the slapstic encryption program. I hope
+I get time to work on it again sometime.
+
+
+	Jed
+_____________________________________________________________________________
+_____________________________________________________________________________
+								7-14-90
+
+Erik,
+
+
+On the board with the AMP socket,
+
+	1.PD15 seems to be shorted to 1.PA0 where 1.PD15
+	passes under 8C on its way to 11C pin 2.
+
+Please see if you can fix it.
+
+There may be more shorts under 8C.
+
+
+I have added a new feature to the Program called 'DUMP' that
+dumps information to the screen. 
+
+
+	First Column	Second Column	Third Column
+
+	Word Address	What the data	Data read from
+			should be	Device A
+	      .		     .		      .
+	      .		     .		      .
+	      .		     .		      .
+	      .		     .		      .
+
+
+If the data read from Device A is correct, the entry is Green.
+If it is not correct, it is Red.
+	
+
+Right coin increments the address,
+Left Coin Decrements the address,
+Start returns to the menu.
+
+
+
+					
+	Jed
+
+
+PS: The square collar around the AMP socket could short some pins when
+    it droops.
+
+_____________________________________________________________________________
+
+To: Art Jackson
+Fr: Jed Margolin
+Re: Sound Board ECN
+Dt: 23 July 1990
+
+
+Please ECN the parts list for Race Drivin' Sound PCB Top Parts list 
+A046491-02.
+
+Change 
+
+Item 4 from:	136052-3121  1  IC, Prog 27256, 200ns	45N
+
+	to:	136077-1033  1  IC, Prog 27C512, 200ns  45N
+
+
+Item 4 from:	136052-3122  1  IC, Prog 27256, 200ns	70N
+
+	to:	136077-1032  1  IC, Prog 27C512, 200ns  70N
+
+
+Item 29 from:   179178-002   1  CONN, RCPT, 2CKT  E1
+
+	to:     179178-002   1  CONN, RCPT, 2CKT  E2
+
+
+
+Thanks,
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 23 July 1990
+
+
+Production
+----------
+I have given Jim Freitas and Jim Buchanan the updated test procedures
+for the boards.
+
+When I went over them with Jim Buchanan the ZRAMs on two DSK Boards
+did not work. As I was preparing to MTO one so I could find out what
+was wrong, Jim discovered that his +5V was low. Adjusting the supply
+fixed the problem.
+
+ 
+
+X PROGRAMMER
+------------
+3M sent three guys (Larry, Moe, and Curly) to investigate the problem with 
+the Quick-Lock socket. I was able to very effectively demonstrate that the 
+devices worked when they were first inserted into the socket but stopped 
+working once they had locked in.
+ 
+	1. After measuring E15s and P15s they were unable to find any
+	   reason for it not to work.
+
+	2. They were consistently unable to reach anyone in their own
+	   company because of their electronic messaging system.
+	
+	3. They make a socket similar to the Yamaichi socket which Tom Clark
+	   did not tell me about. This other 3M socket has the same footprint
+	   as the Yamaichi which means it is not the same as the 3M 
+	   Quick-Lock. (They had to have a distributor fax the data sheet
+	   because they couldn't reach anyone in their company.)
+
+	4. A few days later I received a fax from Chris Schmolze from 3M in
+	   Austin. He claims the problem is that the socket was designed
+	   for plastic parts (PLCC) and I was using ceramic parts.
+
+		a. I tried a plastic part and it failed, also.
+		b. There is no way, from reading the 3M and TI data sheets,
+		   that I would have had any reason to believe that the 
+		   socket wouldn't work.
+
+	5. I left a message for Rick Putnam (3M sales rep) to this effect
+	   but he has not returned my call.
+
+	6. The three wise men who visted me were actually Rick Putnam and
+	   Neal Fouts from 3M in Foster City, and Byron Westerman from 3M
+	   in Austin, Texas.
+								
+									2 of 2
+
+The board that we modified to use the AMP sockets seems to work, although
+only three of the four sockets are useable. The fourth socket has 
+successfully resisted all efforts to find out why it will read parts
+but won't program them.
+
+I will try to have another board built-up and modified to use the Yamaichi 
+sockets.
+
+
+Slapstic Encryption Program
+---------------------------
+I have written a specification for the program and have started implementing
+it. I will test it as much as I can on the PC before installing on
+the 68010 for a functional test.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 30 July 1990
+
+
+
+X PROGRAMMER
+------------
+Out of the 170 devices I have programmed for production there have been
+2 failures. Both appear to be due to address line problems in the
+devices.
+
+3M has taken back the Lock-In sockets and given me their version of the
+Yamaichi socket. Their version is junk.
+
+Emmette has mounted one of the Yamaichi sockets on the board that
+originally had the 3M sockets. I haven't tried it yet.
+
+
+
+Slapstic Encryption Program
+---------------------------
+I am now installing a simple version of the program on the 68010 in order
+to perform a functional test.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 3 August 1990
+
+
+
+X PROGRAMMER
+------------
+I have successfully programmed 617 devices which I have MTO'd to Production.
+
+In the process there were 10 failures. Of these:
+
+	7 appear to be due to bad address lines;
+	1 was not blank;
+	1 could not set the RBIT;
+	1 could set and verify the RBIT, but the ROM could still be read!
+
+Rob Bryant wants a total of 635 devices, so I need to make 18 more. There
+are 468 parts still in inventory so we should MTO about 20.
+
+We are due to receive another 2000 on September 13.
+
+I have kept 10 blank parts for our use.
+
+
+
+Slapstic Encryption Program
+---------------------------
+I have gotten the 68010 program working, exercising the slapstic with 
+encrypted data in the simple slapstic mode.
+
+Next comes the dreaded shell mode.
+
+
+
+To Do for Race Drivin' Release
+------------------------------
+1. Fix the ROM7 Checksum problem.
+2. Get Max to add Watchdog to his Helper test routine.
+3. Test everything once all the ROMs are properly checksummed.
+4. Add the Slapstic encryption routine if possible.
+5. Make sure all the ROMs get documented.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 10 August 1990
+
+
+
+X PROGRAMMER
+------------
+I have asked Karen to finish the X Programmer board by installing the
+Yamaichi sockets. (The board had originally been built with 3M sockets.) 
+I have given her the information she needs to buy more Yamaichi sockets.
+
+This will give the company a backup board for programming Helpers.
+
+
+
+Slapstic Encryption Program
+---------------------------
+I have gotten the 68010 program working, exercising the slapstic with 
+encrypted data in the complicated shell mode.
+
+After discovering (with Don) and compensating for errors in the 
+Slapstic design, the program seems to work. I will let it run for
+awhile.
+
+
+To Do for Race Drivin' Release
+------------------------------
+1. Fix the ROM7 Checksum problem.				[done]
+2. Get Max to add Watchdog to his Helper test routine.
+3. Test everything once all the ROMs are properly checksummed.
+4. Add the Slapstic encryption routine if possible.		[finished]
+5. Make sure all the ROMs get documented.
+
+
+
+Other:	I paid $121.02 cash for the Yamaichi sockets on July 13 and have not
+ 	been paid by Atari Games.
+
+	I will never again loan Atari Games money in this fashion, no
+	matter how desperately the parts are needed.
+
+	Never ever.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 21 August 1990
+
+
+
+X PROGRAMMER
+------------
+I have received the board from Karen.
+
+
+
+Slapstic Encryption Program
+---------------------------
+In addtion to the complicated Slapstic encryption program, I have done a 
+simple Slapstic detection program that runs at Power-Up.
+
+
+
+Race Drivin' 
+------------------------------
+We have released the game.
+
+Somehow, Slapstic did not appear on the Main Board parts list.
+I have asked Art to ECN all the cockpit and compact versions to include it.
+
+The Slapstic also did not appear on Ralph's kit parts list; there were
+also several other omissions. I have asked him to ECN it.
+
+The parts list for the DSK Board needed some work. I have asked Art to ECN it.
+
+I have started the German version.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 27 August 1990
+
+
+
+Race Drivin' 
+------------
+The German Self-Test is complete, subject to finding out from our
+German Distributor what he thinks of my translations.
+
+Art has started the process to ECN all the cockpit and compact versions
+to include Slapstic.
+
+I have ECNed the DSK Board to its final Production configuration.
+
+
+There is a new Self-Test (Version 2.1) that has a menu entry for 
+clearing the ZeroPower RAM. It is in [Margolin.GSPTST]FLTST_R2_1.vlda  .
+It should be assigned ROM Numbers of:  136077-2001 and 136077-2002 .
+It should be used in all future North America, British, and Japanese versions.
+
+The German version also contains the menu entry for clearing ZeroPower RAM. 
+It is in [Margolin.GSPTST]FLTST_G2_1.vlda and should be assigned ROM numbers 
+of 136077-1201 and 136077-1202 . Source code is in [Margolin.GSPTST.NEWGER] .
+
+
+To Do
+-----
+
+1. Give Art the inputs for the Compact version of the DSK Board.
+
+2. Ask production if they need more programmed helpers.
+
+3. Ask production if they want me to look at the bad DSK boards.
+
+4. If I have time I will work on the North American Compact version of 
+   Self-Test.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 31 August 1990
+
+
+Race Drivin' 
+------------
+I have made the changes suggested by Nova-Apparate and now German Self-Test 
+is complete.
+
+German Self-Test is in [Margolin.GSPTST]FLTST_G2_1.vlda and should be 
+assigned ROM numbers of 136077-1201 and 136077-1202 . Source code is in 
+[Margolin.GSPTST.NEWGER] .
+
+There is a new version of Self-Test (Version 2.1) that should be used in
+all new versions of North American, British, and Japanese.
+
+It is in [Margolin.GSPTST]FLTST_R2_1.vlda  and should be assigned 
+ROM Numbers of:  136077-2001 and 136077-2002 .
+
+
+Production
+----------
+I have looked at two of the 21 bad DSK Boards from Production.
+
+They both had the same symptoms:
+
+	ASIC 61 chip was alive and its internal RAM tested ok.
+	Two of the external RAMs tested bad even when replaced
+	by known good parts.
+
+Apparently most of the 21 bad boards exhibit this problem.
+
+Either ASIC 61 has a design weakness that makes it susceptible to this
+kind of failure or there is a SMD attachment problem or there
+is a PC Board problem.
+
+In order to properly test the circuit I would need a modern logic
+analyzer and several weeks to program it. I have given the boards back
+to Production.
+
+Don is going to send two of the boards to Fine Pitch to have the ASIC 61s 
+replaced. That should help decide whether to have the remainder of the
+21 boards fixed or scrapped.
+
+Jim Freitas wasn't sure if these boards had gone through the Zehntel Board
+Tester. I explained that in the last few months I had experienced several cases
+where I had boards with a trace bridge that interfered with circuit function
+but which were cleared with the current from a buzz light. I asked him to run
+the bad DSK boards through the Zehntel again.
+
+I talked to Jim Buchanan who told me what he had found. With the RAMs unplugged,
+data lines on a good board read 2 MegOhms. Some of the data lines on a bad
+board read completely open. He determined that the ASIC 61 pins were properly
+soldered and concluded that the ASIC 61 outputs were blown.
+
+I agree.
+									2 of 3
+
+We might be looking at a board handling problem. With most ICs, once they are
+installed on a board they are pretty much protected from Electro-Static- 
+Discharge (ESD) because they are wired to other ICs, most of which also have
+ESD protection. (There is safety in numbers.)
+
+With ASIC 61, each external data line goes only to one external RAM pin.
+Until the RAM is installed, the line to the ASIC 61 is floating naked and is
+therefore very susceptible to ESD.
+
+I recommend that the ASIC 61s that are removed be sent back to the manufacturer
+for failure analysis.
+
+I do not know how they handle boards after the ASIC 61 is attached but before
+the external RAMs are installed. They may need to observe full ESD precautions
+until the RAM is installed.
+
+
+Cyclotron
+---------
+I have made new Self-Test ROMs for them with some new features they had 
+requested.
+
+Bonnie had a problem where she could not get a board to run standalone.
+There were two problems:
+
+	1. This MultiSync board with this AMS required the 20pF cap on the
+	   Address Strobe line to eliminate the PEEK Errors.
+
+	2. Her program contained old Driver code that looked in the ZeroPower
+	   RAM at the stored values for the control setup and if it was bad
+	   would go to a control setup mode.
+
+	   The MultiSync board that worked came from Driver Compact and still
+	   had valid data in the ZeroPower RAM. Her new board came from 
+	   Production and had not been set up for the Driver.
+
+  	   The software detected that the control setup was wrong and tried
+	   to setup Driver controls, which don't exist in Cylotron.
+
+	   Patching out the routine solved the problem. Bonnie is going to
+	   look at the program in more detail to make sure she doesn't need
+	   this function. 
+
+
+NoName
+------
+I have made new Self-Test ROMs for them with some new features they had 
+requested.
+ 
+
+Other
+-----
+I will be on vacation for September. I am scheduled to return on October 1.
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 8 October 1990
+
+
+
+Race Drivin' 
+------------
+According to Ray Sherman the company does not have the R2R resistor networks,
+the lead time is 9 weeks, and is there anything else we can use?. 
+I told him it is a custom part with two sources and that the only 
+alternative would be to build them, at enormous cost, out of 0.1% resistors.
+He said that one source (Mepco/Centralab) disclaims any knowledge of the
+part. I gave him copies of my files and a Centralab part.
+
+
+Art is coming out with the parts lists with the new cockpit ROM numbers that 
+we have given him for North American, British, and German versions. Note that 
+this will change again for the Link feature.
+
+
+I have made more PLD65s; Emmette will presumably do the rest. I have gotten
+more labels from Jim Freitas.
+
+
+DS II
+-----
+I have gotten the second board to download from the PC. It is ready for Matt.
+
+Only one of the two 2101 Rev 3 parts works. The oscillator does not work on 
+the bad one; there may be more wrong with it also. I tried different crystals,
+even 10 MHz, but to no avail.
+
+It looks like the only way to tell the difference between  rev 2 and rev 3 parts
+is the date code. Both are marked ADSP-2101 G-50X. Rev 3 parts should have a 
+date "greater than 9034C" which should mean that rev 3 starts with 9035. 
+
+
+Other
+-----
+The pod on my system needs its target system to have a 33 pF capacitor on the
+/AS line. This pod seems to get moved around alot because systems tend to not
+work with it. Now we know why. 
+
+
+Next
+----
+Compact Driver Self-Test
+
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 15 October 1990
+
+
+Race Drivin' 
+------------
+I showed Emmette how to program the P15s and he did the remainder of the
+325 parts.
+
+Out of 325 parts we had 13 failures for a failure rate of 4%. 
+Ten of the 13 failures were from the last batch of 68.
+
+In the first batch of 617 devices the failure rate was only 1.6%.
+
+Both of these 'batches' are the original TI Pre-Production parts.
+
+
+DS II
+-----
+I have given Matt a DS II board along with new Self-Test ROMs containing 
+the DS II downloader.
+
+We received two more Rev 3 2101s from Margot.
+
+The 2101 IC in the IC is labeled 'EZE-ICE' indicating that it is probably a
+special part bonded out for the ICE, but it has a date code of 9028 which
+normally means it is the old Rev 2 mask, the one with all the bugs.
+
+If it is a Rev 2 part, the EZE-ICE will not be very useful.
+
+
+Compact Driver Self-Test
+------------------------
+I am making progress.
+
+
+Cyclotron Unwanted Helicopter Sound
+------------------------------------
+Brad's SA II Audio Board makes an unwanted Helicopter Sound during game play.
+The sound is not really loud but once you key in to it you can hear it even
+during game sounds.
+
+When Farokh powered the SA II board with a separate +5v the problem went away.
+
+The +5V line from the MultiSync Board has about 50 mv of noise on it. This is
+normal for a MultiSync Board. In fact this is normal for anything powered by
+a switching power supply.
+
+The problem on the SA II board appears to originate in the OKI sound circuit.
+(The OKI IC is connected directly to +5V.)
+
+The real problem is that the SA II Board is a two layer PC Board. TWO LAYERS!
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 22 October 1990
+
+
+Race Drivin' 
+------------
+Some of the defective P15s appear to be due to a worn out socket on the 
+Programmer. I have brought up and installed the Programmer board with the 
+Yamaichi sockets.
+
+
+DS II
+-----
+The 2101 on our EZE-ICE is indeed a Rev 2 part. We are supposed to be getting 
+a new ROM and a new 2101 for the EZE-ICE.
+
+Note that the 2101 used on the EZE-ICE is a special part bonded out for
+the EZE-ICE only. This is because:
+
+   1. There are extra signals bonded out for the EZE-ICE;
+
+   2. The EZE-ICE PC Board was laid out for the old PGA pinout and is
+      not compatible with the new PGA pinout. (The new PGA pinout is 
+      compatible with the PLCC pinout; the old PGA pinout is not.)
+
+The bottom of the EZE-ICE socket goes to a pin-changer adapter so it will
+correctly plug into a standard 2101 socket. 
+
+The part used in the EZE-ICE could not, for example, be unplugged from
+the EZE-ICE and plugged directly into a standard 2101 socket.
+
+Likewise, a standard 2101 cannot be used on the EZE-ICE board.
+
+
+2101s
+-----
+According to Margot:
+
+	Lead times for the 2105 are 12 weeks although we might be able to get
+	a small quantity before that.
+
+	We could get ten 2101s in 2-3 weeks and another ten 2-3 weeks after 
+	that.
+
+	Supposedly, both parts are available in either PGA (KG) or PLCC (KP).
+
+
+I suggest we order: 	(10)	2101 KG (PGA)
+			(10)	2101 KP (PLCC)
+			(20)	2105 KP	(PLCC)
+
+
+Compact Driver Self-Test
+------------------------
+I am making progress.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 29 October 1990
+
+
+Race Drivin' 
+------------
+I have checked the ROM Parts List for the North American Race Drivin' Kit.
+
+When I asked Art to change the Compact Race Drivin' DSK Board to the -02
+version, he accidentally changed the Cockpit version instead. He is working
+on fixing it.
+
+
+DS II
+-----
+We are waiting for a new ROM and a new 2101 (Rev 3) for the EZE-ICE.
+
+
+Compact Driver Self-Test
+------------------------
+I am making progress.
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 26 October 1990
+
+
+Race Drivin' 
+------------
+I have checked the ROM Parts List for the North American Race Drivin' Kit
+and they are correct.
+
+When I asked Art to change the Compact Race Drivin' DSK Board to the -02
+version, he changed the Cockpit version instead. He is working on fixing it.
+
+
+DS II
+-----
+We are waiting for a new ROM and a new 2101 (Rev 3) for the EZE-ICE.
+
+I received a 2105 but it is a Rev 2 part which is basically worthless.
+
+
+Compact Driver Self-Test
+------------------------
+I have finished the North American/British version and am working on the
+German version.
+
+
+Counterfeit Compact Hard Drivin'
+-------------------------------
+We received the board set and Erik hooked it up. There are several 
+interesting things about it.
+
+	1. The boards are all two layer.
+
+	2. It uses a Jamma connector.
+
+	3. Instead of ZeroPower RAM it uses regular RAM with an external 
+	   Battery.
+
+	4. They use different parts in the Color RAM and output circuit.
+	   (The color RAM does not pass self-test.) It does not look like 
+	   they use 8 bits of RGB. It is not noticeable in the game.
+
+	5. The two 34010s are both -40 but are run at our clock speeds 
+	   (48 MHz. and 50 MHz.).
+
+	6. The ADSP Board is an ADSP II but uses the 2100 PGA instead of
+	   PQFP. The date code of the 2100 is 9037 so it is not from the
+	   batch 3-KOAM bought last year.
+
+	7. One set of Main Board Program ROMs was altered but the only
+	   thing different we noticed is that the attract screen copyright
+	   message says 1990. Our compact says 1988.
+
+  
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 2 November 1990
+
+
+Race Drivin' 
+------------
+I have signed off the Compact parts lists calling out the -02 version of 
+the DSK board.
+
+I have generated the preliminary ROM Release document which can be found in
+[MARGOLIN.RACE]MS_ROMREL.DOC
+
+Self-Test ROMs for North American and German versions are ready to be released.
+
+VRAMs
+-----
+Erik and I tested the Micron 100 ns VRAMs in a board and ran the VRAM Verify
+Loop Test overnight. It ran 375 tests and there were no errors. (The VRAMs
+also ran the game.)
+
+According to the partial data sheet that I received on the NEC 64K*8 VRAMs, 
+they still do not support Shift-Register-To-Memory Transfers, making them
+unuseable in the game. Erik installed some and they were, in fact, not
+useable.
+
+  
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 9 November 1990
+
+
+OrCad
+-----
+I talked to Rhonda in Purchasing who said she did order the software from
+Elcor. I talked to Tanya from Elcor who said she had found that we had
+ordered it from her and everything was fine.
+
+The new version of OrCard is supposed to start shipping around the first week
+in December. We will get it as part of the year's free update. People
+buying the new version will pay $595. (We paid $495.)
+
+
+Production EPROM problem
+------------------------
+Don brought over two of the thirteen ADSP II boards with the problem that they
+passed Self-Test but would not run the game.
+
+One board has a hardware problem. The other board had a bad EPROM. 
+
+	1. It passed the ADSP checksum test, which does not run the EPROM at 
+	   full speed. EPROM Programmers also do not verify it at full speed.
+
+	2. It was plugged into a Main Board to run it at full speed. The 
+	   checksum was correct.
+
+	3. It passed the Verify Test in the EPROM Programmer against the 
+	   ROM master. As I mentioned, EPROM Programmers do not verify parts
+	   at full speed.
+
+	4. The EPROM is, nonetheless, bad. Replacing it in the ADSP II allows
+	   the board to run the game.
+
+I suggested to Jim Buchanan that, if he could get the time, to separate out 
+the bad ADSP II boards that were bad because of bad EPROMs. This may help 
+determine how much of a problem it is.
+
+Part of the problem may be due to the EPROMs that were sent out to be erased.
+There does not appear to be a specification for erasing EPROMs. (Cleaning
+adhesive off the window, erasure intensity and time, etc.) A simple blank
+check is not sufficient for determining whether an EPROM has been properly
+erased.
+ 
+It has come out that the EPROMs going into the Race Drivin' kits are not
+being tested in games. At the meeting with Bob Stewart you worked out
+something with him, but I don't quite remember what it was because of the
+really loud banging going on next store in Dan Van's new area.
+
+
+									2 of 2
+74AS823s
+--------
+Because the 74AS823s are not available TI suggested we use their new
+Bi-CMOS part the 74BCT29823NT).
+
+The Bi-CMOS from TI (the 74BCT29823NT) not only works but produces
+a slightly sharper picture on the monitor.
+
+I have submitted a CER and when I get the Atari pn I will ask Art
+to ECN the parts list for Compact and Cockpit to use this new part.
+
+I have evaluated the Signetics 74F823 and it will also work. It is
+as good as the 74AS823 but is not as good as the 74BCT29823. The
+Signetics part is already on the AVL under 
+
+The preferred part will be the 74BCT29823NT. The 74AS823N (TI) and 
+74F823N (Signetics) can also be used if necessary.
+
+I have informed Mary of this.
+
+The 74BCT29823NT costs $2.50; the 74AS823 cost $1.70 .
+
+
+Compact Race Drivin' Manual
+-----------------------------------
+I have reviewed, corrected, and returned to Publications the schematic package
+for Compact Race Drivin' manual.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 21 November 1990
+
+
+
+Compact Self-Test
+-----------------
+Because we took off the Slapstic and two ROMs on the DSK Board, Auto Self-Test
+reports a DSK ROM error.
+
+I fixed it, added it to [Driver.Raceversions.ROMREVB], updated MS_AROMREL.DOC,
+gave a copy of it to Rick Owens along with the new ROMs, and gave Joe a marked
+up MultiSync North American Parts List and asked him to ECN it.
+
+I also asked Joe to ECN the DSK -01 board, used for the Cockpit version.
+
+This took most of Monday.
+
+
+Cockpit Self-Test
+-----------------
+Manufacturing needed the Cockpit version right away so I did that, too. I 
+fixed it, added it to [Driver.Raceversions.ROMREVC], updated AROMREL.DOC, 
+gave a copy of it to Rick Owens along with the new ROMs, and gave Joe a marked
+up Main North American Parts List and asked him to ECN it.
+
+This took most of Tuesday. Joe was very helpful; Leon was not.
+
+
+Self-Test at a Glance
+---------------------
+Race Drivin' Cockpit Self-Test ROMs 136077-3001 and 136077-3002 are used
+in all North American and British versions:
+
+	Cockpit North American 	   	Released and ECNed
+	Cockpit North American Kit 	Released and ECNed
+	Cockpit British		   	Released and ECNed
+	Cockpit British Kit		Does not exist
+
+
+Race Drivin' Compact Self-Test ROMs 136077-2001 and 136077-2002 are used
+in all North American and British versions:
+
+	Compact North American		Released and ECNed
+	Compact North American Kit	Does not exist
+	Compact British			Does not exist
+	Compact British Kit		Does not exist
+	
+
+German Versions for Cockpit and Compact: Not Released.
+
+									2 of 3
+Compact Opto Harness
+--------------------
+When Art's group documented the Compact Board Set they started with the 
+Cockpit version and changed the numbers. Unfortunately, they forget 
+(and did not check) that the Compact Board Set includes the Opto Harness.
+
+The Opto Harness was therefore not ordered. They had 33 in inventory.
+
+They will either have some made outside on a quick turn at enormous cost
+or make them in-house at enormous cost.
+
+
+74AS823s
+--------
+I have received an Atari pn for the 74BCT29823NT and have asked Art's group
+to ECN the parts list for Compact and Cockpit to use this new part.
+
+
+Production DSK GALs
+------------------- 
+Rick Owens gave me a tube of GALs that he said didn't work in the DSK board.
+Production was having a large fallout rate.
+
+I tried them in a board and, sure enough, they didn't work. I erased and 
+reprogrammed one and it did work. I again erased and reprogrammed one but
+with the security fuse set, and it still worked.
+
+Last June when I released the GALs I gave the vendor a floppy disk with the
+JEDEC files on them. The files included test vectors so they could test the
+entire part and not just verify the fuses. They obviously have not been
+using it.
+
+The GALs need to be programmed in order to work properly.
+
+On Wednesday, Joan Alpen from Merit brought over some guy from Lattice who
+told the following story: 
+
+	On one of the machines the Master part got fried so the operator
+	took one of the already programmed parts and used it as the new 
+	Master, not knowing that the security bit was set. Therefore, all
+	parts made from this new "Master" were blank; except, of course,
+	for the user signature. When Manufacturing complained that the
+	GALs were blank, Merit verified them against the blank "Master" and
+	proclaimed them properly programmed.
+
+	When I told the Lattice guy that I had given them a diskette with
+	test vectors and that if they had used them this problem would not
+	have happened, he said they were using them. Joan spoke up and said,
+	" No, the machines were not linked to the PC." 
+	
+	The Lattice guy ended up admitting they were not using the test 
+	vectors	and said, "You got a problem with that?" I told him I did. 
+	The second time he asked me, "You got a problem with that?" I told 
+	them we were done and, being in the cafeteria at the time, walked out.
+
+									2 of 3
+OrCad
+-----
+As an exercise I have used it to do the DSPLINK schematic; OrCad is very 
+useable. Also, it will produce netlists in lots of forms, including SCICARDS 
+and WIRELIST.
+
+Elcor has sent me information about the new OrCad release due in December.
+The major change seems to be the Graphical User Interface (GUI) so people
+don't have to type DOS commands.
+
+
+Race Drivin' Compact Manual
+---------------------------
+I have reviewed and corrected the Race Drivin' Compact manual. There were
+numerous places that contained information that pertained only to the Cockpit 
+game. I have gone over these problem areas with Andrea.
+
+
+P15 Programmer
+--------------
+Two of the modules have developed problems. I believe it is due to the 
+extensive rework done to accomodate the Yamaichi sockets.
+
+So far we have supplied the following programmed parts: 635 in June, 325
+in October, and currently 414 out of a projected run of 1144.
+
+If the company expects to use P15s after the current run I recommend that
+a new board be done to use Yamaichi sockets. 
+
+	 
+DSPLINK
+-------
+As a result of the Serial Meeting I will modify the test board to permit
+switching the 2105 interrupt to be either when the 68010 writes to the
+interface or when the 68010 reads the interrupt. 
+
+I have not made much progress because I keep getting interrupted here.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 30 November 1990
+
+
+Race Driven' Self-Test
+----------------------
+I have signed off several parts lists that were ECNed for the new Self-Test
+ROMs.
+
+
+P15s
+----
+The two PC Boards used for programming the parts have essentially crapped out.
+
+The WireWrap board we were using has also crapped out.
+
+I believe the problems are due to:
+
+   1. The AMP sockets wear out after a few hundred insertions. 
+      (AMP no longer makes burn-in sockets so we cannot replace them.)
+
+   2. The board with the Yamaichi sockets suffered mortally from the rework.
+
+We are working on two solutions:
+
+   1. I have given Joe the inputs to make a board with one module. I have 
+      also asked him to use very conservative design rules such as
+      12 mil traces and only one trace between IC pins. As of Friday he
+      has been making good progress on the board.
+
+   2. Jim Freitas has just gotten a Data I/O 2900 programmer so they
+      can do GALs. With an appropriate adapter ($995) and the
+      Microcomputer Data Library ($650) it will program the part.
+      Whether it will set the security bit is an open question.
+
+      Jim is borrowing the adapter and library so we can find out.
+
+      The best solution would be for us to buy one so we can continue to
+      program them. We would also be able to do GALs which would be nice.
+
+   3. Emmette has been making parts on the PC Programmer with the TI Adapters.
+      There has been a high failure rate with parts not being blank. 
+
+      As of Friday the 2900 has refused to work with the P15s. It reports
+      Device Overcurrent. The socketing system looks pretty dubious.
+
+So far we have supplied the following programmed parts: 635 in June, 325
+in October, and currently 886 for a grand total of 1846.
+
+DSPLINK
+-------
+I don't get to work on it very much.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 2
+Fr: Jed Margolin
+Re: Status Report
+Dt: 7 December 1990
+
+
+
+P15s
+----
+Joe has finished the new Programmer board and has sent out for film.
+
+We are ordering Yamaichi sockets for the boards.
+
+When the boards are built I will need to modify some software. One of the
+modifications will be so it will not set the security bit if the part
+is non-blank.
+
+Manufacturing's Data I/O 2900 refused to program a P15. The salesman 
+brought in another 2900 and it also refused to program the part. There
+appears to be a problem with the Model 2900. Perhaps it is a software
+problem that they can fix.
+
+
+DSPLINK
+-------
+It has actually started to behave responsibly now that I am giving it a good
+long time to recover from /RESET.
+
+It is alive but needs more work.
+
+
+Programmed Parts
+----------------
+We have received from Rob Bryant 644+500+28+263 = 1435 parts. No one saw him
+deliver the batch of 263 and there is no work order tag for them. In addition,
+the batch of 28 is for our own DSK boards.
+
+As of 12-7 we have made 1322 programmed parts. 
+
+We have experienced 95 bad parts with many of them non-blank to start with.
+Although we seem to have bought these parts with no warranty, we have the 
+right to expect that these parts have undergone at least minimal testing.
+Not Blank = Not Tested.
+
+There is a discrepancy of 1435-1322-95=18 parts that are not accounted for.
+
+Either Rob remembered incorrectly the 263 parts or they got lost or someone 
+took them. Anyone with a Schlage card can get into our lab and that really
+sucks.
+
+So far we have supplied the following programmed parts: 635 in June, 325
+in October, and currently 1322 for a grand total of 2282.
+
+Emmette deserves congratulations for his fine work in programming parts
+under trying conditions.
+									2 of 2
+
+Manufacturing
+-------------
+We are using a 2% capacitor on the Main Board in the 12 Bit A/D circuit.
+When the board was laid out the AVL called for parts on 0.3 centers.
+Someone seems to have changed the AVL and added parts on 0.4 centers.
+They bought said parts which now cannot be auto-inserted. I was asked if
+I would allow 5% parts which are 0.3 and therefore can be auto-inserted.
+
+I said no, just buy the 2% parts that fit.
+
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief						1 of 1
+Fr: Jed Margolin
+Re: Status Report
+Dt: 14 December 1990
+
+
+Programmed Parts
+----------------
+So far we have supplied the following programmed parts: 635 in June, 325
+in October, and currently 1322+137=1459 for a grand total of 2419.
+
+TI would like some of the non-blank parts, as well as the part that could 
+still be read after setting and verifying the RBIT. I don't know about
+this last one; it contains the released program.
+
+
+DSPLINK
+-------
+I have turned over to Ed Rotberg two working DSPLINK boards and some 
+documentation, as well as the revised Self-Test. The boards perform as 
+advertised: they exchange 32 word buffers at 5 MBits/sec and the 68010 can
+upload and download buffers at full speed inside a DBF loop.
+
+I have finished the schematics for the Party Line version; Emmette is
+wirewrapping two for Peter.
+
+There still remains a considerable amount of work to be done:
+	1. Finishing Self-Test with Memory Tests and full Link Tests;
+	2. Documenting things for Peter.
+
+Peter's code will have to start at Boot Page 3. The board will come up in
+Self-Test; a Self-Test Command Code will cause it to Boot up Page 3. 
+After that Peter can do whatever he likes. He cannot, however, change
+the Self-Test code in Boot pages 0-2 unless he wants to write a lot
+of 68010 Self-Test code.
+
+I have attached a copy of the documentation to this report.
+
+It was extremely difficult to get as far as I did because:
+
+	1. There was no working emulator. The Rev 2 emulator made the
+	   situation look worse than it was.
+
+	2. The power to the various benches has been, and apparently still
+	   is, erratic. It may explain some of the problems with the
+	   P15 Programmer.
+
+
+Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief							1 of 3
+Fr: Jed Margolin
+Re: Status Report
+Dt: 25 December 1990
+
+Data I/O
+--------
+The Data I/O saleman brought a new 2900 in; it worked with some E15s but 
+failed on others.
+
+The conductive foam in the socket adapter contains lots of vertical wires
+separated by non-conducting foam. There appears to be too much play in the
+adapter for it to make reliable contact.
+
+Also, Data I/O has made a major blunder. When the security fuse is set, the
+programmer refuses to try to read the device. It does not verify that the
+device is not readable. The salesman didn't understand why this is a problem.
+I explained to him that I had a device with the security fuse set and 
+verified but which could still be read. The security is in the device, not 
+the programmer. He still didn't understand, and suggested I call Data I/O in 
+Washington.
+
+I told him that due to my experience in trying to get getting information 
+from Data I/O after getting through their exerable voice mail system I am
+not inclined to go through that again, especially to give them information 
+that will help them make a better product. They should call me.
+
+He said he would have someone call me; no one did.
+
+I am tempted to write a letter to the TI newsletter explaining why the 
+Data I/O 2900 is not recommended for programming P15s.
+
+As a result I cannot recommend the Data I/O 2900 for programming P15s or 
+anything else that uses that stupid PLCC adapter socket.
+ 
+By the way, when they test the program for a new device they test it on four 
+devices.
+
+
+DSPLINK
+-------
+With Matt's help I have found and fixed the bug in the DSPLINK software.
+
+From talking to Dan Ash I have learned that there is another bug in the
+2101. The LSB transmitted by Serial Port 0 does not work. The recommended 
+workaround is to send one more bit than is needed, and then drop the LSB
+on the receive end. This is not a good fix if you want to send 16-bit words
+because 16 is the maximum number of bits/word that can be sent.
+
+I have been using Serial Port 1 (it is the only Serial Port in the 2105) and
+it is ok.
+
+Unfortunately, I wanted to use Serial Port 0 in the DS III board for 
+communications so I could use Serial Port 1 in its alternate mode which
+provides two more interrupts. They would have been used to make the parallel
+interface more efficient.
+
+No word on when the 2101 will be fixed.
+									2 of 3
+
+DSPLINK - Party Line
+--------------------
+I have received two WireWrap Boards from Emmette but have not had time to
+fire them up. These two will presumably go to Peter.
+
+The schematics for this board are available to the other groups who have 
+decided to use it as a standalone board. Unless they put in a Driver Expansion
+Bus they will have to adapt the interface to whatever they decide to use.
+
+There still remains a considerable amount of work to be done in finishing
+Self-Test with Memory Tests and full Link Tests.
+
+
+Bonnie's PC Board
+-----------------
+Whwn fully loaded, Bonnie's PCB will have:
+
+	1.2M Bytes of EPROM (10 x 27C010-170)
+	64K Bytes of RAM
+	4K Bytes of ZeroPower RAM with Software Write Protect.
+	Driver P15 System
+
+Because the Expansion Bus only supports 2M Bytes of Address space, it will
+be challange to have this thing work with other boards. I am willing to
+guarantee that it will work with a DS III board, but that's it.
+
+I have schematics ready to be reviewed.
+
+More to Do:
+	Program the GAL address decoders;
+	Write Self-Test for this board.
+
+Note: The GALs on this board can be replaced by standard PALs.
+
+
+DS III
+------
+The schematics are ready for a preliminary review.
+
+More To Do:
+	Program the GALs;
+	Write Self-Test.
+
+Note: In one location on this board the GAL cannot be replaced by a
+      standard PAL.
+
+									3 of 3
+New Release: the Driver LINK
+----------------------------
+I have updated Self-Test; the versions have to be tested in a game.
+
+There are four versions:
+	1. Cockpit North American/British;
+	2. Cockpit German;
+	3. Compact North American/British;
+	4. Compact German.
+
+The eighteen Parts Lists that will have to be ECNed are as follows:
+
+	Cockpit:		North American	A045988-05
+				British		A045988-07
+				German		A045988-06
+
+	Cockpit Kit:		North American	A048486-01
+				British		A048486-02
+				German		A048486-03
+
+	Cockpit Link Kit:	North American	A048978-01
+				British		A048978-02
+				German		A048978-03
+
+	Compact:		North American	A046901-04
+				British		A046901-05
+				German		A046901-06
+
+	Compact Kit:		North American	A048984-01
+				British		A048984-02
+				German		A048984-03
+
+	Compact Link Kit:	Referred to in A048980-01,-02,-03
+				I can't find the actual parts list
+
+Not to mention AROMREL.DOC
+
+
+Driver Documentation
+--------------------
+I am working on it. The new QMS Laser Printers are very nice, and are supposed
+to be HP LaserJet compatible, but will not do 12 CPI. It comes out as 
+16.67 CPI. (10 is 10, 16.67 is 16.67, and 12 is 16.67) I have told Dave and
+he has informed QMS of the problem.
+
+
+Jed
+_____________________________________________________________________________

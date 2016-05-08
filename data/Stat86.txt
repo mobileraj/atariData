@@ -1,0 +1,1485 @@
+   Atari/Atari Games   Memos and Status Reports 1986   Jed Margolin
+___________________________________________________________________________
+
+
+Pat,
+
+	If you are going to design a new Sound Procesor System you
+might want to consider some of the things I have done on TomCat.
+
+   1. The TMS 5220C can be reset by bringing /WS and /RS down (and up)
+at the same time. Therefore, it does not require a transistor switch 
+to remove -5V from the IC. (TMS 5220C is Atari p/n 137308-002.)
+
+   2. The TMS 5220C Clock input will accept an almost TTL level if you tie 
+PROUT to +5v. (You must use a pullup resistor on the CLK input so it will go 
+up to VSS.) The clock frequency must then be half what it would otherwise be, 
+so that for example, 8 KHz sampling requires a 320 KHz clock. 
+
+   3. At Earl's request I designed into it the capability of having the
+software be able to select the TMS 5220C Clock frequency so it can
+handle 8 KHz or 10 KHz sampling at the programmer's choice.
+
+   4. In order to accomodate more speech memory I have put together a
+Sequential Memory. The programmer writes to a location to set the
+starting address. There is another location that reads the data thus
+selected. Every Read increments the Sequential Memory address. I have
+implemented 64K bytes of Sequential Memory (in two 26256's) in addition 
+to 32K bytes of Program memory and 8K bytes of RAM. (An 8K x 8 RAM takes
+up less board space than two 2k x 8's.)
+
+
+The above should not be considered an endorsement of the idea of having
+a separate Universal Audio PCB.
+
+
+	Jed 
+_____________________________________________________________________________
+
+Rick, These are the questions I have about the AMI Gate Array for the
+Vector Generator (Atari p/n 137179-001) and about their letter
+of 4/3/86:
+
+
+A. Will the new part be compatible with the old part? I mean electrically,
+mechanically, pin-for-pin compatible?
+
+B. What do we get for our money? 
+
+For Option I: 
+
+  1. What do they do and what do we do? 
+
+  2. How is "J flow tooling and manufacture in 5 micron technology" different 
+     from the technology used in the old part? 
+
+  3. They indicate that they are going to scrap this part too. When?
+
+For Option 2:
+
+  1. What do they do and what do we do? Do I just hand them a schematic and 
+     they do the rest fot $13.5K ?
+ 
+  2. If, as I suspect, their advice to "Design complete circuit from scratch"
+     means "Atari designs complete circuit from scratch" how is this to
+     be accomplished? Are they going to provide us with a complete CAD system,
+     at no cost to Atari, or will we have to pay for it? And how much? And
+     who is going to work on my game while I am designing the Gate Array? 
+
+  3. If Atari bears the cost for redesigning this part why in the world would
+     we choose AMI, a company that has already screwed us once? (And on the
+     same part.)
+
+C. Pricing:
+
+     The way their prices are listed, if we were to go with Option I and
+buy 15K would we pay $5.50 each for 5K (the First 5K) and $5.25 each for 10K 
+(The Next 10K) or would we pay $5.25 each for $15K ?
+
+     Either they are using a nonstandard method of quoting prices or they
+are using a language other than English. Perhaps they are using AMI English.
+
+
+			Jed
+
+cc: Rick Moncrief
+_____________________________________________________________________________
+
+Summary for Turnkey Gate Array (prices include NRE)
+Atari would be responsible for supplying the 
+schematic and the Test Vectors.
+
+
+		1K	   2.5K	       5K
+		---	   ----	      ----
+Oops Board	$13.	   $13.	      $13.	
+
+Fujitsu		$24.43     $12.71      $8.50
+
+AMI		  not quoted	       $6.16
+
+
+If we only sell 1,000 we don't need anybody's Gate Array.
+
+If we sell 2,500 it is a toss-up.
+
+If we sell 5,000, AMI's Gate Array is the most cost effective.
+(Assuming they can actually deliver it.)
+
+
+
+5/12/86	  Offer from Norcomp for Fujitsu gate array.
+
+
+	A. Initiation of Program		$10,000.
+
+	B. Schematic Conversion			included
+
+	C. Simulation/Layout/Validation		$4,080.
+
+	D. Prototypes and final approval	$5,450.
+
+
+	E. Additional samples (max 650 pcs)	$46.
+
+	F. Qualification samples (max 250 pcs)	$120.
+
+
+
+	Production:	 1K	 5K
+			----	-----
+	    	       $4.90	$4.60
+
+			
+Contract says that the buyer is responsible for the test vectors.
+
+
+
+Therefore: 1K = 19,530 NRE + 4,900 = 24,430 which is $24.43 each.
+
+	   5K = 19,530 NRE + 23,000 = 42,530 which is $8.50 each.
+
+
+
+For oops board = $13 (approximately)
+
+Breakeven Point:
+
+	n * 13 = 19,530 + (n * 4.90)
+
+	(n * 13) - (n * 4.90) = 19,530
+
+	n * 8.10 = 19,530
+
+	n = 2,411 pcs
+
+
+
+Even if the oops board costs $18
+
+Breakeven Point:
+
+	n * 18 = 19,530 + (n * 4.90)
+
+	(n * 18) - (n * 4.90) = 19,530
+
+	n * 13.10 = 19,530
+
+	n = 1,490 pcs
+
+
+The AMI quote was:
+
+	Design complete circuit from scratch in 3 micron or 2 micron
+double metal gate array. We supply schematic and test vectors.
+(Unfortunately they did not give a price for 1K quantity)
+
+	Lead time: 10 weeks
+	      NRE: $13.5K
+       Unit Price: $3.46 (5K)
+
+The breakeven point for a $13 oops board is
+
+	n * 13 = 13,500 + (n * 3.46)
+
+	(n * 13) - (n * 3.46) = 13,500
+
+	n * 9.54 = 13,500
+
+	n = 1415 pcs
+
+
+Summary for Turnkey Gate Array (prices include NRE)
+Atari would be responsible for supplying the 
+schematic and the Test Vectors.
+
+		1K	2.5K	 5K
+		---	----	----
+Oops Board	$13.	$13.	$13.	
+
+Fujitsu		$24.43  $12.71	$8.50
+
+AMI		  not quoted	 $6.16
+
+
+If we only sell 1,000 we don't need anybody's Gate Array.
+
+If we sell 2,500 it is a toss-up.
+
+If we sell 5,000, AMI's Gate Array is the most cost effective.
+(Assuming they can actually deliver it.)
+
+
+	Jed
+_____________________________________________________________________________
+
+To: Dan van Elderen
+Fr: Jed Margolin
+Re: Power Supply Cost Comparisons
+Dt: 5/23/86
+=========================================================================
+SUMMARY:
+
+10 Amp Switcher with Audio Board		$91.82
+
+Linear Supply with Regulator/Audio III		$90.10
+(International. A Domestic-only version
+would be $3 - $5 less.)
+=========================================================================
+
+POWER SUPPLY COSTS FROM CHRIS DOWNEND MEMO 5/20/86	
+(A copy of the complete memo is attached) 
+
+For future reference, here is our current power supply cost:
+	output: 5 VDC @10 Amps 0-55 degrees cent. remote sense optional;
+	       12 VDC unreg @ 2amps from transformer; 12VDC reg @ .5 A added
+	          to Audio Aux PCB in later revisions to support System I. 
+
+SL POWER SUPPLY
+        A043363-01 (10 AMP SWITCHER):	A043625-01 (15 amp switcher)
+	CHASSIS: 	3.21		no data in ASK system, but I
+	5V SWITCHER:   30.92		have a cost from Cost Accting.
+	LINE FILTER:    3.65		as of 5/5/86 for materials of:
+	TRANSFORMER:   11.45
+	MISC:		3.54
+		------------
+	MATERIAL:      52.77					65.56
+	LABOR:		 .84					  .84
+	FIXED OVRHD.:	6.07					 6.07
+	VAR. OVRHD.:    2.25					 2.25
+		------------				-------------
+	FULLY ABSORBED:61.93					74.72
+
+AUDIO AUX PC BOARD, A043354-01 (ORIG. STYLE W/O EXTRA REGULATORS):
+	MATERIAL:      13.36
+	LABOR:	        2.12
+	FIXED OVRHD.:  10.52
+	VAR. OVRHD.:    3.89
+		------------ 
+		       29.89
+
+
+Total Switching Power Supply and Audio Board = $61.93 + $29.89 = $91.82
+
+========================================================================
+
+Linear Supply with Regulator/Audio III
+
+From MANMAN 5/23/86, category 1111
+
+Power Supply Base A037671-16 (Color Raster, International):
+
+					STD		CURR
+
+	MATERIAL:			$37.793		$37.793
+	LABOR:				$ 1.841		$ 1.841
+	FIXED OVERHEAD:			$ 0		$ 0
+	VARIABLE OVERHEAD:		$10.784		$10.784
+					------		------
+	TOTAL:				$50.418		$50.418
+
+
+Regulator/Audio III (A043046-01):
+					STD		CURR
+
+	MATERIAL:			$29.18		$31.95
+	LABOR:				$ 2.20		$ 1.93
+	FIXED OVERHEAD:			$10.92		$ 3.85	
+	VARIABLE OVERHEAD:		$ 4.04		$ 1.85
+					------		------
+	TOTAL:				$46.34		$39.68  <39.58>
+
+
+GRAND TOTAL:				$ 96.75		$90.10
+
+=========================================================================
+SUMMARY:
+
+10 Amp Switcher with Audio Board		$91.82
+
+Linear Supply with Regulator/Audio III		$90.10
+(International. A Domestic-only version
+would be $3 - $5 less.)
+
+=========================================================================
+
+From:	KIM::DOWNEND      20-MAY-1986 17:39
+To:	RAINS,VANELDREN,MOORE,MCCARTHY,STEMPLER,ERNIE::MEYETTE,HOFF,
+	SANDY::DAVE,MARGOLIN,MONCRIEF,PATTEN,DOWNEND
+Subj:	SUMMARY ON PC POWER SUPPLY PROPOSAL
+
+A few days ago I solicited comments on the technical aspects
+of using an IBM PC style Power supply in our games - mainly for
+cost savings.
+
+Overall, I recommend a two-prong approach from here:
+	1) Leave existing designs as-is since there are too many conversion
+	   problems to change now.
+	2) Seriously consider this type of supply on new designs with
+	   new cabinets and new electronics which could take advantage
+	   of the large 12 volt supply, the built-in fan and the built-in
+	   on/off switch. There is NO REMOTE SENSE which is still a problem.
+
+I found more technical specifications in the IBM Technical Reference:
+	1) output voltage	current,min.	current max
+		+5	   	2.3		   15.0
+		-5	     	  0		     .3
+		+12         	 .4                 4.2
+		-12          	  0                  .25
+	2) The "power good" signal is the logical AND of the DC output-voltage
+	   sense signal and the AC input voltage fail. It is TTL compatible 
+	   up-level for normal operation or down-level for fault conditions.
+	3) There was no information about temperature de-rating.
+	4) Provides a filtered AC output (switched by on/off), 120VAC @ 1.0 A 
+	   this is a non-standard connector designed for use by the IBM 
+           monochrome monitor. 
+
+Here is a summary of the feedback received:
+	1) McCarthy:...sounds like big brother to ASTEC we used in Gauntlet
+                       for awhile - had to put a 1AMP load on 12 volt output
+		       to maintain regulation.
+		    ...12 volt output is relatively useless to us; would still
+		       need separate supply for audio amp. [ I believe this 
+		       is meant in the context of EXISTING system designs]
+		    ...we should see if ASTEC or other 3rd party in PC 
+		       industry is interested in working with us.
+
+	2)Hoff:     ... sounds like some level of investigation is warranted.
+		    ...Is audio voltage/current correct?
+		    ...how much would the supply save in $'s?
+
+	3)Margolin: ...Are specs with all outputs fully loaded?
+		    ...The audio could be done with a bridge amp (at extra cost)
+		    ...If it doesn't have remote sense, we shouldn't use it.
+		    ...How do the cost figures really compare for this supply
+			versus one built to our spec, assuming we buy 25000?
+ 
+..............................................................................
+
+For future reference, here is our current power supply cost:
+	output: 5 VDC @10 Amps 0-55 degrees cent. remote sense optional;
+	       12 VDC unreg @ 2amps from transformer; 12VDC reg @ .5 A added
+	          to Audio Aux PCB in later revisions to support System I. 
+
+SL POWER SUPPLY
+        A043363-01 (10 AMP SWITCHER):	A043625-01 (15 amp switcher)
+	CHASSIS: 	3.21		no data in ASK system, but I
+	5V SWITCHER:   30.92		have a cost from Cost Accting.
+	LINE FILTER:    3.65		as of 5/5/86 for materials of:
+	TRANSFORMER:   11.45
+	MISC:		3.54
+		------------
+	MATERIAL:      52.77					65.56
+	LABOR:		 .84					  .84
+	FIXED OVRHD.:	6.07					 6.07
+	VAR. OVRHD.:    2.25					 2.25
+		------------				-------------
+	FULLY ABSORBED:61.93					74.72
+
+AUDIO AUX PC BOARD, A043354-01 (ORIG. STYLE W/O EXTRA REGULATORS):
+	MATERIAL:      13.36
+	LABOR:	        2.12
+	FIXED OVRHD.:  10.52
+	VAR. OVRHD.:    3.89
+		------------ 
+		       29.89
+(I find it amazing that we DOUBLE the cost of a PCB with labor and overhead...
+ probably due to the high-labor content of this hand-stuffed board and a 
+ overhead rate that is 6.8 times the labor content; the overhead is 9.9 times
+ the labor content on the power base!?)
+
+These numbers are "standard costs" pulled from the ASK system on mike via
+MANMAN using the LI,1215 command. 
+	
+Final Note: I just opened the latest issue of PC Week Magazine and found 
+an advertisement from 47st. Computer (Mailorder discounter) for a 135W supply 
+for...$64.95 (qty. 10+)...wow, that's $.50 a watt including a fan, a case and an
+on/off switch and connectors. That compares favorably with $74.72 for the
+existing 15-amp power base. 
+=============================================================================
+
+cc: 	Chris Downend
+	Rick Moncrief
+
+_____________________________________________________________________________
+
+Ted Michon's TMS320 System				J. Margolin  5/28/86
+--------------------------
+
+The system contains 4K x 16 of Program RAM and up to 64K words of sequential
+memory in EPROM.
+
+The 68010 seems to have direct access to the Program memory when the TMS320
+Reset is low; the rest of the time the 68010 generates a TMS320 Interrupt
+and data is transferred under TMS320 program control. 
+
+Summary:
+   I found two items that require attention. I do not guarantee that these
+are the only such items.
+
+1. There are two 'ALS373 fall-through latches that receive their inputs from
+   the TMS320 data bus and are clocked by signal 'TPOP0'. The intent appears
+   to be to allow the instruction 'OUT addr,0' to write data to this latch;
+   if this is correct, 'TPOP0' is the wrong signal for this operation. It 
+   would have to be 'TPOP0-' .
+
+2. The maximum output enable time for a 27512 is 100 ns. In order for the
+   circuit to operate reliably over the required temperature and voltage
+   ranges I suggest that the ROMs have their Outputs permanently enabled
+   and followed with 'LS244 buffers which would be gated by TPIP2- .
+=============================================================================
+Normal Operation:
+
+	The TMS320 executes instructions out of the 4K x 16 RAM.
+
+	The sequential memory is used as follows.
+
+	To set up the counter, execute:  'OUT addr,2'	
+	This takes the data from the internal RAM at location 'addr' and 
+	writes it to the Sequential Memory Address Counter.		
+
+	To read the Sequential Memory, execute:   'IN addr,2'
+	This reads the data from the Sequential Memory into internal RAM 
+	location 'addr' and increments the Sequential Memory Address Counter.
+
+	(Since the Sequential Memory shares the data bus with the Program RAM,
+	the RAM is disabled during 'IN addr,2' )
+=============================================================================
+68010 Access:
+
+The 68010 memory access appears to be under TMS320 program control.
+It is unknown which of three methods are used. 
+
+Method 1:
+Reads: 
+   The 68010 supplies the address to the Interface Latch and generates a 
+   TMS320 Interrupt.
+
+   The TMS320 recognizes the Interrupt, reads the data from the Interface
+   latch, determines that the operation is a READ (Because BIO has not been 
+   Set), gets the data from the specified location in the internal data RAM, 
+   and writes it to the Interface Output Latch.
+
+   The 68010 reads the data from the Interface Latch.
+
+Writes:
+  
+   The 68010 supplies the address to the Interface Latch, sets BIO, and 
+   generates a TMS320 Interrupt.
+
+   The TMS320 recognizes the Interrupt, reads the data from the Interface
+   latch, determines that the operation is a WRITE (because BIO has been set),
+   resets BIO, and waits for the 68010 to set it again.
+
+   The 68010 writes the data to the Interface Latch and sets BIO.
+
+   The TMS320 sees that BIO has been set, reads the Input Interface Latch, and
+   writes that data to the internal data RAM.
+
+Method 2:
+
+   Reads and Writes are similar to Method 1, except instead of reading and
+   writing to the internal data RAM, it reads and writes to the Program RAM
+   (using TBLR and TBLW instructions).
+
+Method 3:
+
+   Similar to Method 1, except the first data is interpreted as a command 
+   to indicate whether the address to follow is intended for internal
+   data RAM or external Program (Table) RAM.
+
+==============================================================================
+68010 direct access to Program RAM:
+
+   The Program RAM control signals are selected by an 'AS158 and come from 
+   either the TMS320 or from the 68010.
+
+   The Program RAM data bus is connected directly to the TMS320 data bus and 
+   to an 'ALS373 which goes to the 68010. The 'ALS373 is a fall-through latch 
+   which can be used as a simple buffer in this mode. By the way, because the 
+   Program RAM is connected directly to the TMS320 data bus, the 68010 direct 
+   access can only take place when the TMS320 is held in a Reset. (There is no
+   other memory for it to access.)
+
+   The Program RAM address bus is selected by an 'ALS157, which selects either
+   the TMS320 address bus or a presumably external bus. (ABA01 - ABA12 have on
+   them the symbols that appear to mean that the signals go off-board.)
+
+=============================================================================
+Other:
+
+1. There are two 'ALS373 fall-through latches that receive their inputs from
+   the TMS320 data bus and are clocked by signal 'TPOP0'. The intent appears
+   to be to allow the instruction 'OUT addr,0' to write data to this latch;
+   if this is correct, 'TPOP0' is the wrong signal for this operation. It 
+   would have to be 'TPOP0-' .
+
+2. Sequential memory access time:
+
+IN Command:
+
+	_			   _________________________
+CLKOUT   \________________________/	100 ns		    \_________________
+	 | 						    |
+	__________________				    |  ________
+/DEN	 |           \____\___________________________________/
+	 |
+         |<-  45-65 ns   >|						  
+	 | 		  |				    |
+	 |		  |			|    50     |
+	 |		  |			 ___________	
+D0-D15   _______________________________________/ Data Valid\________
+	 |		  |		   	\___________/
+	 |					
+	 |						    |
+	 |   50 ns    |			   	    	    |
+	 |	      |				   	    |
+	 	      _______________________________________
+TA00 -	_____________/		Address Valid	   	     \________
+ TA15		     \_______________________________________/
+			 |
+			 |   41 ns   |
+TPIP2- Decoding		 |	     |
+	_________________|_______|__ |			       ____
+				 |  \|________________________/
+				 |
+		'ALS27   9 ns    |
+		'AS10    3 ns	 |
+		'ALS138 17 ns	 |
+			-----	 |
+			29 ns ___|
+
+		'ALS32  12 ns 
+
+Sequential memory access time must be: 
+	TCyc - Address Valid - TIP2 Decoding - Data Setup = 
+
+					200 - 50 - 41 - 50 = 59 ns.
+
+Changing the 'ALS138 to an 'AS138 would increase the 59 ns figure to 70.5 ns.
+
+The maximum output enable time for a 27512 is 100 ns. In order for the
+circuit to operate reliably over the required temperature and voltage
+ranges I suggest that the ROMs have their Outputs permanently enabled
+and followed with 'LS244 buffers which would be gated by TPIP2- .
+
+Sequential Memory Access Time - Counters
+
+The worst case counter increment is two consecutine IN commands.
+
+	|   fetch    |  read in  |   fetch   |   read in |       
+	_   	_____	    _____	_____	    _____	_____
+CLKOUT   \_____/     \_____/     \_____/     \_____/     \_____/
+				 |			 |
+	 |    			 |			 |
+TPIP2-	__________________	  _________________	   _________
+	    	  	  \______/		   \______/
+				 |			 |
+Data		       	       __		       __
+Valid	______________________/50\____________________/50\_______
+		     	      \__/		      \__/
+				 |16|			 |16|
+				      _______________________
+'ALS169 _____________________________/			     \___
+inc.				
+
+Memory Access = TCyc * 2 - 'ALS169 - Data Valid
+	      = 400 - 16 - 50
+	      = 334 ns
+
+Therefore use at least 300 ns memory. (Most of the 27256s and all of the 
+27512s that we buy are 200 ns.)
+
+Program Memory access:
+
+	_			   _________________________
+CLKOUT   \________________________/	100 ns		    \_________________
+	 | 						    |
+	__________________				    |          _______
+/MEN	 |           \____\___________________________________________/
+	 |
+         |<-  45-65 ns   >|						  
+	 | 		  |				    |
+	 |		  |			|    50     |
+	 |		  |			 ___________	
+D0-D15   _______________________________________/ Data Valid\_________________
+	 |		  |		   	\___________/
+	 |					
+	 |						    |
+	 |   50 ns    |			   	    	    |
+	 |	      |				   	    |
+	 	      _______________________________________
+TA00 -	_____________/		Address Valid	   	     \________________
+ TA15		     \_______________________________________/
+			  |
+			  |  |<-  12
+			  |  
+TMLCS Decoding		  |	     
+	__________________|__				      ________________
+			     \_______________________________/
+			     |
+	    'ALS00   8 ns    |
+	    'AS158   4 ns    |
+		    -----    |
+		    12 ns ___|
+
+Program memory access time must be: 
+	TCyc - /Men - RAM Sel. Decoding - Data Setup = 
+
+					200 - 65 - 12 - 50 = 73 ns.
+
+Therefore, 70 ns RAM is ok. But not by much.
+
+
+--the end
+_____________________________________________________________________________
+
+System 4, 32010 Processor Parts List (Ted's Math Box)  
+Costs are guestimated by Jed Margolin 6/16/86
+
+
+Item	Atari Part No.	Qty	Description
+
+1			16	RES, SIP, 1Kx8
+
+2			1	RES, SIP, 1Kx4
+
+3			2	RES, 10 Ohms, 1/4W, 5%
+
+4			1	CAP, CER, 0.1uF
+
+5			1	IC, 74ALS32, Quad 2-Input OR
+
+6			2	IC, 74ALS138, 3 to 8 Line Decoder
+
+7			17	IC, 74ALS240, Octal Inverting Buffer
+
+8			2	IC, 74ALS244, Octal Buffer
+
+9			16	IC, 74ALS377, Quad D Flip-Flop/W Enable
+
+10			2	IC, 74ALS645, Octal Bus Transceiver
+
+11			1	IC, ADC0844, 8 Bit A/D with 4 Channel MUX
+
+12			1	Connector
+
+==============================================================================
+13			1	IC, 74AS00, Quad 2-Input NAND
+
+14			2	IC, 74ALS02, Quad 2-Input, NOR
+
+15	137433-001	1	IC, 74AS04, Hex Inverter
+
+16			1	IC, 74AS08, Quad 2-Input AND
+
+17	137427-001	1	IC, 74AS10, Triple 3-Input AND
+
+18			1	IC, 74ALS27, Triple 3-Input NOR
+
+19			1	IC, 74AS27, Triple 3-Input NOR
+
+20			2	IC, 74ALS32, Quad 2-Input OR
+
+21			2	IC, 74AS32, Quad 2-Input OR
+
+
+22	137435-001	1	IC, 74AS74, Dual D Flip-Flop
+
+23	137156-001	1	IC, 74ALS74, Dual D Flip-Flop
+
+24			1	IC, 74AS109, Dual J /K Flip_Flop
+
+25			1	IC, 74ALS138, 3 to 8 Linr Decoder
+
+26			1	IC, 74ALS139, Dual 2 to 4 Line Decoder
+
+27			1	IC, 74AS139, Dual 2 to 4 line Decoder
+
+28			1	IC, 74AS157, Quad 2 to 1 Line MUX
+
+29			3	IC, 74ALS157, Quad 2 to 1 Line MUX
+
+30	137326-001 (F)	2	IC, 74AS158,, Quad 2 to 1 Line MUX/w Invert
+
+31			4	IC, 74ALS169, 4 Bit Synchronous Up/Dn Counter
+
+32			1	IC, 74AS240, Octal Inverting Buffer
+
+33	137438-001	2	IC, 74ALS244, Octal Buffer
+
+34			1	IC, 74AS244, Octal Buffer
+
+35			2	IC, 74AS258, Quad 2 to 1 Line MUX
+
+36			6	IC, 74ALS373, Octal D Transparent Latch
+
+37	137422-001	1	IC, 74AS374, Octal D Edge Triggered Latch
+
+38			2	IC, 74ALS569, 4 Bit Synchronous Counter with 
+							3 State Outputs
+==============================================================================
+39			1	IC, 74ALS873, Dual 4 bit transparent D Latch 
+							with 3 State Outputs
+
+40			1	IC, 74ALS874, Dual 4 bit Edge Triggered Latch
+							 with 3 State Outputs
+ 
+41	144000-003	1	CRYSTAL, 20 MHZ
+
+42	137323-001	16	IC, 4416, 16Kx4 DRAM
+
+43			2	IC, X2816, 2Kx8 EEPROM
+
+44	137434-001	1	IC, TMS32010, Digital Signal Processor
+
+45	137396-200	2	IC, 27256, 32Kx8 EPROM
+
+46	137360-001	4	IC, 4Kx4 STATIC RAM
+
+=============================================================================
+We don't need:	
+	Item 43		2Kx8 EEPROM
+	Item 11		8 Bit A/D Converter with 4 Channel MUX
+	Item 1		RES, SIP, 1Kx8
+	Item 2		RES, SIP, 1Kx4
+	
+Item 7    (17)  IC, 74ALS240, Octal Inverting Buffer
+can be reduced to 
+	  (3) IC, 74ALS240, Octal Inverting Buffer
+
+
+Item 9    (16)	IC, 74ALS377, Quad D Flip-Flop/W Enable
+can be reduced to
+	  (2)	IC, 74ALS377, Quad D Flip-Flop/W Enable
+
+
+We do need two more 27256 EPROMs and probably one or two more 0.1 uF 
+Capacitors.
+
+Therefore, Ted's Math Board contains:
+-------------------------------------
+
+(1)	20 MHz Crystal	$0.81 (Manman)		0.81
+
+(1)	TMS32010	$37.50	(5K)		37.50		Will probably 
+								come down
+		
+(16)	4416 DRAM	$1.63 (Manman)		26.08
+			($0.99 at Frye's)	
+
+(4)	4Kx4 Static RAM	  2.35 (Manman)		 9.40
+
+(4)	27256 (128K Bytes)  4.25 (Newsletter)	17.00	
+			    3.10 (Manman)
+
+(1)	Connector	    $4.00		 $4.00
+
+(1)	PCB - 4 Layer				$50.00
+						-------
+
+				Subtotal -	$144.79		
+
+
+
+For AS, ALS low estimate: Total = 144.79 + 66.00 = $210.
+
+For AS, ALS medium estimate: Total = 144.79 + 94.50 = $239.
+
+For AS, ALS high estimate: Total = 144.79 + 123.00 = $267.
+
+
+Prices do not include labor, overhead, and certain other costs.
+
+
+ALS, AS Cost Estimates
+-----------------------
+ALS Parts:
+
+Item	Atari Part No.	Qty	Description
+
+5			1	IC, 74ALS32, Quad 2-Input OR
+6			2	IC, 74ALS138, 3 to 8 Line Decoder
+7			3	IC, 74ALS240, Octal Inverting Buffer
+8			2	IC, 74ALS244, Octal Buffer
+9			2	IC, 74ALS377, Quad D Flip-Flop/W Enable
+10			2	IC, 74ALS645, Octal Bus Transceiver
+14			2	IC, 74ALS02, Quad 2-Input, NOR
+18			1	IC, 74ALS27, Triple 3-Input NOR
+20			2	IC, 74ALS32, Quad 2-Input OR
+23	137156-001	1	IC, 74ALS74, Dual D Flip-Flop
+25			1	IC, 74ALS138, 3 to 8 Linr Decoder
+26			1	IC, 74ALS139, Dual 2 to 4 Line Decoder
+29			3	IC, 74ALS157, Quad 2 to 1 Line MUX
+31			4	IC, 74ALS169, 4 Bit Synchronous Up/Dn Counter
+33	137438-001	2	IC, 74ALS244, Octal Buffer
+36			6	IC, 74ALS373, Octal D Transparent Latch
+38			2	IC, 74ALS569, 4 Bit Synchronous Counter with 
+							3 State Outputs
+39			1	IC, 74ALS873, Dual 4 bit transparent D Latch
+							with 3 State Outputs
+40			1	IC, 74ALS874, Dual 4 bit Edge Triggered Latch
+							with 3 State Outputs
+		       ----
+			39
+
+AS Parts:
+
+Item	Atari Part No.	Qty	Description
+
+15	137433-001	1	IC, 74AS04, Hex Inverter
+16			1	IC, 74AS08, Quad 2-Input AND
+17	137427-001	1	IC, 74AS10, Triple 3-Input AND
+19			1	IC, 74AS27, Triple 3-Input NOR
+21			2	IC, 74AS32, Quad 2-Input OR
+22	137435-001	1	IC, 74AS74, Dual D Flip-Flop
+
+24			1	IC, 74AS109, Dual J /K Flip_Flop
+27			1	IC, 74AS139, Dual 2 to 4 line Decoder
+28			1	IC, 74AS157, Quad 2 to 1 Line MUX
+30	137326-001 (F)	2	IC, 74AS158,, Quad 2 to 1 Line MUX/w Invert
+35			2	IC, 74AS258, Quad 2 to 1 Line MUX
+37	137422-001	1	IC, 74AS374, Octal D Edge Triggered Latch
+32			1	IC, 74AS240, Octal Inverting Buffer
+34			1	IC, 74AS244, Octal Buffer
+13			1	IC, 74AS00, Quad 2-Input NAND
+
+		       ----
+			18
+
+
+Prices:
+
+Low:
+	39 ALS Parts, Assume $1.00 ea = 39.00
+
+	18 AS Parts, Assume $1.50 ea =  27.00
+					-----
+					66.00
+
+Medium:
+
+	39 ALS Parts, Assume $1.50 ea = 58.50
+
+	18 AS Parts, Assume $2.00 ea =  36.00
+					------
+					94.50
+
+High:
+
+	39 ALS Parts, Assume $2.00 ea =  78.00
+
+	18 AS Parts, Assume $2.50 ea =	 45.00
+					-------
+					123.00
+
+_____________________________________________________________________________
+
+System 4, ADSP-2100 Math Processor Parts List 
+Costs are guestimated by Jed Margolin 6/18/86
+
+PRELIMINARY
+
+The System consists of:
+
+	128K Bytes of sequential memory: 
+		(4) 27256 EPROM
+		(4) ALS169 Counters
+		(2) LS244 Buffers
+
+	ADSP-2100
+
+	8K x 24 Program Memory:
+		(12) 4K x 4 SRAMs
+
+	8K x 16 Data Memory
+		(8) 4K x 4 SRAMs
+
+	Buffers to give the 68010 DMA to Program and Data memory:
+		(4) LS244 Buffers
+		(5) LS245 Transceivers
+
+	DMA Control Logic:
+		?
+
+	Sequential Output Ram (2 x 16K Byte buffers)
+		(8) ALS169 Counters
+		(4) 8K x 8 SRAMs
+		(4) LS244 Buffers
+		(4) LS245 Transceivers
+		(4) LS373 Latches
+==============================================================================
+Parts:
+
+Item	Atari Part No.  QTY	Description
+
+
+1	137396-200	4	IC, 27256, 32Kx8 EPROM, 200 ns
+
+2	137360-001	20	IC, 4Kx4 STATIC RAM, 55 ns
+ 
+3	137441-002	4	IC, 8K x 8 SRAM, 150 ns
+
+4			1	CRYSTAL, 16 MHZ
+
+5			1	IC, ADSP-2100
+
+6			1	4-Layer PC Board			
+
+7	37-74LS244	10	IC, 74LS244
+
+8	37-74LS245	9	IC, 74LS245
+
+9			4	IC, 74LS373
+
+10			12	IC, 74ALS169, 4 Bit Synchronous Up/Dn Counter
+
+11			1	IC, 74AS139, Dual 2 to 4 line Decoder
+
+12	137435-001	1	IC, 74AS74, Dual D Flip-Flop
+
+13			4	Misc AS/ALS Glue
+==============================================================================
+Cost:
+
+(4)	27256ns	(128K Bytes)  	4.25 (Newsletter)	17.00	
+
+(20)	4Kx4 SRAM		2.35 (Manman)		22.35
+ 
+(4)	8K x 8 SRAM		2.25 (Newsletter)	9.00
+
+(1)	CRYSTAL, 16 MHZ					 1.00
+
+(1)	ADSP-2100				       100.00
+
+(1)	4-Layer PC Board				50.00
+
+(10)	74LS244			1.00			10.00		
+
+(9)	74LS245			1.00			 9.00
+
+(4)	74LS373			1.00			 4.00
+
+(12)	74ALS169		1.50			 6.00
+
+(1)	74AS139						 2.00
+
+(1)	74AS74						 2.00
+
+(8)	Misc AS/ALS Glue				16.00
+							------
+						      $248.35
+
+
+Prices do not include labor, overhead, and certain other costs.
+
+=============================================================================
+
+_____________________________________________________________________________
+Parallel Interface - System 4 Driving Simulator Project
+-------------------------------------------------------
+
+Master Controller Signals -
+
+DB0 - DB15 	68010 Data Bus
+
+/LNKWR		68010 decoded write strobe:
+		Writes data to LS374 output latches;
+		Sets appropriate Data Flags (which will generate IRQs on the 
+			selected slave boards).
+
+/TXBUFF		68010 latched control bit:
+		Enables LS374 outputs to Parallel Interface Data Bus. 
+
+/LNKSEL		68010 decoded write strobe:
+		DB0: Parallel Flag 0 will be set by a /LNKWR
+		DB1: Parallel Flag 1 will be set by a /LNKWR
+		DB2: Parallel Flag 2 will be set by a /LNKWR
+		DB3: Parallel Flag 3 will be set by a /LNKWR
+		DB4: Enables the Time Out Counter which generates an IRQ if 
+		        all the selected boards have not responded within the 
+			required time.
+
+/LNKRD		68010 decoded read strobe:
+		Reads Parallel Interface Data Bus.
+
+
+/READSTAT	68010 decoded Read:
+		Reads the status of the individual flags as well as the signal
+		that "All the Flags are zero".
+
+PR0 - PR3	Signals from Slaves that reset their appropriate Flags.
+
+==============================================================================
+Master Controller Signals -
+
+DB0 - DB15 	68010 Data Bus
+
+/LNKWR		68010 decoded write strobe:
+		Writes data to LS374 output latches;
+
+/TXBUFF		68010 latched control bit:
+		Enables LS374 outputs to Parallel Interface Data Bus. 
+
+/LNKSEL		68010 decoded write strobe:
+		DB0 - DB1: Select Slave ID 	0, 1, 2, or 3
+
+		DB2: Enable the Interface
+
+
+/LNKRD		68010 decoded read strobe:
+		Reads Parallel Interface Data Bus.
+
+
+/READSTAT	68010 decoded Read:
+		Reads /LINKIRQ which is used as a handshaking flag for
+			transmissions of blocks of data.
+
+PR0 - PR3	When the Slave reads the data on the Parallel bus (/LNKRD), it
+		resets the Flag corresponding to its Slave ID.
+
+PF0 - PF1	The Flag that corresponds to its Slave ID generates an IRQ
+		when asserted.
+==============================================================================
+
+How it works
+------------
+
+Master Sends Data to one or more Slaves.
+
+	1. Decide which Slaves to send data to. It can be any combination.
+	   Decide whether to use the Time Out Counter. If selected it will 
+		generate an IRQ if all of the selected Slaves fail to respond 
+		with an appropriate amount of time.
+	   These decisions go into the latch controlled by /LNKSEL and remain
+		in effect until changed.
+
+	2. Use the /TXBUFF latched bit to enable the LS374 outputs. The 
+		outputs	should remain enabled while sending data.
+
+	3. Write the desired data using /LNKWR . This will also set the Flag
+	   	for the selected Slave(s).
+
+	4. Start checking 'All zero'. This will go high after all the selected
+	  	Slaves have responded to the Flag. (If the Time Out Counter
+		has been enabled and any Slave has not responded by the 
+		appropriate time, an IRQ will be generated. The Master can 
+		then check the individual Flags and find out who has not 
+		responded and hopefully do something about it.)
+ 
+	5. Repeat steps 3, 4, 5 as required.
+==============================================================================
+Master Receives Data: Master can only receive data from one Slave at a time
+
+	1. Decide which Slave to receive data from. 
+	   Decide whether to use the Time Out Counter. If selected it will 
+		generate an IRQ if the selected Slave fails to respond 
+		with an appropriate amount of time.
+	   These decisions go into the latch controlled by /LNKSEL and remain
+		in effect until changed.
+
+	2. Use the /TXBUFF latched bit to enable the LS374 outputs. The 
+		outputs	should remain enabled while sending data.
+
+	3. Write the data (using /LNKWR) that tells the selected Slave that
+		it is its turn to send data. This will also set the Flag
+	   	for the selected Slave, generating an interrupt.
+
+	4. Start checking 'All zero'. This will go high after the selected
+	  	Slave has responded to the Flag. (If the Time Out Counter
+		has been enabled and the Slave has not responded by the 
+		appropriate time, an IRQ will be generated. 
+ 
+	5. The Master will disable /TXBUFF and do a dummy /LNKWR to tell the
+		Slave that it is ready to receive.
+
+	6. The Slave sees the /LNKIRQ Flag, turns on its /TXBUFF, writes data
+		to its /LNKWR, and does a dummy /LNKRD to reset the Flag.
+
+	7. The Master sees that the Slave Flag has been reset, reads the
+		Bus, and does a dummy /LNKWR to acknowledge receipt of data.
+
+	8. This continues until the Slave has transmitted all the data it has 
+		been asked to send.
+
+	9. Master and Slave do a final handshake so the Master can tell the 
+		Slave it has received the last data word.
+
+==============================================================================
+--end
+
+_____________________________________________________________________________
+
+Comments on ADSP-2100			Jed Margolin  	7/11/86
+---------------------
+
+1. I would prefer a PLCC package.
+
+2. For a PGA package I would prefer the Inside pins to be GND and VCC
+   and have the Clock input be on an outside pin.
+
+3. For a graphics application it would be useful to have a hardware divider
+   with a software selectable number of subtract cycles.
+
+4. The applications documentation should contain discussions on:
+
+	A. Memory configurations and access speed requirements;
+
+	B. Interfacing the device to a host processor;
+
+	C. Data Memory mapped I/O.
+
+5. Analog Devices calls the socket a 100 PGA. Augat calls it a 101 PGA.
+   It would be nice if everyone called it the same thing.
+
+6. It would be nice if Analog Devices supplied a wire-wrap socket to get
+   people started with their prototypes.
+
+7. It would be nice if the ADSP-2100 had an on-chip oscillator that required
+   just a crystal. Or Analog Devices could list several sources of oscillator
+   modules.
+
+8. It would be nice to have a real data sheet.
+
+_____________________________________________________________________________
+
+Signetics had me call Bill Mullins at Magna Sales at 727-8753.
+
+Bill was not in but I got good service from Rebecca.
+
+Rebecca says that Signetics expects to sample their 68010 4Q '86 and have 
+production quantities 1Q '87. They promise to be competitive with Motorola 
+which, according to Rebecca, is currently the sole source for 68010s.
+------------------------------------------------------------------------------
+We have been paying about $15 for the 68010L8 (although we have paid
+as low as $13.75 .)
+
+From a conversation with Amy Davidson from Motorola on 7/31/86:
+
+She gave the following 68010L8 prices to Melanie Martin:
+
+	 2500		5K		10K
+	------		-----		-----
+	$23.75		$21.90		$20.35
+
+
+I told her that I would be making a decision very soon on whether
+to use one or two 68010s in a project I was working on (the second
+one for audio) and that at $20 I doubted I would use two.
+
+She said that Motorola would be coming out with a Plastic 68010L8
+in 1Q '86 for $15 (10K quantity). 
+
+She said something could be worked out so that if they didn't have the
+plastic part by then, they would sell us the ceramic part at the
+price of the plastic part.
+
+I told her that I did not have the authority to negotiate that kind
+of agreement and that I would pass it up the chain of command.
+
+
+	Jed
+
+
+p.s. - For a 10 MHz 68010 Motorola wants $34.50 (10K quantity), 
+       For a 12 MHz part they want $99 (10K quantity).
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: 68010L8 prices
+Dt: 7/31/86
+
+
+We have been paying about $15 for the 68010L8 (although we have paid
+as low as $13.75 .)
+
+From a conversation with Amy Davidson from Motorola on 7/31/86:
+
+She gave the following 68010L8 prices to Melanie Martin:
+
+	 2500		5K		10K
+	------		-----		-----
+	$23.75		$21.90		$20.35
+
+
+I told her that I would be making a decision very soon on whether
+to use one or two 68010s in a project I was working on (the second
+one for audio) and that at $20 I doubted I would use two.
+
+She said that Motorola would be coming out with a Plastic 68010L8
+in 1Q '86 for $15 (10K quantity). 
+
+She said something could be worked out so that if they didn't have the
+plastic part by then, they would sell us the ceramic part at the
+price of the plastic part.
+
+I told her that I did not have the authority to negotiate that kind
+of agreement and that I would pass it up the chain of command.
+
+You are it.
+
+==============================================================================
+Motorola is currently the only source on the AVL approved for the 68010L8.
+
+Several other manufacturers make it. I am in the process of getting samples 
+and a price quote from Signetics.
+
+
+	Jed
+
+
+p.s. - For a 10 MHz 68010 Motorola wants $34.50 (10K quantity), 
+       For a 12 MHz part they want $99 (10K quantity).
+
+==============================================================================
+Rebecca at Magna Sales (who reps Signetics) says that they expect to sample
+their 68010 4Q '86 and have production quantities 1Q '87. They promise to
+be competitive with Motorola which, according to Rebecca, is currently
+the sole source for 68010s.
+
+_____________________________________________________________________________
+
+System 4 Image Memory: 8310.09
+
+Questions about using the 27256 PROM Configuration Jumper, using
+Shunt DIP D as an example.
+
+1. Pin 8 (IPDSB) is left floating. Pin 9 (IPDSA) is connected to Pin 5.
+   Presumably 'NC' means 'Not Connected'. Therefore the Inputs to the
+   'AS139 are floating and IPOED0- will always be high so that the memory
+   will never be selected.
+
+2. Pin 4 (IAD17) is connected to Pin 10 (+) which appears to be Ted's symbol
+   for +5V. Will IAD17 like being connected to +5V? [Maybe the symbol is a
+   ground, which won't work, either.] 
+
+3. Assuming I can: 
+	a. Dispense with the 'AS139;
+	b. Connect the Memory Output Enable permanently low;
+ 	c. Refrain from shorting out IAD17 (and IAA17, IAB17, and IAC17);
+
+   Is there any reason I cannot use IAD17 (and IAA17, IAB17, and IAC17)
+   to upgrade to 27512s?
+
+
+	Jed
+_____________________________________________________________________________
+
+Mostek seems to be for real.
+
+The best I can make out is that their new name is Thompson Components
+Mostek Division. They are owned by Thompson CSF which is a large European
+Semiconductor manufacturer.
+
+As a result of the change of ownership they have dumped some product lines
+(notably Dynamic RAMs) and added others like telecommunications and
+discretes from Thompson.
+
+Our sales engineer is Dee Dee Owen (the former Dee Dee Phinney) at 970-8585.
+
+The applications engineer is Ben Siegal at the same number.
+
+They still make the 2Kx8 Zeropower RAM (48Z02-15). After I try out some new
+samples I expect to ask you to reactivate Atari PN 137442-150 .
+
+They make a Zeropower RAM with a Clock Calender (48T02) that could be useful 
+but they don't have all the bugs out of it yet. (Maybe September)
+
+
+		Jed
+_____________________________________________________________________________
+
+To: John Klein
+Fr: Jed Margolin
+Re: Warner Pension Fraud
+Dt: 9/10/86
+
+
+
+	I talked to Alan Wolff about the Warner Pension Fraud and he explained
+
+that the $97,100 was not covered by the insurance because it was the 
+
+"deductible" and that "they" had decided it was a normal (and customary?) 
+
+business expense to be charged to the Plan.
+
+	He estimated that Atari's share of the Plan was 5% which would come to
+
+$4,855. According to 1984 Form 5500 Line 7a(iv) there were 186 active 
+
+participants which would come to an average of $26.10 each. Assuming an 
+
+average annual rate of return of 10% for the last two years, the amount by 
+
+which Warner has defrauded each Atari employee is $31.58 .
+
+
+	Jed
+
+
+
+PS - How are they able to add Lines 7a(i) and 7a(ii) and get 186? I always 
+thought that 124 + 162 = 286 .
+_____________________________________________________________________________
+
+Please reactivate:
+
+	 137442-150	2K x 8 ZeroPower RAM	MOSTEK 	MK48Z02B-15
+
+
+Once you reactivate it, I will be in a better position to talk to Mostek
+about the 2k x 8 Zeropower/Timekeeper RAM.
+
+
+	Jed
+_____________________________________________________________________________
+
+Game Clock/Calenders
+--------------------
+A game that is able to keep track of the Day, Date, and Time even when the
+the game is off would make several interesting features possible. 
+
+1. A game can introduce new game elements after it is out in the field. For
+example, in an adventure game a room can be locked until a certain date or
+at a certain date a new opponent can appear. Or an old one can disappear.
+All games of a given series can change simultaneously. 
+   A. Players tend to get bored with a game after they have seen everything.
+      This will give them a reason to come back to play the game again.
+   B. Operators tend to permanently leave a game at its initial settings.
+
+2. Accounting information can be more specific, especially during field test,
+showing the pattern of activity by day and hour. It can also record down time.
+Or excessive free plays. (This requires non-volatile RAM which we already
+use.)
+
+3. The game can also use this accounting information. If Wednesday mornings 
+are usually slow, the game can give the player a little more time or an extra 
+life.
+
+4. The game can be slightly different on different days, such as having 
+different backgrounds depending on the day of the week. If the game had a
+moon in it, the moon could change phases appropriately.
+
+5. The game can record the Day, Date, and Time (and initials) of high scores.
+It could have the high score of the day, high score of the week, and all-time
+high score.
+
+6. The game can recognize holidays and do something special for Valentine's
+Day. Or Christmas.
+
+7. The game can remind the operator to perform scheduled maintenance (clean 
+the monitor screen, tighten the controls, etc) and can log the scheduled (and 
+unscheduled) maintenance and repairs. 
+
+------------------------------------------------------------------------------
+
+	There are several ICs available that will perform the functions of 
+Day/Date/Time. Many of them are clumsy to use. 
+
+	The one that shows the most promise is made by Thomson Mostek. It is 
+a variation of their Zeropower RAM (TM) called the Zeropower Timekeeper (TM).
+The package contains a 2K x 8 RAM, Day/Date/Time Calender, Crystal, Automatic 
+Power-fail Chip Deselect/Write Protection, and a Lithium Battery. It plugs 
+into a standard 2K x 8 RAM socket and uses the last eight RAM locations for 
+the Timekeeper. The RAM can be written to and read an unlimited number of 
+times.
+
+	A very conservative estimate of the battery life, assuming an IC 
+ambient temperature of 35 degrees Celcius and assuming the game is powered up 
+an average of 12 hours a day, is that fewer than 1% of the units will fail
+before 6 years. Most can be expected to last at least 7.2 years. 
+
+	Mostek expects the part to be available 4Q this year and to cost
+about $18.00 in quantities of 5k. The few prototype ICs that they have
+contain a bug that makes it difficult to start the Clock if it has been turned
+off. They expect new prototypes later this month. 
+
+	I have installed a Zeropower Timekeeper in a TomCat board and 
+programmed it to display the Day, Date, and Time. It seems to work.
+
+
+
+						Jed Margolin    9/15/86
+_____________________________________________________________________________
+
+  							10 October 1986
+							Atari Games Corp.
+							675 Sycamore Dr.
+							P.O. Box 361110
+							Milpitas, CA 
+							 95035-1110
+
+
+
+  Ben Segal
+  Regional Technical Manager
+  Thomson Components Mostek Division
+  2540 Mission College Blvd
+  Suite 104
+  Santa Clara, CA  95054
+
+
+
+  Dear Ben,
+
+	This is to confirm that your MK48Z02B-15 Zeropower RAM has been 
+  given Atari Part Number 137442-150 and has been placed on our Approved 
+  Vendor List. 
+
+	I am interested in using it in a product that I expect to be
+  produced at end of 1Q '87. Quantities are difficult to predict in the
+  coin-operated games business, but I am shooting for a run of 5K minimum.
+
+	I am also interested in your 48T02 Timekeeper RAM but will need
+  production units in order for our Components Engineering Group to
+  qualify it for the Approved Vendor List.
+
+
+					Sincerely yours.
+
+			
+
+					Jed Margolin
+
+					Senior Staff Electrical Engineer,
+					Atari Games Corp.
+_____________________________________________________________________________
+
+I have a question about Atari's 401K Plan as described in the recent handout 
+entitled "WELLS FARGO BANK RETIREMENT ADVANTAGE PLANS SUMMARY PLAN DESCRIPTION
+FOR THE RETIREMENT ADVANTAGE PLAN OF ATARI GAMES CORPORATION." 
+
+In Section 16 (HOW AND WHEN ARE BENEFITS PAID?) under the heading "Benefits
+Earned Under This Plan" it states:
+
+	"Following your termination of employment, your vested account 
+
+balances will be distributed to you in a lump sum, in periodic payments over a
+
+specified term, or in a combination of both methods."
+
+My question involves the next sentence:
+
+	"Plan assets allocable to your accounts will be valued as of the 
+Valuation Date (see Question 8) coinciding with or immediately preceeding
+the distribution."
+  
+Question 8 says that the Valuation Date is the last day of the sixth and 
+twelfth months of the Plan year. I assume this means June 30 and December 31. 
+(Please correct me if I am wrong.)
+
+Therefore, according to the Plan, if I contribute $5,000 to the Plan in the 
+next five months and leave before June 30, my Plan assets allocable to my
+account will be valued as of December 31, 1986.
+
+	What happens to my $5,000?
+
+	What happens to the company contribution?
+
+	(Who is the Plan Administrator?)	
+
+		Jed
+
+_____________________________________________________________________________

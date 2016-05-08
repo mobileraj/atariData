@@ -1,0 +1,807 @@
+   Atari/Atari Games   Memos and Status Reports 1985   Jed Margolin
+___________________________________________________________________________
+
+
+To: Frank Becker
+Fr: Jed Margolin
+Re: Regulator/Audio III
+Dt: 1/16/85
+
+The Problem:
+
+	I have run into a Regulator/Audio III board that behaves strangely
+	and I want you to know about it in case there are problems in the
+	field.
+
+	The main symptom is noise in the speaker that does not go away when
+	the volume is turned all the way down. It may be accompanied by 
+	distortion that sounds just like a bad speaker cone (but isn't). The 
+	distortion may occur by itself, without the noise.
+
+	In extreme cases the Regulated +5V is affected.
+
+The Fix: 
+
+	Audio:  Clip R16 and R17. In Rev B they will not be loaded.
+
+	Regulated +5V:  Connect a 0.1 uF monolythic capacitor (Atari p/n 
+			122002-104) across CR3. This will be added in Rev B.
+
+The Theory:
+
+   1. The +22V powers the +15V Regulator (Q3) and the Audio amplifiers (Q1
+      and Q2). 
+
+   2. The regulated +15V powers the +5V Regulator control circuitry (Q6 and 
+      Q7). 
+
+   3. The +5V Regulator pass transistors (Q7 and Q8) operate from the +10v.
+
+	I did it this way because the +10 volt output is being operated above
+its rated current and at low line would not be enough to power the LM305. 
+Therefore I am operating the LM305 from the regulated +15V.
+
+	Because the +10V is already overloaded, I did not want to operate the
+audio amplifiers from it, so I connected them to the +22V. This also provides
+more audio power.
+ 
+	This makes it possible for an audio problem to affect the Regulated 
++5V. If the amplifiers oscillate, it may get on the +22V. This may cause the
++15V Regulator to oscillate, which will screw up the regulated +5V.
+
+	Removing C16,R17 and C14,R16 from the amplifiers reduces the chance
+of the amplifiers oscillating, and adding the 0.1 uF capacitor across CR3
+makes the +15V Regulator more stable.
+
+One More Thing:
+
+	If there is no +10V (for example, if the fuse blows) but there is
++15V, the LM305 and the TIP32 will attempt to deliver the current by itself
+through R20, which will burn up.
+
+	We have had cases where the fuse looked good (visually) but was
+revealed by an ohmmeter to be open. 
+
+cc: 
+	Rusty Dawe
+	Chris Downend
+	Morgan Hoff
+	Sam Ly
+	Pat McCarthy
+	Rick Moncrief
+	Doug Snyder
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Game Manuals
+Dt: 1/18/85
+
+Before Atari crashed and burned I was on a list somewhere so that
+I got a copy of each manual as it came out.
+
+I haven't gotten any in a long time and nobody knows anything about it.
+
+I talked to Cody Lawrence in Publications and she is useless. I asked
+why I hadn't received a review copy of the manual (since it contained
+a brand new power supply) and she took it as a personal insult. Pete 
+Takaichi happened to wander in and HE took the question as a personal 
+insult, too. They are both useless.
+
+I talked to Melanie Martin and she is willing to send me a manual if
+she has some extras.
+
+Her opinion was that the way to get manuals was to MTO them as they
+become available. Of course, if I don't have a manual I won't have
+the part number I need to MTO the manual.
+
+I think it is a real waste that I will have to spend all this time
+getting a game manual. Why don't you use your influence to have a
+a system set up to take care of this?  
+
+
+		Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status Report
+Dt: 1/24/85
+
+------------------------------------------------------------------------------
+Item 1:  I have sent the following memo.
+
+To: Frank Becker
+Fr: Jed Margolin
+Re: Regulator/Audio III
+Dt: 1/16/85
+
+The Problem:
+
+	I have run into a Regulator/Audio III board that behaves strangely
+	and I want you to know about it in case there are problems in the
+	field.
+
+	The main symptom is noise in the speaker that does not go away when
+	the volume is turned all the way down. It may be accompanied by 
+	distortion that sounds just like a bad speaker cone (but isn't). The 
+	distortion may occur by itself, without the noise.
+
+	In extreme cases the Regulated +5V is affected.
+
+The Fix: 
+
+	Audio:  Clip R16 and R17. In Rev B they will not be loaded.
+
+	Regulated +5V:  Connect a 0.1 uF monolythic capacitor (Atari p/n 
+			122002-104) across CR3. This will be added in Rev B.
+
+The Theory:
+
+   1. The +22V powers the +15V Regulator (Q3) and the Audio amplifiers (Q1
+      and Q2). 
+
+   2. The regulated +15V powers the +5V Regulator control circuitry (Q6 and 
+      Q7). 
+
+   3. The +5V Regulator pass transistors (Q7 and Q8) operate from the +10v.
+
+	I did it this way because the +10 volt output is being operated above
+its rated current and at low line would not be enough to power the LM305. 
+Therefore I am operating the LM305 from the regulated +15V.
+
+	Because the +10V is already overloaded, I did not want to operate the
+audio amplifiers from it, so I connected them to the +22V. This also provides
+more audio power.
+ 
+	This makes it possible for an audio problem to affect the Regulated 
++5V. If the amplifiers oscillate, it may get on the +22V. This may cause the
++15V Regulator to oscillate, which will screw up the regulated +5V.
+
+	Removing C16,R17 and C14,R16 from the amplifiers reduces the chance
+of the amplifiers oscillating, and adding the 0.1 uF capacitor across CR3
+makes the +15V Regulator more stable.
+
+One More Thing:
+
+	If there is no +10V (for example, if the fuse blows) but there is
++15V, the LM305 and the TIP32 will attempt to deliver the current by itself
+through R20, which will burn up.
+
+	We have had cases where the fuse looked good (visually) but was
+revealed by an ohmmeter to be open. 
+
+cc: 
+	Rusty Dawe
+	Chris Downend
+	Morgan Hoff
+	Sam Ly
+	Pat McCarthy
+	Rick Moncrief
+	Doug Snyder
+------------------------------------------------------------------------------
+Item 2: I have sent a Deviation to production to do the above mods.
+------------------------------------------------------------------------------
+Item 3: Regulator/Audio III Rev B is in progress and should be ready to send
+	out for Film and Fab by Tuesday.
+------------------------------------------------------------------------------
+Item 4:
+	I am continuing to make progress on TomCat. I expect to have 
+schematics ready by early February for the first wirewrap. It will consist of 
+a 68010 connected to a Vector Generator and will allow me to program the 
+TomCat algorithms to get an idea for future direction. (Will it be fast enough
+the way it is? Should I increase the processor clock speed? Add a TMS-320? 
+Things like that.)
+------------------------------------------------------------------------------
+Item 5:
+
+Before Atari crashed and burned I was on a list somewhere so that I got a copy
+of each manual as it came out.
+
+I haven't gotten any in a long time and nobody knows anything about it.
+
+I talked to Melanie Martin and she is willing to send me a manual if
+she has some extras.
+
+Her opinion was that the way to get manuals was to MTO them as they become 
+available. Of course, if I don't have a manual I won't have the part number I 
+need to MTO the manual.
+
+I think it is a real waste that I will have to spend all this time getting a 
+game manual. Why don't you use your influence to have a system set up to take 
+care of this?  
+------------------------------------------------------------------------------
+Item 6:
+
+	According to Publications (Cody Lawrence and Pete Takaichi), only 
+Project Leaders receive review copies of game manuals. Since I am not a 
+project leader I did not receive a review copy of the System i manual even 
+though it used my power supply (and was the first project to use it.)  
+
+	I have always been willing to review and check everything concerning 
+a project that I do, and I usually give same-day turnaround. I get really 
+unhappy when I see errors in manuals; errors that I would have been able
+to correct.
+
+	They pulled the exact same crap on Star Wars. 
+
+------------------------------------------------------------------------------
+.end
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status Report
+Dt: 2/15/85
+
+------------------------------------------------------------------------------
+1. Regulator/Audio III:
+
+   	Regulator/Audio III Rev B has been released.
+
+   	I have given PCB the inputs to create Regulator/Audio III-02,
+   	which is intended for use in games that have an Operator Panel.
+   	This version uses the same PC board as -01 but is loaded differently.
+   	PCB will do it when they have time.
+------------------------------------------------------------------------------
+2. TomCat: 
+
+	My hardware (version 4) is in the Assembly queue for wirewrapping.
+
+	I have started writing the program.
+	
+	I would like shelves on the work benches in the TomCat lab.
+------------------------------------------------------------------------------
+3. The outside door on our side of the building is very difficult to open.
+
+4. I would like to be able to call the elevators from the ground floor.
+
+5. I would like there to be Cocoa at the coffee stations.
+------------------------------------------------------------------------------
+.end
+_____________________________________________________________________________
+
+To: Dan Van Eldren
+Fr: Jed Margolin
+Re: Namco Power Supply
+Dt: 5/1/85
+
+
+To put things into perspective I have converted the costs into dollars.
+I have used the conversion that 12,740 Y = $51.00 .
+
+				1K			5K
+		          -------------   	-----------------
+Switch Bracket		  120 Y  $ 0.48		  120 Y    $ 0.48
+
+Transformer		3,000 Y  $12.00		2,800 Y	   $11.20
+
+Switcher		5,250 Y	 $21.00		5,280 Y    $21.00
+
+Filter			  540 Y  $ 2.16		  470 Y	   $ 1.88
+
+Audio PCB		3,210 Y  $12.84		3,100 Y	   $12.40
+
+Metal Base		  620 Y  $ 2.48		  620 Y	   $ 2.48
+			-------  ------ 	-------    -------
+		       12,740 Y	 $50.96	       12,360 Y	   $49.44	
+
+
+I do not believe there is any way we can match these prices with
+a unit that we design, purchase the parts for, and build.
+
+I must raise the following questions about the Namco supply:
+	
+	1. Will the switching power supply operate over a range of
+	102-135 VAC or must it be redesigned?
+
+	2. Will the switching power supply operate at an installation
+	ambient of 55 degrees Celsius without derating? 
+
+	3. Both the switching power supply and the audio amplifier
+	board are single-sided. In the past we have avoided the use
+	of single-sided boards because the the parts have a tendency 
+	to fall off due to vibration during shipping. Would that be a
+	problem with this supply?
+
+	4. Normally the remote voltage sense lines are connected at the 
+	game board. Here they are jumpered together at the supply. 	
+	Was this done on purpose or is this an error?
+
+	5. System I and System II were designed to use +15 VDC and -15 VDC
+	for the audio. This supply contains a 7812 and a 7912 which 
+	normally produce +12 VDC and -12 VDC. Are they used in a circuit
+	that raises their outputs to +15 VDC and -15 VDC or do they actually
+	produce +12 VDC and -12 VDC? (System I can probably use +12VDC and
+	-12VDC but Doug does not think it would be satisfactory for 
+	System II.)
+
+	6. Is the heat sink containing the audio amplifiers and the regulators
+	large enough to operate satisfactorily at an installation ambient
+	of 55 degrees Celsius?
+
+	7. Does the transformer have an acceptable temperature rise? Ours
+	are Class 105 transformers with a maximum heat rise of 55 degrees 
+	Celsius. This allows them to operate at a game installation 
+	temperature of 38 degrees with a 12 degree rise to the inside of
+	the cabinet. 
+
+	8. How much will it cost to change the transformer to operate at
+	120 VAC?
+
+	9. In order to operate at 220 VAC and 240 VAC, either the power
+	supply must be redesigned or we will have to use an auto-transformer
+	which I believe would cost $14. 
+
+	9. How much would the Namco supply REALLY cost if we were to use it?
+	
+
+Now about our supply (Power Base and Regulator/Audio III):
+
+	1. $80 sounds a little high. My guess is that it would cost $70 if
+	we bought the parts intelligently instead of scrapping the parts
+	and then buying them back at a premium. Or paying a premium because
+	of inadequate lead time.
+
+	2. If the Regulator/Audio III could use two cheap trimpots for $0.20
+	each instead of the Dual Audio taper pot that we pay $2.00 for, we
+	could save $1.60 . (The pot wasn't supposed to cost that much; somehow
+	Purchasing has managed to do it.)  
+
+	3. If I could produce a supply that operated at only 120 VAC I could 
+	reduce the transformer cost by $4.00 and the harness cost by $2.00 .
+
+
+Caveat:
+
+	At Atari there is no way to find out how much things will REALLY cost
+	ahead of time. There is not even a way to find out how much things 
+	have REALLY cost in the past.
+
+	I think you should buy the power supplies from Namco and be done 
+	with it. 
+
+
+				Jed
+_____________________________________________________________________________
+
+New Product		Jed Margolin 5/28/85
+
+
+      This is a box with a microphone connected to it. You can plug headphones
+into it or you can hook it up to your stereo.
+
+    Mode 1: You hum into the microphone (or play a kazoo), the box determines
+    	    the pitch and uses it to control a Yamaha chip set. The play has
+	    a wide choice of instrument voices.
+
+    Mode 2: As in Mode 1, however, it is "recorded". The player can then play 
+    	    it back while recording additional tracks. The tracks can be 
+	    different instruments.
+
+     If it is cheap enough it can be marketed for kids as a toy. It can also 
+be marketed for people who play single note instruments (such as clarinet, 
+flute, saxophone) who have not be able to use synthesizer technology if they 
+did not also play a keyboard.
+
+Hardware:
+
+     1. It will be powered by a transformer lump (To make it easier to do UL)
+
+     2. The electronics will be:	
+		6502
+		RAM	(Perhaps Non-volatile)
+		ROM
+		Yamaha chip set
+		Membrane switch pad, with illumiunated switch positions
+		Cheap Pitch Extraction Circuitry (This is the key element)
+					
+     3. It should come with a cheap microphone and a kazoo so people can start
+     using it right out of the box.
+
+_____________________________________________________________________________
+TomCat Status		6-27-85		Jed Margolin
+
+1). I have completed a set of schematics for a two board implementation of 
+    TomCat. After showing Art Jackson the chip count we have decided to try to
+    put it all on one multilayer board.
+
+    I am working on a redesign to take advantage of the one-board 
+    configuration. It will take about a week.
+
+    Art doesn't know when Joe will be able to get to it because TomCat has
+    zero priority.
+
+    If Joe is ever able to work on it I expect to work with him on the 
+    schematic entry and on the board layout.
+
+2). Karen is wire-wrapping the TMS-320 math processor for me. It is not very
+    much work but it has already been bumped once because it has zero 
+    priority.
+
+    It will take about two months to program it so I can measure its 
+    performance against the naked 68010.
+
+3). I expect to be able to give a show-and-tell after I have integrated the
+    TMS-320 into the program. This will be in two to six months depending
+    on whether I can get the TMS-320 system wire-wrapped, whether I will be 
+    spending time with Joe (laying out the board), and how much time is
+    wasted because the project has zero priority.
+
+4). My productivity is reduced considerably by the poor ventilation system.
+------------------------------------------------------------------------------
+
+TomCat, so far.	 Jed Margolin	6/27/85  
+
+Runway:	
+	Main Algorithm
+
+	Strobe Lights
+
+	VASI Lights
+
+Terrain Objects
+
+Independent control of enemy ship
+
+Firing the Guns
+
+Macros for Object Drawing Routines
+
+Macros for VG Alphanumerics
+
+Objects:	
+	Cube
+	Rocket
+	Airplane
+	BattleZone: Tank, Flying Saucer, Buzz Bomber
+	ABZ: Helicopter
+
+Horizon
+
+Headup Up Display:
+	Heading, Airspeed, Altitude, Thrust
+
+Grid (made possible by full 3D Clipping)
+
+Aerodynamics: In progress
+
+Hardware:	
+
+	Analysis of 68010 timing.
+	Generation of real timing strobes for the hardware.
+	Vector Generator Memory Contention Circuit.
+------------------------------------------------------------------------------
+Hardware Specifications:
+
+Main Processor:
+
+	68010  	@6MHz
+
+	512K	EPROM  (16 x 27256) 
+
+	8K	RAM    (includes 4K in MOSTEK ZeroPower RAM)
+
+	A/D Converter
+
+	8 bit option switch
+
+	Switch Inputs (7)
+
+	Hardware Pseudo-Random Number Generator (23 bit Linear Feedback 
+							Shift Register)
+
+	16 Bit Parallel Game-Link Interface
+
+Analog Vector Generator:
+
+	Analog Vector Generator with 16K RAM
+
+Sound Processor:
+
+	6502 processor @1.79 MHz
+
+	32K Program and Music EPROM  (1 x 27256)
+
+	64K Speech EPROM (2 x 27256) [Program loads an address into a counter,
+				      Every SROM READ increments the counter]
+	
+	Yamaha Chip Set
+
+	Pokey	(2) 
+
+	TMS-5220C Speech Synthesizer
+
+	Coin Switch Inputs
+
+	Coin Counter Outputs
+
+	8 Bit Option Switch 
+
+	8 Bit Parallel Interface to 68010
+
+Math Processor:
+
+	TMS-320 Digital Signal Processing IC (For faster math calculations)
+
+	4K Words RAM for TMS-320 (Interfaced to 68010)
+
+_____________________________________________________________________________
+
+To: Dennis Wood
+Fr: Jed Margolin
+Re: Revised Vaction Policy
+Dt: 7/12/85
+
+
+	Since the new vacation policy takes effect March 31, 1986 I assume 
+
+that the "old" vacation policy will be in effect until then. Is this correct?
+
+	Since I currently have almost 5 weeks of vacation accrued and my 
+
+anniversary date is January 15 your memo indicates that if I don't take most 
+
+of it (all but two weeks) before January 15, I will lose it. Is this correct?
+
+	Now, about the "old" policy. The last memo that I have on vacation 
+
+policy is dated 3/12/84 and was issued by Richard Stearns who was at that time
+
+the Human non-Resources Director. According to this memo, employees could not 
+
+carry over more than two weeks of vacation time each CALENDER year, starting 
+
+January 1, 1986. This is the first time I have heard about the anniversary 
+
+date method. When was it changed to the employee's anniversary date?
+
+
+
+				Jed
+_____________________________________________________________________________
+
+To: Components Engineering 
+Fr: Jed Margolin
+Re: Specification Review Sheet; Transformer, Power, Domestic, p/n 142041 
+Dt: 7/24/85
+
+Section 3.5 Thermal Protection:  	
+
+	Is it necessary to have a thermal cut-out? 
+
+	Wouldn't the fuse in the primary circuit be sufficient?
+
+Section 4.2 Leads:  4.2.1 Size; 4.2.6 Connectors
+
+	If you are going to specify the part number of the Faston
+
+	you should also specify which wire sizes are acceptable, not just
+
+	a minimum size.
+
+Section 5.0 Environmental Requirements:  5.3 Temperature Rise
+	
+	Why are you using 55 degrees for the delta R method and 50 degrees
+	
+	for the thermocouple probe? 
+
+	Also: 		 105 degrees C maximum transformer temperature 
+			- 55 degree C rise in transformer
+			- 38 degree C maximum game installation temperature 
+		       ------	
+			  12 degree C maximum temperature rise from outside
+
+	the game cabinet to the inside, where the transformer will be mounted.
+
+	In the past, Upright cabinets would have about a 4 degree C 
+	temperature rise. The 12 degrees originally was needed because of 
+	cocktail cabinets.
+
+	Are the new cabinets actually this bad? 
+
+Cover Sheet: You have Earl on it twice.
+_____________________________________________________________________________
+
+   To: Dennis Woods
+   Fr: Jed Margolin
+   Re: Ants
+   Dt: 8/12/85
+
+
+   There are ants in my lab. In fact, there are ants all over the building,
+   and have been for several weeks.
+
+   What is your plan for dealing with this problem?
+
+_____________________________________________________________________________
+
+In looking at the specification for the new transformer (142042) I
+noticed that in Section 3.1 and in Figure 1 the 220/240 version
+is a 142041-101 while in Section 10 it is a 142041-002.
+
+Also, I think you need to specify that the Faraday shield is to
+be grounded to the core.
+
+		Jed
+_____________________________________________________________________________
+
+PURCHASE REQUISITION
+
+
+Project Title and Project Number:  TomCat  378XX; also Project 478XX
+
+Requestor: 			Jed Margolin		
+Extension:  			747-2864
+Date:				10/23/85
+Reason For Request:		Parts For Development and Field Test Prototypes
+Dept. No. and Acct Code:   	{I don't know}
+
+Date Material Required:		November 13, 1985
+Deliver To:			1272 Borregas, Sunnyvale
+Total Estimated Cost:		$375 
+
+
+Item	     Description	      Mfg Part No.    Qty     Est Price   Unit
+----   ----------------------------   ------------    ----    ----------  ----
+
+1     NMOS Digital Signal Processor   TMS-32010	       10      37.50       ea
+
+
+	Please order from:
+
+		 Wyle
+		 727-2500
+		 Attn: Janelle
+
+
+Note: The normal price of TMS-32010 is $95 for singles, $60 in 10's (from
+Marshal). Wyle is giving us the price for 5K quantity. I would like
+to order the parts now before they change their minds. 
+
+
+PURCHASE REQUISITION
+
+
+Project Title and Project Number: TomCat  378XX; also Project 478XX
+
+Requestor: 			Jed Margolin		
+Extension:  			747-2864
+Date:				10/23/85
+Reason For Request:		Parts For Development and Field Test Prototypes
+Dept. No. and Acct Code:   	{I don't know}
+
+Date Material Required:		December 2, 1985
+Deliver To:			675 Sycamore Drive, Milpitas
+Total Estimated Cost:		$1200
+
+
+Item	     Description	       Atari p/n      Qty     Est Price   Unit
+----   ----------------------------   ------------    ----    ----------  ----
+
+1     Multi-Layer Printed Circuit	043415-01      10	$1200      10 
+      Boards made from the supplied 
+      artwork. Size 11.5" x 20.7",
+      approx 5200 holes.
+
+      Includes: 
+	Solder Mask on Both sides
+	Silkscreen
+
+_____________________________________________________________________________
+
+Brad,
+
+	I need the following Sound Things for the TomCat demo on Jan 15:
+
+
+	1. Howling Banshee (F14 fires the gun).
+
+	2. Jet engine with control of speed.
+
+	3. Clunk (Getting Hit) - [Warlords had a nice clunk]
+
+	4. Jet Flyby
+
+	5. Speech - Use some samples from Star Wars.
+
+	6. Music - Ride of the Valkyries - Wagner
+
+
+		Jed
+_____________________________________________________________________________
+
+Erwin,
+
+	
+About 137434-001   NMOS Digital Signal Processor, TMS-32010	
+
+The sources are Texas Instruments and General Instrument.
+
+Texas Instruments is ok. 
+
+General Instrument has twice promised me samples and failed to deliver
+them.
+	
+		General Instrument Corporation
+		3080 Olcott St  Suite 230 C
+		Santa Clara, CA  95051
+
+		(408) 496-0844
+
+
+		The old GI rep was Sally McGrew, 	
+		The new GI rep is Earl Porter
+
+If they don't come through with two samples pretty soon, we should take
+them off the AVL.
+
+	Jed
+_____________________________________________________________________________
+
+Dennis, I haven't forgotten you, it's just that Max is using one
+system to develop a real aerodynamic model and therefore I usually 
+don't have two systems available to link together.
+
+I am having more boards stuffed so I can leave a two-player version
+up and running continuously.
+
+
+				Jed
+_____________________________________________________________________________
+
+Chris, at your suggestion I have gone to the TomCat lab to check it
+out and have found that the rumble from the ventilation unit remains
+unacceptible.
+
+		Jed
+
+_____________________________________________________________________________
+
+To: Dan van Elderen
+Fr: Jed Margolin
+Re: Marketing of non-game Products
+Dt: 3/21/86
+
+From OnSat magazine (a satellite TV program guide) Mar 23 - Mar 29:
+==============================================================================
+	* Nation's First Commercial Satellite Network 
+	     Takes Computer Message to Marketplace *
+
+	The nation's first commercial satellite distribution network for 
+computer users has been established by Computer Distribution Network (CDN), 
+and can be seen on Galaxy 2, transponder 5, Monday-Friday at 2:45 pm (ET). 
+The CDN signal is not scrambled.
+
+	The new network carries mainline advertising messages from 
+manufacturers and distributors of computers and computer related products. 
+CDN's programming also includes special programs, such as training in the use 
+of computers, computer products and software, panel discussions, seminars, 
+videoconferences, demonstrations of computers, and other programming developed
+exclusively for the business computer user.
+
+	CDN currently airs six hours of weekly programming, but plans 
+expanding to a schedule of 24 hours of program availability seven days a week.
+
+	For additional information contact CDN, 1 Woodfield Lake, Suite 117,
+Schaumburg, IL 60195.
+==============================================================================
+
+	Although it is aimed at commercial and industrial users consider also
+that there are about 2 million home satellite dishes in North America. Some
+are owned by people who have no other way to get any TV but some are owned
+by people who like to buy Expensive Toys. If we had a non-game product to
+sell this could be a really good way of reaching a target market.
+
+	A small ad in one of the satellite TV guides could let people know
+that Atari was demonstrating something interesting on CDN. 
+
+	Just about anyone with a dish can receive this service.	I have taped 
+45 minutes from one of the shows if you want to look at it.
+
+
+	Jed
+
+
+cc: Rick Moncrief
+_____________________________________________________________________________

@@ -1,0 +1,1492 @@
+   Atari/Atari Games   Memos and Status Reports 1983   Jed Margolin
+___________________________________________________________________________
+
+GAME HARDWARE IDEA - NEW 3D COLOR XY		Jed Margolin  1/25/83
+
+
+	The following is a description of the hardware architecture I am
+
+plannning on designing for the Tomcat research project. I am submitting
+
+it here because the hardware may be applicable to other games.
+
+
+	There are 3 basic sections: The Host Processor; The Vector Generator;
+
+and the Aux Processor.
+
+   1. The Host Processor will be a 16032 or 68000 and will be supercharged
+
+with the Warp Speed Matrix Processor. (Perspective division will be done by 
+
+the Host.) The Host Processor will do all the 3D math and deliver to the
+
+Vector Generator an updated point table for each object. 
+
+   2. The Vector Generator will probably be similar to the analog type 
+
+currently being used; however, it will contain the algorithms to connect the
+
+points for each object so that the Host Processor will not have to spend time 
+
+formatting vectors.
+
+	3. The Aux Processor will be a 6502 or a 6809 and will do:
+
+	   A. Sounds
+
+	   B. Speech
+
+	   C. Coins
+	   
+	   D. EAROM stuff
+
+	   E. Pot reading with A/D Converter
+
+	   F. Communication between games
+ 
+_____________________________________________________________________________
+
+DATE: 1/25/83
+
+SUBMITTED BY: Jed Margolin
+
+NAME OF GAME: YourFaceOnthePlayer BASEBALL OR MAYBE FOOTBALL
+
+PERSPECTIVE: 3rd Person
+
+HARDWARE: Color Raster, Macho 44, Speech Synthesizer, CCD Image Sensor
+
+OBJECT OF THE GAME: Baseball, with two improvements:
+
+	1. At the beginning of the game, a CCD image sensor will take the
+	   player's picture and put his face on all of his team members.
+	   If the player makes the high score table there will be no initials,
+	   just players' faces.
+
+	2. A speech synthesizer (or two) will provide play-by-play and color
+	   commentary of the game taking into account how well the player is
+	   doing. 
+
+------------------------------------------------------------------------------
+
+DATE: 1/25/83
+
+SUBMITTED BY: Jed Margolin
+
+NAME OF THE GAME: BETTY BOOP
+
+PERSPECTIVE: 3rd Person
+
+HARDWARE: Color Raster, Macho 44, Speech Synthesizer
+
+			or
+
+		    Video Disc
+	
+
+OBJECT OF THE GAME: The player leads Betty through a series of adventures,
+		    with her talking and exclaiming Boop-Boop-A-Doop at 
+		    appropriate times.
+
+------------------------------------------------------------------------------
+
+DATE: 1/26/83
+
+SUBMITTED BY: Jed Margolin
+
+NAME OF THE GAME: COCKROACH WARS
+
+PERSPECTIVE: 3rd Person
+
+HARDWARE: Color XY, or High Resolution Raster
+
+OBJECT OF THE GAME: This is a two player competitive game where each player 
+		    controls an animated, articulated cockroach.
+		    The action takes place on several scrolling playfields:
+			UNDER THE KITCHEN SINK,
+			UNDER THE REFRIGERATOR,
+			IN THE PANTRY, and
+		        IN THE BATHROOM (don't get trapped in the bathtub). 
+		    As the two cockroaches fight they have to avoid periodic
+		    natural disasters such as a human exclaiming, "Look Fred,
+		    we have cockroaches, again." The players would then have a
+		    limited amount of time to scurry to safety.
+
+		    Perhaps we could use a CCD imaging device to put the
+		    player's face on the cockroach.
+
+		    If cockroaches are too distasteful, use mice.
+_____________________________________________________________________________
+
+RE:LPB0
+
+	I left the listings in the basket because I felt it was the one
+place where they would NOT mess things up. But if you want them ON the printer
+then that is where they will go.
+
+	And while we're on the subject, last week I tried to help a
+SCI-CARDS person cancel a duplicate listing.(It seems that when his
+listing did not appear in WESTPRINT he figured something had gone wrong
+and ordered another listing.) Because the directions for cancelling
+a printout were so thoughtfully provided on the printer, he and I tried
+them. They didn't work.
+
+				JM
+_____________________________________________________________________________
+
+To: Ken Renda
+Fr: Jed Margolin
+Re: ECR 03727
+Dt: 2/14/83
+
+
+1. Per your request that "Resistors R13 and R14 should be moved so as
+   not to short against ground trace (rear of board)."
+
+	On the board I was shown the resistor leads were excessively
+	long, causing them to short out when they were bent back.
+	But If Manufacturing reallly thinks the traces should be moved,
+	then ok.  
+
+
+2. Per your comment that the "Trace from collector of Q3 to cathode
+   of CR4 is being blown off board resulting in severe damage to PCB."
+
+	On one board that I examined, CR1 and CR4 were both shorted,
+	causing a short from 10.3 VDC to ground. On another board
+	CR1 was shorted and CR4 apppeared to have been replaced,
+	the original CR4 presumably having been shorted also.
+
+	CR1 and CR4 are both protection diodes and do not normally
+	conduct any current unless they are installed backwards,
+	which was NOT the case in the boards I examined.
+
+	I recommend we try to trace these diodes and find out if
+	we had a shipment of bad or incorrectly marked 1N4002's.
+	The only other explanation for these failures would be
+	if the boards had somehow been connected to the supply
+	backwards.
+
+
+
+			Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Dt: 3/2/83
+Re: Reasons for Buying more CIT-101 Terminals
+
+
+The department currently has five CIT-101 terminals:
+
+	Carol has one at her desk for word processing;
+
+	Greg and Norman each have one in their offices;
+
+	There are two in the Hanger Lab, each associated with a 
+	development system (both are for Star Wars).
+
+ There are currently no terminals available for general use. Those
+of us who need to use the VAX have to squeeze in time on one of
+the above systems.
+
+	I use the VAX frequently for programming and for generating and
+maintaining documentation.
+	
+	Earl also uses the VAX extensively and in fact should have one
+allocated for his exclusive use as have Greg and Norman.
+
+	Rick Meyette uses the VAX for word processing.
+
+	Tom Rice has expressed an interest in computerizing parts lists,
+inventories, etc.  I am trying to talk him into using the VAX rather
+than buying another Atari 800 system.
+
+
+
+	I propose that we purchase three CIT-101 terminals. One will go
+to Earl and two will be installed in the labs for general use.
+
+
+	Alternately, one would go to Earl, one would go to me (in my office)
+and one would go to the lab for general use.
+
+
+		Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: "Video-game makers rush to add 3-D chip"
+Dt: 3/7/83
+
+
+Attached is a copy of an article that appeared in the San Jose Mercury
+
+News, March 2, 1983. The chip being touted as a magic chip to do 3-D
+
+is the 2516 16*16 multiplier. I talked to Dave Barnet of Weitek
+
+last year when it first came out and again this afternoon to
+
+update my information.
+
+	The 2516 is an NMOS version of a TRW Bipolar Multiplier.
+
+Because it is NMOS it dissipates less power and so can be packaged
+
+in plastic. It also runs slower than the TRW part.
+
+	Last year the 2516 was being offered in a 1 us version
+
+for $68. This year it is a 200 ns part and goes for about $40
+
+in quantities of 5,000. (The TRW Bipolar Multiplier does a
+
+multiply in about 40 ns and costs twice as much.)
+
+	The 2516 was not cost effective last year at $68 and it
+
+is not cost effective this year at $40. The multiplier/accumulator  
+
+that I use in Star Wars is made out of MSI and costs about $12 (and 
+
+does more than just multiply). 
+
+	The basic operation in doing 3-D transformations is to accumulate 
+
+products such as in ACC'= ACC + A*B. The 2516 does not accumulate products, 
+
+it is  only a multiplier. (Weitek has expressed an interest in working with 
+
+Atari to produce a low power multiplier/accumulator.) My Multiplier/Accumulator
+
+also does a presubtract to make calculations more efficient 
+
+[ ACC'= (A-B)*C + ACC ]. On the other hand, my multiplier is slower 
+
+(2.7 us vs 200 ns for the Weitek).
+
+	Raw multiplier speed is only part of story in doing 3-D 
+
+transformations. In performing the 3-D math, lots of data has to be fed
+
+into the multiplier, and results retrieved, and additions performed (if
+
+the multiplier does not also accumulate products). If a device such
+
+as the 2516 were put on an 8 bit microcomputer bus, even if the multiplier
+
+took zero time it would be several times slower than the current 
+
+Star Wars hardware. (A 2516 put on a 10 MHz 68000 or 6 MHz 16032 would
+
+probably be nice and fast, but a multiplier/accumulator would be better).
+
+	The Star Wars hardware deals with the throughput problem by having
+
+a simple microprogrammed device keep the multiplier/accumulator fed. The
+
+points that define an object are downloaded by a 6809 host processor
+
+at the beginning of the game (or wave) into a RAM it shares with the 
+
+microprogammed machine (the Matrix Processor). When it comes time
+
+to display an object, the host processor supplies a pointer which
+
+tells the matrix processor where the object's points are stored. The
+
+host processor tells the matrix processor which algorithm to use, and
+
+each of the object's points is transformed, one at a time.
+
+	I resent having to generate this memo, having to defend hardware
+
+that I designed THREE YEARS AGO. When the project was Warp Speed it received 
+
+no support from management. Now that it has become Star Wars and Atari 
+
+has paid George Lucas one or two million dollars there is more interest 
+
+in the project. However, the game that is being developed does not take
+
+advantage of the real capabilities of either hardware or algorithms. 
+
+This is very discouraging and makes it very difficult to maintain
+
+any enthusiasm in a subject area for which management obviously
+
+has so little regard. And I don't want to hear any more crap about
+
+Weitek's great 3-D chip. 
+	
+
+
+		Jed	
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Votrax SC-02
+Dt: 3/8/83
+
+
+
+Summary: The SC-02 doesn't sound as good as the TI system we are now using.
+	 We would lose the ability to have the speech recognizable as 
+	 belonging to a particular person (like Luke Skywalker).
+	 The development tools available for the SC-02 are much cruder than
+	 what we already have for the TI system.
+
+
+The information I have on the Votrax SC-02A comes from the following sources:
+
+	A Concept Definition of the SC-02 in a memo from Steve Bristow
+dated 5/4/81;
+
+	A memo from Steve Bristow summarizing the meeting with Votrax on
+6/5/81;
+
+	Preliminary Specification of SC-02 in a letter from Al Lubienski
+(Votrax General Manager) to Michel Ebertin, dated 9/1/81;
+
+	A sample tape from Votrax demonstrating the SC-02;
+
+	A conversation with Randy Hall (of VCS fame) on 5/4/82;
+
+	
+This is what I know:
+
+	My notes indicate that I thought the sample tape made with the SC-02 
+sounded better than the SC-01 but not as good as the TI synthesizer. It does 
+not appear that the SC-02 can be programmed to be recognizable as belonging to
+a particular person. (The sound effects weren't bad, though).
+
+	The SC-02 is an improved version of the SC-01. The phonemes 
+have supposedly been improved and the user can control more of the 
+atttributes of the speech. The tape mentions that the atttributes 
+could be extracted from recorded speech. If all of the attributes 
+are used, the bit rate is 240 bits/sec (versus 1200-1800 bits/sec for TI).
+If the attributes are not used the bit rate is closer to 70 bits/sec
+and it ends up sounding just like the SC-01.
+
+The schedule Randy gave me was as follows -
+
+		samples - Christmas
+		production - 1st Q 83
+		Development Station - 1st Q 83 ($15K)
+		   (does not extract features from recorded speech)
+		Estimate 100K - $10.
+			   1M - $5.
+
+
+In order to fully utilize the additional capabilities of the SC-02
+we would have to hire a linguist to develop vocabulary and/or we
+would have to design a unit that analyzes recorded speech and extracts 
+the required attributes from it. I do not think a person who is
+not a linguist could sit down at a VDT and create acceptable
+vocabulary for the SC-02.
+
+
+If Votrax has made really significant changes since last May, my
+information may be out of date.
+
+
+The last I heard from Dave Remson (VCS) was that General Instrument was
+developing for them a two channel speech synthesizer based on the
+GI SP0250. The SP0250 would have been my first choice for Coin-Op
+to use if it hadn't become apparent that GI was unable to provide
+the necessary support for us to use it successfully. If they are
+successful in developing it and providing decent development tools
+we may want to switch over to it at some future time (and take 
+advantage of VCS quantity discounts).
+
+If this deal with GI is still in the works why this sudden (and
+misplaced) interest in Votrax?
+
+		Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Dt: 4/16/83
+
+
+I amm writing this memo on Saturday. I came in at about 1:45p to 
+work on Star Wars.
+
+Facilities chose today to wax and polish the floors in our labs.
+
+Equipment has been disconnected, moved around this way and that, 
+Erik's radio has been turned on full blast, and the Star Wars game 
+is no longer working.
+
+I called Security and talked to Barbara (whose supervisor's name is
+Dennis Johnson) who said it was a matter for Facilities, not Security.
+She said she would try to have someone from Facilities paged but
+was apparently unsucessful. The guys doing the work here said they
+worked for Gavaer Ramerez.
+
+When I left here at 3:30 am last night everything was intact, and working.
+
+This is not the first time that Facilities has shown a callous disregard
+for projects that I have been working on. On several occasions they
+have moved prototype games (with circuit boards and cables trailing 
+behind) to replace stained ceiling tiles. Presumably they do this
+to other projects as well.
+
+And just when I was starting to work on the game I was asked to leave
+so they could put on the wax on the floor.
+
+I request that you (and Dan, and John, if that is what it takes) TELL
+Facilities that under NO circumstances are they to move ANY of our
+equipment without PRIOR approval.
+
+Getting Star Wars into production is already tough enough without this
+SABOTAGE from the Facilities Department. 
+
+
+CC: John Farrand
+    Mike Halley
+    Dan Van Elderen
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Microprocessor Test Connector and Darl Davidson
+Dt: 3/29/83
+
+
+
+Manufacturing does not use the Microprocessor Test Connector.
+
+
+Repair Technicians in the field do use it because that is how the
+CAT Box connects to the game board.
+
+--------------------------------------------------------------------------
+What the CAT Box Does:
+
+The CAT Box gives repair technicians (in the field) access to the processor's
+bus and enables him to test for open or shorted address and data lines,
+read switch inputs, turn outputs on and off, test RAM, and perform
+Signature Analysis.
+ 
+When people use the CAT Box to perform signature analysis on game
+ROMs, the CAT Box connects a counter to the address lines and simply
+runs through the addresses. By using a ROM Select to start and stop
+the Signature Analyzer, a signature is taken for the bit pattern in
+that ROM, thus establishing whether the ROM is good. This is usually
+done just for the ROM containing the reset and interrupt vectors and 
+test routines; if this ROM is good the game will probably be able to 
+run Self-Test.
+
+Because the address decoders are not strobed but are free to glitch
+until the address is valid, it has been necessary, in order to use
+the CAT Box Signature Analyzer, for the technician to attach capacitors
+to a few address lines to remove these glitches. 
+
+----------------------------------------------------------------------------
+
+All the pins that appear on the Test Connector also appear on the
+microprocessor socket, so my idea was to do an interface board so
+that people would remove the processor (which they must do anyway)
+and plug in this adapter (which would connect to the CAT Box). Also
+on this interface board would be a strobed latch so that Signature
+Analysis could be performed without using kludge capacitors.
+
+----------------------------------------------------------------------------
+
+I talked to Darl Davidson and Frank Becker on 3/28 about this and they were
+adament against doing this. Their reasons were:
+
+	1. Taking off the Test Connector would be perceived as 
+	   "Atari cheaping out".
+	2. It would require twice as many insertions and removals in the
+	   processor socket. We use cheap sockets which are supposedly
+	   good for 10 insertions.
+	3. They were concerned that the people who needed the adapters
+	   wouldn't buy them and would become very angry when they couldn't
+	   use their CAT Boxes with the game.
+	4. Their experience with adapters was that adapters don't work. They
+	   referred to a Z80 adapter that someone is alleged to have
+	   perpetrated.
+
+
+I was not aware that our sockets were that poor.  On the other hand, I learned
+that the kludge capacitors are usually stuck into the processor's empty socket.
+That can't be very good for the socket, considering the diameter of most 
+capacitor's leads.
+
+The other reasons might be valid but probably are not.
+
+---------------------------------------------------------------------------
+
+I have an even better solution.
+
+When the 6809E HALT line is brought low, the processor finishes the current
+instruction and halts with Address, Data, and R/W lines TRI-STATE. Therefore,
+with the HALT line low, the CAT Box could be connected to the game without
+removing the processor (unless there was some reason to believe that the
+processor was bad and wouldn't go Tri-State). 
+
+This could be accomplished in two ways:
+	1. HALT would be automatically grounded with the CAT Box plugged
+	   into the current Test Connector.
+	2. An IC clip (similar to the ones we use on the HP Logic Analyzers)
+	   would clip onto the processor, grounding the HALT line. This
+	   cable would have to go to a small interface board which would
+	   accept the CAT Box connector.
+
+If this is done, there will be no place to stick the kludge capacitors. 
+
+If we use method 1, we could put in the traces for a latch and leave it 
+unstuffed. If someone wants to do signature analysis they will have to 
+solder one in (talk about cheap). We could, instead, stuff a socket, or
+probably for the same cost, stuff the IC (a 74LS74). I do not have any
+unused latches on the Star Wars Main Board.
+
+If we use method 2, a strobed latch can be included on the interface board.
+
+I prefer method 2.
+----------------------------------------------------------------------------
+
+I told Darl that I was willing to keep the Test Connector on the Main Board
+but that I would not put one on the Sound Board. He seemed satisfied with
+the arrangement. 
+
+In any event, I strongly disapprove of using kludge capacitors, especially
+when they are shoved into a microprocessor socket. If we go with method 1
+I want to put the extra LS74 on the Main Board. If we go with method 2
+it would go on the Interface Board.
+
+----------------------------------------------------------------------------
+
+My next step is to have Erik put together a CAT Box Interface Board so we
+can demonstrate its advantages.
+
+
+I wanted you to know what I am doing in this matter because Darl has strong
+feelings about the Test Connector and has threatened to go to Dan and John
+over it.
+
+
+	Jed
+___________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Speakers
+Dt: 5/10/83
+
+
+The following applies to the TDA-2002s as they are used in the 
+Regulator/Audio I and Regulator/Audio II boards. All power ratings
+assume an unclipped sine wave.
+
+SUMMARY:
+
+When used in a game that produces a single audio channel the power amplifiers 
+are usually connected in push-pull and will deliver 12.5 Watts into a 4 ohm 
+load. This can be a single 4 ohm speaker, two 8 ohm speakers in parallel, 
+or an array of four 4 ohm speakers. 
+
+Games with a single audio channel tend to use two 8 ohm speakers. 
+
+In a game that produces two audio channels, each amplifier must have
+a 2 ohm load if the total output is to remain 12.5 Watts. Star Wars
+uses two audio channels (because of the Image Expander) but only uses 
+two 4 ohm speakers and therefore its total output is 6.25 Watts 
+(3.12 Watts per channel). Ideally it should have had four 4 ohm speakers 
+or two 2 ohm speakers. If each amplifier were driving an 8 ohm speaker, 
+the power would drop to 1.5 Watts per channel (for a total of 3.12 Watts) 
+and it would probably not be loud enough in an arcade environment.
+
+If only 8 ohm speakers were available, the Star Wars Image Expander could 
+not be used. 
+
+If only 4 ohm speakers were available, a single channel game would be limited
+to 6.25 Watts instead of the 12.5 Watts currently available with 8 ohm
+speakers.
+
+Standardizing on speakers is a bad idea.
+
+-----------------------------------------------------------------------------
+BACKGROUND:
+
+When operated from a 10 Volt supply, a TDA-2002 will deliver 6.25 Watts
+(sine wave) into a 2 ohm load or 3.12 Watts into a 4 ohm load.
+
+With two TDA-2002s, the amount of power that can be delivered to a
+load is 2x6.25 = 12.5 Watts (sine wave). This is with both amplifiers
+driving 2 ohm loads.
+
+At this point you might object, "But we don't have any two ohm speakers."
+
+This is the answer:
+
+	When a game provides only one audio channel, the two TDA-2002s
+	are usually operated in push-pull with the speaker connected 
+	across the amplifiers outputs. This doubles the output voltage
+	across the speaker, which multiplies the power by four. 
+	(P=V*V/R). If we take the example of a single TDA-2002 driving a 
+	4 ohm speaker we get 3.12 Watts. If we run two TDA-2002s in 
+	push-pull we will get 3.12x4=12.5 Watts. The quadrupling of
+	power is not free. The current required from each amplifier
+	is doubled. The main effect is to "split" the load between
+	each amplifier so that each amplifier sees R/2.
+
+Thus in a push-pull system a 4 ohm speaker will be seen by each amplifier 
+as a 2 ohm load, and the TDA-2002s will deliver 12.5 Watts to the speaker.  
+ 
+If the designer wanted to use two speakers and put two 4 ohm speakers in 
+parallel, the result would be a two ohm system which each TDA-2002 would 
+see as a 1 ohm load which it couldn't drive effectively.
+    	
+If the 4 ohm speakers are put in series, the result is an 8 ohm system 
+which each TDA-2002 would see as a 4 ohm system. That's fine except we 
+now have each amplifier driving a 4 ohm load and delivering 3.12 Wattts 
+for a grand total of 6.24 Watts. This decrease in power would be offset 
+somewhat by the increase in speaker efficiency produced by having a 
+greater cone area, but there is a better solution.
+
+If we take two 8 ohm speakers and put them in parallel (making sure they 
+are phased properly) we get an effective system load of 4 ohms, which 
+each TDA-2002 will see as 2 ohms. The amplifiers will therefore deliver 
+12.5 Watts to the system.
+
+If we wanted to use four speakers (like Space Duel) they would be 4 ohm 
+speakers in both series and parallel to again produce a 4 ohm system. 
+Which is why Space Duel is so loud.
+	 
+So, it seems we can standardize on either four 4 ohm speakers or two 
+8 ohm speakers in every game. 
+	   
+Wrong.
+
+Games with a single audio channel have tended to use two 8 ohm speakers. 
+Star Wars (with fake stereo) is using two 4 ohm speakers. Ideally it 
+should have had four 4 ohm speakers or two 2 ohm speakers. 
+
+Star Wars uses a stereo synthesizer so that each TDA-2002 must must 
+used separately; they cannot be connected in push-pull. The upright 
+game originally used four 4 ohm speakers connected to produce two 
+arrays of 2 ohms each. This would have produced 12.5 Watts of audio. 
+Unfortunately, in a futile attempt to hold the cost down, two speakers 
+were eliminated. Thus, Star Wars is limited to 6.25 Watts of audio. 
+With 8 ohm speakers the system would deliver 1.5 Watts/channel, for a
+total of 3.12 Watts.
+
+The sitdown game currently uses four 4 ohm speakers but it may be 
+necessary to replace the upper channels with 8 ohm speakers to give a 
+better balance between the upper and lower speakers.
+
+It is too soon to tell if fake (or real) stereo is the wave of the
+future. But standardizing on either 4 or 8 ohm speakers would be a
+mistake and would send a clear message to those who have been working
+in this area that there is no support for audio in this company.
+__________________________________________________________________________
+
+To: Chris Downend
+Fr: Jed Margolin
+Re: Power Supply and Audio/Regulator Specs
+Dt: 6/3/83
+
+
+Chris,
+
+Assuming this is for Star Wars, there is only (1) Audio/Regulator Board per 
+game.
+
+These are the maximum ratings for the power supply. Star Wars does not draw 
+the maximum current ratings.
+
+					Jed
+
+------------------------------------------------------------------------
+POWER SUPPLY	Transformer-based design capable of delivering:
+
+	+10.6 VDC @ 8 Amps
+	  6.1 VAC @ 2 Amps
+	 50 VAC CT  @ 2.5 Amps 
+	 36 VAC CT, specified so that after rectification it will deliver:
+			  +21 VDC @ 1.5 Amps 
+			  -21 VDC @ 1.0 Amp
+
+AUDIO/REGULATOR PCB Audio:
+	(2) TDA2002 audio amps, each capable of delivering 6 Watts into 2 ohms
+		
+			Regulators:    +5 VDC @ 6 Amps
+				      +12 VDC @ 1 Amp
+				       -5 VDC @ 1 Amp
+____________________________________________________________________________
+
+To: Alan Nusbaum 
+Fr: Jed Margolin
+Re: PMI DAC-312
+Dt: 6/29/83
+
+
+According to the data sheet, PMI's DAC-312 should perform as well as AMD's
+AM6012 in all the parameters that are relevent to the Analog Vector
+Generator.
+ 
+Erik and I have tried the nine DAC-312 samples in a Star Wars AVG Board
+and they all appeared to work ok.
+
+This kind of test should not take the place of a full scale component
+investigation, but it appears we don't have the equipment to fully test
+DACs.
+
+cc:
+	Dean Charrier
+	Bruce Hartman
+	Rick Moncrief
+
+----------------------------------------------------------------------------
+
+To: Dean Charrier
+Fr: Jed Margolin
+Re: Motorola 
+Dt: 6/29/83
+
+According to the data sheet, Motorola's 74LS385 should be equivalent
+to the TI part.
+
+Erik and I have tried a tube-and-a-half of Motorola 74LS385s in a
+Star Wars Main Board and they all worked ok.
+
+
+cc:	Rick Moncrief
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Cinematronics Video Disc Game
+Dt: 7/13/83
+
+I had the opportunity to examine Cinematronics' new Video Disc Game
+at Central Park and noticed the following:
+
+	1. The game did not have an FCC sticker.
+
+	2. There was NO video overlay. The picture on the screen came
+	   solely from the Video Disc. Scoring, credits, and lives were
+	   done on a separate LED panel. I didn't see any high score table.
+
+	3. The game logic was on a small board and had several ROMs, a
+	   processor (I couldn't see whose it was), a GI Sound IC, maybe
+	   a separate processor for sounds, two audio amplifiers, option
+	   switches, and the usual assortment of other stuff.
+
+	4. Even though it had the sound IC, I cannot recall having heard
+	   it in the game. It sounded like all the audio came from 
+	   the disc player.
+
+	5. The Video Disc player was a standard unit, sitting on the
+	   bottom of the cabinet. I couldn't see the manufacturer's
+	   name on it. The digital interface just plugged in; it probably
+	   came with the unit rather than have been kludged on.
+
+	6. When the game was turned on, there was no color and there was
+	   a noticeable jitter in part of the picture. The attendant
+	   said that the game had always had that problem. When we turned the 
+	   game off and then on again, when the disc came up to speed the
+	   color worked and the jitter was gone. When we moved the game
+	   the color went away again but came back after a disc player 
+	   restart.
+
+	7. The screen blanks out for varying periods of time during disc track
+	   seeks, but I did not find it objectionable for the amount of time
+	   I was with the game (about 40 minutes).
+
+	8. In normal game play, if you get killed you go on to the next scene. 
+	   In the unlimited-lives-mode, if you get killed you start that
+	   same scene over, presumably so you can figure it out.
+	   interface 
+
+	9. The production values of the animation are high quality, but
+	   I do not care for the death sequences, especially the ones 
+	   involving death by fire.
+
+       10. The game used an Electrohome monitor with a composite video adapter.
+
+
+cc: Dan Van Elderen
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Game Serial Communication
+Dt: 7/13/83
+
+
+If we can run the serial communications at 19.2 KBaud,
+
+19.2 KBaud/11 bits= 1750 bytes/sec, not including housekeeping.
+
+Assume 1000 bytes/sec.
+
+If the update rate is 50 mS,
+
+1000 bytes/sec * 50 mS = 50 bytes of communications/ update.
+
+Using a straightforward approach, nothing fancy,
+
+	the player's unit vectors = 9 words * 2 bytes = 18 bytes
+
+	the player's position     = 3 words * 2 bytes =  6 bytes
+
+	fire button, collision detects,etc	      = 10 bytes, max
+
+						______________________
+
+						     = 34 bytes
+
+
+The serial I/O will be done by one of the Pokeys on each game's Sound Board.
+Each game can receive and send simultaneously. 
+
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Star Wars Description
+Dt: 7/20/83
+
+Specifically:
+
+	1. The game can produce 7 colours with 255 levels of brightness.
+	2. The game uses:
+		One 68B09E Game CPU. 
+		One 68B09E Sound CPU.
+		One Custom MSI 3D Math Processor.
+		One Custom MSI Display List Processor.
+	3. There are 12K bytes of Vector Display RAM (and 4K bytes of 
+	   Vector Display ROM).
+	4. I do not know what the highest score achieved in the marketplace or
+	   in-house is.
+
+Technically:
+
+	The hardware is on three boards: the AVG Board, the Main Board, and 
+the Sound Board. 
+
+	The AVG Board contains the Analog Vector Generator which draws 
+the lines on the screen. It has 12K bytes of Vector RAM and 4K bytes of 
+Vector ROM. 
+
+	The Main Board contains the 68B09E Game Processor, 48K bytes of 
+Program ROM, 2K bytes of Program RAM, option switches, means for reading 
+control panel switches and pots, a pseudo-random number generator, a digital 
+Divider, and a Matrix Processor which performs the math for the 3D graphics. 
+
+	The Sound Board contains a 68B09E, 16K bytes ROM (for the program, 
+sound tables, and speech vocabulary), a 6532A (with 128 bytes of RAM, 
+two bidirectionmal I/O ports, and an interrupt timer), 2K RAM, a speech 
+synthesizer, four Atari Custom Sound ICs, a stereo image synthesizer 
+and an interface to the Main Board.
+
+	Self-Test (selected by the Self-Test switch on the operator panel)
+tests as much of the hardware as possible. There is also a hardware diagnostic
+mode which permits the repair technician to select specific routines to aid in
+troubleshooting.
+
+Additionally, kindly tell Lyle:
+		1. I do not use Bit Slices in Star Wars.
+		2. I DO NOT use Bit Slices in Star Wars.
+		3. I DO NOT USE BIT SLICES IN STAR WARS.
+____________________________________________________________________________
+
+To: Mike Hally
+Fr: Jed Margolin
+Re: Star Wars Power Supplies
+Dt: 7/26/83
+
+
+	Two Star Wars production power supplies were brought to me to find out
+why they did not work; even with no load they got really hot.
+
+	In the unit I have tagged as #1, the transformer harness going to
+J3 (the voltage selection connector) has the Red/Black and Brown/Black
+wires reversed so that J3 pin 1 and pin 2 are reversed. This was verified
+by an ohmmeter check. With the 120VAC voltage selection block in place
+the result is effectively that part of the primary winding is shorted.
+
+	In unit #2, the wire colors are correct, but an ohmmeter check
+reveals that J3 pin 1 and pin 2 are reversed. Thus, the problem is a
+wiring error inside the transformer. 
+
+	An additional problem with unit #2 is that the mounting bracket 
+for C1 (the 27,000 uF filter capacitor) has been tightened so much that 
+a section of the capacitor has been caught in the clamp and bent. This
+is not nice.
+
+	Both of these units use Ravenswood tranformers. I am concerned
+that because the transformer stack height is so short these units may not 
+meet the specifications for Color X-Y transformers. I would like a 
+production Color XY Power Supply in order to test the transformer temperature
+rise in a Star Wars Game, and I would also like Components to perform a full
+test on one.
+
+
+cc:
+	John Aubuchon
+	Dean Charrier
+	Rich Cocciolone
+	Chris Downend
+	Mike Laschinger
+	Pat McSweeney
+	Rick Moncrief
+	Alan Nusbaum
+_____________________________________________________________________________
+
+To: Dean Charrier
+Fr: Jed Margolin
+Re: RAMs for Star Wars
+Dt: 7/26/83
+
+
+I have tried the RAMs you gave me by substituting them in the 
+Star Wars Math RAM positions. The RAMs were:
+
+	AMD	AM9128-15DC	8217 
+	AMD	AM9128-15PC	8316
+	Hitachi HM6116P-3	2B1 Q
+
+
+Unfortunately, they all work, so this test is not meaningful.
+
+
+cc:	Rick Moncrief
+	Alan Nusbaum
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Star Wars RAMs at 5F, 5H
+Dt: 8/25/83
+
+Summary: On the boards that I received, the problem with the RAMs at 
+5F and 5H were all solved by connecting a 180 Ohm 1/4 Watt 5% 
+carbon film resistor from 9D pin 2 to ground. There is a 
+convenient trace on the top of the board to attach it to.
+
+-----------------------------------------------------------------
+ 
+On Tuesday, August 23, Mike Laschinger told me about the problem
+they have started having with the Star Wars RAMs in locations
+5F and 5H. These RAMs are used by the Matrix Processor.
+
+My understanding is that in about 10 percent of the boards, Self-
+Test says that the RAMs at 5F and 5H are bad, but in most cases
+the game runs ok.
+
+Changing the RAMs sometimes fixes it and sometimes does not.
+
+This problem coincides with the introduction of the REV C boards.
+Mike took some RAMs that failed Self-Test in a REV C board and
+put them into a REV B board and apparently they worked.
+
+I asked for a sample bad board and an unstuffed REV C board and 
+received it on Wednesday. On the board I received, 5F and 5H failed 
+during Self-Test and the game didn't work. On Wednesday I did some 
+tests but didn't get anywhere.
+
+On Thursday I had Erik put it on a development system and I tried 
+some things. On Thursday afternoon I got Greg and Norman involved.
+
+The RAM test worked when the program was running on the development
+system, but not with the board stand-alone. While running hardware 
+diagnostics I discovered glitches on the WP strobe in the Matrix
+Processor clock generator, which went away when I put a 'scope probe
+on the 12 MHz clock input at the LS161 at 9D pin 2. It appears that
+the noise and glitches on 12 MHz (at the end of the line) were
+screwing up the Matrix Processor clock and probably causing it to
+extraneously access memory.
+
+On the boards that I received, the problem with the RAMs at 5F and 5H 
+were all solved by connecting a 180 Ohm 1/4 Watt 5% carbon film resistor 
+from 9D pin 2 to ground. There is a convenient trace on the top of the 
+board to attach it to.
+
+I do not not know why this problem has suddenly appeared on REV C. We
+did not change the circuitry connected to 12 MHz. Perhaps we are using 
+a new batch of 74S04 inverters in the 12 MHz clock (at 1N).
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Stanford Instructional Network
+Dt: 9/8/83
+
+
+At your request on Tuesday I went with Herb to the meeting concerning the 
+Stanford Instructional Network.
+
+The situation is that another department has signed up for the service
+and paid the $5K or so for a one year trial.
+
+The problems are:
+
+	1. The equipment costs $14K.
+
+	2. We would need to set up several classrooms (for which we have no 
+	   space).
+
+	3. The fees are enormous: Honors Coop Program 	  $419/unit
+				  Non-Registered Option   $229/unit
+				  Audit Option		  $78/unit
+
+	   The feeling at the meeting was that managers might not realize
+	   that the fees had to come from their OWN department's education
+	   budgets and that very few managers had an education budget large 
+	   enough to support the potential demand.
+
+	4. The Autumn Quarter starts September 28. Stanford has kindly
+	   extended the registration deadline for Atari to Sept 13.
+
+		The Honors Coop Program is for full credit toward an
+		advanced degree. It requires formal admission to the
+		Stanford graduate school, which requires a transcript
+		and taking the GRE. It is unlikely that anyone starting 
+		now could make the deadline.
+
+		For the Non-Registered-Option students must still submit
+		transcripts, but do not need the GRE. Students take all
+		the exams and receive grades. Up to 18 credits can be
+		transferred to the Honors Coops Program (if the student
+		manages to get admitted to the program). It would be
+		difficult to be admitted to the Non-Registered-Option
+		at this late date unless the enrollee happens to have
+		a transcript lying around. And had a 3.2 (or better) 
+		Grade Point Average. 
+
+  		The Audit Option requires no qualifications, no homework
+		or exams, and no credt.
+
+		A group in 1196 is buying the equipment. If we wanted
+		to set up a unit here, we might not be able to get it
+		installed in time. 
+
+
+I have a copy of the course descriptions if you want to see it.
+
+
+This could have been a good idea if it had been better organized.
+
+
+			Jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Another Idea
+Dt: 9/13/83
+
+
+I think there might be a large market for a new personal computer
+designed around the NTSC interface.
+
+It would have:
+
+	16032 or 68000 processor
+	[with an additional 6502 perhaps it could be made compatible with 
+	existing Atari 800 software]
+
+	256K byte (or more) RAM
+
+	Slots for ROM cartridges
+
+	Disk (memory) interface [maybe for hard disk]
+
+	Peripheral interface
+
+	NTSC interface
+
+If video disc games are going to be popular as coin-op games, they will also 
+be popular for home units.
+
+The NTSC interface will also allow game video to be mixed with the output
+from a standard consumer camera. This might allow some kind of innovative
+game as well as serve as an extremely versatile titling generator. 
+
+It is this last capability that would have the greatest appeal. People
+would have at their disposal all of the advanced editing and storage 
+(as well as advanced graphics) of the computer. 
+
+
+		Jed
+
+
+
+cc: Mike Albaugh
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Latest Star Wars Problem
+Dt: 9/16/83
+
+
+On Thursday (9/15/83) Mike Laschinger gave me a board set that was
+representative of a problem that they have started to notice in
+Production. The symptom is that sometimes after power-up, the game 
+comes up with no stars. The game plays; there just are no stars.
+
+We were not able to make the problem appear on our test setup. We
+took the board set back to Production and put it on a CTS fixture
+and the problem did appear. (Unfortunately, Mike says it sometimes
+happens in assembled games.)
+
+The reason there were no stars was that the Pseudo-Random-Number Generator
+(ICs 4D, 5B, 5C, 5D) had gotten hung up in the invalid state of all
+ONES. 
+
+The Pseudo-Random-Number Generator has a CLEAR input which is cleared
+during RESET (both power-up and Watchdog Reset) and which is also 
+under program control.
+
+I don't know why it sometimes fails to clear during power-up, but when
+I put the circuit in, I told Greg to do a software clear at the beginning of 
+each game. Instead, he does a software check which is supposed to reset
+the Pseudo-Random-Number Generator if two consecutive numbers are the
+same. Due to a coding error, this feature does not work.
+
+On Friday, Mike's board set exibited the problem in the lab. Once.
+
+I talked to Frank Becker and he said it hasn't been a significant
+problem, yet.
+
+There are several options:
+
+	1. Find out why the Pseudo-Random-Number Generator sometimes fails
+	   to be cleared during a power-on Reset. (A manual Reset does 
+	   clear it.)
+	2. Suggest a hardware fix involving cutting a trace and adding a
+	   jumper.
+	3. Release a new ROM set with the bug fixed, and send out a technical 
+	   note to the operators.
+	4. Do nothing.
+ 
+
+How do you want me to spend my time?
+
+
+
+cc: Mike Halley
+    Mike Laschinger
+    Greg Rivera
+_____________________________________________________________________________
+
+To: John Aubuchon
+Fr: Jed Margolin
+Re: TI Speech Synthesizer Problems
+Dt: 9/27/83
+
+
+On Friday, Sept 16, I spoke to Keith Barber from TI Marketing and Dave
+Watkins from TI Qualtity Control about the potential problems with the 
+TMS-5220 Speech Synthesizer IC used in the Star Wars game.  
+
+Their story is as follows:  
+
+	1. They were doing some tests on the TMS-5220s and found that after
+1000 hours at 85 degrees Celsius and 85% Relative Humidity some of the
+parts exhibited a certain amount of noisiness and raspiness that was
+not supposed to be present. 
+
+	2. They have developed a test to screen for this problem. Tested
+parts go into BIN #1, BIN #2, or BIN #3.
+
+	3. They expect 2% - 4% of the ICs to have this problem.
+
+I asked them some questions which they were totally unable (or unwilling) 
+to answer:
+
+	1. Are 2% - 4% bad before selection, or afterwards?
+
+	2. Will this problem crop up in the 10K we have already used? 
+
+I asked them to send me some "bad" parts so I could judge for myself
+the extent of the problem. 
+
+It seemed that the "real" QC engineer was on jury duty that week but he
+would call on Monday (6/19) and they would send me some "bad" parts by
+Federal Express.
+
+By the end of that week I hadn't received anything so I called Iraj.
+Finally, On Monday 9/26, I received some "bad" parts, but no phone call.
+
+I compared the "bad" parts with a known good part. Of the two "bad"
+parts, one was noticeably worse than the other, sounding like a
+worn out record or perhaps a speaker with a torn cone. However,
+I do not believe that an average player will notice the difference,
+especially with the game playing, and especially in a typical arcade.
+
+Rick Moncrief and Earl Vickers were present and agreed with this conclusion.
+
+I want to emphasize that these were only two parts and were at room 
+temperature. Perhaps it gets worse inside a game. Perhaps these were the 
+"best" of the "bad" parts. If the ICs were any worse than the ones I heard, 
+I would not approve their use in a game, especially since we are paying
+for good parts. I would like them to answer my original questions. 
+
+
+If they continue to pull this kind of crap, perhaps we should look
+for another speech synthesizer.
+
+cc: 
+	Mike Hally
+	Rick Moncrief
+	Earl Vickers
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Speech Recognition Demo
+Dt: 10/3/83
+
+
+Cynthia Petroka and I went to the Demo at 1272 Borregas to see the
+Dragon speech recognition system. The company is named Dragon Systems
+and the gentleman who gave the demo (whose name I did not get) was 
+formerly with Verbex. It seems that he and his associates have developed 
+some new and very efficient speech recognition algorithms tailored to 
+run on an 8 bit microcomputer, specifically a 2 MHz 6502.
+
+The demonstration was given on a 1 MHz Apple II which is the reason he
+gave for why some of the features had been removed.
+
+Cynthia thinks that the vocabulary had been chosen to make the system
+look good, and I agree. Nevertheless the demonstration was very impressive. 
+Even though it was set up in the speaker dependent mode it was very successful 
+in recognizing other speakers. He trained the system to recognize a new
+vocabulary but by then it was very late and Cynthia and I had to leave. 
+
+Dragon Systems is set up to do R & D and they have no plans to market
+the device (algorithms) themselves. I do not know how much they want for
+it or what kind of business arrangement they are interested in. I expect
+that Steve Bristow and Ted Hoff will know. (They were both responsible
+for the meeting.)
+
+If we were to use it in a coin-op game it would require a dedicated
+6502 (2 MHz), 1K RAM, 24K ROM, a microphone, a preamp, an A/D Converter,
+and a game interface. This would provide for a 16 word vocabulary with
+speaker independence. The estimated cost for developing the data base for
+a speaker independent vocabulary is $10K/word. 
+
+	The major problems in using speech recognition in a coin-operated 
+game remain:
+
+	1. Can it be sufficiently speaker independent with high enough 
+	   accuracy? Will it still work when the player is excited?
+
+	2. Can a way be developed to provide sufficient signal-to-noise 
+	   for the players input? It may require that the cabinet be 
+	   specifically designed around this requirement, such as with a 
+	   totally enclosed game.   
+
+	3. Can speech recognition be used effectively in a game?  Cynthia 
+	   had a good idea. It could be used for controls that are used 
+	   infrequently, like the shield button on Alpha One (Tollian Web).
+
+	4. Does anyone want to use speech recognition in a game?  When I 
+	   asked, last spring, people were basically indifferent to the idea.
+
+	
+			Jed
+
+
+cc:
+	Steve Bristow
+	Cynthia Petroka
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Manufacturing's Dual Audio Regulator Board Proposal
+Dt: 10/20/83
+
+
+The following concerns Manufacturing's memo of 9/29/83 "Dual Audio Regulator 
+Board Proposal".
+
+
+SUMMARY: The Audio/Regulator II series was designed to meet rather rigorous 
+	specifications so that it would work in a wide variety of product. 
+	What they want to do would probably work, but would work only with 
+	Pole Position. This would mean maintaining additional inventory in 
+	Manufacturing, Customer Service, and in the Field. Atari has 
+	traditionally put a high premium on standard componants. 
+
+	We should not design new, nonstandard Audio/Regulator boards for 
+	each project.
+
+-----------------------------------------------------------------------------
+
+It is not clear from their proposal exactly what they mean to do and how
+they mean to do it. 
+
+	1. They state that "some games require more audio power than our
+	current 'universal layout' can provide.
+
+		A. This is debatable, as previous studies have demonstrated
+		that the way the cabinet is designed is much more important
+		to the loudness of the game than is the power of the audio
+		amplifiers. In fact, with a poorly designed cabinet (that is,
+		acousatically) even 100 watts would not be enough.
+ 
+		B. Are they proposing to increase the power of the existing 
+		amplifiers? If so, how?
+
+		C. Are they adding more amplifiers to the board?
+
+	2. They state that Pole Position, Ice World, and Firefox require
+	two Regulator/Audio II - 01 boards which use 67% of the PC board
+	and 50% of the heatsink. 
+	
+		A. If the empty board space on the A/R II-01 bothers
+		people, they can use the A/R I which is electrically
+		equivalent but shorter physically. In the past we have
+		used A/R II in its various configurations because
+		the A/R II -02 can be used as a replacement for all the
+		other dash numbers in the A/R II series, simplifying
+		spare parts inventory for the operators, distributors,
+		and for ourselves.
+
+		B. Pole Position did use two Audio/Regulator II-01s but
+		Ice World (now called something else) will use two
+		Audio/Regulator I boards. Firefox is scheduled to use the 
+		Switcher, besides which	it requires +/- 22 volts and would 
+		not use the A/R II-01, anyway. 
+		
+		C. Their estimate that the A/R II-01 uses only 50% of
+		the heatsink may be correct from a visual standpoint
+		but is thermally incorrect. 
+
+		   The major source of heat is the 5 volt regulator which 
+		may dissipate as much as (11.5 - 5) Volts * 6 Amps = 39 Watts. 
+		(If the 10.3 V is not loaded to a total of 8 Amps it tends
+		to be closer to 11.5 Volts.)
+		
+		   The +12 volt regulator dissipates a maximum of about 4 
+		Watts and the -5 volt regulator adds about another 4 Watts 
+		maximum. (Actually the -5 volt supply has not been loaded
+		this much since we stopped using the 3 supply dynamic
+		RAMs).  
+
+		   The TDA2002 amplifiers probably average 1.5 Watts each 
+		when they are both used. (The audio power delivered to the 
+		speakers when averaged over times of 5 minutes is small 
+		compare to peak power during parts of game play.) 
+
+		   Therefore, when everything is fully loaded,  the 5 volt 
+		regulator contributes 39 watts out of  50 Watts for 78%
+		of the heat.
+
+	3. They state that a prototype was developed and tested. Is this 
+	what the drawing in the memo is of? (It shows two amplifiers
+	and two 5 Volt regulators). What is the extra heat sink that they are
+	referring to? Does the 2N3055 "surface" mean the "case" ?
+
+	4. The test they conducted is inadequate for two reasons:
+
+		A. They don't say what the game installation temperature
+		was. We spec games to operate at an installation temperature
+		of 38 degrees Celsius. If the game was tested at 24 deg.C
+		(75 deg F.) you must add (38 - 24) = 14 deg C. to all the
+		readings to find what the maximum temperature could be. 
+		Still, when this is done, the temperatures they report
+		would be acceptable. 
+
+		B. The A/R II was designed to meet rather rigorous 
+		specifications so that it would work in a wide variety
+		of product. What they want to do would probably work, 
+		but would work only with Pole Position. This would
+		mean maintaining additional inventory in Manufacturing,
+		Customer Service, and in the Field. Atari has traditionally
+		put a high premium on standard componants. 
+
+			We formerly had a transformer that was designed to 
+		operate only on	120 VAC (The old Domestic Transformer). A 
+		power base using one of these beauties saved about $4 over
+		one using the International Transformer which had the taps to
+		operate at 100, 120, 220, and 240 VAC. Atari did not want
+		to maintain the additional inventory, with the result that
+		now all of our power transformers are International.
+
+			We should not design new, nonstandard Audio/Regulator
+		boards for each project.
+
+	(Aren't these the same people who want to have a standard cabinet?)
+
+
+	5. The Audio/Regulator II is already beyond the point at which linear
+	supplies are cost effective. That is why the Switching Power supply
+	has been developed.
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Linear Power Supply for Firefox
+Dt: 11/15/83
+
+
+The only game currently running stand-alone is the one that went to the
+Show and is now in the Shield Room. They do not have one upstairs that
+is running stand-alone.
+
+The total current in this unit on the 5 Volt supply was measured to be 
+7.2 Amps. We were not able to measure the boards separately but I doubt 
+that one board is drawing more than 6 Amps. 
+
+If this is representative of the game, then we can run it with one 
+power tray (with an extra capacitor as in Pole Position) and two
+Audio Regulator II boards. Otherwise it will require two power trays.
+
+However, the hardware is said to be still changing. They expect to remove 
+some memory and that should decrease the current. If they get below 6 Amps, 
+then only one Audio Regulator II would be required. (I think this is unlikely 
+with their hardware.)
+
+
+Assuming that they will require two Audio Regulator II boards, the following 
+things should be done to ensure that Firefox can be used with the Linear 
+Power Supply:
+
+	1. The +5 Volt supply should be brought onto J20 as two separate
+	sections, each with a +5 Volt Sense line. 
+
+	2. These two sections must be run separately to the Main and Graphics
+	PCBs (and kept separate).
+
+	3. Do Not Daisy Chain the Power Lines.
+
+	4. The 5 Volt return lines (and their sense lines) should all be 
+	connected together on the Video PCB, unless someone can figure
+	out a reason for doing it some other way.
+
+When the Switching Power Supply is used, the two 5 Volt sections will
+be connected together.
+
+	5. The Reset circuit must be able to work with either Switching
+	or Linear supplies. Sam Ly said he has a circuit for this.
+
+	6. A way must be figured out so the PC boards will work with
+	either  +22,-22 unregulated (The Linear Supply) or +15, -31 
+	(the Switcher).	We may have to change one or two resistors on
+	Game boards that are used with a Linear Supply.   
+
+I expect that the sitdown and upright versions with the Linear supply will
+require separate FCC testing and UL investigation. That means building
+upright and sitdown prototypes. 
+
+Will the games need different model numbers to differentiate them?
+
+
+	Jed
+_____________________________________________________________________________

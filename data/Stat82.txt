@@ -1,0 +1,1270 @@
+   Atari/Atari Games   Memos and Status Reports 1982   Jed Margolin
+___________________________________________________________________________
+
+To: Lynn Nyberg
+
+From: Jed Margolin
+
+Re: Composite Negative Sync for Wells-Gardner 19K4603 and 19K4633 color 
+monitors.
+
+
+The Wells-Gardner 19K4603 and 19K4633 color monitors will accept only positive
+sync. Testing games like DIG DUG with composite negative sync will require
+either MTO'ing new monitors or replacing the interface boards in the 
+4603/4633's with P317's (the one in the 4625). The horizontal centering 
+control on the new board will not function with the older chasis, but that is 
+the only difference. The P317 interface board costs $34.70; all inquiries
+should be directed to Brenda Thompson.
+
+
+cc: Darl Davidson
+    Fred McCord
+    Rick Moncrief
+    Dave Stubben
+    Bill Woods
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Speech Status
+Dt: 2/11/82
+
+
+	In this memo I will discuss TI's new text-to-speech system, their
+coming LPC development system, and their offer to sell us vocabulary. 
+Also, I will mention GI's continuing lack of interest.
+
+
+	On Wednesday, February 10, I attended a demonstration at the Texas 
+Instruments Regional Technology Center, where I was shown a text-to-speech 
+system. The basic system consists of a TMS-7000, 2K of RAM, 10K of language 
+rules, 3K of LPC Allophones, and a TMS-5220 speech synthesizer IC. The input 
+consists of serial ASCII text. When the IC's are available (a few months) a 
+complete set would cost about $30 in quantities of 100K. The quality was 
+easily the best of the phoneme/allophone systems I have heard, but it would 
+definitely not be confused with straight LPC. The only application I can think
+of is where a game is called upon to speak a name or phrase entered by the 
+player. For example, if the player entered his name at the beginning of the 
+game, the game could speak to the player in a more personal manner.
+
+[ Watch out, Rick, there is a torpedo behind us.] 
+
+It could also announce the name of the person with the high score.
+
+[ "The highest score achieved on this game was by John Smith, who scored
+107,740 points, and who is a fine human being and an example to all men."]
+
+The actual phrasing would have to have many variations so the operators won't
+get sick of it and turn it off.
+
+	TI is bringing out an LPC development system for $20K - $25K. This 
+system, which they are calling "PASS" should be available in a few weeks for 
+a demo at the Regional Technology Center. Mike Walack of TI said that they are
+planning on making only 40 of them and that they will probably be all gone by 
+the end of June. (It sounds like TI recruits used car salesmen for its staff.)
+
+	TI has a total vocabulary of about 1500 words which they would be
+willing to sell to us for about $10K. I will be getting an alphabetised list.
+
+
+	GI gave me a document which was supposed to contain the information
+on the algorithms used to expand the data in the vocabulary ROMs.
+Several crucial pages had been omitted from the copy I received.
+GI claims to be preparing a proposal for setting us up to do our own speech 
+encoding.
+
+
+the end
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: A.H.Systems Portable Motorized Antenna Mast
+Dt: 2/12/82
+
+
+	I called A.H.Systems and talked to Art Colin about their
+Portable Motorized Antenna Mast.
+
+	The 14 foot version (AMS-4) costs $4000 and the 22 foot 
+version costs $4200. Delivery is about 3 weeks. The system is completely
+portable but requires guying in other than no wind. (But the guys
+can be very light.) The mast is 4 inch PVC reinforced with wood.
+
+	They are working on a computer controlled mast as well as a
+computer controlled turntable. They would controlled through an
+HP-IB interface as well as a manual remote control. The antenna
+mast would have a resolution of 1 cm and would have an antenna 
+polarity changer. The turntable would have a resolution of 1 degree.
+	
+	Art expects the package to be available in 3 - 4 months and
+cost $15K. People buying the antenna mast now will be able to
+retrofit the computer control.
+
+	He is sending literature.
+
+	With this equipment, a radiated test could be completely
+automated except for changing antennas.
+
+
+
+
+the end
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Status of Speech Synthesis
+Dt: 2/22/82
+
+
+	General Instrument has been unwilling or unable to supply
+the support we would need to successfully use their speech synthesis
+system. This situation is unfortunate since their system is in some
+ways superior to TI's.
+
+	1). During the past eight months I have repeatedly requested
+the vocabulary packing algorithms used with the SP0250. Finally,
+two weeks ago I received an incomplete document that was for a different
+chip (the SP0256).
+
+	2). During the past eight months I have repeatedly requested
+a comprehensive proposal from GI that would enable Atari to develop speech 
+vocabulary in-house. I have not received any serious proposals.
+
+	3). I have discovered that the speech data for the SP0250 can
+be manipulated on-the-fly to produced some useful effects. Words can be
+whispered, or have their pitches offset, or have their pitches made monotone,
+or have their speaking rate modified. I did this with a Mouse Brain
+(and with no help from GI). In October, GI promised that they would modify
+the program in the PIC-1650A that is used to control the SP0250 so that
+it, too, could produce these special effects. The last information on the 
+subject came from Bill Nowlin ( the local GI representative) who confirmed,
+as per my conversation with Phil Mclaughlin (GI Group Leader) that
+GI would not consider modifying the program unless Atari pays for the work.
+
+I strongely recommend that we do NOT.
+
+
+	The most promising developments have been with Texas Instruments.
+
+	1). They expect to demonstrate a speech development system
+next month. The system would cost $20K - $25K.
+
+	2). They have an existing vocabulary of 1300 words.
+
+	3). They expect to bring out prepackaged vocabularies in
+128Kbit serial ROMS. I have vocabulary lists for them (called Time/Weather,
+Military, and Avionic). They already have an Industrial vocabulary which I
+have demonstrated.
+
+The latest quote, received February 22, is as follows:
+
+Quantity                                                  10K	25K	 100K
+
+	TMS-5220 Speech Synthesizer 			  9.75	8.45     6.70
+	TMS-61001 128Kbit serial ROM    (Industrial)	  5.10	4.60     
+	TMS-61002 128Kbit serial ROM    (Time/Weather)	    "	"	
+	TMS-61003 128Kbit serial ROM    (Military)	    "	"
+	TMS-61004 128Kbit serial ROM    (Avionics)	    "	"
+	TMS -6100 128Kbit serial ROM                      8.50  7.40      5.60
+
+	TMS-6100 with words chosen from TI's existing vocabulary:
+	     $25/word masking charge (The TI rep thinks it can be negotiated.)
+
+I recommend that copies of the vocabulary list be distributed
+and people choose 150 of the words they think would be most useful.
+
+
+CC:	Dave Stubben
+
+
+the end
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Prices For Speech Vocabulary
+Dt: 3/3/82
+
+
+The latest prices from Texas Instruments for custom
+vocabulary, using their speaker, are as follows:
+
+	1 - 25 words		$140.
+       25 - 50 words		$120.
+       50 - 100 words		$100.
+      100 - up  words		$ 90.
+
+In addition there would be a $3000 mask charge for the
+128 Kbit serial ROM. Lead time for custom serial ROMs is 12 - 16 weeks.
+
+This compares to $25 a word, selecting from TI's existing vocabulary.
+Since the last memo, I have learned that there would be
+a $3000 mask charge in ADDITION to the $25 per word charge.
+Lead times for serial ROMs would still be 12 - 16 weeks.
+
+The Speech Synthesizer can also be used with external speech data
+delivered by the host processor. It would require a new byte
+of data every 3 ms (worst case).
+
+A 2532 would be good for 25 seconds of speech (about 50 words).
+In quantities of 25K it would cost $7.52 for a custom programmed
+6100 128Kbit serial ROM (not counting vocabulary costs).
+
+Assuming that 2532s are $5 ea. it would cost $20 for an equivalent amount of 
+speech. However, since each game could have its own vocabulary ROM(s) we might
+not need 128Kbits for each game. It depends how much vocabulary a game needs.
+
+TI has offered to sell us their existing 1300 word vocabulary
+for $10K. Since only about 600 appear useful, it works out to $16/word. 
+Of course, if we were to put the data in 2532s anyone could copy it
+and get the vocabulary without paying $10K.
+
+TI expects to have samples of the TIME/WEATHER ROM in 2 weeks with
+the MILITARY and AVIONICS ROMS becoming available in five weeks.
+
+They expect to be able to demonstrate the PASS speech development
+system around the middle of March.
+
+
+cc:	Dave Stubben
+	Mike Halley
+_____________________________________________________________________________
+
+To: Distribution
+Fr: Jed Margolin
+Re: Speech Development System Demonstration
+Dt: 3/12/82
+
+On Tuesday, March 16, Texas Instruments will demonstrate
+their "PASS" speech development system which takes audio
+in and produces LPC data out (for the TMS-5220).
+
+The demonstration will be held at 2:00 pm in the 
+Downstairs Conference Room.
+
+Distribution:
+	Rick Moncrief
+	Dave Stubben
+	Gary Baily
+	Morgan Hoff
+	John Ray
+	Dave Sherman
+	Ed Logg
+	Scott Fuller
+	Joe Coddington
+	Rich Moore
+	Greg Rivera
+	Gary Stempler
+	Owen Reubin(sp?)
+	Steve Calfee
+	Tom Hogg
+	Mike Albaugh
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Speech Status
+Dt: 3/19/82
+
+
+
+Summary: The method of using the Texas Instruments speech synthesizer
+that is best suited for the way we develop and produce games is where
+the speech data is stored in standard byte wide ROMs. Also, the most
+effective way for game designers to experiment with the use of speech
+in games is for Atari to purchase a PASS Speech Development System 
+from Texas Instruments for $25K. If we arrange to have the PASS system here
+(for two days) we can, I hope, demonstrate to management some potential
+uses of speech in games.
+
+This assumes we want to start using speech now. If we wait 10 months TI
+will probably have a less expensive speech development system available
+and/or other companies might have hardware and software available.
+
+------------------------------------------------------------------------------
+Methods of Controlling the Synthesizer:
+
+Method 1 - Vocabulary from off-the-shelf serial ROMs (150 - 205 words in each 
+one)
+		
+						25K	100K
+	
+		TMS-5220 Speech Synthesizer	8.45	6.70		6.70
+		TMS-61002 Industrial Vocabulary 4.60
+		TMS-61003 Time/Weather		4.60
+		TMS-61004 Military		4.60
+		TMS-61005 Avionics		4.60
+	
+	Note: These serial ROMs are very easy to use from a game program with 
+	      4ms interrupts.
+
+Method 2 - Speech Synthesizer with custom serial ROM
+
+		TMS-5220 Speech Synthesizer	8.45	6.70
+		TMS-6100 128Kbit serial ROM	7.40	5.60
+
+		The TMS-6100 would be programmed with:
+			1. words from TI's existing vocabulary at a cost
+			   of $16-$25 per word
+			2. custom words from TI at $90 per word
+			3. vocabulary developed in-house by Atari
+
+		Note: 1. The ROMs incurr a $3K mask charge and production
+			 quantities take 12-16 weeks.
+		      2. very easy to use from a game program with 4ms 
+		         interrupts
+
+Method 3 - TMS-5220 Speech Synthesizer with Speech data in our own
+	   byte wide ROMs. A 2532 would hold 40-50 words. Vocabulary
+	   would come from TI or be developed in-house by Atari.
+
+		Note: 1. The ROMs would be our standard ROMs in the program
+			 address space.
+		      2. The system is moderately easy to use from a
+			 game program - however, the sample program
+			 I have written for it requires attention
+			 every 1.5 ms or so (although half of the time
+		         it is called, the routine is guaranteed to
+			 take 24 us or less).
+
+Method 3A - Super Sound
+
+		TMS-5220 Speech Synthesizer
+		Standard ROMs
+		Dedicated 6502 system to do speech, Pokey sounds,
+			and all coin routines
+
+	Note: 1. This is the most expensive method but would allow
+		 the data from the synthesizer to be modified in real
+		 time for special effects (I have done a sample program to
+		 show these capabilities). It would also allow more
+		 processing time to be devoted to Pokey sounds, and
+		 would allow these sounds to be fully developed, separate
+		 from the game.
+
+
+Discussion:
+
+	Method 1 is feasible only if we can work the existing ROM vocabulary
+	into a game.
+
+	Method 2 is feasible only if we can afford 16 weeks from release to 
+	production.
+
+	Methods 3 and 3A are the ones best suited for the way we develop
+	and produce games.
+
+-----------------------------------------------------------------------------
+
+The next question is, "How can we get vocabulary?"
+
+	1. We can buy TI's vocabulary of 1300 words for $10K.
+
+	2. We can pay TI $90/word for custom words, using either their
+	   speaker or ours.
+
+	3. We can buy the PASS Speech Development System from TI for $25k
+           and do our own vocabulary.
+
+A caveat is in order concerning number 3.
+
+	1. Not everyone's voice is suitable for LPC encoding
+	2. The data rate without editing is about 1700 bits/sec
+	   (versus 1200 for edited). We may be able to learn to
+	   do our own editing.
+	3. The PASS system can process about 10 secs of speech at
+	   a time. The system can produce EPROMs from this or can
+	   upload it through an RS-232 port. A programmer would have
+	   to create the software to enable the VAX to handle the speech
+	   files so a game programmer could put together an entire
+	   vocabulary.
+	4. The PASS system does not have the capabiliy of downloading and 
+	   and playing speech, however, I already have the hardware
+	   and software for doing this.
+
+-----------------------------------------------------------------------------
+
+If we want we can have the PASS system here for two days. It would cost us 
+$500 for two days ($250/day), which we could deduct from the cost of the
+system if we buy one. We would also get Lisl (their resident linguist) for a 
+day.
+
+In addition we would have to agree to be responsible for the unit while we 
+have it. Iraj was somewhat embarrassed about the money but explained that the 
+Regional Technology Center has a separate profit and loss responsibility and 
+I assume that means they want at least a small piece of the action since if 
+we buy the PASS system we probably won't use their services.
+
+Before bringing in the system (if we do), a memo should be sent to all project
+leaders, engineers, programmers, technicians, and anyone else who might be 
+interested, asking them to think about what a game should say, and also to 
+audition prospective speakers. Two weeks' notice should be sufficient. Then we
+should have a meeting.
+
+The purpose of bringing in the PASS system would be to see if we would be able
+to use it; the purpose would not be to have it here for two days and develop 
+all the vocabulary we might need for a particular game.
+
+------------------------------------------------------------
+
+We need to start thinking about what the policy is going to be concerning
+the speaker. First off, we need to find one (or two).  
+
+Will the project teams have to find their own?
+
+Will the speaker used during development be the same one used for the final 
+version?
+
+Will the speaker receive game bonus or will the reward be purely ego?
+
+Do we want to use a professional speaker?
+
+Do we want to conduct a company wide talent search?
+
+We will eventually need to set up a quiet, acoustically dead, room.
+
+--------------------------------------------------------------
+cc:	Lyle Rains
+	Dave Stubben
+_____________________________________________________________________________
+
+Preliminary Draft
+
+
+To: Distribution
+
+Fr: Jed Margolin
+
+Re: Speech Synthesis Meeting
+
+Dt: 2 April
+
+
+	There will be a meeting on Tuesday, April 13 at 2 pm in the downstairs
+conference room for all of those who are interested in using speech synthesis 
+in a game. Please come prepared to discuss how you propose to use it.
+
+	Of the speech synthesis systems available, the system by Texas 
+Instruments is the one best suited for the way we develop and produce games. 
+They have a speech development system available (which we are thinking of 
+buying) that takes audio in and generates LPC data for the synthesizer. We 
+will have the speech development system here at Atari on April 20 and 21. 
+TI's linguist will be here on the 20th to show us how to use the system.
+
+Please see me if you will be coming to the meeting or if you want technical 
+details on the speech synthesis system.
+
+
+Distribution:
+	
+	Programmers
+	Engineers
+	Technicians
+	Project Leaders
+	
+_____________________________________________________________________________
+
+XY Graphics Terminal
+
+
+1. Target a Market
+
+	. Home or Commercial determines FCC class
+
+	. What types of host computers will it be used with?
+
+	. What types of interfaces do they have?
+
+	. What is the target cost?
+
+2. Define The Product (Or Product Line)
+
+	. what are its proposed uses?
+
+	. Design Philosophy - Do what we know how to do
+
+	. The choice of interface is intimately connected with the 
+	  definition of the product and the targeted market
+
+	. The terminal might also be useful as a general purpose 
+	  XY graphics terminal for in-house use.
+
+3. How Will It Be Marketed?
+
+	. Coin-Op can design it and license the design to some
+	  other company
+
+	. Coin-Op can build it and provide documentation and have another
+	  company market it, support it, and provide warranty service.
+
+	. Can Coin-Op market it and support it itself?
+
+	. should it have the Atari name on it?
+
+	. Will the operators object to our selling it?
+
+	. Can the design be protected? Will we need to use custom
+	  LSI for that purpose?
+
+	. How will it be test marketed?
+
+4. Decide who is on the project and what the responsibilities will be.
+
+5. What about UL and FCC?
+	
+	. FCC Class B (home computer) would probably increase
+	  development time because of certification.
+
+------------------------------------------------------------
+
+Possible Product Line
+
+1. XY Graphics Controller with Color XY Display
+
+2. XY Graphics Controller with B/W XY Display
+
+3. Remote Color XY Display (self-powered)
+
+4. Remote B/W XY Monitor (self-powered)
+
+------------------------------------------------------------
+
+Possible Interfaces
+
+
+RS-232: 9600 Baud max which is about 1000 bits/sec
+	which is 100 bytes/100 ms update  (minus housekeeping)
+
+Atari 800: 19,200 Baud which is about 2000 bits/sec
+	which is 200 bytes/100 ms update (minus housekeeping) 
+
+IEEE 488: typically 250 KBytes/sec
+	which is 25 KBytes/100 ms update
+
+Custom 16 bit parallel with full handshaking
+
+PDP-11 Bus
+
+LSI-11 Bus
+
+
+*** The graphics controller will have to be shielded ***
+    and each I/O line will have to be decoupled.
+    Packaging considerations make it undesirable
+    to have multiple interfaces.
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Dt: 4/26/82
+Re: TI Speech Development System
+
+
+	The Texas Instruments PASS Speech Development System does
+work pretty much as advertized and could be used to generate
+vocabulary for their speech synthesizer IC.
+
+	Several people have expressed an interest in using the system 
+if we buy one. They are Milt Loper (4x4), Bruce Merrit, Rich
+Moore (Adventure), and Greg Rivera (Warp Speed).
+
+	As things stand, TI is the only company that offers a speech
+development system for LPC Speech Synthesis.(The other systems that are
+available are for Allophone Synthesis systems like Votrax.)
+
+Nevertheless, I do have some reservations about buying the TI PASS system:
+
+	1. As things stand TI will not give us schematics for it
+	   even though all the boards except one are standard boards.
+	   This would make it difficult to fix if it broke down.
+
+	2. The user documentation is poor. For example, it does not
+	   explicitly state how to read in and execute speech data
+	   from the PROM burner.
+
+	3. More importantly, the user's manual I was shown did not
+	   document the RS-232 uplink (either hardware or software).
+	   This information is vital if we are to be able to upload 
+	   the vocabulary data to the VAX.
+
+	4. The unit does not always work after it is powered-up. The
+	   pushbutton which is alleged to be a reset button does not 
+	   perform a full system reset.
+
+	5. It would be useful if there were a written document on
+	   the rudiments of editing the LPC data.
+
+	According to Lisl (TI's linguist) this lack of documentation 
+is the result of TI Corporate policy. If this is the case perhaps
+we can get one of our big cheeses to talk to one of their big cheeses.
+
+	Despite my reservation, if we want to do our own speech development
+this is the system to get.
+
+
+the end
+_____________________________________________________________________________
+
+POWER SUPPLIES - The following power supplies are currently in use,
+	         and are UL Recognized for use in video games.
+
+
+PS ASSY	 	A037671-XX	A037672-XX	A037396-XX		A037875-XX
+
+NAME		Power Supply	Shielded	Color XY		Shielded Color XY
+				Power Supply
+
+TRANSFORMER	142003-001	142003-003	142005-001		142005-002
+		142003-002	142003-004
+
+TERMIN.TRANS	A035888-01	A035888-03	A037395-01		A037395-02
+		A035888-02	A035888-04
+
+WIRING DIAGRAM	037669-01	037669-01	037394-01		037394-01
+
+USE		B/W XY		B/W XY		Color XY		Color XY
+		Color Raster	Color Raster
+
+
+
+
+ PS ASSY        NAME        TRANSFORMER  TERMINATED    WIRING          USE FOR
+ 				         TRANSFORMER   DIAGRAM
+
+
+A037671-XX   Power Supply   142003-001   A035888-01   037669-01   B/W XY,Color Raster
+			    142003-002   A035888-01
+
+
+A037672-XX   Shielded      142003-002   A035888-03   037669-01   B/W XY,Color Raster
+	     Power Supply  142003-004   A035888-04
+
+A037396-XX   Color XY      142005-001   A037395-01   037394-01   Color XY
+
+A037875-XX   Shielded      142005-002   A037395-02   037394-01   Color XY
+
+
+	XX = 01 Domestic        (Voltage Block  - 120)
+	   = 03 International   (Voltage Blocks - 220, 240)
+	   = 03 European	(Voltage Blocks - 220, 240)
+
+------------------------------------------------------------
+The Following Regulator Audio Boards are Available:
+
+
+REGULATOR/AUDIO II  
+
+Assembly     Wiring     Audio   +5v @ 6A   +10v   +22v @ 1A   -22v @ 1A   +12v @ 1A   -5v @ 0.5A
+   	     Diagram              Reg.                                        Reg.        Reg.
+
+A035435-01   035435-01    X         X       X        
+
+A035435-02   035435-02    X         X       X         X           X          X            X
+
+A035435-04   035435-04    X         X       X         X           X
+
+A035435-05   035435-05              X       X                                              
+
+A035435-06   035435-06              X       X         X           X          X            X
+
+____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Texas Instruments
+Dt: 5/3/82
+
+
+   I have attached to this memo a copy of the purchase agreement that Texas 
+Instruments proposes that Atari sign if we buy a PASS system.
+
+   Iraj's reassuring cover letter is completely worthless according to the 
+terms of the purchase agreement. See Section 4 LIMITED WARRANTY.
+
+   The main points are:
+
+   1. After the 30 day warranty period, TI is under no obligation whatsoever 
+to support the system. If it breaks down we are S-O-L. I should add that it 
+would probably be at least 2 months before it could be fully usable with the 
+VAX system (longer, if we move to Milpitas during this period).
+
+   2. TI will not warranty that the PASS system is even fit for our purpose, 
+that of developing LPC vocabulary to be used with TI speech IC's which Atari 
+is considering using.
+
+   3. Section 6 PATENT RIGHTS seems to indicate that buying TI's speech IC's 
+does not give us the right to use them without negotiating a License. ALSO, 
+IT IS NOT EVEN CLEAR THAT WE WOULD HAVE THE RIGHTS TO THE VOCABULARY WE 
+DEVELOP ON THE PASS.
+
+We have several alternatives open to us:
+
+   1. Buy the PASS system and hope for the best.
+
+   2. Try to have Jim McNally negotiate a new agreement.
+
+   3. Inform TI that their proposed purchase agreement is unacceptable and 
+therefore Atari has decided against using TI speech IC's in its products at 
+this time.
+
+
+What should we do?
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: 4x4 Schematics
+Dt: 5/25/82
+
+
+As per your request I have reviewed Bob Martin's schematics for 4x4. 
+I have the following comments.
+
+
+1. Depending on how far away the 11v is, the LM323 may need 
+   a capacitor on its input.
+
+2. The 100 ohm resistor that is connected between the +11v and
+   the TDA2002 amplifiers will limit the power available to
+   the speakers to 4.5 milliwatts sine wave RMS. (For two 8 ohm speakers)
+
+3. The TDA2002 has very poor power supply rejection. Normally,
+   we operate them in a bridge mode and the power supply hum cancels.
+   In this circuit they are single-ended and the power supply 
+   hum will appear in the speaker output.
+
+4. The LM324 has much better power supply rejection. Whether it
+   will give satisfactory results with the unregulated 11v will
+   depend on how much ripple there is on the supply and on
+   how well the AUDIO+5V is decoupled. (I don't see this
+   decoupling circuit on the schematic).
+
+5. Most people use at least some kind of filter after their
+   Pokeys. The unfiltered square waves from the Pokeys will
+   be particulary objectionable in the headphones.
+
+6. Have you checked with the Safety Group on any safety 
+   requirements relating to the use of headphones?
+
+
+cc: Bob Martin
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Applied Research Project
+Dt: 5/27/82
+
+
+As per your request this is a proposal to set up a research
+project for the purpose of investigating several areas of
+game design which are currently being neglected. The goal
+would be to produce a game.
+
+The areas to be explored will include:
+
+	Game cabinet design with an emphasis on acoustics
+
+	Control panel design
+
+	Graphics techniques for Color XY
+
+	Use of speech synthesis (maybe)
+
+
+By using Color XY and Warp Speed hardware we would be able
+to do the project almost entirely within the department.
+
+The project team should consist of the following:
+
+	Project Leader - Rick Moncrief
+
+	Engineer (and algorithms) - myself
+
+	Programmer - Carl von Loewenfeldt
+
+	Technician - Erik Durfey
+
+	
+	The other members of the department will be encouraged to
+contribute ideas.
+
+
+Scheduling - In order to know how long it will take to do something
+	you have to know just what it is you are going to do. If
+	you already know just what it is that you are going to do
+	then you are not doing research.
+
+	You do not wake up in the morning, look at the schedule, 
+	and declare, "Today I will be brilliant".
+
+My proposal is that things will be presented as they are developed.
+
+-------------------------------------------------------------
+
+Other Problems - The programmers have reserved to themselves
+	the right to design games. There is no chance for anyone else
+	to design a game (except for Lyle).
+
+	The reason for my request last week to set up a Warp Speed 
+	bench was so I could work out some graphics techniques that
+	I am interested in investigating. In particular I want to
+	do the game that I have already described as TOMCAT.
+	It would be a terrific demonstration of some of the things
+	that are possible with Color XY and MY hardware. I also
+	believe it would be highly successful as a game.
+	If this game is selected for the project and if it becomes
+	a repeat of my Warp Speed experience I would be very disappointed.  
+
+the end
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: TI PASS Purchase Agreement
+Dt: 5/28/82
+
+
+I have attached a copy of TI's new proposed purchase agreement for the PASS 
+system. Item 1 in my memo of 5/3/82 has been addressed. Item 2 has not. I'm 
+not sure about item 3. It depends whether Iraj's cover letter constitues a 
+binding modification as per Section 9 ENTIRE AGREEMENT.
+
+Since my last memo I have learned the following:
+
+	The new Votrax chip won't be available until next year.
+
+	National might be coming out with an LPC Speech chip
+	with a development system but will not return my calls.
+
+	Milt Loper has dropped plans for using speech in 4x4.
+	Greg Rivera and Rich Moore appear to remain interested in speech.
+
+
+What do you want me to do?
+_____________________________________________________________________________
+
+TOMCAT - WARP SPEED Conversion
+Plan of Attack  -  Security Clearance required: Red Level B
+
+Jed Margolin 7/7/82
+
+
+Erik:
+	Get WARP SPEED boards (probably 7/14)
+
+	Harness/Control Panel  (Use pot for thrust)
+
+	Become familiar with the hardware
+
+Carl/Greg:	Test Program
+
+	RAM Test (Main and Math)
+
+	Divider - use selected values
+		4000/4000=4000
+		5555/4000=5555
+		2AAA/4000=2AAA
+		5555/5555=4000
+		2AAA/2AAA=4000
+
+	Matrix Processor
+		Initialise Math RAM
+		Check for busy (reading or writing Math RAM generates a Halt)
+		Run ROLL, wait 71 uS, check for done,compare results to known 
+		   values
+		Test DOWNLOAD Program
+
+Carl:
+	Get copies of WARP SPEED program
+	Bring up WARP SPEED
+	Disable enemies
+	Change YAW to ROLL
+	Make stars flat (temporary terrain)
+	Make screen horizontal
+	Implement flight equations (I will add microcode as required)
+	Possibly implement horizon line (I will add microcode as required)
+	Add on-screen readout of airspeed, altitude, rate of climb, heading(?)
+
+	Implement runway with control tower (and rotating radar antenna from 
+		Battlezone)
+	Decide on Terrain generation
+
+
+	Bring out other independent objects: Tanks from ABZ
+					     Doug's aircraft
+					     Saucer from Warp Speed
+
+	Sounds(?)
+	Speech(?)
+
+
+	Begin game play
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: Speech Synthesis Status
+Dt: 9/20/82
+
+
+	The T.I. Speech Development System is in-house and appears to work
+
+as advertised.
+
+	Therefore, my part is done and I am ready to turn it over to whomever
+
+is designated to receive it.
+
+	The Speech development system can analyze up to 12 seconds of speech
+
+at a time and when it is connected to a terminal the user can edit the speech
+
+parameters and make EPROM's. There is also an RS-232 port for uploading speech
+
+data (I have documentation on the protocol used). I recommend that this be
+
+connected to the VAX and that a VAX programmer implement a system for creating
+
+and handling Speech files. My suggestions are as follows:
+
+	1. A typical speech ROM will contain address pointers at the beginning
+
+	   of the ROM. Each word or phrase will have associated with it a
+
+	   starting address of data and an ending address of data.
+
+		a). For 6502 it might be LO,HI.
+
+		b). For 6809 it should be HI,LO.
+
+		c). The addresses might be local to the ROM or be absolute
+		    in the address space of the game.
+
+		d). After the look-up table comes the actual speech data.
+
+	2. When vocabulary is added to a file it should have associated
+
+	   with it a user supplied header consisting of 'Word', speaker, date 
+
+	   recorded, recorded by (optional).
+
+	3. When a user assembles a vocabulary file for a game, he/she should
+
+	   be required only to supply a list of words. The program should
+
+	   automatically create the address look-up table and move the
+
+	   vocabulary data around appropriately. Then it should print a list
+
+	   of the words and their index numbers. (Either alphabetically or by
+
+	   index number or both.)
+
+	4. The Speech Development System requires an RS-232 Terminal (which
+
+	   are currently in short supply) and a room to put it in (for which
+
+	   I have some acoustic absorbing foam). It should be a room free of
+
+	   ventillation noise, or one where the fan can be turned off during
+
+	   recording. Acoustic noise can significantly degrade the speech
+
+	   quality that comes out of the system.
+
+	5. There are ways to manipulate the speech data to produce special
+
+	   effects. In a game with enough processing power it can be done
+
+	   in real time. Otherwise the data can be manipulated before being
+
+	   put into the ROM. I am willing to explain it to whoever does the
+
+	   VAX programming.
+
+	6. I propose sending this memo to Steve Calfee.
+
+
+						- the end -
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: XY Monitor Array
+Dt: 9/22/82
+
+
+     To maintain the aspect ratio there must be a square number of monitors.
+
+The central part of the screen tends to have special significance so the 
+
+minimum is 3x3=9 monitors.
+
+     If you consider the middle row of monitors, the horizontal signal for
+
+the middle monitor is simply the XY signal x 3.
+
+     The signals for the other monitors are derived from offsets and 
+
+multiplies of the original XY signal.
+
+     Note: The monitors must all be of the type with integral pincushion
+
+correction, or each monitor needs its own pincushion correction circuitry.
+
+Also, If the array were used with a game board with pincushion circuitry,
+
+the circuitry would either have to be defeated or the monitor array input
+
+would need an anti-pincushion section.
+
+
+Difficulties:
+
+	1. The vector drawing speed is effectively 3 x original speed, so the
+
+	   monitors must be able to handle the increased speed.
+
+	2. When the vector passes from one display to the next, the beam must
+
+	   be there, waiting for it. If the signals are just hard-clipped
+
+	   at the edge of each monitor, the power dissipation will be very
+
+	   high. This can be ameliorated somewhat by additional circuitry
+
+	   but the dissipation will still be pretty high, especially when
+
+	   the vector is at the intersection of four monitors.
+
+
+A memo on the raster monitor array is in the works.
+
+
+Another possibility is a box with a 13" color raster, a 13" color XY, a 
+
+half silvered mirror, and a TV camera (preferably the Hitachi with the
+
+CCD imaging element). The signal would then be shown on a projection TV
+
+(which could still be used for other purposes).
+
+
+
+							jed
+_____________________________________________________________________________
+
+TO: Mike 
+Fr: Jed
+Re: National 16000 family
+Dt: 11/10/82
+
+It looks like something I could use (instead of the 68000).
+
+I am concerned with price and availability (especially of the 10 MHz part)
+and second sources.
+
+The software they demonstrated did appear to actually work. The symbolic 
+debugger looks like it would be very useful.
+
+They should have made more of an effort to find out what business we are
+in and what processors we have used in the past. I don't particularly care 
+that they have a version that executes 8080 code.
+
+I can use either the 16032 or the 68000. It really comes down to which one
+you guys want to support.
+
+By the way, how well suited is the 16032 to doing Forth?
+
+
+
+				jed
+_____________________________________________________________________________
+
+To: Rick Moncrief
+Fr: Jed Margolin
+Re: New XY System Architecture
+Dt: 11/29/82
+
+
+
+SUMMARY: I would like to pursue a new architecture for 3D XY games. It would 
+	 use two 16 bit microprocessors to replace most of the MSI now used
+	 in Tomcat and would have a 6809 Auxiliary Processor for Sounds, 
+	 Speech, I/O, etc., with the capability of linking two games together.
+
+ 	 The 16 bit processors would be either 68000's or 16032's (National)
+	 depending upon which one the Software People will support.
+	 I will need an appropriate development system for this project.
+
+	 I would like to start the circuit design in January, have a wirewrap
+	 in February, and have a demo ready during the middle of July ('83).
+	 I will do the programming myself.
+
+	 Potential uses include in a regular production game, a demo for
+	 the Marriot Arcade, or as a low cost Graphics Terminal.
+	 
+--------------------------------------------------------------------------
+ARCHITECTURE
+  
+	Attached is a block diagram of a new architecture for an XY system.
+It uses two 16 bit microprocessors to replace most of the MSI now used in
+Tomcat.
+
+	The first processor does the math calculations (rotations, 
+translations, etc.) and the game play.
+
+	The second processor is used as an intelligent vector generator, 
+optimized for 3D projected objects. What that basically means is that the 
+math processor hands to it an updated list of object points; the vector 
+generator will know how they are to be connected.
+
+	The third processor, the Auxiliary Processor, will be a 6809 and
+will handle Sounds, Speech, Switches, Pots, EAROM, Coin Counters, and
+Serial I/O. Because the Aux processor will be operating at a higher interrupt
+rate than is feasible in existing single processor games, two games will be 
+able to talk to each other and exchange enough information to do a two person
+Tomcat game.
+
+----------------------------------------------------------------------------
+DEVELOPMENT SYSTEMS
+
+	The 16 bit processors can be either 68000's or 16032's (from 
+National). The selection will be determined by which one the Software
+People decide to support. 
+
+	In processing power, a 6 MHz 16032 seems to be about equivalent 
+to a 10 MHz 68000. However, the 16032 has a clear advantage in that its
+architecture makes it possible to actually know which instructions have
+been executed rather than just which ones have been prefetched into the 
+pipeline.
+
+	The Graphics Terminal Project's 68000 Development system (the 
+HP 64000) is not available to me under conditions that I can accept:
+I could use a development station if they have one available and I would
+have to relinquish it when they needed it. 
+
+	The in-house 68000 game interface board appears to have gotten
+exactly nowhere.
+
+	National makes a development system for the 16032 which operates
+in a manner similar to what we already do. The VAX is used to edit and
+assemble programs; the object code is downloaded into a box out of which
+comes a pod which plugs into the game's 16032 socket. A VDT plugs into
+the development system for talking to the VAX and patching, running, and
+debugging the program. The cost would be $16K - $20K.
+
+------------------------------------------------------------------------------
+SCHEDULE
+
+	I would like to begin the circuit design in January and be ready to
+begin a wirewrap board by the beginning of February. (I would need to know 
+which processor will be supported before I can do much circuit design.)
+
+	I would need the development system by the middle of February.
+
+	I anticipate doing the preliminary programming myself to demonstrate
+the usefulness of the system. Once the development system is usable I 
+would expect to take 2 weeks to debug hardware, 6 weeks to program the
+Intelligent Vector Generator, 6 weeks for the Math Processor, and 6 weeks
+for the Aux Processor.
+
+------------------------------------------------------------------------------
+POTENTIAL USES
+
+	It could be used in a regular production game, with the capability
+of linking two games together. This capability has been discussed for the
+last several years but has not been feasible due to the 4 ms. interrupt
+rate; the amount of information transferred at a rate of 1 byte every
+4 ms is not enough to link games. (The Aux Processor will operate at 1 ms
+interrupts and that should do the job.)
+
+	This architecture could be used with the powered moving seat to do
+a demo for the Marriot Arcade, especially with two games linked together.
+
+	The serial interface would make it feasible to do a low cost Graphics
+Terminal
+
+	the end
+_____________________________________________________________________________
+
+To: Dan Van Elderen and Rick Moncrief
+Fr: Jed Margolin
+Re: Speech Recognition
+Dt: 12/10/82
+
+
+	There is currently no work being done by Coin-Op in the area of Speech
+Recognition, although Tom Hogg has expressed an interest in it for the
+Graphics Terminal Project. If we do become involved in Speech Recognition
+it probably won't be with Verbex; their systems cost $65,000 ($6K-$10K for
+just the boards).  
+
+------------------------------------------------------------------------------
+(Additional material which may be of interest)
+
+
+In order for a Speech Recognition System to be used successfully in a coin-
+operated video game I would suggest the following requirements:
+
+	1. Produce a 99+ % correct response which must be independent of 
+	   player gender and/or dialect (assuming only American English), 
+	   with no player training, and with probability of considerable 
+	   noise from other games as well as the player's own game. 
+	2. Cost less than $100. (and this figure is probably high).
+
+
+There are currently no systems available which even come close to meeting
+these requirements: 
+
+	1. The single chip devices from Weitek and Interstate (about $10 in
+	   quantity) work poorly, if at all, in the presence of noise.
+
+	2. Even the expensive systems require that the user wear a microphone
+	   headset like the ones telephone operators wear, which would not
+	   be practical in an arcade video game.
+
+	3. Matsushita supposedly has a speaker dependent system for $350 
+	   which is user trainable; chip sets will probably be under $50 .
+
+	4. Texas Instruments has done substantial work in Speech Recognition
+	   (as well as synthesis) and may bring something out in '83 using
+	   the TMS320 Digital Signal Processing chip. 
+
+	5. There was a meeting on Thursday 12/9 between Weitek and 
+	   representatives from various Atari Groups (hosted by the Atari
+	   Semiconductor Group). Weitek has decided that it can no longer
+	   afford to work on speech recognition and wants to either sell off 
+	   its expertise (and several projects in varying states of 
+	   development) or form some kind of joint venture to continue the
+	   work. The project with the most promise (and which is 80% complete)
+	   was for a speaker dependent system where the user trained the
+	   system and which would probably cost less than $20 to produce.
+	   
+	6. General Instrument claims to be committed to Speech, and is 
+	   apparently working on Speech Recognition.
+
+ 
+Other products may have different requirements:
+
+	1. The Graphics Terminal Project could probably tolerate 97% correct
+	   response with user dependence. On user dependent systems there is
+	   a learn mode where the user speaks the words which the machine 
+	   will later recognize.
+
+	2. For similar reasons Speech Recognition might be practical as
+	   part of a Personal Computer System.
+
+	3. If Atari goes into the telephone business, it would be interesting
+	   to have a telephone with Speech Recognition instead of buttons.
+	   Also, frequently called numbers could be referenced by a name
+	   instead of the user having to write down and use an index number.
+
+	4. I would like to have a VCR where I could set the Timer schedule
+	   with Speech Recognition rather than funny little buttons.
+
+_____________________________________________________________________________
